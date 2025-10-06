@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Sparkle
 {
-    public partial class Form1 : Form
+    public partial class FormLoginScreen : Form
     {
-        public Form1()
+        public FormLoginScreen()
         {
             InitializeComponent();
+        }
+
+        private void FormLoginScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
