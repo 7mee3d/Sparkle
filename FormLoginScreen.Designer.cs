@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginScreen));
             this.GBorderLessFormRaduis = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.MainPanelShadowLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -165,6 +166,7 @@
             this.ClientSize = new System.Drawing.Size(1279, 800);
             this.Controls.Add(this.MainPanelShadowLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
