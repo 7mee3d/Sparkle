@@ -121,36 +121,9 @@ namespace Sparkle
 
             return false; 
         }
-        private void FormLoginScreen_Load(object sender, EventArgs e)
-        {
+     
+        
 
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void GTextBoxUsernameLogin_TextChanged(object sender, EventArgs e)
-        {
-           // ClearAlTextInTheTextBoxAfterClick(sender); 
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainPanelShadowLogin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void ButtonLoginTheSparkle_Click(object sender, EventArgs e)
         {
@@ -161,6 +134,11 @@ namespace Sparkle
                 MessageBox.Show("Login Sccessfully Sparkle", "Note Login");
             else
                 MessageBox.Show("Faild Login Sccessfully Sparkle", "Note Login");
+
+            GTextBoxUsernameLogin.Clear();
+            GTextBoxPasswordLogin.Clear();
+
+            GTextBoxUsernameLogin.Focus(); 
         }
     }
 }

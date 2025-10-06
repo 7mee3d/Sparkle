@@ -61,14 +61,15 @@
             this.MainPanelShadowLogin.ShadowDepth = 50;
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
             this.MainPanelShadowLogin.TabIndex = 0;
-            this.MainPanelShadowLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelShadowLogin_Paint);
             // 
             // ButtonLoginTheSparkle
             // 
             this.ButtonLoginTheSparkle.Animated = true;
+            this.ButtonLoginTheSparkle.AnimatedGIF = true;
             this.ButtonLoginTheSparkle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.ButtonLoginTheSparkle.BorderRadius = 9;
             this.ButtonLoginTheSparkle.BorderThickness = 2;
+            this.ButtonLoginTheSparkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonLoginTheSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.ButtonLoginTheSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.ButtonLoginTheSparkle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -116,7 +117,6 @@
             this.GTextBoxPasswordLogin.SelectedText = "";
             this.GTextBoxPasswordLogin.Size = new System.Drawing.Size(322, 45);
             this.GTextBoxPasswordLogin.TabIndex = 1;
-            this.GTextBoxPasswordLogin.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // GTextBoxUsernameLogin
             // 
@@ -143,8 +143,7 @@
             this.GTextBoxUsernameLogin.PlaceholderText = "Username\r\n";
             this.GTextBoxUsernameLogin.SelectedText = "";
             this.GTextBoxUsernameLogin.Size = new System.Drawing.Size(322, 45);
-            this.GTextBoxUsernameLogin.TabIndex = 1;
-            this.GTextBoxUsernameLogin.TextChanged += new System.EventHandler(this.GTextBoxUsernameLogin_TextChanged);
+            this.GTextBoxUsernameLogin.TabIndex = 0;
             // 
             // labelLoginWord
             // 
@@ -170,7 +169,6 @@
             this.Name = "FormLoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormLoginScreen_Load);
             this.MainPanelShadowLogin.ResumeLayout(false);
             this.MainPanelShadowLogin.PerformLayout();
             this.ResumeLayout(false);
