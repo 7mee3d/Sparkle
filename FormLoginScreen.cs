@@ -25,7 +25,8 @@ namespace Sparkle
         {
             
            public string stUsername;
-            public string stPassword; 
+            public string stPassword;
+            public int numberAttempt ;
 
         }
         private void ClearAlTextInTheTextBoxAfterClick(object sender)
@@ -47,7 +48,7 @@ namespace Sparkle
 
             string lineInformationOneUser = "";
 
-            while ((lineInformationOneUser = ReadInformationAllUsers.ReadLine()) != null)
+            while ((lineInformationOneUser = ReadInformationAllUsers.ReadLine().ToString()) != null)
             {
                 informationUserLine.Add(lineInformationOneUser);
                     
@@ -76,6 +77,10 @@ namespace Sparkle
 
             informationUserOne.stUsername = InformationUser[0];
             informationUserOne.stPassword = InformationUser[1];
+
+            if(InformationUser.Count > 2 )
+            informationUserOne.numberAttempt = Convert.ToInt32(InformationUser[2]); 
+
 
             return informationUserOne;
 
@@ -106,7 +111,49 @@ namespace Sparkle
         {
             return (strOne == strTwo);
         }
+        private string ConvertDataInformationUserToLine(stInformationUser informationUser, string separator = "||")
+        {
 
+            string lineInformation = "";
+            lineInformation += informationUser.stUsername + separator;
+            lineInformation += informationUser.stPassword + separator;
+            lineInformation += informationUser.numberAttempt.ToString();
+
+            return lineInformation;
+        }
+
+        private List<string> ConvertDataInformationAllUserToLineBeforePush(List<stInformationUser> informationUsers)
+        {
+            List<string> informationUserLines = new List<string>();
+
+            string line = "";
+
+            foreach (stInformationUser infoOneUser in informationUsers)
+            {
+                line = ConvertDataInformationUserToLine(infoOneUser, "||");
+                if (line != null)
+                    informationUserLines.Add(line);
+            }
+
+            return informationUserLines;
+        }
+        private void SaveAllDataInformationUsersInTheFile(List<string> informationUserLines)
+        {
+            if (!System.IO.File.Exists(kPATH_FILE))
+                System.IO.File.Create(kPATH_FILE).Close();
+
+            System.IO.StreamWriter saveLineInTheFile = new System.IO.StreamWriter(kPATH_FILE);
+
+            foreach (string lineInfoUser in informationUserLines)
+            {
+                if (lineInfoUser != null)
+                    saveLineInTheFile.WriteLine(lineInfoUser);
+            }
+
+            saveLineInTheFile.Close();
+
+
+        }
         private bool areFoundUsernameAndPassword(string username , string password )
         {
 
@@ -123,8 +170,7 @@ namespace Sparkle
         }
      
         
-
-
+       
         private void ButtonLoginTheSparkle_Click(object sender, EventArgs e)
         {
             string username = GTextBoxUsernameLogin.Text;

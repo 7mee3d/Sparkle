@@ -56,7 +56,7 @@
             this.MainPanelShadowLogin.FillColor = System.Drawing.Color.WhiteSmoke;
             this.MainPanelShadowLogin.Location = new System.Drawing.Point(691, 58);
             this.MainPanelShadowLogin.Name = "MainPanelShadowLogin";
-            this.MainPanelShadowLogin.Radius = 15;
+            this.MainPanelShadowLogin.Radius = 20;
             this.MainPanelShadowLogin.ShadowColor = System.Drawing.Color.Black;
             this.MainPanelShadowLogin.ShadowDepth = 50;
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
@@ -67,7 +67,7 @@
             this.ButtonLoginTheSparkle.Animated = true;
             this.ButtonLoginTheSparkle.AnimatedGIF = true;
             this.ButtonLoginTheSparkle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.ButtonLoginTheSparkle.BorderRadius = 9;
+            this.ButtonLoginTheSparkle.BorderRadius = 14;
             this.ButtonLoginTheSparkle.BorderThickness = 2;
             this.ButtonLoginTheSparkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonLoginTheSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
@@ -84,11 +84,11 @@
             this.ButtonLoginTheSparkle.Image = global::Sparkle.Properties.Resources.enter;
             this.ButtonLoginTheSparkle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonLoginTheSparkle.ImageOffset = new System.Drawing.Point(25, 0);
-            this.ButtonLoginTheSparkle.Location = new System.Drawing.Point(107, 490);
+            this.ButtonLoginTheSparkle.Location = new System.Drawing.Point(107, 460);
             this.ButtonLoginTheSparkle.Name = "ButtonLoginTheSparkle";
             this.ButtonLoginTheSparkle.Size = new System.Drawing.Size(161, 51);
             this.ButtonLoginTheSparkle.TabIndex = 2;
-            this.ButtonLoginTheSparkle.Text = "Login";
+            this.ButtonLoginTheSparkle.Text = "Log in";
             this.ButtonLoginTheSparkle.Click += new System.EventHandler(this.ButtonLoginTheSparkle_Click);
             // 
             // GTextBoxPasswordLogin
@@ -111,7 +111,7 @@
             this.GTextBoxPasswordLogin.IconLeft = global::Sparkle.Properties.Resources._lock;
             this.GTextBoxPasswordLogin.IconLeftOffset = new System.Drawing.Point(11, 0);
             this.GTextBoxPasswordLogin.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.GTextBoxPasswordLogin.Location = new System.Drawing.Point(107, 385);
+            this.GTextBoxPasswordLogin.Location = new System.Drawing.Point(107, 369);
             this.GTextBoxPasswordLogin.Name = "GTextBoxPasswordLogin";
             this.GTextBoxPasswordLogin.PlaceholderText = "Password";
             this.GTextBoxPasswordLogin.SelectedText = "";
@@ -148,11 +148,11 @@
             // labelLoginWord
             // 
             this.labelLoginWord.AutoSize = true;
-            this.labelLoginWord.Font = new System.Drawing.Font("Goudy Old Style", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginWord.Font = new System.Drawing.Font("Garamond", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.labelLoginWord.Location = new System.Drawing.Point(90, 142);
+            this.labelLoginWord.Location = new System.Drawing.Point(92, 143);
             this.labelLoginWord.Name = "labelLoginWord";
-            this.labelLoginWord.Size = new System.Drawing.Size(262, 99);
+            this.labelLoginWord.Size = new System.Drawing.Size(240, 90);
             this.labelLoginWord.TabIndex = 0;
             this.labelLoginWord.Text = "Log in";
             // 
