@@ -73,6 +73,36 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_Client {
+            get {
+                object obj = ResourceManager.GetObject("add Client", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_Client_Black {
+            get {
+                object obj = ResourceManager.GetObject("add Client Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap client {
+            get {
+                object obj = ResourceManager.GetObject("client", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -126,6 +156,16 @@ namespace Sparkle.Properties {
         internal static System.Drawing.Bitmap Main_Screen_Sparkle_Login2 {
             get {
                 object obj = ResourceManager.GetObject("Main Screen Sparkle Login2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_Client_ {
+            get {
+                object obj = ResourceManager.GetObject("New Client ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
