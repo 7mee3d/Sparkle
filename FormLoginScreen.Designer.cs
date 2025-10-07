@@ -36,12 +36,13 @@
             this.GTextBoxPasswordLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxUsernameLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelLoginWord = new System.Windows.Forms.Label();
+            this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.MainPanelShadowLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // GBorderLessFormRaduis
             // 
-            this.GBorderLessFormRaduis.BorderRadius = 25;
+            this.GBorderLessFormRaduis.BorderRadius = 40;
             this.GBorderLessFormRaduis.ContainerControl = this;
             this.GBorderLessFormRaduis.DockIndicatorTransparencyValue = 0.6D;
             this.GBorderLessFormRaduis.TransparentWhileDrag = true;
@@ -49,18 +50,20 @@
             // MainPanelShadowLogin
             // 
             this.MainPanelShadowLogin.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanelShadowLogin.Controls.Add(this.GLabelWariningLastAttemptAccount);
             this.MainPanelShadowLogin.Controls.Add(this.ButtonLoginTheSparkle);
             this.MainPanelShadowLogin.Controls.Add(this.GTextBoxPasswordLogin);
             this.MainPanelShadowLogin.Controls.Add(this.GTextBoxUsernameLogin);
             this.MainPanelShadowLogin.Controls.Add(this.labelLoginWord);
             this.MainPanelShadowLogin.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.MainPanelShadowLogin.Location = new System.Drawing.Point(691, 58);
+            this.MainPanelShadowLogin.Location = new System.Drawing.Point(795, 60);
             this.MainPanelShadowLogin.Name = "MainPanelShadowLogin";
             this.MainPanelShadowLogin.Radius = 20;
             this.MainPanelShadowLogin.ShadowColor = System.Drawing.Color.Black;
             this.MainPanelShadowLogin.ShadowDepth = 50;
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
             this.MainPanelShadowLogin.TabIndex = 0;
+            this.MainPanelShadowLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelShadowLogin_Paint);
             // 
             // ButtonLoginTheSparkle
             // 
@@ -156,13 +159,23 @@
             this.labelLoginWord.TabIndex = 0;
             this.labelLoginWord.Text = "Log in";
             // 
+            // GLabelWariningLastAttemptAccount
+            // 
+            this.GLabelWariningLastAttemptAccount.BackColor = System.Drawing.Color.Transparent;
+            this.GLabelWariningLastAttemptAccount.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GLabelWariningLastAttemptAccount.ForeColor = System.Drawing.Color.Red;
+            this.GLabelWariningLastAttemptAccount.Location = new System.Drawing.Point(107, 423);
+            this.GLabelWariningLastAttemptAccount.Name = "GLabelWariningLastAttemptAccount";
+            this.GLabelWariningLastAttemptAccount.Size = new System.Drawing.Size(3, 2);
+            this.GLabelWariningLastAttemptAccount.TabIndex = 3;
+            // 
             // FormLoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Sparkle.Properties.Resources.Main_Screen_Sparkle_Login2;
+            this.BackgroundImage = global::Sparkle.Properties.Resources.Finial_Edit_the_background_image_Login_Screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1279, 800);
+            this.ClientSize = new System.Drawing.Size(1420, 800);
             this.Controls.Add(this.MainPanelShadowLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,6 +196,7 @@
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxUsernameLogin;
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxPasswordLogin;
         private Guna.UI2.WinForms.Guna2Button ButtonLoginTheSparkle;
+        private Guna.UI2.WinForms.Guna2HtmlLabel GLabelWariningLastAttemptAccount;
     }
 }
 

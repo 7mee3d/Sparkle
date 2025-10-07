@@ -155,9 +155,9 @@ namespace Sparkle
 
 
         }
-        private bool areFoundUsernameAndPassword(string username , string password )
+        private bool areFoundUsernameAndPassword(string username , string password , ref bool isFoundUsername  )
         {
-
+            //Load all data to List 
             List<stInformationUser> informationAllUsers = storeInformationAllUserst();
 
             for (int counter = 0; counter <  informationAllUsers.Count; counter++)
@@ -169,29 +169,49 @@ namespace Sparkle
                         if(informationAllUsers[counter].numberAttempt > 0)
                         {
                             informationAllUsers[counter].numberAttempt = 3;
+
+                            //Save All Change After the Login and reset the number attempt account to 3 atttempt original 
                             SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
-                            return true; 
+                            GLabelWariningLastAttemptAccount.Text = ""; 
+
+                            return true;
                         }
-                    }else
+                        else
+                        {
+
+                            MessageBox.Show("Lock Account Login Sparkle", "Note Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            GLabelWariningLastAttemptAccount.Text = "";
+                        }
+                    }
+                    else
                     {
 
-                        if(informationAllUsers[counter].numberAttempt >= 1)
-                        {
-                            informationAllUsers[counter].numberAttempt--;
+                        if (informationAllUsers[counter].numberAttempt == 2)
+                            //Warning 
+                            GLabelWariningLastAttemptAccount.Text = "Warning: Last attempt! Please enter the correct password.";
 
-                        }else
-                        {
-                            MessageBox.Show("Lock Login");
 
+                        if (informationAllUsers[counter].numberAttempt > 1)
+                        {
+                            --informationAllUsers[counter].numberAttempt;
+                        }
+                        else{
+
+                            MessageBox.Show("Lock Account Login Sparkle", "Note Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            informationAllUsers[counter].numberAttempt = 0;
+                            GLabelWariningLastAttemptAccount.Text = "";
                         }
 
                     }
+                    //Flag to username becouse the reset the password to entery defferant password to check
+                    isFoundUsername = true; 
                 }
                 
             }
 
+            //Save All Change after to check in the file 
             SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
-
+            //Login Faild in the account 
             return false; 
         }
      
@@ -199,18 +219,37 @@ namespace Sparkle
        
         private void ButtonLoginTheSparkle_Click(object sender, EventArgs e)
         {
-            string username = GTextBoxUsernameLogin.Text;
-            string password = GTextBoxPasswordLogin.Text;
 
-            if (areFoundUsernameAndPassword(username, password))
-                MessageBox.Show("Login Sccessfully Sparkle", "Note Login");
-        
-       
+            string username = GTextBoxUsernameLogin.Text.Trim();
+            string password = GTextBoxPasswordLogin.Text.Trim();
 
-            GTextBoxUsernameLogin.Clear();
-            GTextBoxPasswordLogin.Clear();
+            bool isFoundUsername = false; 
 
-            GTextBoxUsernameLogin.Focus(); 
+            if (areFoundUsernameAndPassword(username, password , ref isFoundUsername))
+                MessageBox.Show("Login Sccessfully Sparkle", "Note Login" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+
+
+            if (isFoundUsername)
+            {
+                GTextBoxPasswordLogin.Clear();
+                GTextBoxPasswordLogin.Focus();
+            }
+            else
+            {
+                GTextBoxUsernameLogin.Clear();
+                GTextBoxPasswordLogin.Clear();
+                GTextBoxUsernameLogin.Focus();
+            }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPanelShadowLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

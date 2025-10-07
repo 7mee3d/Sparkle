@@ -109,6 +109,7 @@
     <None Include="Resources\enter.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Finial Edit the background image Login Screen.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
