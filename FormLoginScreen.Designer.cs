@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginScreen));
             this.GBorderLessFormRaduis = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.MainPanelShadowLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ButtonLoginTheSparkle = new Guna.UI2.WinForms.Guna2Button();
             this.GTextBoxPasswordLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxUsernameLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelLoginWord = new System.Windows.Forms.Label();
-            this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.MainPanelShadowLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,17 @@
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
             this.MainPanelShadowLogin.TabIndex = 0;
             this.MainPanelShadowLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelShadowLogin_Paint);
+            // 
+            // GLabelWariningLastAttemptAccount
+            // 
+            this.GLabelWariningLastAttemptAccount.BackColor = System.Drawing.Color.Transparent;
+            this.GLabelWariningLastAttemptAccount.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GLabelWariningLastAttemptAccount.ForeColor = System.Drawing.Color.Red;
+            this.GLabelWariningLastAttemptAccount.Location = new System.Drawing.Point(107, 423);
+            this.GLabelWariningLastAttemptAccount.Name = "GLabelWariningLastAttemptAccount";
+            this.GLabelWariningLastAttemptAccount.Size = new System.Drawing.Size(3, 2);
+            this.GLabelWariningLastAttemptAccount.TabIndex = 3;
+            this.GLabelWariningLastAttemptAccount.Text = null;
             // 
             // ButtonLoginTheSparkle
             // 
@@ -116,6 +127,7 @@
             this.GTextBoxPasswordLogin.IconLeftSize = new System.Drawing.Size(25, 25);
             this.GTextBoxPasswordLogin.Location = new System.Drawing.Point(107, 369);
             this.GTextBoxPasswordLogin.Name = "GTextBoxPasswordLogin";
+            this.GTextBoxPasswordLogin.PasswordChar = '*';
             this.GTextBoxPasswordLogin.PlaceholderText = "Password";
             this.GTextBoxPasswordLogin.SelectedText = "";
             this.GTextBoxPasswordLogin.Size = new System.Drawing.Size(322, 45);
@@ -158,16 +170,6 @@
             this.labelLoginWord.Size = new System.Drawing.Size(240, 90);
             this.labelLoginWord.TabIndex = 0;
             this.labelLoginWord.Text = "Log in";
-            // 
-            // GLabelWariningLastAttemptAccount
-            // 
-            this.GLabelWariningLastAttemptAccount.BackColor = System.Drawing.Color.Transparent;
-            this.GLabelWariningLastAttemptAccount.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GLabelWariningLastAttemptAccount.ForeColor = System.Drawing.Color.Red;
-            this.GLabelWariningLastAttemptAccount.Location = new System.Drawing.Point(107, 423);
-            this.GLabelWariningLastAttemptAccount.Name = "GLabelWariningLastAttemptAccount";
-            this.GLabelWariningLastAttemptAccount.Size = new System.Drawing.Size(3, 2);
-            this.GLabelWariningLastAttemptAccount.TabIndex = 3;
             // 
             // FormLoginScreen
             // 
