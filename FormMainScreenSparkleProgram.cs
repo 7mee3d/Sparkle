@@ -17,14 +17,16 @@ namespace Sparkle
             InitializeComponent();
         }
 
-        private void FormMainScreenSparkleProgram_Load(object sender, EventArgs e)
+
+        private void guna2Button6_Click(object sender, EventArgs e)
         {
+            Application.Exit();
 
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+
         }
     }
 }
