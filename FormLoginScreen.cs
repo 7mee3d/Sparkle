@@ -21,7 +21,7 @@ namespace Sparkle
 
         const string kPATH_FILE = "UsersInformation.txt";
 
-        struct stInformationUser
+        class stInformationUser
         {
             
            public string stUsername;
@@ -48,12 +48,13 @@ namespace Sparkle
 
             string lineInformationOneUser = "";
 
-            while ((lineInformationOneUser = ReadInformationAllUsers.ReadLine().ToString()) != null)
+            while ((lineInformationOneUser = ReadInformationAllUsers.ReadLine()) != null)
             {
                 informationUserLine.Add(lineInformationOneUser);
                     
                 }
 
+            ReadInformationAllUsers.Close(); 
             return informationUserLine; 
 
         }
@@ -159,12 +160,37 @@ namespace Sparkle
 
             List<stInformationUser> informationAllUsers = storeInformationAllUserst();
 
-            foreach (stInformationUser infoUser in informationAllUsers)
+            for (int counter = 0; counter <  informationAllUsers.Count; counter++)
             {
-                if (areEqualSideStringCompare(infoUser.stUsername, username) &&
-                    areEqualSideStringCompare(infoUser.stPassword, password)
-                    ) return true; 
+                if (areEqualSideStringCompare(informationAllUsers[counter].stUsername, username))
+                {
+                    if(areEqualSideStringCompare(informationAllUsers[counter].stPassword, password))
+                    {
+                        if(informationAllUsers[counter].numberAttempt > 0)
+                        {
+                            informationAllUsers[counter].numberAttempt = 3;
+                            SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
+                            return true; 
+                        }
+                    }else
+                    {
+
+                        if(informationAllUsers[counter].numberAttempt >= 1)
+                        {
+                            informationAllUsers[counter].numberAttempt--;
+
+                        }else
+                        {
+                            MessageBox.Show("Lock Login");
+
+                        }
+
+                    }
+                }
+                
             }
+
+            SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
 
             return false; 
         }
@@ -178,8 +204,8 @@ namespace Sparkle
 
             if (areFoundUsernameAndPassword(username, password))
                 MessageBox.Show("Login Sccessfully Sparkle", "Note Login");
-            else
-                MessageBox.Show("Faild Login Sccessfully Sparkle", "Note Login");
+        
+       
 
             GTextBoxUsernameLogin.Clear();
             GTextBoxPasswordLogin.Clear();
