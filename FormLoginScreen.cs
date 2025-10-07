@@ -223,11 +223,13 @@ namespace Sparkle
             string username = GTextBoxUsernameLogin.Text.Trim();
             string password = GTextBoxPasswordLogin.Text.Trim();
 
-            bool isFoundUsername = false; 
+            bool isFoundUsername = false;
 
-            if (areFoundUsernameAndPassword(username, password , ref isFoundUsername))
-                MessageBox.Show("Login Sccessfully Sparkle", "Note Login" , MessageBoxButtons.OK , MessageBoxIcon.Information);
-
+            if (areFoundUsernameAndPassword(username, password, ref isFoundUsername)) {
+                FormMainScreenSparkleProgram FrmSparkleMainScreen = new FormMainScreenSparkleProgram() ;
+                this.Hide();
+                FrmSparkleMainScreen.Show(); 
+                    }
 
             if (isFoundUsername)
             {

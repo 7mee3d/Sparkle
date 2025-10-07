@@ -93,6 +93,16 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Sparkle {
+            get {
+                object obj = ResourceManager.GetObject("Logo Sparkle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Main_Background_Image_Sparkle {
             get {
                 object obj = ResourceManager.GetObject("Main Background Image Sparkle", resourceCulture);
