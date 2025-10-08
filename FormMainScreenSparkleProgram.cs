@@ -50,5 +50,11 @@ namespace Sparkle
             UserControlClients UCC = new UserControlClients();
             addUserControlInThePaenl(UCC);
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            UserControlClientsList UCCL = new UserControlClientsList();
+            addUserControlInThePaenl(UCCL);
+        }
     }
 }
