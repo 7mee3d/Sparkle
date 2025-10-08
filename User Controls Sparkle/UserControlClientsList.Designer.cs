@@ -143,6 +143,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlClientsList";
             this.Size = new System.Drawing.Size(1195, 809);
+            this.Load += new System.EventHandler(this.UserControlClientsList_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
