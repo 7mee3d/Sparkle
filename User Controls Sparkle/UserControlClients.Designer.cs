@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelFillInformationClients = new Guna.UI2.WinForms.Guna2Panel();
+            this.ButtonAddNewClient = new Guna.UI2.WinForms.Guna2Button();
+            this.GTextBoxPhoneClient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.GTextBoxIDClient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GTextBoxNameClient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GTextBoxEmailClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxAddressClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.GTextBoxPhoneClient = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.GTextBoxEmailClient = new Guna.UI2.WinForms.Guna2TextBox();
-            this.GTextBoxNameClient = new Guna.UI2.WinForms.Guna2TextBox();
-            this.GTextBoxIDClient = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ButtonAddNewClient = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            this.PanelFillInformationClients.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel4.SuspendLayout();
-            this.guna2GradientPanel5.SuspendLayout();
-            this.guna2GradientPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelFillInformationClients.SuspendLayout();
+            this.guna2GradientPanel3.SuspendLayout();
+            this.guna2GradientPanel6.SuspendLayout();
+            this.guna2GradientPanel5.SuspendLayout();
+            this.guna2GradientPanel4.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -70,6 +70,17 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(409, 74);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -100,6 +111,208 @@
             this.PanelFillInformationClients.Name = "PanelFillInformationClients";
             this.PanelFillInformationClients.Size = new System.Drawing.Size(547, 651);
             this.PanelFillInformationClients.TabIndex = 2;
+            // 
+            // ButtonAddNewClient
+            // 
+            this.ButtonAddNewClient.Animated = true;
+            this.ButtonAddNewClient.AnimatedGIF = true;
+            this.ButtonAddNewClient.BorderRadius = 15;
+            this.ButtonAddNewClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonAddNewClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonAddNewClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.ButtonAddNewClient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewClient.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ButtonAddNewClient.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddNewClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewClient.HoverState.Image = global::Sparkle.Properties.Resources.add_Client;
+            this.ButtonAddNewClient.Image = global::Sparkle.Properties.Resources.add_Client_Black;
+            this.ButtonAddNewClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ButtonAddNewClient.ImageOffset = new System.Drawing.Point(55, 0);
+            this.ButtonAddNewClient.Location = new System.Drawing.Point(121, 539);
+            this.ButtonAddNewClient.Name = "ButtonAddNewClient";
+            this.ButtonAddNewClient.Size = new System.Drawing.Size(303, 55);
+            this.ButtonAddNewClient.TabIndex = 3;
+            this.ButtonAddNewClient.Text = "Add Client";
+            this.ButtonAddNewClient.Click += new System.EventHandler(this.ButtonAddNewClient_Click);
+            // 
+            // GTextBoxPhoneClient
+            // 
+            this.GTextBoxPhoneClient.Animated = true;
+            this.GTextBoxPhoneClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxPhoneClient.BorderRadius = 10;
+            this.GTextBoxPhoneClient.BorderThickness = 2;
+            this.GTextBoxPhoneClient.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxPhoneClient.DefaultText = "";
+            this.GTextBoxPhoneClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxPhoneClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxPhoneClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxPhoneClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxPhoneClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxPhoneClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GTextBoxPhoneClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxPhoneClient.Location = new System.Drawing.Point(194, 190);
+            this.GTextBoxPhoneClient.Name = "GTextBoxPhoneClient";
+            this.GTextBoxPhoneClient.PlaceholderText = "Enter Here Phone Client";
+            this.GTextBoxPhoneClient.SelectedText = "";
+            this.GTextBoxPhoneClient.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxPhoneClient.TabIndex = 2;
+            // 
+            // guna2GradientPanel3
+            // 
+            this.guna2GradientPanel3.BorderRadius = 15;
+            this.guna2GradientPanel3.Controls.Add(this.label3);
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(32, 190);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel3.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 27);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Phone";
+            // 
+            // guna2GradientPanel6
+            // 
+            this.guna2GradientPanel6.BorderRadius = 15;
+            this.guna2GradientPanel6.Controls.Add(this.label6);
+            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(32, 421);
+            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel6.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(16, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 27);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "ID";
+            // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.BorderRadius = 15;
+            this.guna2GradientPanel5.Controls.Add(this.label5);
+            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(32, 344);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(11, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 27);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Name";
+            // 
+            // guna2GradientPanel4
+            // 
+            this.guna2GradientPanel4.BorderRadius = 15;
+            this.guna2GradientPanel4.Controls.Add(this.label4);
+            this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(32, 267);
+            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel4.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(11, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 27);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Email";
+            // 
+            // GTextBoxIDClient
+            // 
+            this.GTextBoxIDClient.Animated = true;
+            this.GTextBoxIDClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxIDClient.BorderRadius = 10;
+            this.GTextBoxIDClient.BorderThickness = 2;
+            this.GTextBoxIDClient.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxIDClient.DefaultText = "";
+            this.GTextBoxIDClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxIDClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxIDClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxIDClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxIDClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxIDClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxIDClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxIDClient.Location = new System.Drawing.Point(194, 421);
+            this.GTextBoxIDClient.Name = "GTextBoxIDClient";
+            this.GTextBoxIDClient.PlaceholderText = "Enter Here ID Client";
+            this.GTextBoxIDClient.SelectedText = "";
+            this.GTextBoxIDClient.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxIDClient.TabIndex = 2;
+            // 
+            // GTextBoxNameClient
+            // 
+            this.GTextBoxNameClient.Animated = true;
+            this.GTextBoxNameClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxNameClient.BorderRadius = 10;
+            this.GTextBoxNameClient.BorderThickness = 2;
+            this.GTextBoxNameClient.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxNameClient.DefaultText = "";
+            this.GTextBoxNameClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxNameClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxNameClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNameClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNameClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNameClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxNameClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNameClient.Location = new System.Drawing.Point(194, 344);
+            this.GTextBoxNameClient.Name = "GTextBoxNameClient";
+            this.GTextBoxNameClient.PlaceholderText = "Enter Here Name Client";
+            this.GTextBoxNameClient.SelectedText = "";
+            this.GTextBoxNameClient.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxNameClient.TabIndex = 2;
+            // 
+            // GTextBoxEmailClient
+            // 
+            this.GTextBoxEmailClient.Animated = true;
+            this.GTextBoxEmailClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxEmailClient.BorderRadius = 10;
+            this.GTextBoxEmailClient.BorderThickness = 2;
+            this.GTextBoxEmailClient.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxEmailClient.DefaultText = "";
+            this.GTextBoxEmailClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxEmailClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxEmailClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxEmailClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxEmailClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxEmailClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxEmailClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxEmailClient.Location = new System.Drawing.Point(194, 267);
+            this.GTextBoxEmailClient.Name = "GTextBoxEmailClient";
+            this.GTextBoxEmailClient.PlaceholderText = "Enter Here Email Client";
+            this.GTextBoxEmailClient.SelectedText = "";
+            this.GTextBoxEmailClient.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxEmailClient.TabIndex = 2;
             // 
             // GTextBoxAddressClient
             // 
@@ -145,207 +358,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Address";
             // 
-            // guna2GradientPanel3
-            // 
-            this.guna2GradientPanel3.BorderRadius = 15;
-            this.guna2GradientPanel3.Controls.Add(this.label3);
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(32, 190);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel3.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 27);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Phone";
-            // 
-            // GTextBoxPhoneClient
-            // 
-            this.GTextBoxPhoneClient.Animated = true;
-            this.GTextBoxPhoneClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxPhoneClient.BorderRadius = 10;
-            this.GTextBoxPhoneClient.BorderThickness = 2;
-            this.GTextBoxPhoneClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxPhoneClient.DefaultText = "";
-            this.GTextBoxPhoneClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxPhoneClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxPhoneClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxPhoneClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxPhoneClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GTextBoxPhoneClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClient.Location = new System.Drawing.Point(194, 190);
-            this.GTextBoxPhoneClient.Name = "GTextBoxPhoneClient";
-            this.GTextBoxPhoneClient.PlaceholderText = "Enter Here Phone Client";
-            this.GTextBoxPhoneClient.SelectedText = "";
-            this.GTextBoxPhoneClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxPhoneClient.TabIndex = 2;
-            // 
-            // guna2GradientPanel4
-            // 
-            this.guna2GradientPanel4.BorderRadius = 15;
-            this.guna2GradientPanel4.Controls.Add(this.label4);
-            this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(32, 267);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel4.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(11, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 27);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Email";
-            // 
-            // guna2GradientPanel5
-            // 
-            this.guna2GradientPanel5.BorderRadius = 15;
-            this.guna2GradientPanel5.Controls.Add(this.label5);
-            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(32, 344);
-            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel5.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 27);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Name";
-            // 
-            // guna2GradientPanel6
-            // 
-            this.guna2GradientPanel6.BorderRadius = 15;
-            this.guna2GradientPanel6.Controls.Add(this.label6);
-            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(32, 421);
-            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
-            this.guna2GradientPanel6.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel6.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(16, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 27);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "ID";
-            // 
-            // GTextBoxEmailClient
-            // 
-            this.GTextBoxEmailClient.Animated = true;
-            this.GTextBoxEmailClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxEmailClient.BorderRadius = 10;
-            this.GTextBoxEmailClient.BorderThickness = 2;
-            this.GTextBoxEmailClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxEmailClient.DefaultText = "";
-            this.GTextBoxEmailClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxEmailClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxEmailClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxEmailClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxEmailClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxEmailClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxEmailClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxEmailClient.Location = new System.Drawing.Point(194, 267);
-            this.GTextBoxEmailClient.Name = "GTextBoxEmailClient";
-            this.GTextBoxEmailClient.PlaceholderText = "Enter Here Email Client";
-            this.GTextBoxEmailClient.SelectedText = "";
-            this.GTextBoxEmailClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxEmailClient.TabIndex = 2;
-            // 
-            // GTextBoxNameClient
-            // 
-            this.GTextBoxNameClient.Animated = true;
-            this.GTextBoxNameClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxNameClient.BorderRadius = 10;
-            this.GTextBoxNameClient.BorderThickness = 2;
-            this.GTextBoxNameClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxNameClient.DefaultText = "";
-            this.GTextBoxNameClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxNameClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxNameClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxNameClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxNameClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxNameClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxNameClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxNameClient.Location = new System.Drawing.Point(194, 344);
-            this.GTextBoxNameClient.Name = "GTextBoxNameClient";
-            this.GTextBoxNameClient.PlaceholderText = "Enter Here Name Client";
-            this.GTextBoxNameClient.SelectedText = "";
-            this.GTextBoxNameClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxNameClient.TabIndex = 2;
-            // 
-            // GTextBoxIDClient
-            // 
-            this.GTextBoxIDClient.Animated = true;
-            this.GTextBoxIDClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxIDClient.BorderRadius = 10;
-            this.GTextBoxIDClient.BorderThickness = 2;
-            this.GTextBoxIDClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxIDClient.DefaultText = "";
-            this.GTextBoxIDClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxIDClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxIDClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxIDClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxIDClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxIDClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxIDClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxIDClient.Location = new System.Drawing.Point(194, 421);
-            this.GTextBoxIDClient.Name = "GTextBoxIDClient";
-            this.GTextBoxIDClient.PlaceholderText = "Enter Here ID Client";
-            this.GTextBoxIDClient.SelectedText = "";
-            this.GTextBoxIDClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxIDClient.TabIndex = 2;
-            // 
-            // ButtonAddNewClient
-            // 
-            this.ButtonAddNewClient.Animated = true;
-            this.ButtonAddNewClient.AnimatedGIF = true;
-            this.ButtonAddNewClient.BorderRadius = 15;
-            this.ButtonAddNewClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ButtonAddNewClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ButtonAddNewClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.ButtonAddNewClient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewClient.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ButtonAddNewClient.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddNewClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewClient.HoverState.Image = global::Sparkle.Properties.Resources.add_Client;
-            this.ButtonAddNewClient.Image = global::Sparkle.Properties.Resources.add_Client_Black;
-            this.ButtonAddNewClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonAddNewClient.ImageOffset = new System.Drawing.Point(55, 0);
-            this.ButtonAddNewClient.Location = new System.Drawing.Point(121, 539);
-            this.ButtonAddNewClient.Name = "ButtonAddNewClient";
-            this.ButtonAddNewClient.Size = new System.Drawing.Size(303, 55);
-            this.ButtonAddNewClient.TabIndex = 3;
-            this.ButtonAddNewClient.Text = "Add Client";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -356,17 +368,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(640, 874);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // UserControlClients
             // 
@@ -380,19 +381,19 @@
             this.Size = new System.Drawing.Size(1195, 809);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelFillInformationClients.ResumeLayout(false);
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
-            this.guna2GradientPanel4.ResumeLayout(false);
-            this.guna2GradientPanel4.PerformLayout();
-            this.guna2GradientPanel5.ResumeLayout(false);
-            this.guna2GradientPanel5.PerformLayout();
             this.guna2GradientPanel6.ResumeLayout(false);
             this.guna2GradientPanel6.PerformLayout();
+            this.guna2GradientPanel5.ResumeLayout(false);
+            this.guna2GradientPanel5.PerformLayout();
+            this.guna2GradientPanel4.ResumeLayout(false);
+            this.guna2GradientPanel4.PerformLayout();
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
