@@ -100,7 +100,7 @@
             this.ColumnAddress,
             this.ColumnEmail,
             this.ColumnPhone});
-            this.ListViewClientsLists.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListViewClientsLists.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewClientsLists.FullRowSelect = true;
             this.ListViewClientsLists.GridLines = true;
             this.ListViewClientsLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -142,7 +142,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByID);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 171);
+            this.guna2Panel1.Location = new System.Drawing.Point(713, 158);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(458, 92);
             this.guna2Panel1.TabIndex = 3;
@@ -191,6 +191,7 @@
             this.GTextBoxSearch.SelectedText = "";
             this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearch.TabIndex = 0;
+            this.GTextBoxSearch.TextChanged += new System.EventHandler(this.GTextBoxSearch_TextChanged);
             // 
             // UserControlClientsList
             // 

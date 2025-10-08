@@ -63,7 +63,6 @@
             this.MainPanelShadowLogin.ShadowDepth = 50;
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
             this.MainPanelShadowLogin.TabIndex = 0;
-            this.MainPanelShadowLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanelShadowLogin_Paint);
             // 
             // GLabelWariningLastAttemptAccount
             // 

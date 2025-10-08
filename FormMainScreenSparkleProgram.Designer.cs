@@ -32,23 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainScreenSparkleProgram));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.GButtonClientListSection = new Guna.UI2.WinForms.Guna2Button();
+            this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2Button5);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button4);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button3);
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
+            this.guna2GradientPanel1.Controls.Add(this.GButtonClientListSection);
             this.guna2GradientPanel1.Controls.Add(this.ButtonClients);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
@@ -76,6 +76,36 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(222, 801);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.Animated = true;
+            this.guna2Button6.AnimatedGIF = true;
+            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.BorderRadius = 3;
+            this.guna2Button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2Button6.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.HoverState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2Button6.Image = global::Sparkle.Properties.Resources.close;
+            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button6.ImageOffset = new System.Drawing.Point(25, 0);
+            this.guna2Button6.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2Button6.Location = new System.Drawing.Point(0, 710);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.PressedColor = System.Drawing.Color.White;
+            this.guna2Button6.Size = new System.Drawing.Size(222, 57);
+            this.guna2Button6.TabIndex = 1;
+            this.guna2Button6.Text = "Exit";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button5
             // 
@@ -95,7 +125,7 @@
             this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button5.Location = new System.Drawing.Point(0, 540);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 599);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.White;
             this.guna2Button5.Size = new System.Drawing.Size(222, 57);
@@ -120,7 +150,7 @@
             this.guna2Button4.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button4.Location = new System.Drawing.Point(0, 470);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 529);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.White;
             this.guna2Button4.Size = new System.Drawing.Size(222, 57);
@@ -145,12 +175,74 @@
             this.guna2Button3.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button3.Location = new System.Drawing.Point(0, 400);
+            this.guna2Button3.Image = global::Sparkle.Properties.Resources.user_Image_;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.ImageOffset = new System.Drawing.Point(25, 0);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 459);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.White;
             this.guna2Button3.Size = new System.Drawing.Size(222, 57);
             this.guna2Button3.TabIndex = 1;
-            this.guna2Button3.Text = "Test1";
+            this.guna2Button3.Text = "Users";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // GButtonClientListSection
+            // 
+            this.GButtonClientListSection.Animated = true;
+            this.GButtonClientListSection.AnimatedGIF = true;
+            this.GButtonClientListSection.BackColor = System.Drawing.Color.Transparent;
+            this.GButtonClientListSection.BorderRadius = 3;
+            this.GButtonClientListSection.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GButtonClientListSection.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.GButtonClientListSection.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonClientListSection.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonClientListSection.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonClientListSection.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonClientListSection.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonClientListSection.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GButtonClientListSection.ForeColor = System.Drawing.Color.White;
+            this.GButtonClientListSection.HoverState.BorderColor = System.Drawing.Color.White;
+            this.GButtonClientListSection.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.GButtonClientListSection.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonClientListSection.Image = global::Sparkle.Properties.Resources.List_Clients;
+            this.GButtonClientListSection.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GButtonClientListSection.ImageOffset = new System.Drawing.Point(25, 0);
+            this.GButtonClientListSection.Location = new System.Drawing.Point(0, 329);
+            this.GButtonClientListSection.Name = "GButtonClientListSection";
+            this.GButtonClientListSection.PressedColor = System.Drawing.Color.White;
+            this.GButtonClientListSection.Size = new System.Drawing.Size(222, 57);
+            this.GButtonClientListSection.TabIndex = 1;
+            this.GButtonClientListSection.Text = "Clients List";
+            this.GButtonClientListSection.Click += new System.EventHandler(this.GButtonClientListSection_Click);
+            // 
+            // ButtonClients
+            // 
+            this.ButtonClients.Animated = true;
+            this.ButtonClients.AnimatedGIF = true;
+            this.ButtonClients.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonClients.BorderRadius = 3;
+            this.ButtonClients.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonClients.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.ButtonClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonClients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.ButtonClients.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonClients.ForeColor = System.Drawing.Color.White;
+            this.ButtonClients.HoverState.BorderColor = System.Drawing.Color.White;
+            this.ButtonClients.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.ButtonClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.ButtonClients.Image = global::Sparkle.Properties.Resources.One_client_;
+            this.ButtonClients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ButtonClients.ImageOffset = new System.Drawing.Point(25, 0);
+            this.ButtonClients.Location = new System.Drawing.Point(0, 260);
+            this.ButtonClients.Name = "ButtonClients";
+            this.ButtonClients.PressedColor = System.Drawing.Color.White;
+            this.ButtonClients.Size = new System.Drawing.Size(222, 57);
+            this.ButtonClients.TabIndex = 1;
+            this.ButtonClients.Text = "Clients";
+            this.ButtonClients.Click += new System.EventHandler(this.ButtonClients_Click);
             // 
             // label1
             // 
@@ -163,6 +255,18 @@
             this.label1.Size = new System.Drawing.Size(175, 54);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sparkle";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.Logo_Sparkle;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 70);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(51, 56);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -222,107 +326,6 @@
             this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
     " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
             // 
-            // guna2Button6
-            // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.AnimatedGIF = true;
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderRadius = 3;
-            this.guna2Button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button6.Image = global::Sparkle.Properties.Resources.close;
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 678);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.PressedColor = System.Drawing.Color.White;
-            this.guna2Button6.Size = new System.Drawing.Size(222, 57);
-            this.guna2Button6.TabIndex = 1;
-            this.guna2Button6.Text = "Exit";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AnimatedGIF = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 3;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button2.Image = global::Sparkle.Properties.Resources.List_Clients;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(25, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 330);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.White;
-            this.guna2Button2.Size = new System.Drawing.Size(222, 57);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Clients List";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // ButtonClients
-            // 
-            this.ButtonClients.Animated = true;
-            this.ButtonClients.AnimatedGIF = true;
-            this.ButtonClients.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonClients.BorderRadius = 3;
-            this.ButtonClients.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonClients.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.ButtonClients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonClients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonClients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ButtonClients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ButtonClients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.ButtonClients.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonClients.ForeColor = System.Drawing.Color.White;
-            this.ButtonClients.HoverState.BorderColor = System.Drawing.Color.White;
-            this.ButtonClients.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.ButtonClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.ButtonClients.Image = global::Sparkle.Properties.Resources.One_client_;
-            this.ButtonClients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonClients.ImageOffset = new System.Drawing.Point(25, 0);
-            this.ButtonClients.Location = new System.Drawing.Point(0, 260);
-            this.ButtonClients.Name = "ButtonClients";
-            this.ButtonClients.PressedColor = System.Drawing.Color.White;
-            this.ButtonClients.Size = new System.Drawing.Size(222, 57);
-            this.ButtonClients.TabIndex = 1;
-            this.ButtonClients.Text = "Clients";
-            this.ButtonClients.Click += new System.EventHandler(this.ButtonClients_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.Logo_Sparkle;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 70);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(51, 56);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -336,7 +339,6 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // FormMainScreenSparkleProgram
             // 
@@ -353,9 +355,9 @@
             this.Text = "FormMainScreenSparkleProgram";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PanelMainWelcomeSparkle.ResumeLayout(false);
             this.PanelMainWelcomeSparkle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -372,7 +374,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button GButtonClientListSection;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel PanelMainWelcomeSparkle;

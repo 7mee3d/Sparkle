@@ -81,6 +81,12 @@
     <Compile Include="User Controls Sparkle\UserControlClientsList.Designer.cs">
       <DependentUpon>UserControlClientsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls Sparkle\UserControlUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Sparkle\UserControlUsers.Designer.cs">
+      <DependentUpon>UserControlUsers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLoginScreen.resx">
       <DependentUpon>FormLoginScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControlClientsList.resx">
       <DependentUpon>UserControlClientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Sparkle\UserControlUsers.resx">
+      <DependentUpon>UserControlUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -146,6 +155,8 @@
     <None Include="Resources\One client .png" />
     <None Include="Resources\List Clients.png" />
     <None Include="Resources\Search.png" />
+    <None Include="Resources\user Image .png" />
+    <None Include="Resources\Background Sparkle Users.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -244,14 +244,6 @@ namespace Sparkle
             }
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainPanelShadowLogin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+    
     }
 }

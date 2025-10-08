@@ -35,23 +35,19 @@ namespace Sparkle
 
         }
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonClients_Click(object sender, EventArgs e)
         {
             UserControlClients UCC = new UserControlClients();
             addUserControlInThePaenl(UCC);
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            UserControlUsers UCU = new UserControlUsers();
+            addUserControlInThePaenl(UCU);
+        }
+
+        private void GButtonClientListSection_Click(object sender, EventArgs e)
         {
             UserControlClientsList UCCL = new UserControlClientsList();
             addUserControlInThePaenl(UCCL);

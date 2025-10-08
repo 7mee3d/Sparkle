@@ -152,7 +152,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void isExsitsIDInTheList(string ID )
+        private bool isExsitsIDInTheList(string ID )
         {
             List<stInformationOneClient> informationAllClientStucture = SaveAllInformationClientToListStructure();
 
@@ -168,7 +168,7 @@ namespace Sparkle.User_Controls_Sparkle
                     ListViewClientsLists.Items[counter].ForeColor = Color.Black;
 
                 }
-                    return; 
+                return true; 
             }
 
             for (int counter = 0; counter < ListViewClientsLists.Items.Count; counter++)
@@ -180,7 +180,12 @@ namespace Sparkle.User_Controls_Sparkle
                 {
                     ListViewClientsLists.Items[counter].BackColor = Color.Yellow;   
                     ListViewClientsLists.Items[counter].ForeColor = Color.Black;
-                    break;
+
+                    //This Statments Focuse the Line Client Information and move to 
+                    ListViewClientsLists.Items[counter].Focused = true;
+                    ListViewClientsLists.Items[counter].EnsureVisible();
+                    //ListViewClientsLists.Items[counter].Selected = true;
+                    return true; 
                 }
             }
             /*
@@ -192,11 +197,13 @@ namespace Sparkle.User_Controls_Sparkle
             return false; */
             GTextBoxSearch.Clear();
             GTextBoxSearch.Focus();
+
+            return false; 
         }
 
         private void UserControlClientsList_Load(object sender, EventArgs e)
         {
-            string ID = GTextBoxSearch.Text;
+          
             pushAllInformationClientsToListView();
         }
 
@@ -209,7 +216,16 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string ID = GTextBoxSearch.Text;
 
-            isExsitsIDInTheList(ID);
+            if (!isExsitsIDInTheList(ID))
+            {
+                MessageBox.Show($"This ID {ID} Not Found Go to the Section Client add this ID in the DB", "Note The Clients List ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void GTextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
