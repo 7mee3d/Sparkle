@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.PanelFillInformationUsers = new Guna.UI2.WinForms.Guna2Panel();
+            this.ButtonAddNewUser = new Guna.UI2.WinForms.Guna2Button();
             this.GTextBoxPasswordUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.GTextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.UpperPanelUserLabels = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ButtonAddNewUser = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBoxUsers = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.UpperPanelUserLabels = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxUsers = new System.Windows.Forms.PictureBox();
             this.PanelFillInformationUsers.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
-            this.UpperPanelUserLabels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
+            this.UpperPanelUserLabels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFillInformationUsers
@@ -59,6 +59,33 @@
             this.PanelFillInformationUsers.Name = "PanelFillInformationUsers";
             this.PanelFillInformationUsers.Size = new System.Drawing.Size(547, 651);
             this.PanelFillInformationUsers.TabIndex = 5;
+            this.PanelFillInformationUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelFillInformationUsers_Paint);
+            // 
+            // ButtonAddNewUser
+            // 
+            this.ButtonAddNewUser.Animated = true;
+            this.ButtonAddNewUser.AnimatedGIF = true;
+            this.ButtonAddNewUser.BorderRadius = 15;
+            this.ButtonAddNewUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonAddNewUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonAddNewUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.ButtonAddNewUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewUser.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ButtonAddNewUser.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddNewUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewUser.HoverState.Image = global::Sparkle.Properties.Resources.add_Client;
+            this.ButtonAddNewUser.Image = global::Sparkle.Properties.Resources.add_Client_Black;
+            this.ButtonAddNewUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ButtonAddNewUser.ImageOffset = new System.Drawing.Point(55, 0);
+            this.ButtonAddNewUser.Location = new System.Drawing.Point(120, 479);
+            this.ButtonAddNewUser.Name = "ButtonAddNewUser";
+            this.ButtonAddNewUser.Size = new System.Drawing.Size(303, 55);
+            this.ButtonAddNewUser.TabIndex = 3;
+            this.ButtonAddNewUser.Text = "Add User";
+            this.ButtonAddNewUser.Click += new System.EventHandler(this.ButtonAddNewUser_Click);
             // 
             // GTextBoxPasswordUser
             // 
@@ -127,6 +154,29 @@
             this.GTextBoxUsername.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxUsername.TabIndex = 0;
             this.GTextBoxUsername.Tag = "TAddress";
+            this.GTextBoxUsername.TextChanged += new System.EventHandler(this.GTextBoxUsername_TextChanged);
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.BorderRadius = 15;
+            this.guna2GradientPanel2.Controls.Add(this.label2);
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(16, 219);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(10, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Username";
             // 
             // UpperPanelUserLabels
             // 
@@ -138,54 +188,6 @@
             this.UpperPanelUserLabels.Name = "UpperPanelUserLabels";
             this.UpperPanelUserLabels.Size = new System.Drawing.Size(409, 74);
             this.UpperPanelUserLabels.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add User";
-            // 
-            // ButtonAddNewUser
-            // 
-            this.ButtonAddNewUser.Animated = true;
-            this.ButtonAddNewUser.AnimatedGIF = true;
-            this.ButtonAddNewUser.BorderRadius = 15;
-            this.ButtonAddNewUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ButtonAddNewUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ButtonAddNewUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.ButtonAddNewUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewUser.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ButtonAddNewUser.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddNewUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewUser.HoverState.Image = global::Sparkle.Properties.Resources.add_Client;
-            this.ButtonAddNewUser.Image = global::Sparkle.Properties.Resources.add_Client_Black;
-            this.ButtonAddNewUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonAddNewUser.ImageOffset = new System.Drawing.Point(55, 0);
-            this.ButtonAddNewUser.Location = new System.Drawing.Point(120, 479);
-            this.ButtonAddNewUser.Name = "ButtonAddNewUser";
-            this.ButtonAddNewUser.Size = new System.Drawing.Size(303, 55);
-            this.ButtonAddNewUser.TabIndex = 3;
-            this.ButtonAddNewUser.Text = "Add User";
-            // 
-            // pictureBoxUsers
-            // 
-            this.pictureBoxUsers.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxUsers.BackgroundImage = global::Sparkle.Properties.Resources.Background_Sparkle_Users;
-            this.pictureBoxUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxUsers.Location = new System.Drawing.Point(481, 0);
-            this.pictureBoxUsers.Name = "pictureBoxUsers";
-            this.pictureBoxUsers.Size = new System.Drawing.Size(759, 918);
-            this.pictureBoxUsers.TabIndex = 4;
-            this.pictureBoxUsers.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -200,27 +202,28 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Add User";
             // 
-            // guna2GradientPanel2
+            // pictureBoxUsers
             // 
-            this.guna2GradientPanel2.BorderRadius = 15;
-            this.guna2GradientPanel2.Controls.Add(this.label2);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(16, 219);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel2.TabIndex = 1;
+            this.pictureBoxUsers.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxUsers.BackgroundImage = global::Sparkle.Properties.Resources.Background_Sparkle_Users;
+            this.pictureBoxUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxUsers.Location = new System.Drawing.Point(481, 0);
+            this.pictureBoxUsers.Name = "pictureBoxUsers";
+            this.pictureBoxUsers.Size = new System.Drawing.Size(759, 918);
+            this.pictureBoxUsers.TabIndex = 4;
+            this.pictureBoxUsers.TabStop = false;
             // 
             // UserControlUsers
             // 
@@ -232,15 +235,16 @@
             this.Controls.Add(this.UpperPanelUserLabels);
             this.Name = "UserControlUsers";
             this.Size = new System.Drawing.Size(1195, 809);
+            this.Load += new System.EventHandler(this.UserControlUsers_Load);
             this.PanelFillInformationUsers.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
-            this.UpperPanelUserLabels.ResumeLayout(false);
-            this.UpperPanelUserLabels.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            this.UpperPanelUserLabels.ResumeLayout(false);
+            this.UpperPanelUserLabels.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).EndInit();
             this.ResumeLayout(false);
 
         }
