@@ -173,6 +173,7 @@
             // 
             // FormLoginScreen
             // 
+            this.AcceptButton = this.ButtonLoginTheSparkle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sparkle.Properties.Resources.Finial_Edit_the_background_image_Login_Screen;

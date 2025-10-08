@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -147,22 +148,56 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<string> LiInformationClient = new List<string>();
 
-            if (!isIDExistsInFile(GTextBoxIDClient.Text))
+            if (!String.IsNullOrEmpty(GTextBoxIDClient.Text))
             {
-                LiInformationClient.Add(GTextBoxIDClient.Text);
-                LiInformationClient.Add(GTextBoxNameClient.Text);
-                LiInformationClient.Add(GTextBoxAddressClient.Text);
-                LiInformationClient.Add(GTextBoxEmailClient.Text);
-                LiInformationClient.Add(GTextBoxPhoneClient.Text);
-                LoadLineInformationClientToFile(ConvertSeriseStringToLine(LiInformationClient, ";||;"));
-                MessageBox.Show("Done");
+                if (!isIDExistsInFile(GTextBoxIDClient.Text))
+                {
+                    LiInformationClient.Add(GTextBoxIDClient.Text);
+                    LiInformationClient.Add(GTextBoxNameClient.Text);
+                    LiInformationClient.Add(GTextBoxAddressClient.Text);
+                    LiInformationClient.Add(GTextBoxEmailClient.Text);
+                    LiInformationClient.Add(GTextBoxPhoneClient.Text);
+
+                    LoadLineInformationClientToFile(ConvertSeriseStringToLine(LiInformationClient, ";||;"));
+
+                    //Notification
+                    notifyIconAddClients.ShowBalloonTip(1500, "Sparkle Add New Client Notification", $"The Client ID [{GTextBoxIDClient.Text}] Add Sccuessfully , And you need to show list Client Click the Notification to open file Clients", ToolTipIcon.Info);
+                }
+                else
+                {
+                    
+                    MessageBox.Show("This is ID Already Exsits in the List ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+                }
             }
-            else
+
+        }
+        private void setErrorProviser(object sender, CancelEventArgs e , string captionError)
+        {
+
+            Guna2TextBox GTB = sender as Guna2TextBox;
+
+           if(string.IsNullOrEmpty(GTB.Text))
             {
-                MessageBox.Show("This is ID Already Exsits in the List ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //Error Provider must included this method
+                e.Cancel = true;
+                GTB.Focus();
+                MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-           
-        
+
+        }
+    
+        private void GTextBoxIDClient_Validating(object sender, CancelEventArgs e)
+        {
+            
+            setErrorProviser(sender, e , "ID Box");
+        }
+
+    
+
+        private void notifyIconAddClients_BalloonTipClicked(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
         }
     }
 }

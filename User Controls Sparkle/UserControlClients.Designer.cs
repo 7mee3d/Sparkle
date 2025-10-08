@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlClients));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +51,8 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorProviderFormClients = new System.Windows.Forms.ErrorProvider(this.components);
+            this.notifyIconAddClients = new System.Windows.Forms.NotifyIcon(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelFillInformationClients.SuspendLayout();
@@ -58,6 +62,7 @@
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormClients)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -158,7 +163,8 @@
             this.GTextBoxPhoneClient.PlaceholderText = "Enter Here Phone Client";
             this.GTextBoxPhoneClient.SelectedText = "";
             this.GTextBoxPhoneClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxPhoneClient.TabIndex = 2;
+            this.GTextBoxPhoneClient.TabIndex = 1;
+            this.GTextBoxPhoneClient.Tag = "TPhone";
             // 
             // guna2GradientPanel3
             // 
@@ -268,7 +274,9 @@
             this.GTextBoxIDClient.PlaceholderText = "Enter Here ID Client";
             this.GTextBoxIDClient.SelectedText = "";
             this.GTextBoxIDClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxIDClient.TabIndex = 2;
+            this.GTextBoxIDClient.TabIndex = 4;
+            this.GTextBoxIDClient.Tag = "TID";
+            this.GTextBoxIDClient.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxIDClient_Validating);
             // 
             // GTextBoxNameClient
             // 
@@ -290,7 +298,8 @@
             this.GTextBoxNameClient.PlaceholderText = "Enter Here Name Client";
             this.GTextBoxNameClient.SelectedText = "";
             this.GTextBoxNameClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxNameClient.TabIndex = 2;
+            this.GTextBoxNameClient.TabIndex = 3;
+            this.GTextBoxNameClient.Tag = "TName";
             // 
             // GTextBoxEmailClient
             // 
@@ -313,6 +322,7 @@
             this.GTextBoxEmailClient.SelectedText = "";
             this.GTextBoxEmailClient.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxEmailClient.TabIndex = 2;
+            this.GTextBoxEmailClient.Tag = "TEmail";
             // 
             // GTextBoxAddressClient
             // 
@@ -334,7 +344,8 @@
             this.GTextBoxAddressClient.PlaceholderText = "Enter Here Address Client";
             this.GTextBoxAddressClient.SelectedText = "";
             this.GTextBoxAddressClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxAddressClient.TabIndex = 2;
+            this.GTextBoxAddressClient.TabIndex = 0;
+            this.GTextBoxAddressClient.Tag = "TAddress";
             // 
             // guna2GradientPanel2
             // 
@@ -369,8 +380,22 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // errorProviderFormClients
+            // 
+            this.errorProviderFormClients.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.errorProviderFormClients.ContainerControl = this;
+            this.errorProviderFormClients.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderFormClients.Icon")));
+            // 
+            // notifyIconAddClients
+            // 
+            this.notifyIconAddClients.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconAddClients.Icon")));
+            this.notifyIconAddClients.Text = "notifyIcon1";
+            this.notifyIconAddClients.Visible = true;
+            this.notifyIconAddClients.BalloonTipClicked += new System.EventHandler(this.notifyIconAddClients_BalloonTipClicked);
+            // 
             // UserControlClients
             // 
+            this.AccessibleName = "ButtonAddNewClient";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -394,6 +419,7 @@
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormClients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,5 +447,7 @@
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxNameClient;
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxEmailClient;
         private Guna.UI2.WinForms.Guna2Button ButtonAddNewClient;
+        private System.Windows.Forms.ErrorProvider errorProviderFormClients;
+        private System.Windows.Forms.NotifyIcon notifyIconAddClients;
     }
 }
