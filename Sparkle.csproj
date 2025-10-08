@@ -145,6 +145,7 @@
     <None Include="Resources\add Client Black.png" />
     <None Include="Resources\One client .png" />
     <None Include="Resources\List Clients.png" />
+    <None Include="Resources\Search.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -128,9 +129,87 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
         
+        private void PaintTheLine( PaintEventArgs e)
+        {
+            Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
+
+            Pen pen = new Pen(WhiteGreen);
+            pen.Width = 3;
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+
+            //Points Line
+            Point p1 = new Point(0, 280);
+            Point p2 = new Point(1200, 280);
+
+            //Draw the Line
+            e.Graphics.DrawLine(pen, p1, p2);
+        }
+
+        private bool AreEqual(string textOne , string textTwo )
+        {
+            return (textOne == textTwo);
+
+        }
+
+        private void isExsitsIDInTheList(string ID )
+        {
+            List<stInformationOneClient> informationAllClientStucture = SaveAllInformationClientToListStructure();
+
+            if (AreEqual(ListViewClientsLists.Items[0].Text, ID))
+            {
+                ListViewClientsLists.Items[0].BackColor = Color.Yellow;
+                ListViewClientsLists.Items[0].ForeColor = Color.Black;
+
+                for (int counter = 0; counter < ListViewClientsLists.Items.Count; counter++)
+                {
+                    if(!AreEqual(ListViewClientsLists.Items[counter].Text, ID))
+                        ListViewClientsLists.Items[counter].BackColor = Color.White;
+                    ListViewClientsLists.Items[counter].ForeColor = Color.Black;
+
+                }
+                    return; 
+            }
+
+            for (int counter = 0; counter < ListViewClientsLists.Items.Count; counter++)
+            {
+                ListViewClientsLists.Items[counter].BackColor = Color.White;
+                ListViewClientsLists.Items[counter].ForeColor = Color.Black;
+
+                if (AreEqual (ListViewClientsLists.Items[counter].Text , ID) )
+                {
+                    ListViewClientsLists.Items[counter].BackColor = Color.Yellow;   
+                    ListViewClientsLists.Items[counter].ForeColor = Color.Black;
+                    break;
+                }
+            }
+            /*
+            foreach (stInformationOneClient infoOneClient in informationAllClientStucture)
+            {
+                if (AreEqual(infoOneClient.stIDClient, ID)) return true; 
+            }
+
+            return false; */
+            GTextBoxSearch.Clear();
+            GTextBoxSearch.Focus();
+        }
+
         private void UserControlClientsList_Load(object sender, EventArgs e)
         {
+            string ID = GTextBoxSearch.Text;
             pushAllInformationClientsToListView();
+        }
+
+        private void UserControlClientsList_Paint(object sender, PaintEventArgs e)
+        {
+            PaintTheLine(e);
+        }
+
+        private void GButtonSearchByID_Click(object sender, EventArgs e)
+        {
+            string ID = GTextBoxSearch.Text;
+
+            isExsitsIDInTheList(ID);
         }
     }
 }
