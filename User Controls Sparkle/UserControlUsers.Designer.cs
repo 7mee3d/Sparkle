@@ -59,7 +59,6 @@
             this.PanelFillInformationUsers.Name = "PanelFillInformationUsers";
             this.PanelFillInformationUsers.Size = new System.Drawing.Size(547, 651);
             this.PanelFillInformationUsers.TabIndex = 5;
-            this.PanelFillInformationUsers.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelFillInformationUsers_Paint);
             // 
             // ButtonAddNewUser
             // 
@@ -154,7 +153,6 @@
             this.GTextBoxUsername.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxUsername.TabIndex = 0;
             this.GTextBoxUsername.Tag = "TAddress";
-            this.GTextBoxUsername.TextChanged += new System.EventHandler(this.GTextBoxUsername_TextChanged);
             // 
             // guna2GradientPanel2
             // 
@@ -235,7 +233,6 @@
             this.Controls.Add(this.UpperPanelUserLabels);
             this.Name = "UserControlUsers";
             this.Size = new System.Drawing.Size(1195, 809);
-            this.Load += new System.EventHandler(this.UserControlUsers_Load);
             this.PanelFillInformationUsers.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();

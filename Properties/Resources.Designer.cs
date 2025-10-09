@@ -143,6 +143,16 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap group_Users {
+            get {
+                object obj = ResourceManager.GetObject("group Users", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap List_Clients {
             get {
                 object obj = ResourceManager.GetObject("List Clients", resourceCulture);

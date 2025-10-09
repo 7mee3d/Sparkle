@@ -213,22 +213,14 @@ namespace Sparkle.User_Controls_Sparkle
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please , Enter the Username & Password To Be add In The Sparkle System", "Note Error Add new User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
             GTextBoxUsername.Clear();
             GTextBoxPasswordUser.Clear();
-        }
-        private void UserControlUsers_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GTextBoxUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PanelFillInformationUsers_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void ButtonAddNewUser_Click(object sender, EventArgs e)

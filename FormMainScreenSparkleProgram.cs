@@ -52,5 +52,11 @@ namespace Sparkle
             UserControlClientsList UCCL = new UserControlClientsList();
             addUserControlInThePaenl(UCCL);
         }
+
+        private void GButtonUsersList_Click(object sender, EventArgs e)
+        {
+            UserControUsersList UCUL = new UserControUsersList();
+            addUserControlInThePaenl(UCUL);
+        }
     }
 }
