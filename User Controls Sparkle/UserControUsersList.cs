@@ -140,17 +140,61 @@ namespace Sparkle.User_Controls_Sparkle
 
                 if (informationAllUsersData[counter].stUsername == "Admin")
                 {
-                    ListViewUsersLists.Items[counter].BackColor = Color.Yellow;
-                    ListViewUsersLists.Items[counter].ForeColor = Color.Black;
+                    ListViewUsersLists.Items[counter].BackColor = Color.Red;
+                    ListViewUsersLists.Items[counter].ForeColor = Color.White;
                 }
             }
 
         }
 
- 
+
+        private bool SreachTheUsernameInListView (string username )
+        {
+
+            //Reset all back color and fore color list view 
+            for (int counterOutSide = 0; counterOutSide < ListViewUsersLists.Items.Count; counterOutSide++)
+            {
+              
+                ListViewUsersLists.Items[counterOutSide].BackColor = Color.White;
+                ListViewUsersLists.Items[counterOutSide].ForeColor = Color.Black;
+
+            }
+
+            if (ListViewUsersLists.Items[0].Text == username)
+            {
+                ListViewUsersLists.Items[0].BackColor = Color.Yellow;
+                ListViewUsersLists.Items[0].ForeColor = Color.Black;
+                return true; 
+            }
+
+            else
+            {
+
+                for (int counterInside = 0; counterInside < ListViewUsersLists.Items.Count; counterInside++)
+                {
+                    if (ListViewUsersLists.Items[counterInside].Text == username)
+                    {
+                        ListViewUsersLists.Items[counterInside].BackColor = Color.Yellow;
+                        ListViewUsersLists.Items[counterInside].ForeColor = Color.Black;
+                        return true; 
+                    }
+                }
+
+            }
+            GTextBoxSearchUsersList.Clear();
+            GTextBoxSearchUsersList.Focus(); 
+            return false;
+
+        }
         private void UserControUsersList_Load(object sender, EventArgs e)
         {
             pushAllInformationUsersToListView();
+        }
+
+        private void GButtonSearchByUsername_Click(object sender, EventArgs e)
+        {
+            string username = GTextBoxSearchUsersList.Text; 
+            SreachTheUsernameInListView(username); 
         }
     }
 }

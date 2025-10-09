@@ -30,14 +30,14 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonSearchByUsername = new Guna.UI2.WinForms.Guna2Button();
+            this.GTextBoxSearchUsersList = new Guna.UI2.WinForms.Guna2TextBox();
             this.PanelMainListViewClientsList = new Guna.UI2.WinForms.Guna2Panel();
             this.ListViewUsersLists = new System.Windows.Forms.ListView();
             this.ColumnUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnPassword = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.GTextBoxSearchUsersList = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewClientsList.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -72,6 +72,31 @@
             this.GButtonSearchByUsername.Size = new System.Drawing.Size(88, 42);
             this.GButtonSearchByUsername.TabIndex = 1;
             this.GButtonSearchByUsername.Text = "Search";
+            this.GButtonSearchByUsername.Click += new System.EventHandler(this.GButtonSearchByUsername_Click);
+            // 
+            // GTextBoxSearchUsersList
+            // 
+            this.GTextBoxSearchUsersList.Animated = true;
+            this.GTextBoxSearchUsersList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchUsersList.BorderRadius = 20;
+            this.GTextBoxSearchUsersList.BorderThickness = 2;
+            this.GTextBoxSearchUsersList.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxSearchUsersList.DefaultText = "";
+            this.GTextBoxSearchUsersList.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxSearchUsersList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxSearchUsersList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchUsersList.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchUsersList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchUsersList.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GTextBoxSearchUsersList.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxSearchUsersList.IconLeft = global::Sparkle.Properties.Resources.Search;
+            this.GTextBoxSearchUsersList.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.GTextBoxSearchUsersList.Location = new System.Drawing.Point(3, 46);
+            this.GTextBoxSearchUsersList.Name = "GTextBoxSearchUsersList";
+            this.GTextBoxSearchUsersList.PlaceholderText = "Search By Username";
+            this.GTextBoxSearchUsersList.SelectedText = "";
+            this.GTextBoxSearchUsersList.Size = new System.Drawing.Size(340, 46);
+            this.GTextBoxSearchUsersList.TabIndex = 0;
             // 
             // PanelMainListViewClientsList
             // 
@@ -120,42 +145,6 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(409, 74);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Users List";
-            // 
-            // GTextBoxSearchUsersList
-            // 
-            this.GTextBoxSearchUsersList.Animated = true;
-            this.GTextBoxSearchUsersList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearchUsersList.BorderRadius = 20;
-            this.GTextBoxSearchUsersList.BorderThickness = 2;
-            this.GTextBoxSearchUsersList.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxSearchUsersList.DefaultText = "";
-            this.GTextBoxSearchUsersList.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxSearchUsersList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxSearchUsersList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearchUsersList.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearchUsersList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearchUsersList.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GTextBoxSearchUsersList.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxSearchUsersList.IconLeft = global::Sparkle.Properties.Resources.Search;
-            this.GTextBoxSearchUsersList.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.GTextBoxSearchUsersList.Location = new System.Drawing.Point(3, 46);
-            this.GTextBoxSearchUsersList.Name = "GTextBoxSearchUsersList";
-            this.GTextBoxSearchUsersList.PlaceholderText = "Search By Username";
-            this.GTextBoxSearchUsersList.SelectedText = "";
-            this.GTextBoxSearchUsersList.Size = new System.Drawing.Size(340, 46);
-            this.GTextBoxSearchUsersList.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -168,6 +157,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Users List";
             // 
             // UserControUsersList
             // 
