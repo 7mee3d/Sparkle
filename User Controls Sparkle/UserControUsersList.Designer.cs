@@ -48,9 +48,9 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByUsername);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchUsersList);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 119);
+            this.guna2Panel1.Location = new System.Drawing.Point(738, 244);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(458, 92);
+            this.guna2Panel1.Size = new System.Drawing.Size(454, 94);
             this.guna2Panel1.TabIndex = 6;
             // 
             // GButtonSearchByUsername
@@ -101,13 +101,14 @@
             // PanelMainListViewClientsList
             // 
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewUsersLists);
-            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 284);
+            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 365);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 525);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 444);
             this.PanelMainListViewClientsList.TabIndex = 5;
             // 
             // ListViewUsersLists
             // 
+            this.ListViewUsersLists.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListViewUsersLists.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnUsername,
             this.ColumnPassword});
@@ -116,10 +117,10 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(297, 3);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 3);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
-            this.ListViewUsersLists.Size = new System.Drawing.Size(601, 558);
+            this.ListViewUsersLists.Size = new System.Drawing.Size(1195, 441);
             this.ListViewUsersLists.TabIndex = 0;
             this.ListViewUsersLists.UseCompatibleStateImageBehavior = false;
             this.ListViewUsersLists.View = System.Windows.Forms.View.Details;
@@ -128,12 +129,12 @@
             // ColumnUsername
             // 
             this.ColumnUsername.Text = "Username";
-            this.ColumnUsername.Width = 250;
+            this.ColumnUsername.Width = 600;
             // 
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 345;
+            this.ColumnPassword.Width = 590;
             // 
             // guna2GradientPanel1
             // 
@@ -141,7 +142,7 @@
             this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label1);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 39);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(409, 74);
             this.guna2GradientPanel1.TabIndex = 4;
