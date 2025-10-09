@@ -139,8 +139,8 @@ namespace Sparkle.User_Controls_Sparkle
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
             //Points Line
-            Point p1 = new Point(0, 280);
-            Point p2 = new Point(1200, 280);
+            Point p1 = new Point(0, 523);
+            Point p2 = new Point(1200, 523);
 
             //Draw the Line
             e.Graphics.DrawLine(pen, p1, p2);

@@ -15,6 +15,7 @@ namespace Sparkle.User_Controls_Sparkle
         public UserControUsersList()
         {
             InitializeComponent();
+            pushAllInformationUsersToListView();
         }
 
         const string kPATH_FILE_USER = "UsersInformation.txt";
@@ -125,7 +126,22 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
+        private void PaintTheLine(PaintEventArgs e)
+        {
+            Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
 
+            Pen pen = new Pen(WhiteGreen);
+            pen.Width = 3;
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+
+            //Points Line
+            Point p1 = new Point(0, 250);
+            Point p2 = new Point(1200, 250);
+
+            //Draw the Line
+            e.Graphics.DrawLine(pen, p1, p2);
+        }
         private void pushAllInformationUsersToListView ()
         {
             List<stInformationUser> informationAllUsersData = SaveAllInformationUserToListSturcture();
@@ -164,9 +180,8 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 ListViewUsersLists.Items[0].BackColor = Color.Yellow;
                 ListViewUsersLists.Items[0].ForeColor = Color.Black;
-                return true; 
+                return true;
             }
-
             else
             {
 
@@ -176,7 +191,7 @@ namespace Sparkle.User_Controls_Sparkle
                     {
                         ListViewUsersLists.Items[counterInside].BackColor = Color.Yellow;
                         ListViewUsersLists.Items[counterInside].ForeColor = Color.Black;
-                        return true; 
+                        return true;
                     }
                 }
 
@@ -195,6 +210,16 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string username = GTextBoxSearchUsersList.Text; 
             SreachTheUsernameInListView(username); 
+        }
+
+        private void UserControUsersList_Paint(object sender, PaintEventArgs e)
+        {
+            PaintTheLine(e);
+        }
+
+        private void ListViewUsersLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

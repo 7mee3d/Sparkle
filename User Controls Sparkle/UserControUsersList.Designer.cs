@@ -91,7 +91,7 @@
             this.GTextBoxSearchUsersList.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxSearchUsersList.IconLeft = global::Sparkle.Properties.Resources.Search;
             this.GTextBoxSearchUsersList.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.GTextBoxSearchUsersList.Location = new System.Drawing.Point(3, 46);
+            this.GTextBoxSearchUsersList.Location = new System.Drawing.Point(3, 42);
             this.GTextBoxSearchUsersList.Name = "GTextBoxSearchUsersList";
             this.GTextBoxSearchUsersList.PlaceholderText = "Search By Username";
             this.GTextBoxSearchUsersList.SelectedText = "";
@@ -101,9 +101,9 @@
             // PanelMainListViewClientsList
             // 
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewUsersLists);
-            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 252);
+            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 284);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 557);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 525);
             this.PanelMainListViewClientsList.TabIndex = 5;
             // 
             // ListViewUsersLists
@@ -116,13 +116,14 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(297, 21);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(297, 3);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
-            this.ListViewUsersLists.Size = new System.Drawing.Size(601, 536);
+            this.ListViewUsersLists.Size = new System.Drawing.Size(601, 558);
             this.ListViewUsersLists.TabIndex = 0;
             this.ListViewUsersLists.UseCompatibleStateImageBehavior = false;
             this.ListViewUsersLists.View = System.Windows.Forms.View.Details;
+            this.ListViewUsersLists.SelectedIndexChanged += new System.EventHandler(this.ListViewUsersLists_SelectedIndexChanged);
             // 
             // ColumnUsername
             // 
@@ -180,7 +181,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControUsersList";
             this.Size = new System.Drawing.Size(1195, 809);
-            this.Load += new System.EventHandler(this.UserControUsersList_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControUsersList_Paint);
             this.guna2Panel1.ResumeLayout(false);
             this.PanelMainListViewClientsList.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
