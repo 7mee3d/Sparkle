@@ -42,6 +42,7 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonUsersList = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.GButtonRemoveOrUpdateClient = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonClientListSection = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -66,6 +67,7 @@
             this.guna2GradientPanel1.Controls.Add(this.guna2Button5);
             this.guna2GradientPanel1.Controls.Add(this.GButtonUsersList);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button3);
+            this.guna2GradientPanel1.Controls.Add(this.GButtonRemoveOrUpdateClient);
             this.guna2GradientPanel1.Controls.Add(this.GButtonClientListSection);
             this.guna2GradientPanel1.Controls.Add(this.ButtonClients);
             this.guna2GradientPanel1.Controls.Add(this.label1);
@@ -260,6 +262,35 @@
             this.guna2Button3.Text = "Users";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
+            // GButtonRemoveOrUpdateClient
+            // 
+            this.GButtonRemoveOrUpdateClient.Animated = true;
+            this.GButtonRemoveOrUpdateClient.AnimatedGIF = true;
+            this.GButtonRemoveOrUpdateClient.BackColor = System.Drawing.Color.Transparent;
+            this.GButtonRemoveOrUpdateClient.BorderRadius = 3;
+            this.GButtonRemoveOrUpdateClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GButtonRemoveOrUpdateClient.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.GButtonRemoveOrUpdateClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonRemoveOrUpdateClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonRemoveOrUpdateClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonRemoveOrUpdateClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonRemoveOrUpdateClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonRemoveOrUpdateClient.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GButtonRemoveOrUpdateClient.ForeColor = System.Drawing.Color.White;
+            this.GButtonRemoveOrUpdateClient.HoverState.BorderColor = System.Drawing.Color.White;
+            this.GButtonRemoveOrUpdateClient.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.GButtonRemoveOrUpdateClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonRemoveOrUpdateClient.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
+            this.GButtonRemoveOrUpdateClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GButtonRemoveOrUpdateClient.ImageSize = new System.Drawing.Size(15, 15);
+            this.GButtonRemoveOrUpdateClient.Location = new System.Drawing.Point(0, 396);
+            this.GButtonRemoveOrUpdateClient.Name = "GButtonRemoveOrUpdateClient";
+            this.GButtonRemoveOrUpdateClient.PressedColor = System.Drawing.Color.White;
+            this.GButtonRemoveOrUpdateClient.Size = new System.Drawing.Size(222, 57);
+            this.GButtonRemoveOrUpdateClient.TabIndex = 1;
+            this.GButtonRemoveOrUpdateClient.Text = "Remove Or Update Client";
+            this.GButtonRemoveOrUpdateClient.Click += new System.EventHandler(this.GButtonClientListSection_Click);
+            // 
             // GButtonClientListSection
             // 
             this.GButtonClientListSection.Animated = true;
@@ -385,5 +416,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Button GButtonRemoveOrUpdateClient;
     }
 }
