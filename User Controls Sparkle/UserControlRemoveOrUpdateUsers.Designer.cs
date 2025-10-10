@@ -210,6 +210,7 @@
             this.GButtonUpdateUser.Size = new System.Drawing.Size(303, 55);
             this.GButtonUpdateUser.TabIndex = 13;
             this.GButtonUpdateUser.Text = "Update User";
+            this.GButtonUpdateUser.Click += new System.EventHandler(this.GButtonUpdateUser_Click);
             // 
             // GButtonSearchUsername
             // 

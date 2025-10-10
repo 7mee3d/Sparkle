@@ -220,6 +220,27 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
 
         }
+        private bool ModifyInformationUser(string username)
+        {
+            List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
+
+            foreach (stInformationUser infoUser in allInfroamtionUserStruct)
+            {
+                if (username == infoUser.stUsername)
+                {
+                    infoUser.stUsername = GTextBoxNewUsername.Text;
+                    if (isFoundTheUsernameInSystemSparkle(infoUser.stUsername)) return false;
+                    else 
+                        infoUser.stPassword = GTextBoxNewPasswordUsername.Text; 
+
+                    SaveAllInformationUsersStructureToFile(allInfroamtionUserStruct);
+                    return true;
+                }
+            }
+
+            return false;
+
+        }
 
         private void RemoveUserByUsernameAfterClickRemove ()
         {
@@ -248,6 +269,33 @@ namespace Sparkle.User_Controls_Sparkle
             }
             ClearAllTextBoxiesAndModes();
         }
+
+           private void UpdateInformationUser ()
+        {
+            string username = GTextBoxUsername.Text;
+            if (GRadioButtonNone.Checked)
+            {
+                MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update]in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ClearAllTextBoxiesAndModes();
+                return;
+            }
+
+            if (GRadioButtonUpdateMode.Checked)
+            {
+                if (MessageBox.Show($"Are you sure you want to Update this This User [{username}] Information?", "Confirm Update Username", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                {
+                    if (ModifyInformationUser(username))
+                       // notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
+                      MessageBox.Show("The Update was successful.", "Note Update Information User" , MessageBoxButtons.OK);
+                    else
+                        MessageBox.Show($"Sorry This New Username is Exsits or Not Found This username in the Sparkle System !", "Error Update User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+
+            ClearAllTextBoxiesAndModes();
+        }
+
         private void GButtonSearchUsername_Click(object sender, EventArgs e)
         {
             string Username = GTextBoxUsername.Text;
@@ -260,6 +308,11 @@ namespace Sparkle.User_Controls_Sparkle
         private void GButtonRemoveUser_Click(object sender, EventArgs e)
         {
             RemoveUserByUsernameAfterClickRemove();
+        }
+
+        private void GButtonUpdateUser_Click(object sender, EventArgs e)
+        {
+            UpdateInformationUser();
         }
     }
 }
