@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,19 +14,58 @@ namespace Sparkle.User_Controls_Sparkle
 {
     public partial class UserControlRemoveOrUpdateUsers : UserControl
     {
+
+        private void EnabelAllTextBoxiesInPanel (bool flagEnableAllTextBoxiesOrNot = true)
+        {
+
+
+            foreach (Control outterControl in this.Controls )
+            {
+                if(outterControl is Guna2Panel GP )
+                {
+                    foreach (Control innerControl in GP.Controls)
+                    {
+
+                        if (innerControl is Guna2TextBox GTB)
+                        {
+                            if (GTB == GTextBoxUsername)
+                            {
+                                GTB.Enabled = true;
+                            }
+                            else
+                                GTB.Enabled = flagEnableAllTextBoxiesOrNot;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ClearAllTextBoxiesAndModes()
+        {
+            GRadioButtonNone.Checked = true;
+            GTextBoxNewUsername.Clear();
+            GTextBoxNewPasswordUsername.Clear();
+ 
+        }
         public UserControlRemoveOrUpdateUsers()
         {
             InitializeComponent();
-
+            EnabelAllTextBoxiesInPanel(false);
             GRadioButtonNone.Checked = true; 
         }
         const string kPATH_FILE_USER = "UsersInformation.txt";
 
-        struct stInformationUser
+        class stInformationUser
         {
             public string stUsername;
             public string stPassword;
             public int stNumberAttempt;
+
+            //Flags 
+
+            //Flag Remove 
+            public bool IsUsernameToBeRemove = false; 
+
 
         }
 
@@ -106,9 +146,8 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void SaveAllInformationUsersStructureToFile()
+        private void SaveAllInformationUsersStructureToFile(List<stInformationUser> allInfroamtionUserStruct)
         {
-            List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
 
             if (!System.IO.File.Exists(kPATH_FILE_USER))
                 System.IO.File.Create(kPATH_FILE_USER).Close();
@@ -117,6 +156,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             foreach (stInformationUser infoOneUser in allInfroamtionUserStruct)
             {
+                if(infoOneUser.IsUsernameToBeRemove == false )
                 WriteAllInformationUserToFile.WriteLine(ConvertDataToLine(infoOneUser, "||"));
             }
 
@@ -162,6 +202,64 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
-     
+
+        private bool RemoveUsernameInSystemSparkle  (string username )
+        {
+            List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
+
+            foreach (stInformationUser infoUser in allInfroamtionUserStruct)
+            {
+                if(username == infoUser.stUsername )
+                {
+                    infoUser.IsUsernameToBeRemove = true;
+                    SaveAllInformationUsersStructureToFile(allInfroamtionUserStruct);
+                    return true; 
+                }
+            }
+
+            return false; 
+
+        }
+
+        private void RemoveUserByUsernameAfterClickRemove ()
+        {
+            string username = GTextBoxUsername.Text;
+
+            if (GRadioButtonNone.Checked)
+            {
+                MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ClearAllTextBoxiesAndModes();
+                return;
+            }
+            if (GRadioButtonUpdateMode.Checked)
+            {
+                MessageBox.Show($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information User !", "Error Update Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ClearAllTextBoxiesAndModes();
+                return;
+            }
+            if (GRadioButtonRemoveMode.Checked)
+            {
+                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
+                    if (RemoveUsernameInSystemSparkle(username))
+                        MessageBox.Show("Done");
+                    else MessageBox.Show($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !", "Error Remove User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            ClearAllTextBoxiesAndModes();
+        }
+        private void GButtonSearchUsername_Click(object sender, EventArgs e)
+        {
+            string Username = GTextBoxUsername.Text;
+
+            if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked )
+                EnabelAllTextBoxiesInPanel(true);
+            else EnabelAllTextBoxiesInPanel(false);
+        }
+
+        private void GButtonRemoveUser_Click(object sender, EventArgs e)
+        {
+            RemoveUserByUsernameAfterClickRemove();
+        }
     }
 }

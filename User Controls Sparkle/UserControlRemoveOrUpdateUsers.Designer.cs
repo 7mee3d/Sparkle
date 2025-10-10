@@ -40,10 +40,10 @@
             this.GButtonSearchUsername = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonRemoveUser = new Guna.UI2.WinForms.Guna2Button();
             this.GPanelFillInformationUsernameToUpdate = new Guna.UI2.WinForms.Guna2Panel();
-            this.GTextBoxPhoneClient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GTextBoxNewPasswordUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.GTextBoxAddressClient = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GTextBoxNewUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -235,6 +235,7 @@
             this.GButtonSearchUsername.Size = new System.Drawing.Size(303, 55);
             this.GButtonSearchUsername.TabIndex = 13;
             this.GButtonSearchUsername.Text = "Search Username";
+            this.GButtonSearchUsername.Click += new System.EventHandler(this.GButtonSearchUsername_Click);
             // 
             // GButtonRemoveUser
             // 
@@ -260,12 +261,13 @@
             this.GButtonRemoveUser.Size = new System.Drawing.Size(303, 55);
             this.GButtonRemoveUser.TabIndex = 13;
             this.GButtonRemoveUser.Text = "Remove User";
+            this.GButtonRemoveUser.Click += new System.EventHandler(this.GButtonRemoveUser_Click);
             // 
             // GPanelFillInformationUsernameToUpdate
             // 
-            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GTextBoxPhoneClient);
+            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GTextBoxNewPasswordUsername);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel3);
-            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GTextBoxAddressClient);
+            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GTextBoxNewUsername);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel2);
             this.GPanelFillInformationUsernameToUpdate.Location = new System.Drawing.Point(25, 443);
             this.GPanelFillInformationUsernameToUpdate.Name = "GPanelFillInformationUsernameToUpdate";
@@ -273,28 +275,28 @@
             this.GPanelFillInformationUsernameToUpdate.TabIndex = 18;
             this.GPanelFillInformationUsernameToUpdate.Visible = false;
             // 
-            // GTextBoxPhoneClient
+            // GTextBoxNewPasswordUsername
             // 
-            this.GTextBoxPhoneClient.Animated = true;
-            this.GTextBoxPhoneClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxPhoneClient.BorderRadius = 10;
-            this.GTextBoxPhoneClient.BorderThickness = 2;
-            this.GTextBoxPhoneClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxPhoneClient.DefaultText = "";
-            this.GTextBoxPhoneClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxPhoneClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxPhoneClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxPhoneClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxPhoneClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxPhoneClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClient.Location = new System.Drawing.Point(211, 187);
-            this.GTextBoxPhoneClient.Name = "GTextBoxPhoneClient";
-            this.GTextBoxPhoneClient.PlaceholderText = "Enter Here New Password";
-            this.GTextBoxPhoneClient.SelectedText = "";
-            this.GTextBoxPhoneClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxPhoneClient.TabIndex = 6;
-            this.GTextBoxPhoneClient.Tag = "TPhone";
+            this.GTextBoxNewPasswordUsername.Animated = true;
+            this.GTextBoxNewPasswordUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxNewPasswordUsername.BorderRadius = 10;
+            this.GTextBoxNewPasswordUsername.BorderThickness = 2;
+            this.GTextBoxNewPasswordUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxNewPasswordUsername.DefaultText = "";
+            this.GTextBoxNewPasswordUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxNewPasswordUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxNewPasswordUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNewPasswordUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNewPasswordUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNewPasswordUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxNewPasswordUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNewPasswordUsername.Location = new System.Drawing.Point(211, 187);
+            this.GTextBoxNewPasswordUsername.Name = "GTextBoxNewPasswordUsername";
+            this.GTextBoxNewPasswordUsername.PlaceholderText = "Enter Here New Password";
+            this.GTextBoxNewPasswordUsername.SelectedText = "";
+            this.GTextBoxNewPasswordUsername.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxNewPasswordUsername.TabIndex = 6;
+            this.GTextBoxNewPasswordUsername.Tag = "TPhone";
             // 
             // guna2GradientPanel3
             // 
@@ -318,28 +320,28 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Password";
             // 
-            // GTextBoxAddressClient
+            // GTextBoxNewUsername
             // 
-            this.GTextBoxAddressClient.Animated = true;
-            this.GTextBoxAddressClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxAddressClient.BorderRadius = 10;
-            this.GTextBoxAddressClient.BorderThickness = 2;
-            this.GTextBoxAddressClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxAddressClient.DefaultText = "";
-            this.GTextBoxAddressClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxAddressClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxAddressClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxAddressClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxAddressClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxAddressClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxAddressClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxAddressClient.Location = new System.Drawing.Point(211, 110);
-            this.GTextBoxAddressClient.Name = "GTextBoxAddressClient";
-            this.GTextBoxAddressClient.PlaceholderText = "Enter Here New Username";
-            this.GTextBoxAddressClient.SelectedText = "";
-            this.GTextBoxAddressClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxAddressClient.TabIndex = 5;
-            this.GTextBoxAddressClient.Tag = "TAddress";
+            this.GTextBoxNewUsername.Animated = true;
+            this.GTextBoxNewUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxNewUsername.BorderRadius = 10;
+            this.GTextBoxNewUsername.BorderThickness = 2;
+            this.GTextBoxNewUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxNewUsername.DefaultText = "";
+            this.GTextBoxNewUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxNewUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxNewUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNewUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNewUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNewUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxNewUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxNewUsername.Location = new System.Drawing.Point(211, 110);
+            this.GTextBoxNewUsername.Name = "GTextBoxNewUsername";
+            this.GTextBoxNewUsername.PlaceholderText = "Enter Here New Username";
+            this.GTextBoxNewUsername.SelectedText = "";
+            this.GTextBoxNewUsername.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxNewUsername.TabIndex = 5;
+            this.GTextBoxNewUsername.Tag = "TAddress";
             // 
             // guna2GradientPanel2
             // 
@@ -441,10 +443,10 @@
         private Guna.UI2.WinForms.Guna2Button GButtonSearchUsername;
         private Guna.UI2.WinForms.Guna2Button GButtonRemoveUser;
         private Guna.UI2.WinForms.Guna2Panel GPanelFillInformationUsernameToUpdate;
-        private Guna.UI2.WinForms.Guna2TextBox GTextBoxPhoneClient;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxNewPasswordUsername;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox GTextBoxAddressClient;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxNewUsername;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
