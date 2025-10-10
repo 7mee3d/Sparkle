@@ -70,5 +70,11 @@ namespace Sparkle
         {
 
         }
+
+        private void GButtonRemoveOrUpdateUsers_Click(object sender, EventArgs e)
+        {
+            UserControlRemoveOrUpdateUsers UCROUU = new UserControlRemoveOrUpdateUsers();
+            addUserControlInThePaenl(UCROUU);
+        }
     }
 }

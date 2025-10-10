@@ -34,6 +34,7 @@ namespace Sparkle.User_Controls_Sparkle
                 }
             }
         }
+      
         public UserControlRemoveOrUpdateClients()
         {
             InitializeComponent();
@@ -65,7 +66,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
+        //File Name (Path)
         const string kPATH_FILE_CLIENT = "InformationClients.txt";
 
         private List<string> LoadAllLineInformationClientFromFile()
@@ -112,7 +113,6 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
         private List<string> SplitLineInformationClinet (string lineInformationClinet )
         {
 
@@ -126,7 +126,6 @@ namespace Sparkle.User_Controls_Sparkle
 
             return informationSplitLineInformationClient;
         }
-
 
         private List <stInformationClient> LoadAllLinesInformationClientsToListStructure ()
         {
@@ -232,6 +231,7 @@ namespace Sparkle.User_Controls_Sparkle
             return true; 
 
         }
+      
         private bool RemoveClientOfSystemSparkleAndFile(string ID)
         {
             List<stInformationClient> informationAllClientsStructure = LoadAllLinesInformationClientsToListStructure();
@@ -283,7 +283,6 @@ namespace Sparkle.User_Controls_Sparkle
             ClearAllTextBoxiesAndModes();
         }
 
-
         private void notifyIconRemoveAndUpdateClient_BalloonTipClicked_1(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
@@ -320,6 +319,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             return (Convert.ToInt32 (Character) >= 48 && Convert.ToInt32(Character) <= 57 ); 
         }
+    
         private bool isAllCharacterInTextIsDigit (string text )
         {
             foreach(char Character in text)
@@ -329,6 +329,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             return true;
         }
+    
         private void GTextBoxIDClient_Validating(object sender, CancelEventArgs e)
         {
             
@@ -350,22 +351,14 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
- 
-
-
-   
         private void GRadioButtonUpdateMode_CheckedChanged(object sender, EventArgs e)
         {
-            if (GRadioButtonUpdateMode.Checked)
-            {
-
-                GPanelFillInformationClientToUpdate.Visible = true;
-            }
+          
 
           
         }
 
-        private void GRadioButtonRemoveMode_CheckedChanged(object sender, EventArgs e)
+        private void CheckedChangedRadioButonModesInSystemSparkle(object sender, EventArgs e)
         {
             if (GRadioButtonRemoveMode.Checked)
             {
@@ -373,6 +366,21 @@ namespace Sparkle.User_Controls_Sparkle
                 GPanelFillInformationClientToUpdate.Visible = false;
 
             }
+
+
+            if (GRadioButtonNone.Checked)
+            {
+
+                GPanelFillInformationClientToUpdate.Visible = false;
+
+            }
+
+            if (GRadioButtonUpdateMode.Checked)
+            {
+
+                GPanelFillInformationClientToUpdate.Visible = true;
+            }
+
         }
 
         private void DrawLineOfUserControlRemoveAndUpdate(PaintEventArgs e)
@@ -389,9 +397,12 @@ namespace Sparkle.User_Controls_Sparkle
 
             e.Graphics.DrawLine(pen, p1, p2);
         }
+     
         private void UserControlRemoveOrUpdateClients_Paint(object sender, PaintEventArgs e)
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
+
+   
     }
 }

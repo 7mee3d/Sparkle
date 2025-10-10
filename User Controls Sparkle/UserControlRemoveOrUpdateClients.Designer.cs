@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlRemoveOrUpdateClients));
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.GPanelFillInformationClientToUpdate = new Guna.UI2.WinForms.Guna2Panel();
             this.GTextBoxPhoneClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -58,10 +55,11 @@
             this.errorProviderCoreectFillTextBox = new System.Windows.Forms.ErrorProvider(this.components);
             this.GPanelIDTextBoxAndRadioButton = new Guna.UI2.WinForms.Guna2Panel();
             this.GRadioButtonUpdateMode = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.GRadioButtonRemoveMode = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonNone = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GRadioButtonRemoveMode = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.GPanelFillInformationClientToUpdate.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -72,43 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderRemoveOrUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCoreectFillTextBox)).BeginInit();
             this.GPanelIDTextBoxAndRadioButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.BorderRadius = 20;
-            this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(543, 74);
-            this.guna2GradientPanel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Remove Or Update Client";
             // 
             // GPanelFillInformationClientToUpdate
             // 
@@ -491,27 +455,7 @@
             this.GRadioButtonUpdateMode.UncheckedState.BorderThickness = 2;
             this.GRadioButtonUpdateMode.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.GRadioButtonUpdateMode.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonUpdateMode.CheckedChanged += new System.EventHandler(this.GRadioButtonUpdateMode_CheckedChanged);
-            // 
-            // GRadioButtonRemoveMode
-            // 
-            this.GRadioButtonRemoveMode.AutoSize = true;
-            this.GRadioButtonRemoveMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonRemoveMode.CheckedState.BorderThickness = 0;
-            this.GRadioButtonRemoveMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonRemoveMode.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.GRadioButtonRemoveMode.CheckedState.InnerOffset = -4;
-            this.GRadioButtonRemoveMode.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonRemoveMode.Location = new System.Drawing.Point(226, 74);
-            this.GRadioButtonRemoveMode.Name = "GRadioButtonRemoveMode";
-            this.GRadioButtonRemoveMode.Size = new System.Drawing.Size(118, 22);
-            this.GRadioButtonRemoveMode.TabIndex = 17;
-            this.GRadioButtonRemoveMode.Text = "Remove Mode";
-            this.GRadioButtonRemoveMode.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.GRadioButtonRemoveMode.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonRemoveMode.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonRemoveMode.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonRemoveMode.CheckedChanged += new System.EventHandler(this.GRadioButtonRemoveMode_CheckedChanged);
+            this.GRadioButtonUpdateMode.CheckedChanged += new System.EventHandler(this.CheckedChangedRadioButonModesInSystemSparkle);
             // 
             // GRadioButtonNone
             // 
@@ -531,7 +475,63 @@
             this.GRadioButtonNone.UncheckedState.BorderThickness = 2;
             this.GRadioButtonNone.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.GRadioButtonNone.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonNone.CheckedChanged += new System.EventHandler(this.GRadioButtonRemoveMode_CheckedChanged);
+            this.GRadioButtonNone.CheckedChanged += new System.EventHandler(this.CheckedChangedRadioButonModesInSystemSparkle);
+            // 
+            // GRadioButtonRemoveMode
+            // 
+            this.GRadioButtonRemoveMode.AutoSize = true;
+            this.GRadioButtonRemoveMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GRadioButtonRemoveMode.CheckedState.BorderThickness = 0;
+            this.GRadioButtonRemoveMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GRadioButtonRemoveMode.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonRemoveMode.CheckedState.InnerOffset = -4;
+            this.GRadioButtonRemoveMode.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GRadioButtonRemoveMode.Location = new System.Drawing.Point(226, 74);
+            this.GRadioButtonRemoveMode.Name = "GRadioButtonRemoveMode";
+            this.GRadioButtonRemoveMode.Size = new System.Drawing.Size(118, 22);
+            this.GRadioButtonRemoveMode.TabIndex = 17;
+            this.GRadioButtonRemoveMode.Text = "Remove Mode";
+            this.GRadioButtonRemoveMode.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonRemoveMode.UncheckedState.BorderThickness = 2;
+            this.GRadioButtonRemoveMode.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonRemoveMode.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonRemoveMode.CheckedChanged += new System.EventHandler(this.CheckedChangedRadioButonModesInSystemSparkle);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(402, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Remove Or Update Client";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.BorderRadius = 20;
+            this.guna2GradientPanel1.Controls.Add(this.pictureBox1);
+            this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
+            this.guna2GradientPanel1.TabIndex = 2;
             // 
             // UserControlRemoveOrUpdateClients
             // 
@@ -545,9 +545,6 @@
             this.Name = "UserControlRemoveOrUpdateClients";
             this.Size = new System.Drawing.Size(1195, 809);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlRemoveOrUpdateClients_Paint);
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GPanelFillInformationClientToUpdate.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
@@ -564,15 +561,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCoreectFillTextBox)).EndInit();
             this.GPanelIDTextBoxAndRadioButton.ResumeLayout(false);
             this.GPanelIDTextBoxAndRadioButton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel GPanelFillInformationClientToUpdate;
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxPhoneClient;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
@@ -600,5 +596,8 @@
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonUpdateMode;
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonRemoveMode;
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonNone;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

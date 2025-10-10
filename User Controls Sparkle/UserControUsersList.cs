@@ -217,9 +217,6 @@ namespace Sparkle.User_Controls_Sparkle
             PaintTheLine(e);
         }
 
-        private void ListViewUsersLists_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

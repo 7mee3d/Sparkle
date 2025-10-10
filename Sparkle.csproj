@@ -87,6 +87,12 @@
     <Compile Include="User Controls Sparkle\UserControlRemoveOrUpdateClients.Designer.cs">
       <DependentUpon>UserControlRemoveOrUpdateClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls Sparkle\UserControlRemoveOrUpdateUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Sparkle\UserControlRemoveOrUpdateUsers.Designer.cs">
+      <DependentUpon>UserControlRemoveOrUpdateUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls Sparkle\UserControlUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControlRemoveOrUpdateClients.resx">
       <DependentUpon>UserControlRemoveOrUpdateClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Sparkle\UserControlRemoveOrUpdateUsers.resx">
+      <DependentUpon>UserControlRemoveOrUpdateUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControlUsers.resx">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
@@ -180,6 +189,8 @@
     <None Include="Resources\updated.png" />
     <None Include="Resources\updated1.png" />
     <None Include="Resources\remove user.png" />
+    <None Include="Resources\List Users Image.png" />
+    <None Include="Resources\List Users Image 2.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

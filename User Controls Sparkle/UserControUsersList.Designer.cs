@@ -124,7 +124,6 @@
             this.ListViewUsersLists.TabIndex = 0;
             this.ListViewUsersLists.UseCompatibleStateImageBehavior = false;
             this.ListViewUsersLists.View = System.Windows.Forms.View.Details;
-            this.ListViewUsersLists.SelectedIndexChanged += new System.EventHandler(this.ListViewUsersLists_SelectedIndexChanged);
             // 
             // ColumnUsername
             // 
@@ -144,7 +143,7 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(409, 74);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
             // pictureBox1
