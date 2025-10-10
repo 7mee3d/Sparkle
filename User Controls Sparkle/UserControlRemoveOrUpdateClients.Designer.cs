@@ -28,38 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlRemoveOrUpdateClients));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.GTextBoxPhoneClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.GTextBoxIDClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxNameClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxEmailClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxAddressClient = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.GTextBoxIDClient = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonUpdateClient = new Guna.UI2.WinForms.Guna2Button();
-            this.GButtonRemoveClient = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GButtonSearchIDExsits = new Guna.UI2.WinForms.Guna2Button();
+            this.GButtonRemoveClient = new Guna.UI2.WinForms.Guna2Button();
+            this.notifyIconRemoveAndUpdateClient = new System.Windows.Forms.NotifyIcon(this.components);
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
+            this.guna2GradientPanel6.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
-            this.guna2GradientPanel6.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -72,6 +75,19 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(543, 74);
             this.guna2GradientPanel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -147,6 +163,28 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Phone";
             // 
+            // guna2GradientPanel6
+            // 
+            this.guna2GradientPanel6.BorderRadius = 15;
+            this.guna2GradientPanel6.Controls.Add(this.label6);
+            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(34, 106);
+            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel6.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(16, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 27);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "ID";
+            // 
             // guna2GradientPanel5
             // 
             this.guna2GradientPanel5.BorderRadius = 15;
@@ -190,6 +228,29 @@
             this.label4.Size = new System.Drawing.Size(74, 27);
             this.label4.TabIndex = 1;
             this.label4.Text = "Email";
+            // 
+            // GTextBoxIDClient
+            // 
+            this.GTextBoxIDClient.Animated = true;
+            this.GTextBoxIDClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxIDClient.BorderRadius = 10;
+            this.GTextBoxIDClient.BorderThickness = 2;
+            this.GTextBoxIDClient.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxIDClient.DefaultText = "";
+            this.GTextBoxIDClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxIDClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxIDClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxIDClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxIDClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxIDClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxIDClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxIDClient.Location = new System.Drawing.Point(196, 106);
+            this.GTextBoxIDClient.Name = "GTextBoxIDClient";
+            this.GTextBoxIDClient.PlaceholderText = "Enter Here ID Client";
+            this.GTextBoxIDClient.SelectedText = "";
+            this.GTextBoxIDClient.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxIDClient.TabIndex = 15;
+            this.GTextBoxIDClient.Tag = "TID";
             // 
             // GTextBoxNameClient
             // 
@@ -282,51 +343,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Address";
             // 
-            // GTextBoxIDClient
-            // 
-            this.GTextBoxIDClient.Animated = true;
-            this.GTextBoxIDClient.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxIDClient.BorderRadius = 10;
-            this.GTextBoxIDClient.BorderThickness = 2;
-            this.GTextBoxIDClient.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxIDClient.DefaultText = "";
-            this.GTextBoxIDClient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxIDClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxIDClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxIDClient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxIDClient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxIDClient.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.GTextBoxIDClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxIDClient.Location = new System.Drawing.Point(196, 106);
-            this.GTextBoxIDClient.Name = "GTextBoxIDClient";
-            this.GTextBoxIDClient.PlaceholderText = "Enter Here ID Client";
-            this.GTextBoxIDClient.SelectedText = "";
-            this.GTextBoxIDClient.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxIDClient.TabIndex = 15;
-            this.GTextBoxIDClient.Tag = "TID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(16, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 27);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "ID";
-            // 
-            // guna2GradientPanel6
-            // 
-            this.guna2GradientPanel6.BorderRadius = 15;
-            this.guna2GradientPanel6.Controls.Add(this.label6);
-            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(34, 106);
-            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
-            this.guna2GradientPanel6.Size = new System.Drawing.Size(156, 43);
-            this.guna2GradientPanel6.TabIndex = 8;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.GButtonUpdateClient);
@@ -363,44 +379,6 @@
             this.GButtonUpdateClient.Text = "Update Client";
             this.GButtonUpdateClient.Click += new System.EventHandler(this.GButtonUpdateClient_Click);
             // 
-            // GButtonRemoveClient
-            // 
-            this.GButtonRemoveClient.Animated = true;
-            this.GButtonRemoveClient.AnimatedGIF = true;
-            this.GButtonRemoveClient.BorderRadius = 15;
-            this.GButtonRemoveClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GButtonRemoveClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GButtonRemoveClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GButtonRemoveClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GButtonRemoveClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GButtonRemoveClient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GButtonRemoveClient.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
-            this.GButtonRemoveClient.ForeColor = System.Drawing.Color.White;
-            this.GButtonRemoveClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GButtonRemoveClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GButtonRemoveClient.HoverState.Image = global::Sparkle.Properties.Resources.remove_user;
-            this.GButtonRemoveClient.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
-            this.GButtonRemoveClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonRemoveClient.ImageOffset = new System.Drawing.Point(35, 0);
-            this.GButtonRemoveClient.Location = new System.Drawing.Point(62, 237);
-            this.GButtonRemoveClient.Name = "GButtonRemoveClient";
-            this.GButtonRemoveClient.Size = new System.Drawing.Size(303, 55);
-            this.GButtonRemoveClient.TabIndex = 13;
-            this.GButtonRemoveClient.Text = "Remove Client";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // GButtonSearchIDExsits
             // 
             this.GButtonSearchIDExsits.Animated = true;
@@ -427,6 +405,38 @@
             this.GButtonSearchIDExsits.Text = "Search ID Cleint";
             this.GButtonSearchIDExsits.Click += new System.EventHandler(this.GButtonSearchIDExsits_Click);
             // 
+            // GButtonRemoveClient
+            // 
+            this.GButtonRemoveClient.Animated = true;
+            this.GButtonRemoveClient.AnimatedGIF = true;
+            this.GButtonRemoveClient.BorderRadius = 15;
+            this.GButtonRemoveClient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonRemoveClient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonRemoveClient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonRemoveClient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonRemoveClient.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonRemoveClient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonRemoveClient.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.GButtonRemoveClient.ForeColor = System.Drawing.Color.White;
+            this.GButtonRemoveClient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonRemoveClient.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonRemoveClient.HoverState.Image = global::Sparkle.Properties.Resources.remove_user;
+            this.GButtonRemoveClient.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
+            this.GButtonRemoveClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GButtonRemoveClient.ImageOffset = new System.Drawing.Point(35, 0);
+            this.GButtonRemoveClient.Location = new System.Drawing.Point(62, 237);
+            this.GButtonRemoveClient.Name = "GButtonRemoveClient";
+            this.GButtonRemoveClient.Size = new System.Drawing.Size(303, 55);
+            this.GButtonRemoveClient.TabIndex = 13;
+            this.GButtonRemoveClient.Text = "Remove Client";
+            // 
+            // notifyIconRemoveAndUpdateClient
+            // 
+            this.notifyIconRemoveAndUpdateClient.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconRemoveAndUpdateClient.Icon")));
+            this.notifyIconRemoveAndUpdateClient.Text = "notifyIcon1";
+            this.notifyIconRemoveAndUpdateClient.Visible = true;
+            this.notifyIconRemoveAndUpdateClient.BalloonTipClicked += new System.EventHandler(this.notifyIconRemoveAndUpdateClient_BalloonTipClicked_1);
+            // 
             // UserControlRemoveOrUpdateClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,19 +449,19 @@
             this.Size = new System.Drawing.Size(1195, 809);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
+            this.guna2GradientPanel6.ResumeLayout(false);
+            this.guna2GradientPanel6.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
-            this.guna2GradientPanel6.ResumeLayout(false);
-            this.guna2GradientPanel6.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +491,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button GButtonUpdateClient;
         private Guna.UI2.WinForms.Guna2Button GButtonSearchIDExsits;
+        private System.Windows.Forms.NotifyIcon notifyIconRemoveAndUpdateClient;
     }
 }

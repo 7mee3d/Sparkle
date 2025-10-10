@@ -230,12 +230,18 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string ID = GTextBoxIDClient.Text;
 
-            if (updateInformationOneClient(ID))
+            if ((MessageBox.Show($"Are you sure you want to Update this This Client [{ID}] Information?", "Confirm Update Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
             {
-                if(MessageBox.Show($"Are you sure you want to Update this This Client [{ID}] Information?" , "Confirm Update Client" , MessageBoxButtons.OK , MessageBoxIcon.Exclamation) == DialogResult.OK)
-                MessageBox.Show("The Update was successful.", "Note Update Information Client" , MessageBoxButtons.OK);
+                if(updateInformationOneClient(ID) )
+                    notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
+                 //  MessageBox.Show("The Update was successful.", "Note Update Information Client" , MessageBoxButtons.OK);
 
             }
+        }
+
+        private void notifyIconRemoveAndUpdateClient_BalloonTipClicked_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
         }
     }
 }
