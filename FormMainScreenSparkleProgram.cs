@@ -58,5 +58,12 @@ namespace Sparkle
             UserControUsersList UCUL = new UserControUsersList();
             addUserControlInThePaenl(UCUL);
         }
+
+        private void GButtonRemoveOrUpdateClientSection_Click(object sender, EventArgs e)
+        {
+            UserControlRemoveOrUpdateClients UCROUC = new UserControlRemoveOrUpdateClients();
+            addUserControlInThePaenl(UCROUC);
+
+        }
     }
 }

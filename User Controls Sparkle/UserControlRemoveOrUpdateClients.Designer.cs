@@ -361,6 +361,7 @@
             this.GButtonUpdateClient.Size = new System.Drawing.Size(303, 55);
             this.GButtonUpdateClient.TabIndex = 13;
             this.GButtonUpdateClient.Text = "Update Client";
+            this.GButtonUpdateClient.Click += new System.EventHandler(this.GButtonUpdateClient_Click);
             // 
             // GButtonRemoveClient
             // 
@@ -424,6 +425,7 @@
             this.GButtonSearchIDExsits.Size = new System.Drawing.Size(303, 55);
             this.GButtonSearchIDExsits.TabIndex = 13;
             this.GButtonSearchIDExsits.Text = "Search ID Cleint";
+            this.GButtonSearchIDExsits.Click += new System.EventHandler(this.GButtonSearchIDExsits_Click);
             // 
             // UserControlRemoveOrUpdateClients
             // 
@@ -435,7 +437,6 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlRemoveOrUpdateClients";
             this.Size = new System.Drawing.Size(1195, 809);
-            this.Load += new System.EventHandler(this.UserControlRemoveOrUpdateClients_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

@@ -289,7 +289,7 @@
             this.GButtonRemoveOrUpdateClient.Size = new System.Drawing.Size(222, 57);
             this.GButtonRemoveOrUpdateClient.TabIndex = 1;
             this.GButtonRemoveOrUpdateClient.Text = "Remove Or Update Client";
-            this.GButtonRemoveOrUpdateClient.Click += new System.EventHandler(this.GButtonClientListSection_Click);
+            this.GButtonRemoveOrUpdateClient.Click += new System.EventHandler(this.GButtonRemoveOrUpdateClientSection_Click);
             // 
             // GButtonClientListSection
             // 
