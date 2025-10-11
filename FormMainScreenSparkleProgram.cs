@@ -66,15 +66,17 @@ namespace Sparkle
 
         }
 
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+      
         private void GButtonRemoveOrUpdateUsers_Click(object sender, EventArgs e)
         {
             UserControlRemoveOrUpdateUsers UCROUU = new UserControlRemoveOrUpdateUsers();
             addUserControlInThePaenl(UCROUU);
+        }
+
+        private void GButtonNewOrder_Click(object sender, EventArgs e)
+        {
+            UserControlNewOrderSparkle UCNOS = new UserControlNewOrderSparkle();
+            addUserControlInThePaenl(UCNOS);
         }
     }
 }

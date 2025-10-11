@@ -103,6 +103,26 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Carpet_prayer {
+            get {
+                object obj = ResourceManager.GetObject("Carpet prayer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checklist_New_Order_ {
+            get {
+                object obj = ResourceManager.GetObject("checklist New Order ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap client {
             get {
                 object obj = ResourceManager.GetObject("client", resourceCulture);
@@ -226,6 +246,26 @@ namespace Sparkle.Properties {
         internal static System.Drawing.Bitmap One_client_ {
             get {
                 object obj = ResourceManager.GetObject("One client ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Order_Icon_ {
+            get {
+                object obj = ResourceManager.GetObject("Order Icon ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Order_Image_ {
+            get {
+                object obj = ResourceManager.GetObject("Order Image ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -413,6 +413,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlRemoveOrUpdateUsers";
             this.Size = new System.Drawing.Size(1195, 809);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlRemoveOrUpdateUsers_Paint);
             this.GPanelUsernameTextBoxAndRadioButton.ResumeLayout(false);
             this.GPanelUsernameTextBoxAndRadioButton.PerformLayout();
             this.guna2GradientPanel6.ResumeLayout(false);

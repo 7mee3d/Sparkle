@@ -242,6 +242,21 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private void DrawLineOfUserControlRemoveAndUpdate(PaintEventArgs e)
+        {
+
+            Color whiteGreen = Color.FromArgb(255, 4, 187, 156);
+
+            Pen pen = new Pen(whiteGreen);
+
+            pen.Width = 4;
+
+            Point p1 = new Point(0, 430);
+            Point p2 = new Point(687, 430);
+
+            e.Graphics.DrawLine(pen, p1, p2);
+        }
+
         private void RemoveUserByUsernameAfterClickRemove ()
         {
             string username = GTextBoxUsername.Text;
@@ -313,6 +328,11 @@ namespace Sparkle.User_Controls_Sparkle
         private void GButtonUpdateUser_Click(object sender, EventArgs e)
         {
             UpdateInformationUser();
+        }
+
+        private void UserControlRemoveOrUpdateUsers_Paint(object sender, PaintEventArgs e)
+        {
+            DrawLineOfUserControlRemoveAndUpdate(e);
         }
     }
 }
