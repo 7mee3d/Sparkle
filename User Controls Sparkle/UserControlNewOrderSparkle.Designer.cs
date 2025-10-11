@@ -361,7 +361,7 @@
             // 
             this.GPanelGroupRadioButton.Controls.Add(this.GRadioButtonCarsSection);
             this.GPanelGroupRadioButton.Controls.Add(this.GRadioButtonCarpetsSection);
-            this.GPanelGroupRadioButton.Location = new System.Drawing.Point(573, 250);
+            this.GPanelGroupRadioButton.Location = new System.Drawing.Point(591, 250);
             this.GPanelGroupRadioButton.Name = "GPanelGroupRadioButton";
             this.GPanelGroupRadioButton.Size = new System.Drawing.Size(582, 52);
             this.GPanelGroupRadioButton.TabIndex = 5;
@@ -420,10 +420,11 @@
             this.GPanelOptionsCarpets.Controls.Add(this.label9);
             this.GPanelOptionsCarpets.Controls.Add(this.label8);
             this.GPanelOptionsCarpets.Controls.Add(this.label7);
-            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(574, 313);
+            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(592, 313);
             this.GPanelOptionsCarpets.Name = "GPanelOptionsCarpets";
             this.GPanelOptionsCarpets.Size = new System.Drawing.Size(580, 314);
             this.GPanelOptionsCarpets.TabIndex = 6;
+            this.GPanelOptionsCarpets.Visible = false;
             // 
             // label7
             // 
@@ -521,11 +522,11 @@
             this.GPanelCarsSection.Controls.Add(this.label13);
             this.GPanelCarsSection.Controls.Add(this.label12);
             this.GPanelCarsSection.Controls.Add(this.label14);
-            this.GPanelCarsSection.Location = new System.Drawing.Point(587, 313);
+            this.GPanelCarsSection.Location = new System.Drawing.Point(605, 313);
             this.GPanelCarsSection.Name = "GPanelCarsSection";
             this.GPanelCarsSection.Size = new System.Drawing.Size(580, 314);
             this.GPanelCarsSection.TabIndex = 7;
-            this.GPanelCarsSection.Paint += new System.Windows.Forms.PaintEventHandler(this.GPanelCarsSection_Paint);
+            this.GPanelCarsSection.Visible = false;
             // 
             // guna2CheckBox3
             // 
@@ -859,7 +860,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlNewOrderSparkle";
             this.Size = new System.Drawing.Size(1195, 809);
-            this.Load += new System.EventHandler(this.UserControlNewOrderSparkle_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlNewOrderSparkle_Paint);
             this.PanelFillInformationClients.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
