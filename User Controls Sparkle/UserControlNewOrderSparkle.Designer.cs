@@ -51,7 +51,6 @@
             this.GRadioButtonCarsSection = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonCarpetsSection = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GPanelOptionsCarpets = new Guna.UI2.WinForms.Guna2Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.GRadioButtonSizeCarpetLarge = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonWashTypDeepWash = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonSizeCarpetMedium = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -80,6 +79,10 @@
             this.ButtonAddNewOrder = new Guna.UI2.WinForms.Guna2Button();
             this.TotalPriceCarSection = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.TotalPriceCarpetSection = new System.Windows.Forms.Label();
+            this.TextNoneAnyOption = new System.Windows.Forms.Label();
+            this.GPanelSizeCarpet = new Guna.UI2.WinForms.Guna2Panel();
             this.PanelFillInformationClients.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
@@ -94,6 +97,8 @@
             this.GPanelCarsOptions.SuspendLayout();
             this.GPnaelOtherServices.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel2.SuspendLayout();
+            this.GPanelSizeCarpet.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFillInformationClients
@@ -386,12 +391,12 @@
             this.GRadioButtonCarsSection.Animated = true;
             this.GRadioButtonCarsSection.AutoSize = true;
             this.GRadioButtonCarsSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonCarsSection.CheckedState.BorderThickness = 0;
+            this.GRadioButtonCarsSection.CheckedState.BorderThickness = 2;
             this.GRadioButtonCarsSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonCarsSection.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonCarsSection.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonCarsSection.CheckedState.InnerOffset = -4;
             this.GRadioButtonCarsSection.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonCarsSection.Location = new System.Drawing.Point(392, 14);
+            this.GRadioButtonCarsSection.Location = new System.Drawing.Point(422, 16);
             this.GRadioButtonCarsSection.Name = "GRadioButtonCarsSection";
             this.GRadioButtonCarsSection.Size = new System.Drawing.Size(65, 28);
             this.GRadioButtonCarsSection.TabIndex = 0;
@@ -408,9 +413,9 @@
             this.GRadioButtonCarpetsSection.Animated = true;
             this.GRadioButtonCarpetsSection.AutoSize = true;
             this.GRadioButtonCarpetsSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonCarpetsSection.CheckedState.BorderThickness = 0;
+            this.GRadioButtonCarpetsSection.CheckedState.BorderThickness = 2;
             this.GRadioButtonCarpetsSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonCarpetsSection.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonCarpetsSection.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonCarpetsSection.CheckedState.InnerOffset = -4;
             this.GRadioButtonCarpetsSection.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonCarpetsSection.Location = new System.Drawing.Point(105, 14);
@@ -427,12 +432,10 @@
             // 
             // GPanelOptionsCarpets
             // 
-            this.GPanelOptionsCarpets.Controls.Add(this.label15);
-            this.GPanelOptionsCarpets.Controls.Add(this.GRadioButtonSizeCarpetLarge);
+            this.GPanelOptionsCarpets.Controls.Add(this.GPanelSizeCarpet);
+            this.GPanelOptionsCarpets.Controls.Add(this.guna2CustomGradientPanel2);
             this.GPanelOptionsCarpets.Controls.Add(this.GRadioButtonWashTypDeepWash);
-            this.GPanelOptionsCarpets.Controls.Add(this.GRadioButtonSizeCarpetMedium);
             this.GPanelOptionsCarpets.Controls.Add(this.GRadioButtonWashTypNormalWash);
-            this.GPanelOptionsCarpets.Controls.Add(this.GRadioButtonSizeCarpetSmall);
             this.GPanelOptionsCarpets.Controls.Add(this.GNumricUPDownNumberCarpets);
             this.GPanelOptionsCarpets.Controls.Add(this.GCheckBoxOtherServicesHomeDelivery);
             this.GPanelOptionsCarpets.Controls.Add(this.GCheckBoxOtherServicesQuickDrying);
@@ -440,49 +443,40 @@
             this.GPanelOptionsCarpets.Controls.Add(this.label9);
             this.GPanelOptionsCarpets.Controls.Add(this.label8);
             this.GPanelOptionsCarpets.Controls.Add(this.label7);
-            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(592, 313);
+            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(593, 314);
             this.GPanelOptionsCarpets.Name = "GPanelOptionsCarpets";
             this.GPanelOptionsCarpets.Size = new System.Drawing.Size(580, 314);
             this.GPanelOptionsCarpets.TabIndex = 6;
             this.GPanelOptionsCarpets.Visible = false;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Garamond", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.label15.Location = new System.Drawing.Point(459, 231);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 68);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "0";
-            // 
             // GRadioButtonSizeCarpetLarge
             // 
+            this.GRadioButtonSizeCarpetLarge.Animated = true;
             this.GRadioButtonSizeCarpetLarge.AutoSize = true;
-            this.GRadioButtonSizeCarpetLarge.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetLarge.CheckedState.BorderThickness = 0;
-            this.GRadioButtonSizeCarpetLarge.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetLarge.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetLarge.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetLarge.CheckedState.BorderThickness = 2;
+            this.GRadioButtonSizeCarpetLarge.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetLarge.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetLarge.CheckedState.InnerOffset = -4;
             this.GRadioButtonSizeCarpetLarge.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonSizeCarpetLarge.Location = new System.Drawing.Point(409, 45);
+            this.GRadioButtonSizeCarpetLarge.Location = new System.Drawing.Point(262, 5);
             this.GRadioButtonSizeCarpetLarge.Name = "GRadioButtonSizeCarpetLarge";
             this.GRadioButtonSizeCarpetLarge.Size = new System.Drawing.Size(109, 21);
             this.GRadioButtonSizeCarpetLarge.TabIndex = 3;
             this.GRadioButtonSizeCarpetLarge.Text = "Large Carpet";
-            this.GRadioButtonSizeCarpetLarge.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonSizeCarpetLarge.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetLarge.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonSizeCarpetLarge.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonSizeCarpetLarge.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonSizeCarpetLarge.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetLarge.CheckedChanged += new System.EventHandler(this.GRadioButtonSizeCarpetLarge_CheckedChanged);
             // 
             // GRadioButtonWashTypDeepWash
             // 
+            this.GRadioButtonWashTypDeepWash.Animated = true;
             this.GRadioButtonWashTypDeepWash.AutoSize = true;
-            this.GRadioButtonWashTypDeepWash.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonWashTypDeepWash.CheckedState.BorderThickness = 0;
-            this.GRadioButtonWashTypDeepWash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonWashTypDeepWash.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonWashTypDeepWash.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonWashTypDeepWash.CheckedState.BorderThickness = 2;
+            this.GRadioButtonWashTypDeepWash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonWashTypDeepWash.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypDeepWash.CheckedState.InnerOffset = -4;
             this.GRadioButtonWashTypDeepWash.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonWashTypDeepWash.Location = new System.Drawing.Point(273, 103);
@@ -490,37 +484,39 @@
             this.GRadioButtonWashTypDeepWash.Size = new System.Drawing.Size(96, 21);
             this.GRadioButtonWashTypDeepWash.TabIndex = 3;
             this.GRadioButtonWashTypDeepWash.Text = "Deep wash";
-            this.GRadioButtonWashTypDeepWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonWashTypDeepWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypDeepWash.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonWashTypDeepWash.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonWashTypDeepWash.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonWashTypDeepWash.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GRadioButtonWashTypDeepWash.CheckedChanged += new System.EventHandler(this.GRadioButtonWashTypDeepWash_CheckedChanged);
             // 
             // GRadioButtonSizeCarpetMedium
             // 
+            this.GRadioButtonSizeCarpetMedium.Animated = true;
             this.GRadioButtonSizeCarpetMedium.AutoSize = true;
-            this.GRadioButtonSizeCarpetMedium.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetMedium.CheckedState.BorderThickness = 0;
-            this.GRadioButtonSizeCarpetMedium.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetMedium.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetMedium.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetMedium.CheckedState.BorderThickness = 2;
+            this.GRadioButtonSizeCarpetMedium.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetMedium.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetMedium.CheckedState.InnerOffset = -4;
             this.GRadioButtonSizeCarpetMedium.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonSizeCarpetMedium.Location = new System.Drawing.Point(273, 45);
+            this.GRadioButtonSizeCarpetMedium.Location = new System.Drawing.Point(126, 5);
             this.GRadioButtonSizeCarpetMedium.Name = "GRadioButtonSizeCarpetMedium";
             this.GRadioButtonSizeCarpetMedium.Size = new System.Drawing.Size(125, 21);
             this.GRadioButtonSizeCarpetMedium.TabIndex = 3;
             this.GRadioButtonSizeCarpetMedium.Text = "Medium Carpet";
-            this.GRadioButtonSizeCarpetMedium.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonSizeCarpetMedium.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetMedium.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonSizeCarpetMedium.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonSizeCarpetMedium.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonSizeCarpetMedium.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetMedium.CheckedChanged += new System.EventHandler(this.GRadioButtonSizeCarpetMedium_CheckedChanged);
             // 
             // GRadioButtonWashTypNormalWash
             // 
+            this.GRadioButtonWashTypNormalWash.Animated = true;
             this.GRadioButtonWashTypNormalWash.AutoSize = true;
-            this.GRadioButtonWashTypNormalWash.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonWashTypNormalWash.CheckedState.BorderThickness = 0;
-            this.GRadioButtonWashTypNormalWash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonWashTypNormalWash.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonWashTypNormalWash.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonWashTypNormalWash.CheckedState.BorderThickness = 2;
+            this.GRadioButtonWashTypNormalWash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonWashTypNormalWash.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypNormalWash.CheckedState.InnerOffset = -4;
             this.GRadioButtonWashTypNormalWash.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonWashTypNormalWash.Location = new System.Drawing.Point(155, 103);
@@ -528,75 +524,97 @@
             this.GRadioButtonWashTypNormalWash.Size = new System.Drawing.Size(111, 21);
             this.GRadioButtonWashTypNormalWash.TabIndex = 3;
             this.GRadioButtonWashTypNormalWash.Text = "Normal wash\n";
-            this.GRadioButtonWashTypNormalWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonWashTypNormalWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypNormalWash.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonWashTypNormalWash.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonWashTypNormalWash.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonWashTypNormalWash.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GRadioButtonWashTypNormalWash.CheckedChanged += new System.EventHandler(this.GRadioButtonWashTypNormalWash_CheckedChanged);
             // 
             // GRadioButtonSizeCarpetSmall
             // 
+            this.GRadioButtonSizeCarpetSmall.Animated = true;
             this.GRadioButtonSizeCarpetSmall.AutoSize = true;
-            this.GRadioButtonSizeCarpetSmall.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetSmall.CheckedState.BorderThickness = 0;
-            this.GRadioButtonSizeCarpetSmall.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonSizeCarpetSmall.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetSmall.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetSmall.CheckedState.BorderThickness = 2;
+            this.GRadioButtonSizeCarpetSmall.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSizeCarpetSmall.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetSmall.CheckedState.InnerOffset = -4;
             this.GRadioButtonSizeCarpetSmall.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonSizeCarpetSmall.Location = new System.Drawing.Point(155, 45);
+            this.GRadioButtonSizeCarpetSmall.Location = new System.Drawing.Point(8, 5);
             this.GRadioButtonSizeCarpetSmall.Name = "GRadioButtonSizeCarpetSmall";
             this.GRadioButtonSizeCarpetSmall.Size = new System.Drawing.Size(107, 21);
             this.GRadioButtonSizeCarpetSmall.TabIndex = 3;
             this.GRadioButtonSizeCarpetSmall.Text = "Small Carpet";
-            this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderThickness = 2;
-            this.GRadioButtonSizeCarpetSmall.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.GRadioButtonSizeCarpetSmall.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonSizeCarpetSmall.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeCarpetSmall.CheckedChanged += new System.EventHandler(this.GRadioButtonSizeCarpetSmall_CheckedChanged);
             // 
             // GNumricUPDownNumberCarpets
             // 
             this.GNumricUPDownNumberCarpets.BackColor = System.Drawing.Color.Transparent;
             this.GNumricUPDownNumberCarpets.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GNumricUPDownNumberCarpets.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GNumricUPDownNumberCarpets.Location = new System.Drawing.Point(176, 262);
+            this.GNumricUPDownNumberCarpets.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GNumricUPDownNumberCarpets.Location = new System.Drawing.Point(176, 261);
+            this.GNumricUPDownNumberCarpets.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.GNumricUPDownNumberCarpets.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.GNumricUPDownNumberCarpets.Name = "GNumricUPDownNumberCarpets";
             this.GNumricUPDownNumberCarpets.Size = new System.Drawing.Size(100, 36);
             this.GNumricUPDownNumberCarpets.TabIndex = 2;
+            this.GNumricUPDownNumberCarpets.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GNumricUPDownNumberCarpets.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.GNumricUPDownNumberCarpets.ValueChanged += new System.EventHandler(this.GNumricUPDownNumberCarpets_ValueChanged);
             // 
             // GCheckBoxOtherServicesHomeDelivery
             // 
+            this.GCheckBoxOtherServicesHomeDelivery.Animated = true;
             this.GCheckBoxOtherServicesHomeDelivery.AutoSize = true;
-            this.GCheckBoxOtherServicesHomeDelivery.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GCheckBoxOtherServicesHomeDelivery.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesHomeDelivery.CheckedState.BorderRadius = 0;
             this.GCheckBoxOtherServicesHomeDelivery.CheckedState.BorderThickness = 0;
-            this.GCheckBoxOtherServicesHomeDelivery.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GCheckBoxOtherServicesHomeDelivery.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxOtherServicesHomeDelivery.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxOtherServicesHomeDelivery.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold);
             this.GCheckBoxOtherServicesHomeDelivery.Location = new System.Drawing.Point(229, 198);
             this.GCheckBoxOtherServicesHomeDelivery.Name = "GCheckBoxOtherServicesHomeDelivery";
             this.GCheckBoxOtherServicesHomeDelivery.Size = new System.Drawing.Size(129, 22);
             this.GCheckBoxOtherServicesHomeDelivery.TabIndex = 1;
             this.GCheckBoxOtherServicesHomeDelivery.Text = "Home delivery";
-            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderRadius = 0;
-            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderThickness = 0;
-            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderRadius = 1;
+            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderThickness = 1;
+            this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GCheckBoxOtherServicesHomeDelivery.CheckedChanged += new System.EventHandler(this.GCheckBoxOtherServicesHomeDelivery_CheckedChanged);
             // 
             // GCheckBoxOtherServicesQuickDrying
             // 
+            this.GCheckBoxOtherServicesQuickDrying.Animated = true;
             this.GCheckBoxOtherServicesQuickDrying.AutoSize = true;
-            this.GCheckBoxOtherServicesQuickDrying.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GCheckBoxOtherServicesQuickDrying.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesQuickDrying.CheckedState.BorderRadius = 0;
             this.GCheckBoxOtherServicesQuickDrying.CheckedState.BorderThickness = 0;
-            this.GCheckBoxOtherServicesQuickDrying.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GCheckBoxOtherServicesQuickDrying.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesQuickDrying.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GCheckBoxOtherServicesQuickDrying.Location = new System.Drawing.Point(75, 198);
             this.GCheckBoxOtherServicesQuickDrying.Name = "GCheckBoxOtherServicesQuickDrying";
             this.GCheckBoxOtherServicesQuickDrying.Size = new System.Drawing.Size(123, 22);
             this.GCheckBoxOtherServicesQuickDrying.TabIndex = 1;
             this.GCheckBoxOtherServicesQuickDrying.Text = "Quick Drying";
-            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderRadius = 0;
-            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderThickness = 0;
-            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderRadius = 1;
+            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderThickness = 1;
+            this.GCheckBoxOtherServicesQuickDrying.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.GCheckBoxOtherServicesQuickDrying.CheckedChanged += new System.EventHandler(this.GCheckBoxOtherServicesQuickDrying_CheckedChanged);
             // 
             // label10
             // 
@@ -649,7 +667,7 @@
             this.GPanelCarsOptions.Controls.Add(this.label12);
             this.GPanelCarsOptions.Controls.Add(this.label14);
             this.GPanelCarsOptions.Controls.Add(this.guna2CustomGradientPanel1);
-            this.GPanelCarsOptions.Location = new System.Drawing.Point(590, 311);
+            this.GPanelCarsOptions.Location = new System.Drawing.Point(594, 313);
             this.GPanelCarsOptions.Name = "GPanelCarsOptions";
             this.GPanelCarsOptions.Size = new System.Drawing.Size(580, 314);
             this.GPanelCarsOptions.TabIndex = 7;
@@ -659,9 +677,9 @@
             // 
             this.GRadioButtonSizeLargeCar.AutoSize = true;
             this.GRadioButtonSizeLargeCar.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonSizeLargeCar.CheckedState.BorderThickness = 0;
+            this.GRadioButtonSizeLargeCar.CheckedState.BorderThickness = 2;
             this.GRadioButtonSizeLargeCar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonSizeLargeCar.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeLargeCar.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeLargeCar.CheckedState.InnerOffset = -4;
             this.GRadioButtonSizeLargeCar.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonSizeLargeCar.Location = new System.Drawing.Point(385, 57);
@@ -679,9 +697,9 @@
             // 
             this.GRadioButtonMediumCar.AutoSize = true;
             this.GRadioButtonMediumCar.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonMediumCar.CheckedState.BorderThickness = 0;
+            this.GRadioButtonMediumCar.CheckedState.BorderThickness = 2;
             this.GRadioButtonMediumCar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonMediumCar.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonMediumCar.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonMediumCar.CheckedState.InnerOffset = -4;
             this.GRadioButtonMediumCar.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonMediumCar.Location = new System.Drawing.Point(249, 57);
@@ -699,9 +717,9 @@
             // 
             this.GRadioButtonSizeSmallCar.AutoSize = true;
             this.GRadioButtonSizeSmallCar.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonSizeSmallCar.CheckedState.BorderThickness = 0;
+            this.GRadioButtonSizeSmallCar.CheckedState.BorderThickness = 2;
             this.GRadioButtonSizeSmallCar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GRadioButtonSizeSmallCar.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonSizeSmallCar.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeSmallCar.CheckedState.InnerOffset = -4;
             this.GRadioButtonSizeSmallCar.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GRadioButtonSizeSmallCar.Location = new System.Drawing.Point(131, 57);
@@ -904,17 +922,62 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(134, 67);
             this.guna2CustomGradientPanel1.TabIndex = 9;
             // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BorderRadius = 10;
+            this.guna2CustomGradientPanel2.Controls.Add(this.TotalPriceCarpetSection);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(409, 230);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(146, 67);
+            this.guna2CustomGradientPanel2.TabIndex = 10;
+            // 
+            // TotalPriceCarpetSection
+            // 
+            this.TotalPriceCarpetSection.AutoSize = true;
+            this.TotalPriceCarpetSection.BackColor = System.Drawing.Color.Transparent;
+            this.TotalPriceCarpetSection.Font = new System.Drawing.Font("Garamond", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPriceCarpetSection.ForeColor = System.Drawing.Color.White;
+            this.TotalPriceCarpetSection.Location = new System.Drawing.Point(9, 0);
+            this.TotalPriceCarpetSection.Name = "TotalPriceCarpetSection";
+            this.TotalPriceCarpetSection.Size = new System.Drawing.Size(57, 68);
+            this.TotalPriceCarpetSection.TabIndex = 8;
+            this.TotalPriceCarpetSection.Text = "0";
+            // 
+            // TextNoneAnyOption
+            // 
+            this.TextNoneAnyOption.AutoSize = true;
+            this.TextNoneAnyOption.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextNoneAnyOption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.TextNoneAnyOption.Location = new System.Drawing.Point(687, 394);
+            this.TextNoneAnyOption.Name = "TextNoneAnyOption";
+            this.TextNoneAnyOption.Size = new System.Drawing.Size(391, 54);
+            this.TextNoneAnyOption.TabIndex = 11;
+            this.TextNoneAnyOption.Text = "None Any Option";
+            // 
+            // GPanelSizeCarpet
+            // 
+            this.GPanelSizeCarpet.Controls.Add(this.GRadioButtonSizeCarpetSmall);
+            this.GPanelSizeCarpet.Controls.Add(this.GRadioButtonSizeCarpetMedium);
+            this.GPanelSizeCarpet.Controls.Add(this.GRadioButtonSizeCarpetLarge);
+            this.GPanelSizeCarpet.Location = new System.Drawing.Point(146, 43);
+            this.GPanelSizeCarpet.Name = "GPanelSizeCarpet";
+            this.GPanelSizeCarpet.Size = new System.Drawing.Size(389, 30);
+            this.GPanelSizeCarpet.TabIndex = 11;
+            // 
             // UserControlNewOrderSparkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ButtonAddNewOrder);
-            this.Controls.Add(this.GPanelCarsOptions);
-            this.Controls.Add(this.GPanelOptionsCarpets);
             this.Controls.Add(this.GPanelGroupRadioButton);
+            this.Controls.Add(this.GPanelOptionsCarpets);
             this.Controls.Add(this.PanelFillInformationClients);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.TextNoneAnyOption);
+            this.Controls.Add(this.GPanelCarsOptions);
             this.Name = "UserControlNewOrderSparkle";
             this.Size = new System.Drawing.Size(1195, 809);
             this.Load += new System.EventHandler(this.UserControlNewOrderSparkle_Load);
@@ -944,7 +1007,12 @@
             this.GPnaelOtherServices.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.PerformLayout();
+            this.GPanelSizeCarpet.ResumeLayout(false);
+            this.GPanelSizeCarpet.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -999,8 +1067,11 @@
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonMediumCar;
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonSizeSmallCar;
         private Guna.UI2.WinForms.Guna2Button ButtonAddNewOrder;
-        private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label TotalPriceCarSection;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.Label TotalPriceCarpetSection;
+        private System.Windows.Forms.Label TextNoneAnyOption;
+        private Guna.UI2.WinForms.Guna2Panel GPanelSizeCarpet;
     }
 }

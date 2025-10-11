@@ -47,12 +47,14 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 GPanelOptionsCarpets.Visible = true;
                 GPanelCarsOptions.Visible = false;
+                TextNoneAnyOption.Visible = false;
             }
 
             else if (GRadioButtonCarsSection.Checked)
             {
                 GPanelOptionsCarpets.Visible = false;
                 GPanelCarsOptions.Visible = true;
+                TextNoneAnyOption.Visible = false;
             }
         }
 
@@ -167,6 +169,66 @@ namespace Sparkle.User_Controls_Sparkle
                 updateTotalPriceSectionCarWash();
             }
         }
+        
+        private int calcPriceSizeCarpet ()
+        {
+            int totalPriceSizeCarpet = 0;
+
+            if (GRadioButtonSizeCarpetSmall.Checked)
+                totalPriceSizeCarpet = 5;
+
+            if (GRadioButtonSizeCarpetMedium.Checked)
+                totalPriceSizeCarpet = 10;
+
+            if (GRadioButtonSizeCarpetLarge.Checked)
+                totalPriceSizeCarpet = 15;
+
+            return totalPriceSizeCarpet; 
+        }
+
+        private int calcPriceTypeWash()
+        {
+
+            int totalPriceTypeWash = 0;
+
+            if (GRadioButtonWashTypNormalWash.Checked)
+                totalPriceTypeWash = 5;
+
+            if (GRadioButtonWashTypDeepWash.Checked)
+                totalPriceTypeWash = 10;
+
+            return totalPriceTypeWash;
+
+        }
+
+        private int calcPriceOtherServices ()
+        {
+
+            int totalPriceOtherSevices = 0;
+
+            if (GCheckBoxOtherServicesQuickDrying.Checked)
+                totalPriceOtherSevices += 5;
+
+            if (GCheckBoxOtherServicesHomeDelivery.Checked)
+                totalPriceOtherSevices += 15;
+
+            return totalPriceOtherSevices;
+        }
+
+        private int totalNumberCarpetToNeedWashing()
+        {
+            return (Convert.ToInt32( GNumricUPDownNumberCarpets.Value)); 
+        }
+
+        private int calcTotalPriveAllServiceCarpet ()
+        {
+            return ((calcPriceSizeCarpet() + calcPriceTypeWash() + calcPriceOtherServices()) * totalNumberCarpetToNeedWashing() ) ;
+        }
+
+        private void updateTotalPriceOfCarpet ()
+        {
+            TotalPriceCarpetSection.Text = Convert.ToString(calcTotalPriveAllServiceCarpet()) + "$";
+        }
 
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
@@ -186,6 +248,46 @@ namespace Sparkle.User_Controls_Sparkle
         private void GCheckBoxOtherServicesPolishing_CheckedChanged(object sender, EventArgs e)
         {
             updateTotalPriceSectionCarWash();
+        }
+
+        private void GRadioButtonSizeCarpetLarge_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GRadioButtonWashTypNormalWash_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GRadioButtonSizeCarpetSmall_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GRadioButtonSizeCarpetMedium_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GRadioButtonWashTypDeepWash_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GCheckBoxOtherServicesQuickDrying_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GCheckBoxOtherServicesHomeDelivery_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
+        }
+
+        private void GNumricUPDownNumberCarpets_ValueChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceOfCarpet();
         }
     }
 }
