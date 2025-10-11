@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainScreenSparkleProgram));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonRemoveOrUpdateUsers = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonNewOrder = new Guna.UI2.WinForms.Guna2Button();
@@ -40,17 +46,11 @@
             this.GButtonRemoveOrUpdateClient = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonClientListSection = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.PanelMainWelcomeSparkle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,76 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(222, 801);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(24, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 54);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sparkle";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(75, 426);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(553, 96);
+            this.label2.TabIndex = 1;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label3.Location = new System.Drawing.Point(65, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 82);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Sparkle";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Elephant", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label4.Location = new System.Drawing.Point(26, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(778, 146);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Welcome To";
+            // 
+            // PanelMainWelcomeSparkle
+            // 
+            this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
+            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -8);
+            this.PanelMainWelcomeSparkle.Name = "PanelMainWelcomeSparkle";
+            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 809);
+            this.PanelMainWelcomeSparkle.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(75, 551);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(387, 113);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
+    " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
             // 
             // guna2Button6
             // 
@@ -159,7 +229,7 @@
             this.GButtonNewOrder.Image = global::Sparkle.Properties.Resources.Order_Icon_;
             this.GButtonNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.GButtonNewOrder.ImageOffset = new System.Drawing.Point(25, 0);
-            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 616);
+            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 614);
             this.GButtonNewOrder.Name = "GButtonNewOrder";
             this.GButtonNewOrder.PressedColor = System.Drawing.Color.White;
             this.GButtonNewOrder.Size = new System.Drawing.Size(222, 55);
@@ -313,18 +383,6 @@
             this.ButtonClients.Text = "Clients";
             this.ButtonClients.Click += new System.EventHandler(this.ButtonClients_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sparkle";
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -336,64 +394,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 426);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(553, 96);
-            this.label2.TabIndex = 1;
-            this.label2.Text = resources.GetString("label2.Text");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label3.Location = new System.Drawing.Point(65, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 82);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Sparkle";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Elephant", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(26, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(778, 146);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Welcome To";
-            // 
-            // PanelMainWelcomeSparkle
-            // 
-            this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
-            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -8);
-            this.PanelMainWelcomeSparkle.Name = "PanelMainWelcomeSparkle";
-            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 809);
-            this.PanelMainWelcomeSparkle.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(75, 551);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 113);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
-    " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
             // 
             // guna2PictureBox2
             // 
@@ -424,9 +424,9 @@
             this.Text = "FormMainScreenSparkleProgram";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PanelMainWelcomeSparkle.ResumeLayout(false);
             this.PanelMainWelcomeSparkle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
