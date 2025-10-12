@@ -1015,7 +1015,6 @@
             this.GTextBoxOtherSeviceCarpet.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxOtherSeviceCarpet.TabIndex = 0;
             this.GTextBoxOtherSeviceCarpet.Tag = "TAddress";
-            this.GTextBoxOtherSeviceCarpet.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2GradientPanel8
             // 
@@ -1259,7 +1258,6 @@
             this.GTextBoxCarModel.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxCarModel.TabIndex = 3;
             this.GTextBoxCarModel.Tag = "TName";
-            this.GTextBoxCarModel.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // GTextBoxCarDetailsCarSection
             // 
@@ -1396,7 +1394,6 @@
             this.GTextBoxNumberCar.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxNumberCar.TabIndex = 14;
             this.GTextBoxNumberCar.Tag = "TID";
-            this.GTextBoxNumberCar.TextChanged += new System.EventHandler(this.guna2TextBox7_TextChanged);
             // 
             // guna2GradientPanel14
             // 

@@ -15,19 +15,23 @@ namespace Sparkle.User_Controls_Sparkle
     public partial class UserControlNewOrderSparkle : UserControl
     {
 
-      
 
+          //Path File 
+        const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
+        const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
+      
+        
         public UserControlNewOrderSparkle()
         {
             InitializeComponent();
             GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+            GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
             GTextBoxIDOrderCarpet.Enabled = false;
+            GTextBoxIDOrderCarSection.Enabled = false; 
         }
 
-        const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
-        const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
 
-       
+        //Reset All Text Boxies
         private void ResetAllTextBoxInUserControl ()
         {
             foreach (Control outterControls in this.Controls)
@@ -45,10 +49,20 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
+        private void resetAllCheckBoxiesOtherServive()
+        {
+            GCheckBoxOtherServicesEngineCleaning.Checked = false;
+            GCheckBoxOtherServicesExteriorWash.Checked = false;
+            GCheckBoxOtherServicesPolishing.Checked = false;
+            GCheckBoxOtherServicesInteriorWash.Checked = false;
+
+            updateTotalPriceSectionCarWash();
+        }
+
 
 
         //------------------------------ [Start Section Carpet]-------------------------------
-        
+
 
         struct stInformationOrderCarpet
         {
@@ -225,6 +239,26 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private List<string> allInformationOptionsCarpet()
+        {
+            List<string> allInformationCarpet = new List<string>();
+
+            allInformationCarpet.Add(((lastIDOrderInFile()) + 1).ToString());
+            allInformationCarpet.Add(GTextBoxNameClientSectionCarpet.Text);
+            allInformationCarpet.Add(GTextBoxAddressClientSectionCarpet.Text);
+            allInformationCarpet.Add(GTextBoxEmailClientSectionCarpet.Text);
+            allInformationCarpet.Add(GTextBoxPhoneClientSectionCarpet.Text);
+            allInformationCarpet.Add(returnWordSizeCarpt());
+            allInformationCarpet.Add(returnWordTypeWash());
+            allInformationCarpet.Add(returnTextOtherServiceCarpet());
+            allInformationCarpet.Add(GNumricUPDownNumberCarpets.Value.ToString());
+            allInformationCarpet.Add(GTextBoxOtherSeviceCarpet.Text);
+            allInformationCarpet.Add(calcTotalPriveAllServiceCarpet().ToString());
+
+            return allInformationCarpet;
+        }
+
+
 
         //------------------------------ [End Section Carpet]-------------------------------
 
@@ -356,7 +390,7 @@ namespace Sparkle.User_Controls_Sparkle
             lineInformationCarOrder += allInformationCarOrderInformation[8] + Separtor; 
             lineInformationCarOrder += allInformationCarOrderInformation[9] + Separtor; 
             lineInformationCarOrder += allInformationCarOrderInformation[10] + Separtor; 
-            lineInformationCarOrder += allInformationCarOrderInformation[12] ;
+            lineInformationCarOrder += allInformationCarOrderInformation[11] ;
 
             return lineInformationCarOrder; 
         }
@@ -366,7 +400,7 @@ namespace Sparkle.User_Controls_Sparkle
             if (!System.IO.File.Exists(kPATH_FILE_CARS_ORDERS))
                 System.IO.File.Create(kPATH_FILE_CARS_ORDERS).Close();
 
-            System.IO.StreamWriter WriteAllInformationOrderCarToFile = new System.IO.StreamWriter(kPATH_FILE_CARS_ORDERS);
+            System.IO.StreamWriter WriteAllInformationOrderCarToFile = new System.IO.StreamWriter(kPATH_FILE_CARS_ORDERS   , true );
 
             string lineInfroamtionCarOrder = ConvertListStringToLineInformationCarOrder(allInformationCarOrderInformation);
 
@@ -377,11 +411,51 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
+     
+       private List<string> AllInformationStringCarSection ()
+        {
+
+            List<string> allInformationCarSection = new List<string>();
+
+            allInformationCarSection.Add(GTextBoxIDOrderCarSection.Text);
+            allInformationCarSection.Add(GTextBoxNumberCar.Text);
+            allInformationCarSection.Add(GTextBoxCarModel.Text);
+            allInformationCarSection.Add(GTextBoxNameClientCarSection.Text);
+            allInformationCarSection.Add(GTextBoxAddressClientCarSection.Text);
+            allInformationCarSection.Add(GTextBoxEmailClientCarSection.Text);
+            allInformationCarSection.Add(GTextBoxPhoneClientCarSection.Text);
+            allInformationCarSection.Add(returnWordSizeCar());
+            allInformationCarSection.Add(returnTypeWashCarWord());
+            allInformationCarSection.Add(returnLineWordServiceCar());
+            allInformationCarSection.Add(TotalPriceCarSection.Text);
+            allInformationCarSection.Add(GTextBoxCarDetailsCarSection.Text);
+
+            return allInformationCarSection;
+
+        }
+
+       private int TakeLastIDOrderCarSection ()
+        {
+            List<string> allInformationLineSectionCar = LoadAllInformationOrderCarSectionFromFile();
+
+            if (allInformationLineSectionCar.Count > 0)
+            {
+                List<string> SplitLineInformationOneLine = SplitLineInformationOrderCar(allInformationLineSectionCar[allInformationLineSectionCar.Count - 1]);
+                return Convert.ToInt32(SplitLineInformationOneLine[0]);
+            }
+            else
+                return 0; 
+        }
+
 
 
 
         //------------------------------ [End Section Car]-------------------------------
 
+
+
+
+        //------------------------------ [ Start Draw Line Section ]-------------------------------
 
 
         private void DrawLineVarticalBetweenSectionAndInformationClient (PaintEventArgs event1 ){
@@ -405,6 +479,12 @@ namespace Sparkle.User_Controls_Sparkle
         {
             DrawLineVarticalBetweenSectionAndInformationClient(e);
         }
+
+
+
+
+        //------------------------------ [ End Draw Line Section ]-------------------------------
+
 
         private void SwitchRadioButtonVisiblePanelCarAndCarpet(object sender, EventArgs e)
         {
@@ -432,6 +512,12 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
+
+
+        //------------------------------ [Start Section Car Options]-------------------------------
+
+
+
         private int calcSizeCarPrice  ()
         {
             int SizePriceCar = 0;
@@ -446,6 +532,22 @@ namespace Sparkle.User_Controls_Sparkle
                 SizePriceCar = 15;
 
             return SizePriceCar; 
+        }
+
+        private string returnWordSizeCar ()
+        {
+            string sizeCarWord = "";
+
+            if (GRadioButtonSizeSmallCar.Checked)
+                sizeCarWord = "Small Car";
+
+            if (GRadioButtonMediumCar.Checked)
+                sizeCarWord = "Medium Car";
+                    
+            if (GRadioButtonSizeLargeCar.Checked)
+                sizeCarWord = "Large Car";
+
+            return sizeCarWord;
         }
 
         private void InitialValueAfterClickButtonNewOrder ()
@@ -466,7 +568,20 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
+     
+        private string returnTypeWashCarWord()
+        {
+            string wordTypeWashCar  = "";
 
+            if (GCheckBoxServicesFullWash.Checked)
+                wordTypeWashCar = "Full Wash";
+         
+
+            return wordTypeWashCar;
+
+
+        }
+   
         private int calcOtherServiceWashPriceCar ()
         {
 
@@ -484,7 +599,35 @@ namespace Sparkle.User_Controls_Sparkle
             if (GCheckBoxOtherServicesPolishing.Checked)
                 priceOtherSeviceWashCar += 5;
 
-            return priceOtherSeviceWashCar; 
+            return priceOtherSeviceWashCar;
+
+
+        }
+       
+        private string returnLineWordServiceCar ()
+        {
+
+            string wordServiceCar = "";
+
+            if (GCheckBoxServicesFullWash.Checked)
+            {
+               return  "None";
+
+            }
+
+            if (GCheckBoxOtherServicesExteriorWash.Checked)
+                wordServiceCar += "Exterior Wash";
+
+            if (GCheckBoxOtherServicesInteriorWash.Checked)
+                wordServiceCar += "Interior Wash";
+
+            if (GCheckBoxOtherServicesEngineCleaning.Checked)
+                wordServiceCar += "Engine Cleaning";
+
+            if (GCheckBoxOtherServicesPolishing.Checked)
+                wordServiceCar += "Polishing";
+
+            return wordServiceCar;
 
 
         }
@@ -499,52 +642,19 @@ namespace Sparkle.User_Controls_Sparkle
             TotalPriceCarSection.Text = Convert.ToString(calcTotalPriceOfWashCar()) + "$";
         }
 
-        private void resetAllCheckBoxiesOtherServive ()
-        {
-            GCheckBoxOtherServicesEngineCleaning.Checked = false;
-            GCheckBoxOtherServicesExteriorWash.Checked = false;
-            GCheckBoxOtherServicesPolishing.Checked = false;
-            GCheckBoxOtherServicesInteriorWash.Checked = false;
 
-            updateTotalPriceSectionCarWash(); 
-        }
+
+        //------------------------------ [End Section Car Options]-------------------------------
+
+
        
-        private void UserControlNewOrderSparkle_Load(object sender, EventArgs e)
-        {
-            updateTotalPriceSectionCarWash(); 
-        }
+   
 
-        private void GRadioButtonSizeSmallCar_CheckedChanged(object sender, EventArgs e)
-        {
-            updateTotalPriceSectionCarWash();
-        }
+        //------------------------------ [Start Section Carpet Options]-------------------------------
 
-        private void GRadioButtonMediumCar_CheckedChanged(object sender, EventArgs e)
-        {
-            updateTotalPriceSectionCarWash();
-        }
 
-        private void GRadioButtonSizeLargeCar_CheckedChanged(object sender, EventArgs e)
-        {
-            updateTotalPriceSectionCarWash();
-        }
 
-        private void GCheckBoxServicesFullWash_CheckedChanged(object sender, EventArgs e)
-        {
-            if (GCheckBoxServicesFullWash.Checked)
-            {
-                GPnaelOtherServices.Enabled = false;
-                resetAllCheckBoxiesOtherServive();
-                updateTotalPriceSectionCarWash();
-            }
 
-            if (!GCheckBoxServicesFullWash.Checked)
-            {
-                GPnaelOtherServices.Enabled = true;
-                updateTotalPriceSectionCarWash();
-            }
-        }
-        
         private int calcPriceSizeCarpet ()
         {
             int totalPriceSizeCarpet = 0;
@@ -645,29 +755,23 @@ namespace Sparkle.User_Controls_Sparkle
             return ((calcPriceSizeCarpet() + calcPriceTypeWash() + calcPriceOtherServices()) * totalNumberCarpetToNeedWashing());
         }
 
-        private List<string> allInformationOptionsCarpet ()
-        {
-            List<string> allInformationCarpet = new List<string>();
-
-            allInformationCarpet.Add(((lastIDOrderInFile())+1).ToString()); 
-            allInformationCarpet.Add(GTextBoxNameClientSectionCarpet.Text); 
-            allInformationCarpet.Add(GTextBoxAddressClientSectionCarpet.Text); 
-            allInformationCarpet.Add(GTextBoxEmailClientSectionCarpet.Text); 
-            allInformationCarpet.Add(GTextBoxPhoneClientSectionCarpet.Text); 
-            allInformationCarpet.Add(returnWordSizeCarpt()); 
-            allInformationCarpet.Add(returnWordTypeWash()); 
-            allInformationCarpet.Add(returnTextOtherServiceCarpet()); 
-            allInformationCarpet.Add(GNumricUPDownNumberCarpets.Value.ToString()); 
-            allInformationCarpet.Add(GTextBoxOtherSeviceCarpet.Text); 
-            allInformationCarpet.Add(calcTotalPriveAllServiceCarpet().ToString());
-
-            return allInformationCarpet; 
-        }
-   
-        private void updateTotalPriceOfCarpet ()
+        private void updateTotalPriceOfCarpet()
         {
             TotalPriceCarpetSection.Text = Convert.ToString(calcTotalPriveAllServiceCarpet()) + "$";
         }
+
+
+
+
+        //------------------------------ [End Section Carpet Options]-------------------------------
+
+
+
+
+
+
+
+        //------------------------------ [Start Section Controls]-------------------------------
 
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
@@ -729,9 +833,40 @@ namespace Sparkle.User_Controls_Sparkle
             updateTotalPriceOfCarpet();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        private void UserControlNewOrderSparkle_Load(object sender, EventArgs e)
         {
-          
+            updateTotalPriceSectionCarWash();
+        }
+
+        private void GRadioButtonSizeSmallCar_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceSectionCarWash();
+        }
+
+        private void GRadioButtonMediumCar_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceSectionCarWash();
+        }
+
+        private void GRadioButtonSizeLargeCar_CheckedChanged(object sender, EventArgs e)
+        {
+            updateTotalPriceSectionCarWash();
+        }
+
+        private void GCheckBoxServicesFullWash_CheckedChanged(object sender, EventArgs e)
+        {
+            if (GCheckBoxServicesFullWash.Checked)
+            {
+                GPnaelOtherServices.Enabled = false;
+                resetAllCheckBoxiesOtherServive();
+                updateTotalPriceSectionCarWash();
+            }
+
+            if (!GCheckBoxServicesFullWash.Checked)
+            {
+                GPnaelOtherServices.Enabled = true;
+                updateTotalPriceSectionCarWash();
+            }
         }
 
         private void ButtonAddNewOrder_Click(object sender, EventArgs e)
@@ -745,17 +880,21 @@ namespace Sparkle.User_Controls_Sparkle
              
                 ResetAllTextBoxInUserControl();
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+
+            }else if (GRadioButtonCarsSection.Checked )
+            {
+                SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
+                MessageBox.Show("Done");
+
+                ResetAllTextBoxInUserControl();
+
+                GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString(); 
             }
         }
 
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void guna2TextBox7_TextChanged(object sender, EventArgs e)
-        {
+     //------------------------------ [End Section Controls]-------------------------------
 
-        }
     }
 }
