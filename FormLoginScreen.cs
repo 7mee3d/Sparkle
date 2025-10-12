@@ -75,10 +75,10 @@ namespace Sparkle
         private stInformationUser ConvertLineInformationUserToDataStruct (List<string> InformationUser)
         {
             stInformationUser informationUserOne = new stInformationUser();
-
-            informationUserOne.stUsername = InformationUser[0];
-            informationUserOne.stPassword = InformationUser[1];
-
+           
+                informationUserOne.stUsername = InformationUser[0];
+                informationUserOne.stPassword = InformationUser[1];
+       
             if(InformationUser.Count > 2 )
             informationUserOne.numberAttempt = Convert.ToInt32(InformationUser[2]); 
 

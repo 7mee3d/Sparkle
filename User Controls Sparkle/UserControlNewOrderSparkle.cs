@@ -65,17 +65,20 @@ namespace Sparkle.User_Controls_Sparkle
         {
             stInformationOrderCarpet infoCarpetOrder = new stInformationOrderCarpet();
 
-            infoCarpetOrder.stIDCarpetOrder = allInformationOrderCarpet[0];
-            infoCarpetOrder.stNameClient = allInformationOrderCarpet[1];
-            infoCarpetOrder.stAddressClient = allInformationOrderCarpet[2];
-            infoCarpetOrder.stEmailClient = allInformationOrderCarpet[3];
-            infoCarpetOrder.stPhoneClient = allInformationOrderCarpet[4];
-            infoCarpetOrder.stSizeCarpet = allInformationOrderCarpet[5];
-            infoCarpetOrder.stTypeWashCarpet = allInformationOrderCarpet[6];
-            infoCarpetOrder.stOtherServiceCarpet = allInformationOrderCarpet[7];
-            infoCarpetOrder.stNumberCarpet = allInformationOrderCarpet[8];
-            infoCarpetOrder.stOtherDeatils = allInformationOrderCarpet[9];
-            infoCarpetOrder.stTotalPriceOrder = allInformationOrderCarpet[10];
+            if (allInformationOrderCarpet.Count >= 11)
+            {
+                infoCarpetOrder.stIDCarpetOrder = allInformationOrderCarpet[0];
+                infoCarpetOrder.stNameClient = allInformationOrderCarpet[1];
+                infoCarpetOrder.stAddressClient = allInformationOrderCarpet[2];
+                infoCarpetOrder.stEmailClient = allInformationOrderCarpet[3];
+                infoCarpetOrder.stPhoneClient = allInformationOrderCarpet[4];
+                infoCarpetOrder.stSizeCarpet = allInformationOrderCarpet[5];
+                infoCarpetOrder.stTypeWashCarpet = allInformationOrderCarpet[6];
+                infoCarpetOrder.stOtherServiceCarpet = allInformationOrderCarpet[7];
+                infoCarpetOrder.stNumberCarpet = allInformationOrderCarpet[8];
+                infoCarpetOrder.stOtherDeatils = allInformationOrderCarpet[9];
+                infoCarpetOrder.stTotalPriceOrder = allInformationOrderCarpet[10];
+            }
 
             return infoCarpetOrder; 
 
@@ -466,6 +469,7 @@ namespace Sparkle.User_Controls_Sparkle
             TotalPriceCarpetSection.Text = Convert.ToString(calcTotalPriveAllServiceCarpet()) + "$";
         }
 
+
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
             updateTotalPriceSectionCarWash();
@@ -510,7 +514,6 @@ namespace Sparkle.User_Controls_Sparkle
         {
             updateTotalPriceOfCarpet();
         }
-
 
         private void GCheckBoxOtherServicesQuickDrying_CheckedChanged(object sender, EventArgs e)
         {
