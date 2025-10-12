@@ -26,6 +26,23 @@ namespace Sparkle.User_Controls_Sparkle
 
         const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
        
+        private void ResetAllTextBoxInUserControl ()
+        {
+            foreach (Control outterControls in this.Controls)
+            {
+
+                if(outterControls is Guna2Panel G2P)
+                {
+                    foreach (Control innerControls in G2P.Controls)
+                    {
+                        if (innerControls is Guna2TextBox G2TB && G2TB != GTextBoxIDOrderCarpet)
+                            G2TB.Text = ""; 
+
+                    }
+                }
+            }
+        }
+
         struct stInformationOrderCarpet
         {
             public string stIDCarpetOrder;
@@ -150,12 +167,21 @@ namespace Sparkle.User_Controls_Sparkle
       
         private int lastIDOrderInFile()
         {
-            List<stInformationOrderCarpet> allInformationOrderStucture = pushAllInformationOrderCarpetToListSturtcure();
-           
-            if (allInformationOrderStucture.Count > 0)
-                return (Convert.ToInt32(allInformationOrderStucture[allInformationOrderStucture.Count - 1].stIDCarpetOrder));
+            /*  List<stInformationOrderCarpet> allInformationOrderStucture = pushAllInformationOrderCarpetToListSturtcure();
+
+              if (allInformationOrderStucture.Count > 0)
+                  return (Convert.ToInt32(allInformationOrderStucture[allInformationOrderStucture.Count - 1].stIDCarpetOrder));
+              else
+                  return 0; */
+
+            List<string> allLinesInformationOrder = LoadAllInformationOrderCarpetFromFile();
+            if (allLinesInformationOrder.Count > 0)
+            {
+                List<string> informationAfterSplit = SplitLineInformationOrderCarpet(allLinesInformationOrder[allLinesInformationOrder.Count - 1]);
+                return (Convert.ToInt32(informationAfterSplit[0]));
+            }
             else
-                return 0; 
+                return 0;
         }
 
         private void SaveAllInformationOrderAfterConvertDataToLineTOFile (List<string> informationCarpet)
@@ -172,7 +198,6 @@ namespace Sparkle.User_Controls_Sparkle
                 WriteLineToFile.WriteLine(lineInformation);
 
             }
-
             WriteLineToFile.Close();
 
         }
@@ -222,6 +247,10 @@ namespace Sparkle.User_Controls_Sparkle
                 GPanelOptionsCarpets.Visible = true;
                 GPanelCarsOptions.Visible = false;
                 TextNoneAnyOption.Visible = false;
+                GPnaelIDOrderCarpet.Visible = true;
+                PanelFillInformationClientsCarpet.Visible = true;
+                GPnaelInfroamtionOrderCar.Visible = false;
+                GPnaelIDOrderCar.Visible = false;
             }
 
             else if (GRadioButtonCarsSection.Checked)
@@ -229,6 +258,11 @@ namespace Sparkle.User_Controls_Sparkle
                 GPanelOptionsCarpets.Visible = false;
                 GPanelCarsOptions.Visible = true;
                 TextNoneAnyOption.Visible = false;
+                GPnaelIDOrderCarpet.Visible = false;
+                PanelFillInformationClientsCarpet.Visible = false;
+
+                GPnaelInfroamtionOrderCar.Visible = true;
+                GPnaelIDOrderCar.Visible = true; 
             }
         }
 
@@ -469,7 +503,6 @@ namespace Sparkle.User_Controls_Sparkle
             TotalPriceCarpetSection.Text = Convert.ToString(calcTotalPriveAllServiceCarpet()) + "$";
         }
 
-
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
             updateTotalPriceSectionCarWash();
@@ -537,14 +570,26 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void ButtonAddNewOrder_Click(object sender, EventArgs e)
         {
-            
+        
             if (GRadioButtonCarpetsSection.Checked)
             {
                
                 SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
                 MessageBox.Show("Done");
+             
+                ResetAllTextBoxInUserControl();
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
             }
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
