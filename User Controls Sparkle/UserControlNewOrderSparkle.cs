@@ -27,7 +27,8 @@ namespace Sparkle.User_Controls_Sparkle
             GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
             GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
             GTextBoxIDOrderCarpet.Enabled = false;
-            GTextBoxIDOrderCarSection.Enabled = false; 
+            GTextBoxIDOrderCarSection.Enabled = false;
+            GRadioButtonCarpetsSection.Checked = true; 
         }
 
 
@@ -59,6 +60,45 @@ namespace Sparkle.User_Controls_Sparkle
             updateTotalPriceSectionCarWash();
         }
 
+        private void ResetAllControlPanel ()
+        {
+
+            foreach (Control outterControl in this.Controls )
+            {
+                if(outterControl is Guna2Panel G2P )
+                {
+                    // Reset All CheckBox or Radio Button and Numeric Up Down in the Panel Paerant
+                    foreach (Control InnerControl in outterControl.Controls)
+                    {
+                        if (InnerControl is Guna2RadioButton R2B)
+                            R2B.Checked = false;
+
+                        if (InnerControl is Guna2CheckBox G2CB)
+                            G2CB.Checked = false;
+
+                        if (InnerControl is Guna2NumericUpDown G2NUD)
+                            G2NUD.Value = 1;
+
+                        // Reset All CheckBox or Radio Button and Numeric Up Down in the Panel child 
+                        if (InnerControl is Guna2Panel G2P2)
+                            foreach (Control InnerInnerControl in InnerControl.Controls)
+                            {
+                                if (InnerInnerControl is Guna2RadioButton R2B2)
+                                    R2B2.Checked = false;
+
+                                if (InnerInnerControl is Guna2CheckBox G2CB2)
+                                    G2CB2.Checked = false;
+
+                                if (InnerInnerControl is Guna2NumericUpDown G2NUD2)
+                                    G2NUD2.Value = 1; 
+
+                            }
+                    }
+                }
+            }
+            errorProviderCarpet.Clear();
+            CoreectProviderCarpet.Clear(); 
+        }
 
 
         //------------------------------ [Start Section Carpet]-------------------------------
@@ -468,8 +508,8 @@ namespace Sparkle.User_Controls_Sparkle
             pen.Width = 4;
 
             //Points Line To Be Draw 
-            Point point1 = new Point(573, 300);
-            Point point2 = new Point(573, 680);
+            Point point1 = new Point(590, 300);
+            Point point2 = new Point(590, 740);
                 
             event1.Graphics.DrawLine(pen, point1, point2);
 
@@ -550,13 +590,15 @@ namespace Sparkle.User_Controls_Sparkle
             return sizeCarWord;
         }
 
-        private void InitialValueAfterClickButtonNewOrder ()
+
+       /*   private void InitialValueAfterClickButtonNewOrder ()
         {
             if (GRadioButtonCarsSection.Checked)
                 GRadioButtonSizeSmallCar.Checked = true; 
             
-        }
+        }*/
       
+
         private int calcServiceWashPriceCar()
         {
             int priceTypeWashCar = 0;
@@ -575,7 +617,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (GCheckBoxServicesFullWash.Checked)
                 wordTypeWashCar = "Full Wash";
-         
+
+            if (!GCheckBoxServicesFullWash.Checked)
+                wordTypeWashCar = "None";
+
 
             return wordTypeWashCar;
 
@@ -773,6 +818,103 @@ namespace Sparkle.User_Controls_Sparkle
 
         //------------------------------ [Start Section Controls]-------------------------------
 
+        private void OrderNow ()
+        {
+            if (GRadioButtonCarpetsSection.Checked)
+            {
+
+                SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
+                MessageBox.Show("Done");
+
+                ResetAllTextBoxInUserControl();
+
+                GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+                ResetAllControlPanel();
+            }
+            else if (GRadioButtonCarsSection.Checked)
+            {
+                SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
+                MessageBox.Show("Done");
+
+                ResetAllTextBoxInUserControl();
+
+                GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
+                ResetAllControlPanel();
+
+            }
+        }
+
+        private bool checkCharacterDigitOrNot (char Character)
+        {
+            return (Convert.ToInt32(Character) >= 48 && Convert.ToInt32(Character) <= 57);
+        }
+
+        private bool checkTextHaveDigitOrNot (string text)
+        {
+            foreach (char Character in text)
+                if (checkCharacterDigitOrNot(Character)) return true;
+
+            return false;
+        }
+
+        private void setErrorAndCorrectControlsTextBoxCarpet (object sender, CancelEventArgs eventCancel , string CaptionError , string CaptionCorrect )
+        {
+            Guna2TextBox GunaTextBox = sender as Guna2TextBox; 
+
+            if(string.IsNullOrEmpty(GunaTextBox.Text) || checkTextHaveDigitOrNot(GunaTextBox.Text))
+            {
+                eventCancel.Cancel = true;
+                GunaTextBox.Focus();
+                CoreectProviderCarpet.SetError(GunaTextBox, "");
+                errorProviderCarpet.SetError(GunaTextBox, CaptionError);
+            }
+            else
+            {
+                eventCancel.Cancel = false;
+                errorProviderCarpet.SetError(GunaTextBox, "");
+                CoreectProviderCarpet.SetError(GunaTextBox, CaptionCorrect);
+           
+            }
+        }
+        private void setErrorAndCorrectControlsTextBoxCarwithoutDigit(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
+        {
+            Guna2TextBox GunaTextBox = sender as Guna2TextBox;
+
+            if (string.IsNullOrEmpty(GunaTextBox.Text) || checkTextHaveDigitOrNot(GunaTextBox.Text))
+            {
+                eventCancel.Cancel = true;
+                GunaTextBox.Focus();
+                CorrectProvidorCarSection.SetError(GunaTextBox, "");
+                errorProviderCarSection.SetError(GunaTextBox, CaptionError);
+            }
+            else
+            {
+                eventCancel.Cancel = false;
+                errorProviderCarSection.SetError(GunaTextBox, "");
+                CorrectProvidorCarSection.SetError(GunaTextBox, CaptionCorrect);
+
+            }
+        }
+
+        private void setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
+        {
+            Guna2TextBox GunaTextBox = sender as Guna2TextBox;
+
+            if (string.IsNullOrEmpty(GunaTextBox.Text) || !checkTextHaveDigitOrNot(GunaTextBox.Text))
+            {
+                eventCancel.Cancel = true;
+                GunaTextBox.Focus();
+                CorrectProvidorCarSection.SetError(GunaTextBox, "");
+                errorProviderCarSection.SetError(GunaTextBox, CaptionError);
+            }
+            else
+            {
+                eventCancel.Cancel = false;
+                errorProviderCarSection.SetError(GunaTextBox, "");
+                CorrectProvidorCarSection.SetError(GunaTextBox, CaptionCorrect);
+
+            }
+        }
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
             updateTotalPriceSectionCarWash();
@@ -871,30 +1013,58 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void ButtonAddNewOrder_Click(object sender, EventArgs e)
         {
-        
-            if (GRadioButtonCarpetsSection.Checked)
-            {
-               
-                SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
-                MessageBox.Show("Done");
-             
-                ResetAllTextBoxInUserControl();
-                GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+            OrderNow();
+        }
 
-            }else if (GRadioButtonCarsSection.Checked )
-            {
-                SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
-                MessageBox.Show("Done");
+        private void GTextBoxNameClientSectionCarpet_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+        }
 
-                ResetAllTextBoxInUserControl();
+        private void GTextBoxAddressClientSectionCarpet_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
 
-                GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString(); 
-            }
+        }
+
+        private void GTextBoxPhoneClientSectionCarpet_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+
+        }
+
+        private void GTextBoxNumberCar_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful"); 
+        }
+
+        private void GTextBoxCarModel_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarwithoutDigit(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+
+        }
+
+        private void GTextBoxNameClientCarSection_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarwithoutDigit(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+
+        }
+
+        private void GTextBoxPhoneClientCarSection_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+
+        }
+
+        private void GTextBoxAddressClientCarSection_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxCarwithoutDigit(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+
         }
 
 
 
-     //------------------------------ [End Section Controls]-------------------------------
+        //------------------------------ [End Section Controls]-------------------------------
 
     }
 }
