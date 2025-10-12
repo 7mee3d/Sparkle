@@ -25,6 +25,8 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
+        const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
+
        
         private void ResetAllTextBoxInUserControl ()
         {
@@ -42,6 +44,11 @@ namespace Sparkle.User_Controls_Sparkle
                 }
             }
         }
+
+
+
+        //------------------------------ [Start Section Carpet]-------------------------------
+        
 
         struct stInformationOrderCarpet
         {
@@ -217,6 +224,165 @@ namespace Sparkle.User_Controls_Sparkle
             WriteAllInformationOrderCarpetToFile.Close(); 
 
         }
+
+
+        //------------------------------ [End Section Carpet]-------------------------------
+
+
+
+
+
+        //------------------------------ [Start Section Car]-------------------------------
+
+
+        struct stInformationOrderCar
+        {
+            public string stIDCarOrder;
+            public string stNumberCar;
+            public string stCarModelName;
+            public string stNameClient;
+            public string stAddressClient;
+            public string stEmailClient;
+            public string stPhoneClient;
+            public string stSizeCar;
+            public string stServiceCars;
+            public string stOtherServiceCar;
+            public string stOtherDeatilsCar;
+            public string stTotalPriceOrder;
+        }
+
+        private List<string> LoadAllInformationOrderCarSectionFromFile ()
+        {
+            List<string> allLinesLoadAllFromFileInformationAllOrders = new List<string>();
+
+            if (!System.IO.File.Exists(kPATH_FILE_CARS_ORDERS))
+                System.IO.File.Create(kPATH_FILE_CARS_ORDERS).Close();
+
+            System.IO.StreamReader ReadAllInformationOrderCar = new System.IO.StreamReader(kPATH_FILE_CARS_ORDERS);
+
+            string lineInformationOrderCar = "";
+
+            while((lineInformationOrderCar = ReadAllInformationOrderCar.ReadLine() ) != null )
+            {
+                if(!String.IsNullOrEmpty(lineInformationOrderCar))
+                allLinesLoadAllFromFileInformationAllOrders.Add(lineInformationOrderCar);
+            }
+
+            ReadAllInformationOrderCar.Close();
+
+            return allLinesLoadAllFromFileInformationAllOrders; 
+        }
+      
+        private stInformationOrderCar ConvertAllInformtionLineToData(List<string> allInformationOrderCarString)
+        {
+            stInformationOrderCar allInformationOrderCar = new stInformationOrderCar();
+
+            if(allInformationOrderCarString.Count >=12)
+            {
+
+                allInformationOrderCar.stIDCarOrder = allInformationOrderCarString[0];
+                allInformationOrderCar.stNumberCar = allInformationOrderCarString[1];
+                allInformationOrderCar.stCarModelName = allInformationOrderCarString[2];
+                allInformationOrderCar.stNameClient = allInformationOrderCarString[3];
+                allInformationOrderCar.stAddressClient = allInformationOrderCarString[4];
+                allInformationOrderCar.stEmailClient = allInformationOrderCarString[5];
+                allInformationOrderCar.stPhoneClient = allInformationOrderCarString[6];
+                allInformationOrderCar.stSizeCar = allInformationOrderCarString[7];
+                allInformationOrderCar.stServiceCars = allInformationOrderCarString[8];
+                allInformationOrderCar.stOtherServiceCar = allInformationOrderCarString[9];
+                allInformationOrderCar.stTotalPriceOrder = allInformationOrderCarString[10];
+                allInformationOrderCar.stOtherDeatilsCar = allInformationOrderCarString[11];
+            }
+
+            return allInformationOrderCar;
+        }
+      
+        private string ConvertDataInformationOrderCarToLine(stInformationOrderCar informationOrderCar , string Separtor ="#|||#" )
+        {
+            string lineInformationOrderCar = "";
+
+            lineInformationOrderCar += informationOrderCar.stIDCarOrder + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stNumberCar + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stCarModelName + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stNameClient + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stAddressClient + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stEmailClient + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stPhoneClient + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stSizeCar + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stServiceCars + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stOtherServiceCar + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stTotalPriceOrder + Separtor; 
+            lineInformationOrderCar += informationOrderCar.stOtherDeatilsCar;
+
+            return lineInformationOrderCar; 
+        }
+
+        private List<string> SplitLineInformationOrderCar (string LineInformationOrderCar )
+        {
+            List<string> allInformationAfterSplitOrderCar  = new List<string>();
+
+            if (!string.IsNullOrEmpty(LineInformationOrderCar))
+            {
+                allInformationAfterSplitOrderCar.AddRange(LineInformationOrderCar.Split(new string[] { "#|||#" }, StringSplitOptions.RemoveEmptyEntries));
+            }
+
+            return allInformationAfterSplitOrderCar;
+        }
+      
+        private List<stInformationOrderCar> pushAllInformationOrderCarToStructure()
+        {
+            List<string> allInformationLineOrderCar = LoadAllInformationOrderCarSectionFromFile();
+            List<stInformationOrderCar> allInformationOrderCarSturcture = new List<stInformationOrderCar>();
+
+            foreach (string lineInformationCarOrder in allInformationLineOrderCar)
+            {
+                allInformationOrderCarSturcture.Add(ConvertAllInformtionLineToData(SplitLineInformationOrderCar(lineInformationCarOrder)));
+            }
+
+            return allInformationOrderCarSturcture; 
+        }
+    
+        private string ConvertListStringToLineInformationCarOrder (List<string> allInformationCarOrderInformation, string Separtor = "#|||#")
+        {
+            string lineInformationCarOrder = "";
+            lineInformationCarOrder += allInformationCarOrderInformation[0] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[1] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[2] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[3] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[4] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[5] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[6] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[7] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[8] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[9] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[10] + Separtor; 
+            lineInformationCarOrder += allInformationCarOrderInformation[12] ;
+
+            return lineInformationCarOrder; 
+        }
+    
+        private void SaveAllInformationOrderCarToFile(List<string> allInformationCarOrderInformation)
+        {
+            if (!System.IO.File.Exists(kPATH_FILE_CARS_ORDERS))
+                System.IO.File.Create(kPATH_FILE_CARS_ORDERS).Close();
+
+            System.IO.StreamWriter WriteAllInformationOrderCarToFile = new System.IO.StreamWriter(kPATH_FILE_CARS_ORDERS);
+
+            string lineInfroamtionCarOrder = ConvertListStringToLineInformationCarOrder(allInformationCarOrderInformation);
+
+            if (!string.IsNullOrEmpty(lineInfroamtionCarOrder))
+                WriteAllInformationOrderCarToFile.WriteLine(lineInfroamtionCarOrder);
+
+            WriteAllInformationOrderCarToFile.Close(); 
+
+
+        }
+
+
+
+        //------------------------------ [End Section Car]-------------------------------
+
+
 
         private void DrawLineVarticalBetweenSectionAndInformationClient (PaintEventArgs event1 ){
 

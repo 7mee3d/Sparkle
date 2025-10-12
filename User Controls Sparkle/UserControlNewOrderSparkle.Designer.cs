@@ -1075,10 +1075,11 @@
             // 
             this.GPnaelIDOrderCar.Controls.Add(this.guna2GradientPanel6);
             this.GPnaelIDOrderCar.Controls.Add(this.GTextBoxIDOrderCarSection);
-            this.GPnaelIDOrderCar.Location = new System.Drawing.Point(746, 73);
+            this.GPnaelIDOrderCar.Location = new System.Drawing.Point(26, 275);
             this.GPnaelIDOrderCar.Name = "GPnaelIDOrderCar";
             this.GPnaelIDOrderCar.Size = new System.Drawing.Size(533, 79);
             this.GPnaelIDOrderCar.TabIndex = 17;
+            this.GPnaelIDOrderCar.Visible = false;
             // 
             // guna2GradientPanel6
             // 
@@ -1145,6 +1146,7 @@
             this.GPnaelInfroamtionOrderCar.Name = "GPnaelInfroamtionOrderCar";
             this.GPnaelInfroamtionOrderCar.Size = new System.Drawing.Size(531, 401);
             this.GPnaelInfroamtionOrderCar.TabIndex = 16;
+            this.GPnaelInfroamtionOrderCar.Visible = false;
             // 
             // GTextBoxPhoneClientCarSection
             // 
