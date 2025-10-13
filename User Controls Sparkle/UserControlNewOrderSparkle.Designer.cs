@@ -47,7 +47,6 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GPanelOptionsCarpets = new Guna.UI2.WinForms.Guna2Panel();
             this.GPanelSizeCarpet = new Guna.UI2.WinForms.Guna2Panel();
@@ -80,7 +79,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TotalPriceCarSection = new System.Windows.Forms.Label();
-            this.ButtonAddNewOrder = new Guna.UI2.WinForms.Guna2Button();
             this.TextNoneAnyOption = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.GRadioButtonCarsSection = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -119,6 +117,9 @@
             this.CoreectProviderCarpet = new System.Windows.Forms.ErrorProvider(this.components);
             this.CorrectProvidorCarSection = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCarSection = new System.Windows.Forms.ErrorProvider(this.components);
+            this.GButtonResetAllOrder = new Guna.UI2.WinForms.Guna2Button();
+            this.ButtonAddNewOrder = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelFillInformationClientsCarpet.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -126,7 +127,6 @@
             this.guna2GradientPanel7.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GPanelOptionsCarpets.SuspendLayout();
             this.GPanelSizeCarpet.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -151,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CoreectProviderCarpet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CorrectProvidorCarSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCarSection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFillInformationClientsCarpet
@@ -408,17 +409,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
             this.guna2GradientPanel1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.Order_Icon_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -931,32 +921,6 @@
             this.TotalPriceCarSection.Size = new System.Drawing.Size(57, 68);
             this.TotalPriceCarSection.TabIndex = 8;
             this.TotalPriceCarSection.Text = "0";
-            // 
-            // ButtonAddNewOrder
-            // 
-            this.ButtonAddNewOrder.Animated = true;
-            this.ButtonAddNewOrder.AnimatedGIF = true;
-            this.ButtonAddNewOrder.BorderRadius = 15;
-            this.ButtonAddNewOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ButtonAddNewOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ButtonAddNewOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ButtonAddNewOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.ButtonAddNewOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewOrder.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
-            this.ButtonAddNewOrder.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddNewOrder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.ButtonAddNewOrder.HoverState.Image = global::Sparkle.Properties.Resources.Order_Image_;
-            this.ButtonAddNewOrder.Image = global::Sparkle.Properties.Resources.checklist_New_Order_;
-            this.ButtonAddNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonAddNewOrder.ImageOffset = new System.Drawing.Point(40, 0);
-            this.ButtonAddNewOrder.Location = new System.Drawing.Point(668, 710);
-            this.ButtonAddNewOrder.Name = "ButtonAddNewOrder";
-            this.ButtonAddNewOrder.Size = new System.Drawing.Size(303, 55);
-            this.ButtonAddNewOrder.TabIndex = 8;
-            this.ButtonAddNewOrder.Text = "Add New Order";
-            this.ButtonAddNewOrder.Click += new System.EventHandler(this.ButtonAddNewOrder_Click);
             // 
             // TextNoneAnyOption
             // 
@@ -1504,6 +1468,69 @@
             this.errorProviderCarSection.ContainerControl = this;
             this.errorProviderCarSection.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderCarSection.Icon")));
             // 
+            // GButtonResetAllOrder
+            // 
+            this.GButtonResetAllOrder.Animated = true;
+            this.GButtonResetAllOrder.AnimatedGIF = true;
+            this.GButtonResetAllOrder.BorderRadius = 15;
+            this.GButtonResetAllOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonResetAllOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonResetAllOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonResetAllOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonResetAllOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonResetAllOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonResetAllOrder.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.GButtonResetAllOrder.ForeColor = System.Drawing.Color.White;
+            this.GButtonResetAllOrder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonResetAllOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonResetAllOrder.HoverState.Image = global::Sparkle.Properties.Resources.reset_Original;
+            this.GButtonResetAllOrder.Image = global::Sparkle.Properties.Resources.reset_Bold;
+            this.GButtonResetAllOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GButtonResetAllOrder.ImageOffset = new System.Drawing.Point(15, 0);
+            this.GButtonResetAllOrder.Location = new System.Drawing.Point(971, 710);
+            this.GButtonResetAllOrder.Name = "GButtonResetAllOrder";
+            this.GButtonResetAllOrder.Size = new System.Drawing.Size(178, 55);
+            this.GButtonResetAllOrder.TabIndex = 8;
+            this.GButtonResetAllOrder.Text = "Reset";
+            this.GButtonResetAllOrder.Click += new System.EventHandler(this.ButtonResetAllOrder_Click);
+            // 
+            // ButtonAddNewOrder
+            // 
+            this.ButtonAddNewOrder.Animated = true;
+            this.ButtonAddNewOrder.AnimatedGIF = true;
+            this.ButtonAddNewOrder.BorderRadius = 15;
+            this.ButtonAddNewOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonAddNewOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonAddNewOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonAddNewOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.ButtonAddNewOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewOrder.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.ButtonAddNewOrder.ForeColor = System.Drawing.Color.White;
+            this.ButtonAddNewOrder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.ButtonAddNewOrder.HoverState.Image = global::Sparkle.Properties.Resources.Order_Image_;
+            this.ButtonAddNewOrder.Image = global::Sparkle.Properties.Resources.checklist_New_Order_;
+            this.ButtonAddNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ButtonAddNewOrder.ImageOffset = new System.Drawing.Point(25, 0);
+            this.ButtonAddNewOrder.Location = new System.Drawing.Point(628, 710);
+            this.ButtonAddNewOrder.Name = "ButtonAddNewOrder";
+            this.ButtonAddNewOrder.Size = new System.Drawing.Size(323, 55);
+            this.ButtonAddNewOrder.TabIndex = 8;
+            this.ButtonAddNewOrder.Text = "Add New Order";
+            this.ButtonAddNewOrder.Click += new System.EventHandler(this.ButtonAddNewOrder_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.Order_Icon_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // UserControlNewOrderSparkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1513,6 +1540,7 @@
             this.Controls.Add(this.GPnaelIDOrderCarpet);
             this.Controls.Add(this.GPnaelInfroamtionOrderCar);
             this.Controls.Add(this.guna2CustomGradientPanel3);
+            this.Controls.Add(this.GButtonResetAllOrder);
             this.Controls.Add(this.ButtonAddNewOrder);
             this.Controls.Add(this.GPanelOptionsCarpets);
             this.Controls.Add(this.PanelFillInformationClientsCarpet);
@@ -1536,7 +1564,6 @@
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GPanelOptionsCarpets.ResumeLayout(false);
             this.GPanelOptionsCarpets.PerformLayout();
             this.GPanelSizeCarpet.ResumeLayout(false);
@@ -1577,6 +1604,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CoreectProviderCarpet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CorrectProvidorCarSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCarSection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1673,5 +1701,6 @@
         private System.Windows.Forms.ErrorProvider CoreectProviderCarpet;
         private System.Windows.Forms.ErrorProvider CorrectProvidorCarSection;
         private System.Windows.Forms.ErrorProvider errorProviderCarSection;
+        private Guna.UI2.WinForms.Guna2Button GButtonResetAllOrder;
     }
 }

@@ -204,6 +204,8 @@
     <None Include="Resources\Order Icon .png" />
     <None Include="Resources\Order Image .png" />
     <None Include="Resources\checklist New Order .png" />
+    <None Include="Resources\reset Bold.png" />
+    <None Include="Resources\reset Original.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

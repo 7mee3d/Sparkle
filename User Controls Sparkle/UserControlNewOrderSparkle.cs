@@ -42,7 +42,7 @@ namespace Sparkle.User_Controls_Sparkle
                 {
                     foreach (Control innerControls in G2P.Controls)
                     {
-                        if (innerControls is Guna2TextBox G2TB && G2TB != GTextBoxIDOrderCarpet)
+                        if (innerControls is Guna2TextBox G2TB && (G2TB != GTextBoxIDOrderCarpet) && (G2TB != GTextBoxIDOrderCarSection))
                             G2TB.Text = ""; 
 
                     }
@@ -97,7 +97,9 @@ namespace Sparkle.User_Controls_Sparkle
                 }
             }
             errorProviderCarpet.Clear();
-            CoreectProviderCarpet.Clear(); 
+            CoreectProviderCarpet.Clear();
+            errorProviderCarSection.Clear();
+            CorrectProvidorCarSection.Clear();
         }
 
 
@@ -818,6 +820,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         //------------------------------ [Start Section Controls]-------------------------------
 
+        //Method Button Add Order Now 
         private void OrderNow ()
         {
             if (GRadioButtonCarpetsSection.Checked)
@@ -876,6 +879,7 @@ namespace Sparkle.User_Controls_Sparkle
            
             }
         }
+      
         private void setErrorAndCorrectControlsTextBoxCarwithoutDigit(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
         {
             Guna2TextBox GunaTextBox = sender as Guna2TextBox;
@@ -915,6 +919,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
+    
         private void GCheckBoxOtherServicesInteriorWash_CheckedChanged(object sender, EventArgs e)
         {
             updateTotalPriceSectionCarWash();
@@ -1016,6 +1021,11 @@ namespace Sparkle.User_Controls_Sparkle
             OrderNow();
         }
 
+
+
+        //------------------------------ [Start Section Controls Validating ]-------------------------------
+
+
         private void GTextBoxNameClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
@@ -1062,9 +1072,19 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private void ButtonResetAllOrder_Click(object sender, EventArgs e)
+        {
+            resetAllCheckBoxiesOtherServive();
+            ResetAllControlPanel();
+            ResetAllTextBoxInUserControl();
+        
+        }
 
 
-        //------------------------------ [End Section Controls]-------------------------------
+        //--------------------------- [End Section Controls Validating ]-------------------------------
+
+
+        //-------------------------------- [End Section Controls]-------------------------------
 
     }
 }
