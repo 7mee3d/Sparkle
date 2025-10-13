@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 
 namespace Sparkle.User_Controls_Sparkle
@@ -828,10 +827,11 @@ namespace Sparkle.User_Controls_Sparkle
 
                 SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
                 MessageBox.Show("Done");
-
+                setTitleAndSizeAndLocationFormSectionCarpet();
                 ResetAllTextBoxInUserControl();
 
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+               
                 ResetAllControlPanel();
             }
             else if (GRadioButtonCarsSection.Checked)
@@ -1019,6 +1019,7 @@ namespace Sparkle.User_Controls_Sparkle
         private void ButtonAddNewOrder_Click(object sender, EventArgs e)
         {
             OrderNow();
+           
         }
 
 
@@ -1086,5 +1087,323 @@ namespace Sparkle.User_Controls_Sparkle
 
         //-------------------------------- [End Section Controls]-------------------------------
 
+
+        Form frmConfirmAddOrderCarpetSection = new Form();
+
+        private void setTitleAndSizeAndLocationFormSectionCarpet ()
+        {
+
+            frmConfirmAddOrderCarpetSection.Text = "Confirm Add Order Carpet";
+            frmConfirmAddOrderCarpetSection.StartPosition = FormStartPosition.CenterScreen;
+
+            Guna2BorderlessForm GBLEF = new Guna2BorderlessForm() ;
+            Guna2ShadowForm G2SF = new Guna2ShadowForm(); 
+
+            GBLEF.BorderRadius = 20;
+            G2SF.ShadowColor = Color.FromArgb( 90, 4, 187, 156);
+            G2SF.SetShadowForm (frmConfirmAddOrderCarpetSection);
+
+            GBLEF.ContainerControl = frmConfirmAddOrderCarpetSection;
+
+            frmConfirmAddOrderCarpetSection.MinimizeBox = false;
+            frmConfirmAddOrderCarpetSection.MaximizeBox = false;
+            frmConfirmAddOrderCarpetSection.ControlBox = false;
+
+            frmConfirmAddOrderCarpetSection.BackColor = Color.White;
+            frmConfirmAddOrderCarpetSection.Size = new Size (500 , Convert.ToInt32(Math.Round(700.5)) );
+
+            setLabelFinialBill();
+      
+            setLabelsOrderCarpetSection();
+            frmConfirmAddOrderCarpetSection.ShowDialog(); 
+        }
+
+        private void setLabelFinialBill()
+        {
+            Label lblFinialBill = new Label();
+
+            lblFinialBill.Text = "Finial Bill";
+            lblFinialBill.Font = new Font("Garamond", 35, FontStyle.Bold);
+            lblFinialBill.ForeColor = Color.FromArgb(255, 4, 187, 156);
+            lblFinialBill.Width = 250;
+            lblFinialBill.Height = 100; 
+            lblFinialBill.Top = 30;
+            lblFinialBill.Left = 140; 
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblFinialBill);
+        }
+
+        private void setLabelIDOrderAndResultIDOrder ()
+        {
+            Label lblIDOrder = new Label();
+            Label lblResultIDOrder = new Label();
+
+            // Label ID Order 
+           lblIDOrder.Text = "ID Order :";
+            lblIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblIDOrder.BackColor = Color.Transparent; 
+            lblIDOrder.Top = 150;
+            lblIDOrder.Left = 10;
+            lblIDOrder.Width = 120;
+            lblIDOrder.Height = 40;
+            lblIDOrder.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label ID Order 
+            lblResultIDOrder.Text = GTextBoxIDOrderCarpet.Text;
+            lblResultIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultIDOrder.Top = 150;
+            lblResultIDOrder.Left = 130;
+            lblResultIDOrder.Width = 50;
+      
+            lblIDOrder.Height = 20;
+            
+            lblResultIDOrder.BackColor = Color.Transparent;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblIDOrder);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultIDOrder);
+
+        }
+        private void setLabelNameClientAndResultNameClientCarpet ()
+        {
+            Label lblNameClient = new Label();
+            Label lblResultNameClient = new Label();
+
+
+            //Label Name Client 
+            lblNameClient.Text = "Name Client :";
+            lblNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblNameClient.Top = 210;
+            lblNameClient.Width = 150;
+            lblNameClient.Left = 10;
+            lblNameClient.Height = 40; 
+            lblNameClient.BackColor = Color.Transparent;
+            lblNameClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Name Client 
+            lblResultNameClient.Text = GTextBoxNameClientSectionCarpet.Text;
+            lblResultNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNameClient.Top = 210;
+            lblResultNameClient.Left = 160;
+            lblResultNameClient.Width = 150;
+            lblResultNameClient.BackColor = Color.Transparent;
+            lblResultNameClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblNameClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultNameClient);
+
+        }
+
+
+        private void setLabelAddressClientAndLabelResultAddressClient()
+        {
+            Label lblAddressClient = new Label(); 
+            Label lblResultAddressClient = new Label();
+
+
+
+
+            //Label Address Client 
+            lblAddressClient.Text = "Address Client :";
+            lblAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblAddressClient.Top = 270;
+            lblAddressClient.Width = 160;
+            lblAddressClient.Left = 10;
+            lblAddressClient.Height = 40;
+            lblAddressClient.BackColor = Color.Transparent;
+            lblAddressClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Address Client 
+            lblResultAddressClient.Text = GTextBoxAddressClientSectionCarpet.Text;
+            lblResultAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultAddressClient.Top = 270;
+            lblResultAddressClient.Left = 170;
+            lblResultAddressClient.Width = 200;
+            lblResultAddressClient.BackColor = Color.Transparent;
+            lblResultAddressClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblAddressClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultAddressClient);
+
+        }
+
+
+        private void setLabelEmailClientAndLabelResultEmailClient()
+        {
+            Label lblEmailClient = new Label();
+            Label lblResultEmailClient = new Label();
+
+            //Label Email Client 
+            lblEmailClient.Text = "Email Client : ";
+            lblEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblEmailClient.Top = 330;
+            lblEmailClient.Width = 150;
+            lblEmailClient.Left = 10;
+            lblEmailClient.Height = 40;
+            lblEmailClient.BackColor = Color.Transparent;
+            lblEmailClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Email Client 
+            lblResultEmailClient.Text = GTextBoxEmailClientSectionCarpet.Text;
+            lblResultEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultEmailClient.Top = 330;
+            lblResultEmailClient.Left = 160;
+            lblResultEmailClient.Width = 200;
+            lblResultEmailClient.BackColor = Color.Transparent;
+            lblResultEmailClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblEmailClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultEmailClient);
+
+        }
+
+        private void setLabelPhoneClientAndLabelResultPhoneClient()
+        {
+            Label lblPhoneClient = new Label();
+            Label lblResultPhoneClient = new Label();
+
+
+            //Label Phone Client 
+            lblPhoneClient.Text = "Phone Client : ";
+            lblPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblPhoneClient.Top = 390;
+            lblPhoneClient.Width = 150;
+            lblPhoneClient.Left = 10;
+            lblPhoneClient.Height = 40;
+            lblPhoneClient.BackColor = Color.Transparent;
+            lblPhoneClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Phone Client 
+            lblResultPhoneClient.Text = GTextBoxPhoneClientSectionCarpet.Text;
+            lblResultPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultPhoneClient.Top = 390;
+            lblResultPhoneClient.Left = 160;
+            lblResultPhoneClient.Width = 100;
+            lblResultPhoneClient.BackColor = Color.Transparent;
+            lblResultPhoneClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblPhoneClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultPhoneClient);
+
+        }
+
+        private void setLabelSizeCarpetAndLabelResultSizeCarpet()
+        {
+
+            Label lblSizeCarpet = new Label();
+            Label lblResultSizeCarpet = new Label();
+
+
+
+
+            //Label Size Carpet
+            lblSizeCarpet.Text = "Size Carpet : ";
+            lblSizeCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblSizeCarpet.Top = 450;
+            lblSizeCarpet.Width = 150;
+            lblSizeCarpet.Left = 10;
+            lblSizeCarpet.Height = 40;
+            lblSizeCarpet.BackColor = Color.Transparent;
+            lblSizeCarpet.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Size Carpet
+            lblResultSizeCarpet.Text = returnWordSizeCarpt();
+            lblResultSizeCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultSizeCarpet.Top = 450;
+            lblResultSizeCarpet.Left = 160;
+            lblResultSizeCarpet.Width = 60;
+            lblResultSizeCarpet.BackColor = Color.Transparent;
+            lblResultSizeCarpet.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblSizeCarpet);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultSizeCarpet);
+
+        }
+
+
+        private void setLabelTypeWashCarpetAndLabelResultTypeWashCarpet()
+        {
+
+
+
+            Label lblTypeWashCarpet = new Label();
+            Label lblResultTypeWashCarpet = new Label();
+
+
+            //Label Type Wash Carpet
+            lblTypeWashCarpet.Text = "Type Wash : ";
+            lblTypeWashCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblTypeWashCarpet.Top = 510;
+            lblTypeWashCarpet.Width = 150;
+            lblTypeWashCarpet.Left = 10;
+            lblTypeWashCarpet.Height = 40;
+            lblTypeWashCarpet.BackColor = Color.Transparent;
+            lblTypeWashCarpet.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Type Wash Carpet
+            lblResultTypeWashCarpet.Text = returnWordTypeWash();
+            lblResultTypeWashCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultTypeWashCarpet.Top = 510;
+            lblResultTypeWashCarpet.Left = 155;
+            lblResultTypeWashCarpet.Width = 160;
+            lblResultTypeWashCarpet.BackColor = Color.Transparent;
+            lblResultTypeWashCarpet.Height = 50;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblTypeWashCarpet);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultTypeWashCarpet);
+
+        }
+
+        private void setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet()
+        {
+
+
+
+
+            Label lblOtherSeviceCarpet = new Label();
+            Label lblResultOtherSeviceCarpet = new Label();
+
+
+
+            //Label Other Service  Carpet
+            lblOtherSeviceCarpet.Text = "Other Service : ";
+            lblOtherSeviceCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblOtherSeviceCarpet.Top = 570;
+            lblOtherSeviceCarpet.Width = 350;
+            lblOtherSeviceCarpet.Left = 10;
+            lblOtherSeviceCarpet.Height = 40;
+            lblOtherSeviceCarpet.BackColor = Color.Transparent;
+            lblOtherSeviceCarpet.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Type Wash Carpet
+            lblResultOtherSeviceCarpet.Text = returnTextOtherServiceCarpet();
+            lblResultOtherSeviceCarpet.Font = new Font("Garamond", 12, FontStyle.Bold);
+            lblResultOtherSeviceCarpet.Top = 620;
+            lblResultOtherSeviceCarpet.Left = 100;
+            lblResultOtherSeviceCarpet.Width = 150;
+            lblResultOtherSeviceCarpet.BackColor = Color.Transparent;
+            lblResultOtherSeviceCarpet.Height = 150;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblOtherSeviceCarpet);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultOtherSeviceCarpet);
+
+        }
+        private void setLabelsOrderCarpetSection( )
+        {
+
+          
+  
+
+            setLabelIDOrderAndResultIDOrder();
+            setLabelNameClientAndResultNameClientCarpet();
+            setLabelAddressClientAndLabelResultAddressClient();
+            setLabelEmailClientAndLabelResultEmailClient();
+            setLabelPhoneClientAndLabelResultPhoneClient();
+            setLabelSizeCarpetAndLabelResultSizeCarpet();
+            setLabelTypeWashCarpetAndLabelResultTypeWashCarpet();
+            setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet();
+
+        }
     }
 }
