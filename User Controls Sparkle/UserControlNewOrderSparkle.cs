@@ -826,18 +826,18 @@ namespace Sparkle.User_Controls_Sparkle
             {
 
                 SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
-                MessageBox.Show("Done");
-                setTitleAndSizeAndLocationFormSectionCarpet();
+                MessageBox.Show("Done Save Order");
                 ResetAllTextBoxInUserControl();
 
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
                
                 ResetAllControlPanel();
+              
             }
             else if (GRadioButtonCarsSection.Checked)
             {
                 SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
-                MessageBox.Show("Done");
+                MessageBox.Show("Done Save Order");
 
                 ResetAllTextBoxInUserControl();
 
@@ -1018,8 +1018,10 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void ButtonAddNewOrder_Click(object sender, EventArgs e)
         {
-            OrderNow();
-           
+            //setTitleAndSizeAndLocationFormSectionCarpet();
+            if(GRadioButtonCarpetsSection.Checked)
+            ButtonOrderNowNewForm();
+
         }
 
 
@@ -1088,9 +1090,10 @@ namespace Sparkle.User_Controls_Sparkle
         //-------------------------------- [End Section Controls]-------------------------------
 
 
-        Form frmConfirmAddOrderCarpetSection = new Form();
+        //Decleration The Form -> To Avoid Daplicate The Form Calling 
+        Form frmConfirmAddOrderCarpetSection ;
 
-        private void setTitleAndSizeAndLocationFormSectionCarpet ()
+        private void setTitleAndSizeAndLocationFormSectionCarpet (Form frmConfirmAddOrderCarpetSection)
         {
 
             frmConfirmAddOrderCarpetSection.Text = "Confirm Add Order Carpet";
@@ -1112,13 +1115,13 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.BackColor = Color.White;
             frmConfirmAddOrderCarpetSection.Size = new Size (500 , Convert.ToInt32(Math.Round(700.5)) );
 
-            setLabelFinialBill();
+            setLabelFinialBill(frmConfirmAddOrderCarpetSection);
       
-            setLabelsOrderCarpetSection();
-            frmConfirmAddOrderCarpetSection.ShowDialog(); 
+            setLabelsOrderCarpetSection(frmConfirmAddOrderCarpetSection);
+           
         }
 
-        private void setLabelFinialBill()
+        private void setLabelFinialBill(Form frmConfirmAddOrderCarpetSection)
         {
             Label lblFinialBill = new Label();
 
@@ -1132,7 +1135,7 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.Controls.Add(lblFinialBill);
         }
 
-        private void setLabelIDOrderAndResultIDOrder ()
+        private void setLabelIDOrderAndResultIDOrder (Form frmConfirmAddOrderCarpetSection)
         {
             Label lblIDOrder = new Label();
             Label lblResultIDOrder = new Label();
@@ -1162,7 +1165,8 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.Controls.Add(lblResultIDOrder);
 
         }
-        private void setLabelNameClientAndResultNameClientCarpet ()
+      
+        private void setLabelNameClientAndResultNameClientCarpet (Form frmConfirmAddOrderCarpetSection)
         {
             Label lblNameClient = new Label();
             Label lblResultNameClient = new Label();
@@ -1192,8 +1196,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
-        private void setLabelAddressClientAndLabelResultAddressClient()
+        private void setLabelAddressClientAndLabelResultAddressClient(Form frmConfirmAddOrderCarpetSection)
         {
             Label lblAddressClient = new Label(); 
             Label lblResultAddressClient = new Label();
@@ -1225,8 +1228,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
-        private void setLabelEmailClientAndLabelResultEmailClient()
+        private void setLabelEmailClientAndLabelResultEmailClient(Form frmConfirmAddOrderCarpetSection)
         {
             Label lblEmailClient = new Label();
             Label lblResultEmailClient = new Label();
@@ -1255,7 +1257,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void setLabelPhoneClientAndLabelResultPhoneClient()
+        private void setLabelPhoneClientAndLabelResultPhoneClient(Form frmConfirmAddOrderCarpetSection)
         {
             Label lblPhoneClient = new Label();
             Label lblResultPhoneClient = new Label();
@@ -1285,7 +1287,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void setLabelSizeCarpetAndLabelResultSizeCarpet()
+        private void setLabelSizeCarpetAndLabelResultSizeCarpet(Form frmConfirmAddOrderCarpetSection)
         {
 
             Label lblSizeCarpet = new Label();
@@ -1319,8 +1321,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
-        private void setLabelTypeWashCarpetAndLabelResultTypeWashCarpet()
+        private void setLabelTypeWashCarpetAndLabelResultTypeWashCarpet(Form frmConfirmAddOrderCarpetSection)
         {
 
 
@@ -1354,7 +1355,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet()
+        private void setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet(Form frmConfirmAddOrderCarpetSection)
         {
 
 
@@ -1389,20 +1390,52 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.Controls.Add(lblResultOtherSeviceCarpet);
 
         }
-        private void setLabelsOrderCarpetSection( )
+     
+        private void setLabelsOrderCarpetSection(Form frmConfirmAddOrderCarpetSection)
         {
 
-          
-  
 
-            setLabelIDOrderAndResultIDOrder();
-            setLabelNameClientAndResultNameClientCarpet();
-            setLabelAddressClientAndLabelResultAddressClient();
-            setLabelEmailClientAndLabelResultEmailClient();
-            setLabelPhoneClientAndLabelResultPhoneClient();
-            setLabelSizeCarpetAndLabelResultSizeCarpet();
-            setLabelTypeWashCarpetAndLabelResultTypeWashCarpet();
-            setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet();
+            setLabelIDOrderAndResultIDOrder(frmConfirmAddOrderCarpetSection);
+            setLabelNameClientAndResultNameClientCarpet(frmConfirmAddOrderCarpetSection);
+            setLabelAddressClientAndLabelResultAddressClient(frmConfirmAddOrderCarpetSection);
+            setLabelEmailClientAndLabelResultEmailClient(frmConfirmAddOrderCarpetSection);
+            setLabelPhoneClientAndLabelResultPhoneClient(frmConfirmAddOrderCarpetSection);
+            setLabelSizeCarpetAndLabelResultSizeCarpet(frmConfirmAddOrderCarpetSection);
+            setLabelTypeWashCarpetAndLabelResultTypeWashCarpet(frmConfirmAddOrderCarpetSection);
+            setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet(frmConfirmAddOrderCarpetSection);
+         
+
+        }
+
+
+        private void ButtonOrderNowNewForm()
+        {
+            //setLabelsOrderCarpetSection();
+            frmConfirmAddOrderCarpetSection = new Form();
+            setTitleAndSizeAndLocationFormSectionCarpet(frmConfirmAddOrderCarpetSection);
+
+            
+            Guna2GradientButton G2B = new Guna2GradientButton();
+
+            G2B.Text = "Order Now";
+            G2B.Location = new Point(300, 620);
+            G2B.FillColor = Color.FromArgb(255, 4, 187, 156);
+            G2B.FillColor2 = Color.White; 
+            G2B.Animated = true;
+            G2B.AnimatedGIF = true;
+            G2B.BorderRadius = 10;
+            frmConfirmAddOrderCarpetSection.Controls.Add(G2B);
+
+            
+            G2B.Click += (Sender, e) =>
+            {
+                OrderNow();
+                frmConfirmAddOrderCarpetSection.Close();
+            };
+
+            frmConfirmAddOrderCarpetSection.ShowDialog();
+
+
 
         }
     }
