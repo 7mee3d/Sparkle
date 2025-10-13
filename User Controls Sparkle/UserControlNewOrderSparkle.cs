@@ -18,7 +18,8 @@ namespace Sparkle.User_Controls_Sparkle
           //Path File 
         const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
         const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
-      
+
+        bool[] FlagsFillTextBoxInformationCarpet = { false , false , false , false , false , false};
         
         public UserControlNewOrderSparkle()
         {
@@ -678,6 +679,33 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private string returnLineWordServiceCarSpecialFinialBillForm()
+        {
+
+            string wordServiceCar = "";
+
+            if (GCheckBoxServicesFullWash.Checked)
+            {
+                return "None";
+
+            }
+
+            if (GCheckBoxOtherServicesExteriorWash.Checked)
+                wordServiceCar += "Exterior Wash\n";
+
+            if (GCheckBoxOtherServicesInteriorWash.Checked)
+                wordServiceCar += "Interior Wash\n";
+
+            if (GCheckBoxOtherServicesEngineCleaning.Checked)
+                wordServiceCar += "Engine Cleaning\n";
+
+            if (GCheckBoxOtherServicesPolishing.Checked)
+                wordServiceCar += "Polishing\n";
+
+            return wordServiceCar;
+
+
+        }
         private int calcTotalPriceOfWashCar ()
         {
             return (calcSizeCarPrice() + calcServiceWashPriceCar() + calcOtherServiceWashPriceCar()); 
@@ -716,20 +744,29 @@ namespace Sparkle.User_Controls_Sparkle
 
             return totalPriceSizeCarpet; 
         }
-       
-        private string returnWordSizeCarpt ()
+
+        private string returnWordSizeCarpt()
         {
             string wordSizeCarpet = "";
 
 
             if (GRadioButtonSizeCarpetSmall.Checked)
+            {
                 wordSizeCarpet = "Small";
+                FlagsFillTextBoxInformationCarpet[3] = true;
+            }
 
             if (GRadioButtonSizeCarpetMedium.Checked)
+            {
                 wordSizeCarpet = "Medium";
+                FlagsFillTextBoxInformationCarpet[3] = true;
+            }
 
             if (GRadioButtonSizeCarpetLarge.Checked)
+            {
                 wordSizeCarpet = "Large";
+                FlagsFillTextBoxInformationCarpet[3] = true;
+            }
 
             return wordSizeCarpet;
         }
@@ -751,13 +788,19 @@ namespace Sparkle.User_Controls_Sparkle
        
         private string returnWordTypeWash(){
 
-            string wordTypeWash = ""; 
+            string wordTypeWash = "";
 
             if (GRadioButtonWashTypNormalWash.Checked)
+            {
                 wordTypeWash = "Normal Wash";
+                FlagsFillTextBoxInformationCarpet[4] = true;
+            }
 
             if (GRadioButtonWashTypDeepWash.Checked)
+            {
                 wordTypeWash = "Deep Wash";
+                FlagsFillTextBoxInformationCarpet[4] = true;
+            }
 
             return wordTypeWash; 
 
@@ -783,10 +826,17 @@ namespace Sparkle.User_Controls_Sparkle
             string wordOtherSevice = "";
 
             if (GCheckBoxOtherServicesQuickDrying.Checked)
+            {
                 wordOtherSevice += " Quick Drying";
+                FlagsFillTextBoxInformationCarpet[5] = true;
+            }
 
-            if (GCheckBoxOtherServicesHomeDelivery.Checked)
+            if (GCheckBoxOtherServicesHomeDelivery.Checked){
+
                 wordOtherSevice += " Home Delivery";
+                FlagsFillTextBoxInformationCarpet[5] = true;
+
+            }
 
             return wordOtherSevice.TrimStart().TrimEnd();
         }
@@ -819,7 +869,9 @@ namespace Sparkle.User_Controls_Sparkle
 
         //------------------------------ [Start Section Controls]-------------------------------
 
+
         //Method Button Add Order Now 
+
         private void OrderNow ()
         {
             if (GRadioButtonCarpetsSection.Checked)
@@ -1015,12 +1067,30 @@ namespace Sparkle.User_Controls_Sparkle
                 updateTotalPriceSectionCarWash();
             }
         }
+     
+        /*private bool ValidateCarpetSection()
+        {
+            return FlagsFillTextBoxInformationCarpet[0] &&
+                   FlagsFillTextBoxInformationCarpet[1] &&
+                   FlagsFillTextBoxInformationCarpet[2] &&
+                   FlagsFillTextBoxInformationCarpet[3] &&
+                   FlagsFillTextBoxInformationCarpet[4] &&
+                   FlagsFillTextBoxInformationCarpet[5];
+        }*/
 
-        private void ButtonAddNewOrder_Click(object sender, EventArgs e)
+
+        private void ButtonAddNewOrder_Click(object sender, EventArgs e) 
         {
             //setTitleAndSizeAndLocationFormSectionCarpet();
-            if(GRadioButtonCarpetsSection.Checked)
-            ButtonOrderNowNewForm();
+
+
+            if (GRadioButtonCarpetsSection.Checked /*&& ValidateCarpetSection()*/) ButtonOrderNowNewForm();
+            /* else
+             {
+                 MessageBox.Show("Cant Complete this operation");
+             }*/
+
+            else if (GRadioButtonCarsSection.Checked) ButtonOrderNowNewFormCar();
 
         }
 
@@ -1032,18 +1102,19 @@ namespace Sparkle.User_Controls_Sparkle
         private void GTextBoxNameClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+            FlagsFillTextBoxInformationCarpet[0] = true;
         }
 
         private void GTextBoxAddressClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
-
+            FlagsFillTextBoxInformationCarpet[1] = true;
         }
 
         private void GTextBoxPhoneClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
-
+            FlagsFillTextBoxInformationCarpet[2] = true;
         }
 
         private void GTextBoxNumberCar_Validating(object sender, CancelEventArgs e)
@@ -1091,7 +1162,12 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         //Decleration The Form -> To Avoid Daplicate The Form Calling 
-        Form frmConfirmAddOrderCarpetSection ;
+
+        Form frmConfirmAddOrderSection;
+
+
+        //-------------------------------- [Start Section Carpet Create Form Finial Bill ]-------------------------------
+
 
         private void setTitleAndSizeAndLocationFormSectionCarpet (Form frmConfirmAddOrderCarpetSection)
         {
@@ -1407,12 +1483,11 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
         private void ButtonOrderNowNewForm()
         {
             //setLabelsOrderCarpetSection();
-            frmConfirmAddOrderCarpetSection = new Form();
-            setTitleAndSizeAndLocationFormSectionCarpet(frmConfirmAddOrderCarpetSection);
+            frmConfirmAddOrderSection = new Form();
+            setTitleAndSizeAndLocationFormSectionCarpet(frmConfirmAddOrderSection);
 
             
             Guna2GradientButton G2B = new Guna2GradientButton();
@@ -1424,19 +1499,426 @@ namespace Sparkle.User_Controls_Sparkle
             G2B.Animated = true;
             G2B.AnimatedGIF = true;
             G2B.BorderRadius = 10;
-            frmConfirmAddOrderCarpetSection.Controls.Add(G2B);
+            frmConfirmAddOrderSection.Controls.Add(G2B);
 
             
             G2B.Click += (Sender, e) =>
             {
                 OrderNow();
-                frmConfirmAddOrderCarpetSection.Close();
+                frmConfirmAddOrderSection.Close();
             };
 
-            frmConfirmAddOrderCarpetSection.ShowDialog();
+            frmConfirmAddOrderSection.ShowDialog();
 
 
 
         }
+
+
+
+        //-------------------------------- [End Section Carpet Create Form Finial Bill ]-------------------------------
+
+
+
+
+
+        //-------------------------------- [start Section Car Create Form Finial Bill ]-------------------------------
+
+
+        private void setTitleAndSizeAndLocationFormSectionCar(Form frmConfirmAddOrderSection)
+        {
+
+            frmConfirmAddOrderSection.Text = "Confirm Add Order Car";
+            frmConfirmAddOrderSection.StartPosition = FormStartPosition.CenterScreen;
+
+            Guna2BorderlessForm GBLEF = new Guna2BorderlessForm();
+            Guna2ShadowForm G2SF = new Guna2ShadowForm();
+
+            GBLEF.BorderRadius = 20;
+            G2SF.ShadowColor = Color.FromArgb(90, 4, 187, 156);
+            G2SF.SetShadowForm(frmConfirmAddOrderSection);
+
+            GBLEF.ContainerControl = frmConfirmAddOrderSection;
+
+            frmConfirmAddOrderSection.MinimizeBox = false;
+            frmConfirmAddOrderSection.MaximizeBox = false;
+            frmConfirmAddOrderSection.ControlBox = false;
+
+            frmConfirmAddOrderSection.BackColor = Color.White;
+            frmConfirmAddOrderSection.Size = new Size(500, Convert.ToInt32(Math.Round(700.5)));
+
+            setLabelFinialBill(frmConfirmAddOrderSection);
+
+            setLabelsOrderCarSection(frmConfirmAddOrderSection);
+
+        }
+
+        private void setLabelIDOrderAndResultIDOrderCar(Form frmConfirmAddOrderSection)
+        {
+            Label lblIDOrder = new Label();
+            Label lblResultIDOrder = new Label();
+
+            // Label ID Order 
+            lblIDOrder.Text = "ID Order :";
+            lblIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblIDOrder.BackColor = Color.Transparent;
+            lblIDOrder.Top = 150;
+            lblIDOrder.Left = 10;
+            lblIDOrder.Width = 120;
+            lblIDOrder.Height = 40;
+            lblIDOrder.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label ID Order 
+            lblResultIDOrder.Text = GTextBoxIDOrderCarSection.Text;
+            lblResultIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultIDOrder.Top = 150;
+            lblResultIDOrder.Left = 130;
+            lblResultIDOrder.Width = 50;
+
+            lblIDOrder.Height = 20;
+
+            lblResultIDOrder.BackColor = Color.Transparent;
+
+            frmConfirmAddOrderSection.Controls.Add(lblIDOrder);
+            frmConfirmAddOrderSection.Controls.Add(lblResultIDOrder);
+
+        }
+       
+        private void setLabelNumberCarAndResultNumberCar(Form frmConfirmAddOrderSection)
+        {
+            Label lblNumberCar = new Label();
+            Label lblResultNumberCar = new Label();
+
+            // Label Number Car
+            lblNumberCar.Text = "Number Car :";
+            lblNumberCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblNumberCar.BackColor = Color.Transparent;
+            lblNumberCar.Top = 190;
+            lblNumberCar.Left = 10;
+            lblNumberCar.Width = 145;
+            lblNumberCar.Height = 40;
+            lblNumberCar.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Number Car
+            lblResultNumberCar.Text = GTextBoxNumberCar.Text;
+            lblResultNumberCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNumberCar.Top = 190;
+            lblResultNumberCar.Left = 160;
+            lblResultNumberCar.Width = 150;
+
+            lblResultNumberCar.Height = 20;
+
+            lblResultNumberCar.BackColor = Color.Transparent;
+
+            frmConfirmAddOrderSection.Controls.Add(lblNumberCar);
+            frmConfirmAddOrderSection.Controls.Add(lblResultNumberCar);
+
+        }
+       
+        private void setLabelNameModelCarAndResultModelCar(Form frmConfirmAddOrderCarpetSection)
+        {
+            Label lblModelCar = new Label();
+            Label lblResultModelCar = new Label();
+
+
+            //Label Model Car
+            lblModelCar.Text = "Model Car :";
+            lblModelCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblModelCar.Top = 230;
+            lblModelCar.Width = 150;
+            lblModelCar.Left = 10;
+            lblModelCar.Height = 40;
+            lblModelCar.BackColor = Color.Transparent;
+            lblModelCar.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Model Car
+            lblResultModelCar.Text = GTextBoxCarModel.Text;
+            lblResultModelCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultModelCar.Top = 230;
+            lblResultModelCar.Left = 160;
+            lblResultModelCar.Width = 150;
+            lblResultModelCar.BackColor = Color.Transparent;
+            lblResultModelCar.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblModelCar);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultModelCar);
+
+        }
+
+        private void setLabelNameClientAndResultNameClientCar(Form frmConfirmAddOrderCarpetSection)
+        {
+            Label lblNameClient = new Label();
+            Label lblResultNameClient = new Label();
+
+
+            //Label Name Client 
+            lblNameClient.Text = "Name Client :";
+            lblNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblNameClient.Top = 270;
+            lblNameClient.Width = 150;
+            lblNameClient.Left = 10;
+            lblNameClient.Height = 40;
+            lblNameClient.BackColor = Color.Transparent;
+            lblNameClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Name Client 
+            lblResultNameClient.Text = GTextBoxNameClientCarSection.Text;
+            lblResultNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNameClient.Top = 270;
+            lblResultNameClient.Left = 160;
+            lblResultNameClient.Width = 150;
+            lblResultNameClient.BackColor = Color.Transparent;
+            lblResultNameClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblNameClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultNameClient);
+
+        }
+
+        private void setLabelAddressClientAndLabelResultAddressClientCar(Form frmConfirmAddOrderCarpetSection)
+        {
+            Label lblAddressClient = new Label();
+            Label lblResultAddressClient = new Label();
+
+
+            //Label Address Client 
+            lblAddressClient.Text = "Address Client :";
+            lblAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblAddressClient.Top = 310;
+            lblAddressClient.Width = 160;
+            lblAddressClient.Left = 10;
+            lblAddressClient.Height = 40;
+            lblAddressClient.BackColor = Color.Transparent;
+            lblAddressClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Address Client 
+            lblResultAddressClient.Text = GTextBoxAddressClientCarSection.Text;
+            lblResultAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultAddressClient.Top = 310;
+            lblResultAddressClient.Left = 170;
+            lblResultAddressClient.Width = 200;
+            lblResultAddressClient.BackColor = Color.Transparent;
+            lblResultAddressClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblAddressClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultAddressClient);
+
+        }
+
+        private void setLabelEmailClientAndLabelResultEmailClientCar(Form frmConfirmAddOrderCarpetSection)
+        {
+            Label lblEmailClient = new Label();
+            Label lblResultEmailClient = new Label();
+
+
+            //Label Email Client 
+            lblEmailClient.Text = "Email Client : ";
+            lblEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblEmailClient.Top = 350;
+            lblEmailClient.Width = 150;
+            lblEmailClient.Left = 10;
+            lblEmailClient.Height = 40;
+            lblEmailClient.BackColor = Color.Transparent;
+            lblEmailClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Email Client 
+            lblResultEmailClient.Text = GTextBoxEmailClientCarSection.Text;
+            lblResultEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultEmailClient.Top = 350;
+            lblResultEmailClient.Left = 160;
+            lblResultEmailClient.Width = 200;
+            lblResultEmailClient.BackColor = Color.Transparent;
+            lblResultEmailClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblEmailClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultEmailClient);
+
+        }
+
+        private void setLabelPhoneClientAndLabelResultPhoneClientCar(Form frmConfirmAddOrderCarpetSection)
+        {
+            Label lblPhoneClient = new Label();
+            Label lblResultPhoneClient = new Label();
+
+
+            //Label Phone Client 
+            lblPhoneClient.Text = "Phone Client : ";
+            lblPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblPhoneClient.Top = 390;
+            lblPhoneClient.Width = 150;
+            lblPhoneClient.Left = 10;
+            lblPhoneClient.Height = 40;
+            lblPhoneClient.BackColor = Color.Transparent;
+            lblPhoneClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Phone Client 
+            lblResultPhoneClient.Text = GTextBoxPhoneClientCarSection.Text;
+            lblResultPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultPhoneClient.Top = 390;
+            lblResultPhoneClient.Left = 160;
+            lblResultPhoneClient.Width = 100;
+            lblResultPhoneClient.BackColor = Color.Transparent;
+            lblResultPhoneClient.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblPhoneClient);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultPhoneClient);
+
+        }
+
+        private void setLabelSizeCarpetAndLabelResultSizeCar(Form frmConfirmAddOrderCarpetSection)
+        {
+
+            Label lblSizeCar= new Label();
+            Label lblResultSizeCar = new Label();
+
+
+
+
+            //Label Size Carpet
+            lblSizeCar.Text = "Size Car : ";
+            lblSizeCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblSizeCar.Top = 430;
+            lblSizeCar.Width = 150;
+            lblSizeCar.Left = 10;
+            lblSizeCar.Height = 40;
+            lblSizeCar.BackColor = Color.Transparent;
+            lblSizeCar.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Size Carpet
+            lblResultSizeCar.Text = returnWordSizeCar();
+            lblResultSizeCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultSizeCar.Top = 430;
+            lblResultSizeCar.Left = 160;
+            lblResultSizeCar.Width = 150;
+            lblResultSizeCar.BackColor = Color.Transparent;
+            lblResultSizeCar.Height = 40;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblSizeCar);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultSizeCar);
+
+        }
+
+        private void setLabelTypeWashCarpetAndLabelResultTypeWashServiceCar(Form frmConfirmAddOrderCarpetSection)
+        {
+
+
+            Label lblTypeWashCar = new Label();
+            Label lblResultTypeWashCar = new Label();
+
+
+            //Label Type Wash Carpet
+            lblTypeWashCar.Text = "Serivce: ";
+            lblTypeWashCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblTypeWashCar.Top = 470;
+            lblTypeWashCar.Width = 100;
+            lblTypeWashCar.Left = 10;
+            lblTypeWashCar.Height = 40;
+            lblTypeWashCar.BackColor = Color.Transparent;
+            lblTypeWashCar.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Type Wash Carpet
+            lblResultTypeWashCar.Text = returnTypeWashCarWord();
+            lblResultTypeWashCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultTypeWashCar.Top = 470;
+            lblResultTypeWashCar.Left = 120;
+            lblResultTypeWashCar.Width = 100;
+            lblResultTypeWashCar.BackColor = Color.Transparent;
+            lblResultTypeWashCar.Height = 50;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblTypeWashCar);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultTypeWashCar);
+
+        }
+
+        private void setLabelOtherServiceCarpetAndLabelResultOtherServiceCar(Form frmConfirmAddOrderCarpetSection)
+        {
+
+
+            Label lblOtherSeviceCar = new Label();
+            Label lblResultOtherSeviceCar = new Label();
+
+
+
+            //Label Other Service  Car
+            lblOtherSeviceCar.Text = "Other Service : ";
+            lblOtherSeviceCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblOtherSeviceCar.Top = 530;
+            lblOtherSeviceCar.Width = 350;
+            lblOtherSeviceCar.Left = 10;
+            lblOtherSeviceCar.Height = 40;
+            lblOtherSeviceCar.BackColor = Color.Transparent;
+            lblOtherSeviceCar.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+
+            // Result Label Other Service Car
+            lblResultOtherSeviceCar.Text = returnLineWordServiceCarSpecialFinialBillForm();
+            lblResultOtherSeviceCar.Font = new Font("Garamond", 12, FontStyle.Bold);
+            lblResultOtherSeviceCar.Top = 570;
+            lblResultOtherSeviceCar.Left = 60;
+            lblResultOtherSeviceCar.Width = 200;
+            lblResultOtherSeviceCar.BackColor = Color.Transparent;
+            lblResultOtherSeviceCar.Height = 400;
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblOtherSeviceCar);
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblResultOtherSeviceCar);
+
+        }
+
+        private void setLabelsOrderCarSection(Form frmConfirmAddOrderCarpetSection)
+        {
+
+
+            setLabelIDOrderAndResultIDOrderCar(frmConfirmAddOrderCarpetSection);
+            setLabelNumberCarAndResultNumberCar(frmConfirmAddOrderCarpetSection);
+            setLabelNameModelCarAndResultModelCar(frmConfirmAddOrderCarpetSection);
+            setLabelNameClientAndResultNameClientCar(frmConfirmAddOrderCarpetSection);
+            setLabelAddressClientAndLabelResultAddressClientCar(frmConfirmAddOrderCarpetSection);
+            setLabelEmailClientAndLabelResultEmailClientCar(frmConfirmAddOrderCarpetSection);
+            setLabelPhoneClientAndLabelResultPhoneClientCar(frmConfirmAddOrderCarpetSection);
+            setLabelSizeCarpetAndLabelResultSizeCar(frmConfirmAddOrderCarpetSection);
+            setLabelTypeWashCarpetAndLabelResultTypeWashServiceCar(frmConfirmAddOrderCarpetSection);
+            setLabelOtherServiceCarpetAndLabelResultOtherServiceCar(frmConfirmAddOrderCarpetSection);
+
+
+        }
+
+        private void ButtonOrderNowNewFormCar()
+        {
+            //setLabelsOrderCarpetSection();
+            frmConfirmAddOrderSection = new Form();
+            setTitleAndSizeAndLocationFormSectionCar(frmConfirmAddOrderSection);
+
+
+            Guna2GradientButton G2B = new Guna2GradientButton();
+
+            G2B.Text = "Order Now";
+            G2B.Location = new Point(300, 620);
+            G2B.FillColor = Color.FromArgb(255, 4, 187, 156);
+            G2B.FillColor2 = Color.White;
+            G2B.Animated = true;
+            G2B.AnimatedGIF = true;
+            G2B.BorderRadius = 10;
+            frmConfirmAddOrderSection.Controls.Add(G2B);
+
+
+            G2B.Click += (Sender, e) =>
+            {
+                OrderNow();
+                frmConfirmAddOrderSection.Close();
+            };
+
+            frmConfirmAddOrderSection.ShowDialog();
+
+
+
+        }
+
+       
+        
+        //-------------------------------- [End Section Car Create Form Finial Bill ]-------------------------------
+
+
     }
 }
