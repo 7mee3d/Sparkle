@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonRemoveOrUpdateUsers = new Guna.UI2.WinForms.Guna2Button();
+            this.GButtonViewAllOrderCarAndCarpet = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonNewOrder = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonUsersList = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -66,6 +67,7 @@
             this.guna2GradientPanel1.BorderRadius = 20;
             this.guna2GradientPanel1.Controls.Add(this.guna2Button6);
             this.guna2GradientPanel1.Controls.Add(this.GButtonRemoveOrUpdateUsers);
+            this.guna2GradientPanel1.Controls.Add(this.GButtonViewAllOrderCarAndCarpet);
             this.guna2GradientPanel1.Controls.Add(this.GButtonNewOrder);
             this.guna2GradientPanel1.Controls.Add(this.GButtonUsersList);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button3);
@@ -87,7 +89,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 119);
+            this.label1.Location = new System.Drawing.Point(24, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 54);
             this.label1.TabIndex = 1;
@@ -200,13 +202,42 @@
             this.GButtonRemoveOrUpdateUsers.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GButtonRemoveOrUpdateUsers.Image = global::Sparkle.Properties.Resources.List_Users_Image_2;
-            this.GButtonRemoveOrUpdateUsers.Location = new System.Drawing.Point(0, 555);
+            this.GButtonRemoveOrUpdateUsers.Location = new System.Drawing.Point(0, 507);
             this.GButtonRemoveOrUpdateUsers.Name = "GButtonRemoveOrUpdateUsers";
             this.GButtonRemoveOrUpdateUsers.PressedColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateUsers.Size = new System.Drawing.Size(222, 55);
             this.GButtonRemoveOrUpdateUsers.TabIndex = 1;
             this.GButtonRemoveOrUpdateUsers.Text = "Remove Or Update User";
             this.GButtonRemoveOrUpdateUsers.Click += new System.EventHandler(this.GButtonRemoveOrUpdateUsers_Click);
+            // 
+            // GButtonViewAllOrderCarAndCarpet
+            // 
+            this.GButtonViewAllOrderCarAndCarpet.Animated = true;
+            this.GButtonViewAllOrderCarAndCarpet.AnimatedGIF = true;
+            this.GButtonViewAllOrderCarAndCarpet.BackColor = System.Drawing.Color.Transparent;
+            this.GButtonViewAllOrderCarAndCarpet.BorderRadius = 3;
+            this.GButtonViewAllOrderCarAndCarpet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GButtonViewAllOrderCarAndCarpet.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.GButtonViewAllOrderCarAndCarpet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonViewAllOrderCarAndCarpet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonViewAllOrderCarAndCarpet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonViewAllOrderCarAndCarpet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonViewAllOrderCarAndCarpet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonViewAllOrderCarAndCarpet.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GButtonViewAllOrderCarAndCarpet.ForeColor = System.Drawing.Color.White;
+            this.GButtonViewAllOrderCarAndCarpet.HoverState.BorderColor = System.Drawing.Color.White;
+            this.GButtonViewAllOrderCarAndCarpet.HoverState.CustomBorderColor = System.Drawing.Color.White;
+            this.GButtonViewAllOrderCarAndCarpet.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonViewAllOrderCarAndCarpet.Image = global::Sparkle.Properties.Resources.completed_Order;
+            this.GButtonViewAllOrderCarAndCarpet.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GButtonViewAllOrderCarAndCarpet.ImageOffset = new System.Drawing.Point(10, 0);
+            this.GButtonViewAllOrderCarAndCarpet.Location = new System.Drawing.Point(0, 629);
+            this.GButtonViewAllOrderCarAndCarpet.Name = "GButtonViewAllOrderCarAndCarpet";
+            this.GButtonViewAllOrderCarAndCarpet.PressedColor = System.Drawing.Color.White;
+            this.GButtonViewAllOrderCarAndCarpet.Size = new System.Drawing.Size(222, 55);
+            this.GButtonViewAllOrderCarAndCarpet.TabIndex = 1;
+            this.GButtonViewAllOrderCarAndCarpet.Text = "Show All Order";
+            this.GButtonViewAllOrderCarAndCarpet.Click += new System.EventHandler(this.GButtonShowAllOrderCarAndCarpet_Click);
             // 
             // GButtonNewOrder
             // 
@@ -228,8 +259,8 @@
             this.GButtonNewOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GButtonNewOrder.Image = global::Sparkle.Properties.Resources.Order_Icon_;
             this.GButtonNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonNewOrder.ImageOffset = new System.Drawing.Point(25, 0);
-            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 614);
+            this.GButtonNewOrder.ImageOffset = new System.Drawing.Point(10, 0);
+            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 566);
             this.GButtonNewOrder.Name = "GButtonNewOrder";
             this.GButtonNewOrder.PressedColor = System.Drawing.Color.White;
             this.GButtonNewOrder.Size = new System.Drawing.Size(222, 55);
@@ -257,8 +288,8 @@
             this.GButtonUsersList.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GButtonUsersList.Image = global::Sparkle.Properties.Resources.group_Users;
             this.GButtonUsersList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonUsersList.ImageOffset = new System.Drawing.Point(25, 0);
-            this.GButtonUsersList.Location = new System.Drawing.Point(0, 496);
+            this.GButtonUsersList.ImageOffset = new System.Drawing.Point(10, 0);
+            this.GButtonUsersList.Location = new System.Drawing.Point(0, 448);
             this.GButtonUsersList.Name = "GButtonUsersList";
             this.GButtonUsersList.PressedColor = System.Drawing.Color.White;
             this.GButtonUsersList.Size = new System.Drawing.Size(222, 55);
@@ -286,9 +317,9 @@
             this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2Button3.Image = global::Sparkle.Properties.Resources.user_Image_;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(25, 0);
+            this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button3.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 437);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 389);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.White;
             this.guna2Button3.Size = new System.Drawing.Size(222, 55);
@@ -317,7 +348,7 @@
             this.GButtonRemoveOrUpdateClient.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
             this.GButtonRemoveOrUpdateClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.GButtonRemoveOrUpdateClient.ImageSize = new System.Drawing.Size(15, 15);
-            this.GButtonRemoveOrUpdateClient.Location = new System.Drawing.Point(0, 378);
+            this.GButtonRemoveOrUpdateClient.Location = new System.Drawing.Point(0, 330);
             this.GButtonRemoveOrUpdateClient.Name = "GButtonRemoveOrUpdateClient";
             this.GButtonRemoveOrUpdateClient.PressedColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateClient.Size = new System.Drawing.Size(222, 55);
@@ -345,8 +376,8 @@
             this.GButtonClientListSection.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GButtonClientListSection.Image = global::Sparkle.Properties.Resources.List_Clients;
             this.GButtonClientListSection.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonClientListSection.ImageOffset = new System.Drawing.Point(25, 0);
-            this.GButtonClientListSection.Location = new System.Drawing.Point(0, 319);
+            this.GButtonClientListSection.ImageOffset = new System.Drawing.Point(10, 0);
+            this.GButtonClientListSection.Location = new System.Drawing.Point(0, 271);
             this.GButtonClientListSection.Name = "GButtonClientListSection";
             this.GButtonClientListSection.PressedColor = System.Drawing.Color.White;
             this.GButtonClientListSection.Size = new System.Drawing.Size(222, 55);
@@ -374,8 +405,8 @@
             this.ButtonClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.ButtonClients.Image = global::Sparkle.Properties.Resources.One_client_;
             this.ButtonClients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonClients.ImageOffset = new System.Drawing.Point(25, 0);
-            this.ButtonClients.Location = new System.Drawing.Point(0, 260);
+            this.ButtonClients.ImageOffset = new System.Drawing.Point(10, 0);
+            this.ButtonClients.Location = new System.Drawing.Point(0, 212);
             this.ButtonClients.Name = "ButtonClients";
             this.ButtonClients.PressedColor = System.Drawing.Color.White;
             this.ButtonClients.Size = new System.Drawing.Size(222, 55);
@@ -388,7 +419,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.Logo_Sparkle;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 70);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 54);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(51, 56);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,5 +483,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button GButtonRemoveOrUpdateClient;
         private Guna.UI2.WinForms.Guna2Button GButtonNewOrder;
+        private Guna.UI2.WinForms.Guna2Button GButtonViewAllOrderCarAndCarpet;
     }
 }

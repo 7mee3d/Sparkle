@@ -27,7 +27,6 @@ namespace Sparkle
             ControlUser.BringToFront(); 
 
 
-
         }
         private void guna2Button6_Click(object sender, EventArgs e)
         {
@@ -77,6 +76,13 @@ namespace Sparkle
         {
             UserControlNewOrderSparkle UCNOS = new UserControlNewOrderSparkle();
             addUserControlInThePaenl(UCNOS);
+        }
+
+        private void GButtonShowAllOrderCarAndCarpet_Click(object sender, EventArgs e)
+        {
+            UserControlShowAllOrdersCarAndCarpet UCSAOCAC = new UserControlShowAllOrdersCarAndCarpet();
+
+            addUserControlInThePaenl(UCSAOCAC);
         }
     }
 }

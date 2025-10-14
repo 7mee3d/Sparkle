@@ -706,6 +706,7 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
+     
         private int calcTotalPriceOfWashCar ()
         {
             return (calcSizeCarPrice() + calcServiceWashPriceCar() + calcOtherServiceWashPriceCar()); 
@@ -1113,7 +1114,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GTextBoxPhoneClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
-            setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
+            setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
             FlagsFillTextBoxInformationCarpet[2] = true;
         }
 
