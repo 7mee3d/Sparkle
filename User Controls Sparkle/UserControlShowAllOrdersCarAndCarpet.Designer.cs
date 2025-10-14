@@ -38,13 +38,13 @@
             this.ColumnAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SizeCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TypeWash = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalPriceOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.GRadioButtonCarsSectionList = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonCarpetsSectionList = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -54,6 +54,8 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.ListViewAllOrdersCar = new System.Windows.Forms.ListView();
             this.IDOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumberCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ModelNameCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AddressClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EmailClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,8 +64,6 @@
             this.Service = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherSerivce = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NumberCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ModelNameCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewAllOrdersCarpet.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -126,6 +126,7 @@
             this.GTextBoxSearchIDOrderCarpet.SelectedText = "";
             this.GTextBoxSearchIDOrderCarpet.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearchIDOrderCarpet.TabIndex = 0;
+            this.GTextBoxSearchIDOrderCarpet.Click += new System.EventHandler(this.GTextBoxSearchIDOrderCarpet_Click);
             // 
             // PanelMainListViewAllOrdersCarpet
             // 
@@ -189,6 +190,26 @@
             this.ColumnPhone.Text = "Phone";
             this.ColumnPhone.Width = 170;
             // 
+            // SizeCarpet
+            // 
+            this.SizeCarpet.Text = "Size Carpet";
+            this.SizeCarpet.Width = 118;
+            // 
+            // TypeWash
+            // 
+            this.TypeWash.Text = "Type Wash";
+            this.TypeWash.Width = 124;
+            // 
+            // OtherService
+            // 
+            this.OtherService.Text = "Other Service";
+            this.OtherService.Width = 230;
+            // 
+            // TotalPriceOrder
+            // 
+            this.TotalPriceOrder.Text = "Total Price";
+            this.TotalPriceOrder.Width = 139;
+            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BorderRadius = 20;
@@ -224,26 +245,6 @@
             this.label1.Size = new System.Drawing.Size(315, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "All Order In Sparkle";
-            // 
-            // SizeCarpet
-            // 
-            this.SizeCarpet.Text = "Size Carpet";
-            this.SizeCarpet.Width = 118;
-            // 
-            // TypeWash
-            // 
-            this.TypeWash.Text = "Type Wash";
-            this.TypeWash.Width = 124;
-            // 
-            // OtherService
-            // 
-            this.OtherService.Text = "Other Service";
-            this.OtherService.Width = 230;
-            // 
-            // TotalPriceOrder
-            // 
-            this.TotalPriceOrder.Text = "Total Price";
-            this.TotalPriceOrder.Width = 139;
             // 
             // GCPanelChoiceSectionToViewOrdersCarOrCarpet
             // 
@@ -402,6 +403,16 @@
             this.IDOrder.Text = "ID Order";
             this.IDOrder.Width = 111;
             // 
+            // NumberCar
+            // 
+            this.NumberCar.Text = "Number Car";
+            this.NumberCar.Width = 120;
+            // 
+            // ModelNameCar
+            // 
+            this.ModelNameCar.Text = "Model Car";
+            this.ModelNameCar.Width = 170;
+            // 
             // NameClient
             // 
             this.NameClient.Text = "Name Client";
@@ -441,16 +452,6 @@
             // 
             this.TotalPrice.Text = "Total Price";
             this.TotalPrice.Width = 139;
-            // 
-            // NumberCar
-            // 
-            this.NumberCar.Text = "Number Car";
-            this.NumberCar.Width = 120;
-            // 
-            // ModelNameCar
-            // 
-            this.ModelNameCar.Text = "Model Car";
-            this.ModelNameCar.Width = 170;
             // 
             // UserControlShowAllOrdersCarAndCarpet
             // 

@@ -19,13 +19,17 @@ namespace Sparkle.User_Controls_Sparkle
             InitializeComponent();
             ListViewAllOrdersCarpet.Scrollable = true;
             psuhAllInformationOrderToListViewCarpet();
+            pushAllInformationOrderCarToListViewCar();
+            GRadioButtonCarpetsSectionList.Checked = true; 
 
 
 
         }
 
+        //Path Files 
         private const string _kPATH_FILE_NAME_CARPET_ORDERS = "CarpetsOrders.txt";
         private const string _kPATH_FILE_NAME_CAR_ORDERS = "CarOrders.txt";
+
         struct stInformationOrderCarpet
         {
             public string stIDCarpetOrder;
@@ -102,6 +106,32 @@ namespace Sparkle.User_Controls_Sparkle
             return infoCarpetOrder;
         }
 
+        private stInformationOrderCar ConvertLineInformationCarToDataInformation (List<string> allInformationOrderCarString)
+        {
+
+            stInformationOrderCar allInformationOrderCar = new stInformationOrderCar();
+
+            if (allInformationOrderCarString.Count >= 12)
+            {
+
+                allInformationOrderCar.stIDCarOrder = allInformationOrderCarString[0];
+                allInformationOrderCar.stNumberCar = allInformationOrderCarString[1];
+                allInformationOrderCar.stCarModelName = allInformationOrderCarString[2];
+                allInformationOrderCar.stNameClient = allInformationOrderCarString[3];
+                allInformationOrderCar.stAddressClient = allInformationOrderCarString[4];
+                allInformationOrderCar.stEmailClient = allInformationOrderCarString[5];
+                allInformationOrderCar.stPhoneClient = allInformationOrderCarString[6];
+                allInformationOrderCar.stSizeCar = allInformationOrderCarString[7];
+                allInformationOrderCar.stServiceCars = allInformationOrderCarString[8];
+                allInformationOrderCar.stOtherServiceCar = allInformationOrderCarString[9];
+                allInformationOrderCar.stTotalPriceOrder = allInformationOrderCarString[10];
+                allInformationOrderCar.stOtherDeatilsCar = allInformationOrderCarString[11];
+            }
+
+            return allInformationOrderCar;
+
+        }
+      
         private List<string> SplitLineToConvertPartsString(string lineInformationOrder, string Separtor)
         {
             List<string> informationAfterSplitLine = new List<string>();
@@ -117,16 +147,31 @@ namespace Sparkle.User_Controls_Sparkle
         private List<stInformationOrderCarpet> pushAllInformationOrderCarpetToListStructure()
         {
             List<stInformationOrderCarpet> allInformationOrderCarpet = new List<stInformationOrderCarpet>();
+
             List<string> InformationLineOrderCarpetFromFile = LoadAllLineInformationOrderFromFile(_kPATH_FILE_NAME_CARPET_ORDERS);
 
             foreach (string lineInformationCarpet in InformationLineOrderCarpetFromFile)
             {
                 allInformationOrderCarpet.Add(ConvertLineInformationCarpetToDataInformation(SplitLineToConvertPartsString(lineInformationCarpet , "&&//&&")));
             }
+
             return allInformationOrderCarpet;
 
         }
       
+        private List<stInformationOrderCar> pushAllInformationOrderCarToListSturcture()
+        {
+            List<string> LoadAllLineInforationOrderCar = LoadAllLineInformationOrderFromFile(_kPATH_FILE_NAME_CAR_ORDERS);
+            List<stInformationOrderCar> allInformationOrderCar = new List<stInformationOrderCar>(); 
+
+            foreach(string lineInoformationOrderCar in LoadAllLineInforationOrderCar)
+            {
+                allInformationOrderCar.Add(ConvertLineInformationCarToDataInformation(SplitLineToConvertPartsString(lineInoformationOrderCar, "#|||#")));
+            }
+
+            return allInformationOrderCar;
+        }
+     
         private void psuhAllInformationOrderToListViewCarpet()
         {
 
@@ -153,18 +198,30 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
     
-        private bool isFoundTheOrderByIDCarpet(string ID)
+        private void pushAllInformationOrderCarToListViewCar ()
         {
 
-            List<stInformationOrderCarpet> informationOrderCarpet = pushAllInformationOrderCarpetToListStructure();
-
-            foreach (stInformationOrderCarpet infoOrderCarpet in informationOrderCarpet)
+            List<stInformationOrderCar> allInformationOrderCar = pushAllInformationOrderCarToListSturcture();
+            
+            foreach (stInformationOrderCar infoCarOrder in allInformationOrderCar)
             {
-                if (infoOrderCarpet.stIDCarpetOrder == ID) return true; 
+                ListViewItem LVI = new ListViewItem(infoCarOrder.stIDCarOrder);
+
+                LVI.SubItems.Add(infoCarOrder.stNumberCar);
+                LVI.SubItems.Add(infoCarOrder.stCarModelName);
+                LVI.SubItems.Add(infoCarOrder.stNameClient);
+                LVI.SubItems.Add(infoCarOrder.stAddressClient);
+                LVI.SubItems.Add(infoCarOrder.stEmailClient);
+                LVI.SubItems.Add(infoCarOrder.stPhoneClient);
+                LVI.SubItems.Add(infoCarOrder.stSizeCar);
+                LVI.SubItems.Add(infoCarOrder.stServiceCars);
+                LVI.SubItems.Add(infoCarOrder.stOtherServiceCar);
+                LVI.SubItems.Add(infoCarOrder.stTotalPriceOrder);
+
+                ListViewAllOrdersCar.Items.Add(LVI); 
 
             }
-
-            return false; 
+        
         }
 
         private void resetBackColorAndForeColorInListView()
@@ -175,18 +232,28 @@ namespace Sparkle.User_Controls_Sparkle
                 ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
             }
         }
-      
-    /* /*   private void SearchOrderByIDOrder (string IDOrder)
-      
-        {
 
-        //  List<stInformationOrderCarpet> informationOrderCarpet = pushAllInformationOrderCarpetToListStructure();
+        private void TakeAllItemListViewCarpetOrderBackForeColorWhite(int indexStartTakeColorWhite)
+        {
+            for (int counter= indexStartTakeColorWhite + 1; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
+            {
+                ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
+                ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.White;
+            }
+        }
+
+        private void SearchOrderByIDOrder (string IDOrder) {
+
+  
+            /*  if (IDOrder == "")
+              {
+                  resetBackColorAndForeColorInListView();
+                  return; 
+              }*/
 
             resetBackColorAndForeColorInListView();
 
-       /*  
-
-            if (ListViewAllOrdersCarpet.Items[0].Text == IDOrder)
+            if (ListViewAllOrdersCarpet.Items[0].SubItems[0].Text == IDOrder)
             {
                 ListViewAllOrdersCarpet.Items[0].BackColor = Color.Yellow;
                 ListViewAllOrdersCarpet.Items[0].ForeColor = Color.Black;
@@ -196,24 +263,35 @@ namespace Sparkle.User_Controls_Sparkle
             }
             
             for (int counter = 0; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
-           
+
             {
-                if (isFoundTheOrderByIDCarpet(ListViewAllOrdersCarpet.Items[counter].Text))
+                ListViewItem LVI = ListViewAllOrdersCarpet.Items[0];
+
+                //Nituce this statment Vheck the List vew not structure
+                if (ListViewAllOrdersCarpet.Items[counter].Text == IDOrder)
                 {
                     ListViewAllOrdersCarpet.Items[counter].BackColor = Color.Yellow;
                     ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
                     ListViewAllOrdersCarpet.Items[counter].Focused = true;
                     ListViewAllOrdersCarpet.Items[counter].EnsureVisible();
-                    return; 
+                    //ListViewAllOrdersCarpet.Scrollable = false;
+
+                    TakeAllItemListViewCarpetOrderBackForeColorWhite(counter);
+
+                    
+                    return;
+                }
+                else
+                {
+                    ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
+                    ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.White;
                 }
 
             }
 
-         
-        }*/
+           
+        }
      
-
-
         private void GRadioButtonCarpetsSectionList_CheckedChanged(object sender, EventArgs e)
         {
             if(GRadioButtonCarpetsSectionList.Checked)
@@ -236,8 +314,16 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GButtonSearchByIDOrderCarpet_Click(object sender, EventArgs e)
         {
-            string IdOrder = GTextBoxSearchIDOrderCarpet.Text; 
+            string IdOrder = GTextBoxSearchIDOrderCarpet.Text;
+            GTextBoxSearchIDOrderCarpet.Clear();
             SearchOrderByIDOrder(IdOrder);
         }
+
+        private void GTextBoxSearchIDOrderCarpet_Click(object sender, EventArgs e)
+        {
+           // ListViewAllOrdersCarpet.Scrollable = true;
+            resetBackColorAndForeColorInListView();
+        }
+    
     }
 }
