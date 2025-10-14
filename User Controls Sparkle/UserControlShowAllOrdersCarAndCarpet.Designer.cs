@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.GButtonSearchByIDOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.GTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GButtonSearchByIDOrderCarpet = new Guna.UI2.WinForms.Guna2Button();
+            this.GTextBoxSearchIDOrderCarpet = new Guna.UI2.WinForms.Guna2TextBox();
             this.PanelMainListViewAllOrdersCarpet = new Guna.UI2.WinForms.Guna2Panel();
             this.ListViewAllOrdersCarpet = new System.Windows.Forms.ListView();
             this.ColumnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,56 +75,57 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.GButtonSearchByIDOrder);
-            this.guna2Panel1.Controls.Add(this.GTextBoxSearch);
+            this.guna2Panel1.Controls.Add(this.GButtonSearchByIDOrderCarpet);
+            this.guna2Panel1.Controls.Add(this.GTextBoxSearchIDOrderCarpet);
             this.guna2Panel1.Location = new System.Drawing.Point(737, 9);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(458, 60);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // GButtonSearchByIDOrder
+            // GButtonSearchByIDOrderCarpet
             // 
-            this.GButtonSearchByIDOrder.Animated = true;
-            this.GButtonSearchByIDOrder.AnimatedGIF = true;
-            this.GButtonSearchByIDOrder.BorderRadius = 10;
-            this.GButtonSearchByIDOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GButtonSearchByIDOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GButtonSearchByIDOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GButtonSearchByIDOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GButtonSearchByIDOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GButtonSearchByIDOrder.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GButtonSearchByIDOrder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.GButtonSearchByIDOrder.ForeColor = System.Drawing.Color.White;
-            this.GButtonSearchByIDOrder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GButtonSearchByIDOrder.Location = new System.Drawing.Point(349, 8);
-            this.GButtonSearchByIDOrder.Name = "GButtonSearchByIDOrder";
-            this.GButtonSearchByIDOrder.Size = new System.Drawing.Size(88, 42);
-            this.GButtonSearchByIDOrder.TabIndex = 1;
-            this.GButtonSearchByIDOrder.Text = "Search";
+            this.GButtonSearchByIDOrderCarpet.Animated = true;
+            this.GButtonSearchByIDOrderCarpet.AnimatedGIF = true;
+            this.GButtonSearchByIDOrderCarpet.BorderRadius = 10;
+            this.GButtonSearchByIDOrderCarpet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonSearchByIDOrderCarpet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GButtonSearchByIDOrderCarpet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GButtonSearchByIDOrderCarpet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GButtonSearchByIDOrderCarpet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonSearchByIDOrderCarpet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GButtonSearchByIDOrderCarpet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.GButtonSearchByIDOrderCarpet.ForeColor = System.Drawing.Color.White;
+            this.GButtonSearchByIDOrderCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GButtonSearchByIDOrderCarpet.Location = new System.Drawing.Point(349, 8);
+            this.GButtonSearchByIDOrderCarpet.Name = "GButtonSearchByIDOrderCarpet";
+            this.GButtonSearchByIDOrderCarpet.Size = new System.Drawing.Size(88, 42);
+            this.GButtonSearchByIDOrderCarpet.TabIndex = 1;
+            this.GButtonSearchByIDOrderCarpet.Text = "Search";
+            this.GButtonSearchByIDOrderCarpet.Click += new System.EventHandler(this.GButtonSearchByIDOrderCarpet_Click);
             // 
-            // GTextBoxSearch
+            // GTextBoxSearchIDOrderCarpet
             // 
-            this.GTextBoxSearch.Animated = true;
-            this.GTextBoxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearch.BorderRadius = 20;
-            this.GTextBoxSearch.BorderThickness = 2;
-            this.GTextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxSearch.DefaultText = "";
-            this.GTextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GTextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxSearch.IconLeft = global::Sparkle.Properties.Resources.Search;
-            this.GTextBoxSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.GTextBoxSearch.Location = new System.Drawing.Point(3, 8);
-            this.GTextBoxSearch.Name = "GTextBoxSearch";
-            this.GTextBoxSearch.PlaceholderText = "Search Bu ID Order";
-            this.GTextBoxSearch.SelectedText = "";
-            this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
-            this.GTextBoxSearch.TabIndex = 0;
+            this.GTextBoxSearchIDOrderCarpet.Animated = true;
+            this.GTextBoxSearchIDOrderCarpet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchIDOrderCarpet.BorderRadius = 20;
+            this.GTextBoxSearchIDOrderCarpet.BorderThickness = 2;
+            this.GTextBoxSearchIDOrderCarpet.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxSearchIDOrderCarpet.DefaultText = "";
+            this.GTextBoxSearchIDOrderCarpet.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxSearchIDOrderCarpet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxSearchIDOrderCarpet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchIDOrderCarpet.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchIDOrderCarpet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchIDOrderCarpet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GTextBoxSearchIDOrderCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxSearchIDOrderCarpet.IconLeft = global::Sparkle.Properties.Resources.Search;
+            this.GTextBoxSearchIDOrderCarpet.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.GTextBoxSearchIDOrderCarpet.Location = new System.Drawing.Point(3, 8);
+            this.GTextBoxSearchIDOrderCarpet.Name = "GTextBoxSearchIDOrderCarpet";
+            this.GTextBoxSearchIDOrderCarpet.PlaceholderText = "Search Bu ID Order";
+            this.GTextBoxSearchIDOrderCarpet.SelectedText = "";
+            this.GTextBoxSearchIDOrderCarpet.Size = new System.Drawing.Size(340, 46);
+            this.GTextBoxSearchIDOrderCarpet.TabIndex = 0;
             // 
             // PanelMainListViewAllOrdersCarpet
             // 
@@ -162,7 +163,6 @@
             this.ListViewAllOrdersCarpet.TabIndex = 0;
             this.ListViewAllOrdersCarpet.UseCompatibleStateImageBehavior = false;
             this.ListViewAllOrdersCarpet.View = System.Windows.Forms.View.Details;
-            this.ListViewAllOrdersCarpet.SelectedIndexChanged += new System.EventHandler(this.ListViewAllOrdersCarAndCarpet_SelectedIndexChanged);
             // 
             // ColumnID
             // 
@@ -404,49 +404,41 @@
             // 
             // NameClient
             // 
-            this.NameClient.DisplayIndex = 1;
             this.NameClient.Text = "Name Client";
             this.NameClient.Width = 254;
             // 
             // AddressClient
             // 
-            this.AddressClient.DisplayIndex = 2;
             this.AddressClient.Text = "Address";
             this.AddressClient.Width = 283;
             // 
             // EmailClient
             // 
-            this.EmailClient.DisplayIndex = 3;
             this.EmailClient.Text = "Email";
             this.EmailClient.Width = 230;
             // 
             // PhoneClient
             // 
-            this.PhoneClient.DisplayIndex = 4;
             this.PhoneClient.Text = "Phone";
             this.PhoneClient.Width = 170;
             // 
             // SizeCar
             // 
-            this.SizeCar.DisplayIndex = 5;
             this.SizeCar.Text = "Size Car";
             this.SizeCar.Width = 118;
             // 
             // Service
             // 
-            this.Service.DisplayIndex = 6;
             this.Service.Text = "Service";
             this.Service.Width = 124;
             // 
             // OtherSerivce
             // 
-            this.OtherSerivce.DisplayIndex = 7;
             this.OtherSerivce.Text = "Other Service";
             this.OtherSerivce.Width = 230;
             // 
             // TotalPrice
             // 
-            this.TotalPrice.DisplayIndex = 8;
             this.TotalPrice.Text = "Total Price";
             this.TotalPrice.Width = 139;
             // 
@@ -487,8 +479,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button GButtonSearchByIDOrder;
-        private Guna.UI2.WinForms.Guna2TextBox GTextBoxSearch;
+        private Guna.UI2.WinForms.Guna2Button GButtonSearchByIDOrderCarpet;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxSearchIDOrderCarpet;
         private Guna.UI2.WinForms.Guna2Panel PanelMainListViewAllOrdersCarpet;
         private System.Windows.Forms.ListView ListViewAllOrdersCarpet;
         private System.Windows.Forms.ColumnHeader ColumnID;
