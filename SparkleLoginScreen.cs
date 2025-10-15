@@ -197,7 +197,7 @@ namespace Sparkle
                         }
                         else{
 
-                            MessageBox.Show("Lock Account Login Sparkle", "Note Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                           // MessageBox.Show("Lock Account Login Sparkle", "Note Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             informationAllUsers[counter].numberAttempt = 0;
                             GLabelWariningLastAttemptAccount.Text = "";
                         }
@@ -243,5 +243,7 @@ namespace Sparkle
                 GTextBoxUsernameLogin.Focus();
             }
         }
+
+    
     }
 }

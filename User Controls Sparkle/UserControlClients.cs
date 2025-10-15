@@ -27,8 +27,21 @@ namespace Sparkle.User_Controls_Sparkle
             public string stEmail; 
             public string stPhone; 
         }
-        const string kPATH_FILE_CLIENT = "InformationClients.txt";
+   
+        //Path File
+        private const string _kPATH_FILE_CLIENT = "InformationClients.txt";
 
+        private void ResetAllTextBoxToDefault()
+        {
+
+            foreach(Control OutterControl in this.Controls)
+                if(OutterControl is Guna2Panel G2P)
+                    foreach(Control innerControl in OutterControl.Controls)
+                        if (innerControl is Guna2TextBox G2TB)
+                            G2TB.Clear();                
+         
+        }
+   
         private string ConvertSeriseStringToLine(List<string> informationClient, string Separator = ";||;")
         {
             string lineInfromationClient = "";
@@ -42,13 +55,12 @@ namespace Sparkle.User_Controls_Sparkle
             return lineInfromationClient;
         }
 
-
         private void LoadLineInformationClientToFile(string lineInformationClient )
         {
-            if (!System.IO.File.Exists(kPATH_FILE_CLIENT))
-                System.IO.File.Create(kPATH_FILE_CLIENT).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_CLIENT))
+                System.IO.File.Create(_kPATH_FILE_CLIENT).Close();
 
-            System.IO.StreamWriter LoadInformationToFile = new System.IO.StreamWriter(kPATH_FILE_CLIENT , true ); //True -> Append the information to push file no clear all info client 
+            System.IO.StreamWriter LoadInformationToFile = new System.IO.StreamWriter(_kPATH_FILE_CLIENT, true ); //True -> Append the information to push file no clear all info client 
 
             if (!String.IsNullOrEmpty(lineInformationClient))
             {
@@ -63,9 +75,9 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<string> LiInfromationAllClientsFromFile = new List<string>();
 
-            if (System.IO.File.Exists(kPATH_FILE_CLIENT))
+            if (System.IO.File.Exists(_kPATH_FILE_CLIENT))
             {
-                System.IO.StreamReader readLineInformationFromFile = new System.IO.StreamReader(kPATH_FILE_CLIENT);
+                System.IO.StreamReader readLineInformationFromFile = new System.IO.StreamReader(_kPATH_FILE_CLIENT);
 
                 string lineInformationClient = "";
 
@@ -131,7 +143,6 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-
         private bool isIDExistsInFile(string ID)
         {
             List<stInformationClient> stAllInformationClients = LoadAllInformationToListStructure();
@@ -144,7 +155,8 @@ namespace Sparkle.User_Controls_Sparkle
 
             return false; 
         }
-        private void ButtonAddNewClient_Click(object sender, EventArgs e)
+    
+        private void addNewClintInSparkle()
         {
             List<string> LiInformationClient = new List<string>();
 
@@ -162,16 +174,23 @@ namespace Sparkle.User_Controls_Sparkle
 
                     //Notification
                     notifyIconAddClients.ShowBalloonTip(1500, "Sparkle Add New Client Notification", $"The Client ID [{GTextBoxIDClient.Text}] Add Sccuessfully , And you need to show list Client Click the Notification to open file Clients", ToolTipIcon.Info);
+                    ResetAllTextBoxToDefault();
                 }
                 else
                 {
-                    
+
                     MessageBox.Show("This is ID Already Exsits in the List ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-               
+                    GTextBoxIDClient.Clear();
                 }
             }
+        }
+      
+        private void ButtonAddNewClient_Click(object sender, EventArgs e)
+        {
+            addNewClintInSparkle();
 
         }
+      
         private void setErrorProviser(object sender, CancelEventArgs e , string captionError)
         {
 
@@ -193,11 +212,11 @@ namespace Sparkle.User_Controls_Sparkle
             setErrorProviser(sender, e , "ID Box");
         }
 
-    
-
         private void notifyIconAddClients_BalloonTipClicked(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
         }
+
+      
     }
 }
