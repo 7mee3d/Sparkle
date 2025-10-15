@@ -128,6 +128,7 @@
             this.GTextBoxSearchIDOrderCarpet.SelectedText = "";
             this.GTextBoxSearchIDOrderCarpet.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearchIDOrderCarpet.TabIndex = 0;
+            this.GTextBoxSearchIDOrderCarpet.Click += new System.EventHandler(this.GTextBoxSearchIDOrderCarpet_Click_1);
             // 
             // PanelMainListViewAllOrdersCarpet
             // 

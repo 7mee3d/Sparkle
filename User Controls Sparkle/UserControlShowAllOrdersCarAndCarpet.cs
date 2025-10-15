@@ -93,6 +93,7 @@ namespace Sparkle.User_Controls_Sparkle
                 ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
                 ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
             }
+       
         }
 
         private void TakeAllItemListViewCarpetOrderBackForeColorWhite(int indexStartTakeColorWhite)
@@ -190,7 +191,7 @@ namespace Sparkle.User_Controls_Sparkle
                 LVICarpet.SubItems.Add(infoOneOrder.stOtherServiceCarpet);
                 LVICarpet.SubItems.Add(infoOneOrder.stNumberCarpet);
                 LVICarpet.SubItems.Add(infoOneOrder.stOtherDeatils);
-                LVICarpet.SubItems.Add(infoOneOrder.stTotalPriceOrder);
+                LVICarpet.SubItems.Add(infoOneOrder.stTotalPriceOrder+"$");
 
                 ListViewAllOrdersCarpet.Items.Add(LVICarpet);
 
@@ -216,35 +217,41 @@ namespace Sparkle.User_Controls_Sparkle
                 ListViewAllOrdersCarpet.Items[0].ForeColor = Color.Black;
                 ListViewAllOrdersCarpet.Items[0].Focused = true;
                 ListViewAllOrdersCarpet.Items[0].EnsureVisible();
+                TakeAllItemListViewCarpetOrderBackForeColorWhite(0);
                 return;
             }
-
-            for (int counter = 0; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
-
+            else
             {
-                ListViewItem LVI = ListViewAllOrdersCarpet.Items[0];
-
-                //Nituce this statment Vheck the List vew not structure
-                if (ListViewAllOrdersCarpet.Items[counter].Text == IDOrder)
-                {
-                    ListViewAllOrdersCarpet.Items[counter].BackColor = Color.Yellow;
-                    ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
-                    ListViewAllOrdersCarpet.Items[counter].Focused = true;
-                    ListViewAllOrdersCarpet.Items[counter].EnsureVisible();
-                    //ListViewAllOrdersCarpet.Scrollable = false;
-
-                    TakeAllItemListViewCarpetOrderBackForeColorWhite(counter);
-
-
-                    return;
-                }
-                else
-                {
-                    ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
-                    ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.White;
-                }
-
+                ListViewAllOrdersCarpet.Items[0].BackColor = Color.White;
+                ListViewAllOrdersCarpet.Items[0].ForeColor = Color.White;
             }
+
+                for (int counter = 1; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
+
+                {
+                    ListViewItem LVI = ListViewAllOrdersCarpet.Items[0];
+
+                    //Nituce this statment Vheck the List vew not structure
+                    if (ListViewAllOrdersCarpet.Items[counter].Text == IDOrder)
+                    {
+                        ListViewAllOrdersCarpet.Items[counter].BackColor = Color.Yellow;
+                        ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
+                        ListViewAllOrdersCarpet.Items[counter].Focused = true;
+                        ListViewAllOrdersCarpet.Items[counter].EnsureVisible();
+                        //ListViewAllOrdersCarpet.Scrollable = false;
+
+                        TakeAllItemListViewCarpetOrderBackForeColorWhite(counter);
+
+
+                        return;
+                    }
+                    else
+                    {
+                        ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
+                        ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.White;
+                    }
+
+                }
 
 
         }
@@ -390,12 +397,14 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string IdOrder = GTextBoxSearchIDOrderCarpet.Text;
             GTextBoxSearchIDOrderCarpet.Clear();
+
             SearchOrderByIDOrderCarpetSection(IdOrder);
         }
 
-        private void GTextBoxSearchIDOrderCarpet_Click(object sender, EventArgs e)
+
+        private void GTextBoxSearchIDOrderCarpet_Click_1(object sender, EventArgs e)
         {
-           // ListViewAllOrdersCarpet.Scrollable = true;
+            // ListViewAllOrdersCarpet.Scrollable = true;
             resetBackColorAndForeColorInListView();
         }
 
