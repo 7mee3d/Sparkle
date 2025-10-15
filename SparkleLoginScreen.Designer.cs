@@ -1,6 +1,6 @@
 ﻿namespace Sparkle
 {
-    partial class FormLoginScreen
+    partial class SparkleLoginScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoginScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SparkleLoginScreen));
             this.GBorderLessFormRaduis = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.MainPanelShadowLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -170,7 +170,7 @@
             this.labelLoginWord.TabIndex = 0;
             this.labelLoginWord.Text = "Log in";
             // 
-            // FormLoginScreen
+            // SparkleLoginScreen
             // 
             this.AcceptButton = this.ButtonLoginTheSparkle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,7 +181,7 @@
             this.Controls.Add(this.MainPanelShadowLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormLoginScreen";
+            this.Name = "SparkleLoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MainPanelShadowLogin.ResumeLayout(false);

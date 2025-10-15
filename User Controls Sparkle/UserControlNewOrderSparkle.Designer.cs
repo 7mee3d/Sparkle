@@ -1116,7 +1116,6 @@
             this.GTextBoxIDOrderCarSection.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxIDOrderCarSection.TabIndex = 14;
             this.GTextBoxIDOrderCarSection.Tag = "TID";
-            this.GTextBoxIDOrderCarSection.TextChanged += new System.EventHandler(this.GTextBoxIDOrderCarSection_TextChanged);
             // 
             // GPnaelInfroamtionOrderCar
             // 

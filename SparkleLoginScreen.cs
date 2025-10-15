@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Sparkle
 {
-    public partial class FormLoginScreen : Form
+    public partial class SparkleLoginScreen : Form
     {
-        public FormLoginScreen()
+        public SparkleLoginScreen()
         {
             InitializeComponent();
       
@@ -243,7 +243,5 @@ namespace Sparkle
                 GTextBoxUsernameLogin.Focus();
             }
         }
-
-    
     }
 }

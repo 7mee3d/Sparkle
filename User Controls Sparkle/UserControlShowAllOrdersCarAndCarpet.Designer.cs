@@ -43,6 +43,8 @@
             this.SizeCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TypeWash = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherService = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumberCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OtherDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalPriceOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,7 +55,7 @@
             this.PanelMainListViewAllOrdersCar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonSearchIDOrderCarSectionToListView = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GTextBoxSearchByIDOrderCarSection = new Guna.UI2.WinForms.Guna2TextBox();
             this.ListViewAllOrdersCar = new System.Windows.Forms.ListView();
             this.IDOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NumberCar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -66,9 +68,9 @@
             this.Service = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherSerivce = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NumberCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.OtherDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.notifyIconFoundOrder = new System.Windows.Forms.NotifyIcon(this.components);
+            this.GPictureBoxCarpetGIF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPictureBoxCarGIF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewAllOrdersCarpet.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -76,6 +78,8 @@
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.SuspendLayout();
             this.PanelMainListViewAllOrdersCar.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -211,6 +215,16 @@
             this.OtherService.Text = "Other Service";
             this.OtherService.Width = 230;
             // 
+            // NumberCarpet
+            // 
+            this.NumberCarpet.Text = "Number Carpet";
+            this.NumberCarpet.Width = 150;
+            // 
+            // OtherDetails
+            // 
+            this.OtherDetails.Text = "Other Details";
+            this.OtherDetails.Width = 150;
+            // 
             // TotalPriceOrder
             // 
             this.TotalPriceOrder.Text = "Total Price";
@@ -324,7 +338,7 @@
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.GButtonSearchIDOrderCarSectionToListView);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel3.Controls.Add(this.GTextBoxSearchByIDOrderCarSection);
             this.guna2Panel3.Location = new System.Drawing.Point(737, 9);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(458, 60);
@@ -349,30 +363,32 @@
             this.GButtonSearchIDOrderCarSectionToListView.Size = new System.Drawing.Size(88, 42);
             this.GButtonSearchIDOrderCarSectionToListView.TabIndex = 1;
             this.GButtonSearchIDOrderCarSectionToListView.Text = "Search";
+            this.GButtonSearchIDOrderCarSectionToListView.Click += new System.EventHandler(this.GButtonSearchIDOrderCarSectionToListView_Click);
             // 
-            // guna2TextBox1
+            // GTextBoxSearchByIDOrderCarSection
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.guna2TextBox1.IconLeft = global::Sparkle.Properties.Resources.Search;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(3, 8);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "Search Bu ID Order Car";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(340, 46);
-            this.guna2TextBox1.TabIndex = 0;
+            this.GTextBoxSearchByIDOrderCarSection.Animated = true;
+            this.GTextBoxSearchByIDOrderCarSection.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchByIDOrderCarSection.BorderRadius = 20;
+            this.GTextBoxSearchByIDOrderCarSection.BorderThickness = 2;
+            this.GTextBoxSearchByIDOrderCarSection.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxSearchByIDOrderCarSection.DefaultText = "";
+            this.GTextBoxSearchByIDOrderCarSection.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxSearchByIDOrderCarSection.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxSearchByIDOrderCarSection.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchByIDOrderCarSection.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearchByIDOrderCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearchByIDOrderCarSection.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GTextBoxSearchByIDOrderCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxSearchByIDOrderCarSection.IconLeft = global::Sparkle.Properties.Resources.Search;
+            this.GTextBoxSearchByIDOrderCarSection.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.GTextBoxSearchByIDOrderCarSection.Location = new System.Drawing.Point(3, 8);
+            this.GTextBoxSearchByIDOrderCarSection.Name = "GTextBoxSearchByIDOrderCarSection";
+            this.GTextBoxSearchByIDOrderCarSection.PlaceholderText = "Search Bu ID Order Car";
+            this.GTextBoxSearchByIDOrderCarSection.SelectedText = "";
+            this.GTextBoxSearchByIDOrderCarSection.Size = new System.Drawing.Size(340, 46);
+            this.GTextBoxSearchByIDOrderCarSection.TabIndex = 0;
+            this.GTextBoxSearchByIDOrderCarSection.Click += new System.EventHandler(this.GTextBoxSearchByIDOrderCarSection_Click);
             // 
             // ListViewAllOrdersCar
             // 
@@ -458,21 +474,39 @@
             this.TotalPrice.Text = "Total Price";
             this.TotalPrice.Width = 139;
             // 
-            // NumberCarpet
-            // 
-            this.NumberCarpet.Text = "Number Carpet";
-            this.NumberCarpet.Width = 150;
-            // 
-            // OtherDetails
-            // 
-            this.OtherDetails.Text = "Other Details";
-            this.OtherDetails.Width = 150;
-            // 
             // notifyIconFoundOrder
             // 
             this.notifyIconFoundOrder.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconFoundOrder.Icon")));
             this.notifyIconFoundOrder.Text = "notifyIcon1";
             this.notifyIconFoundOrder.Visible = true;
+            // 
+            // GPictureBoxCarpetGIF
+            // 
+            this.GPictureBoxCarpetGIF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.BackgroundImage")));
+            this.GPictureBoxCarpetGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxCarpetGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.Image")));
+            this.GPictureBoxCarpetGIF.ImageRotate = 0F;
+            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(198, 153);
+            this.GPictureBoxCarpetGIF.Name = "GPictureBoxCarpetGIF";
+            this.GPictureBoxCarpetGIF.Size = new System.Drawing.Size(216, 127);
+            this.GPictureBoxCarpetGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxCarpetGIF.TabIndex = 19;
+            this.GPictureBoxCarpetGIF.TabStop = false;
+            this.GPictureBoxCarpetGIF.Visible = false;
+            // 
+            // GPictureBoxCarGIF
+            // 
+            this.GPictureBoxCarGIF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.BackgroundImage")));
+            this.GPictureBoxCarGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxCarGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.Image")));
+            this.GPictureBoxCarGIF.ImageRotate = 0F;
+            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(765, 127);
+            this.GPictureBoxCarGIF.Name = "GPictureBoxCarGIF";
+            this.GPictureBoxCarGIF.Size = new System.Drawing.Size(276, 181);
+            this.GPictureBoxCarGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxCarGIF.TabIndex = 20;
+            this.GPictureBoxCarGIF.TabStop = false;
+            this.GPictureBoxCarGIF.Visible = false;
             // 
             // UserControlShowAllOrdersCarAndCarpet
             // 
@@ -483,6 +517,8 @@
             this.Controls.Add(this.GCPanelChoiceSectionToViewOrdersCarOrCarpet);
             this.Controls.Add(this.PanelMainListViewAllOrdersCarpet);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.GPictureBoxCarpetGIF);
+            this.Controls.Add(this.GPictureBoxCarGIF);
             this.Name = "UserControlShowAllOrdersCarAndCarpet";
             this.Size = new System.Drawing.Size(1195, 809);
             this.guna2Panel1.ResumeLayout(false);
@@ -494,6 +530,8 @@
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.PerformLayout();
             this.PanelMainListViewAllOrdersCar.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,7 +561,7 @@
         private Guna.UI2.WinForms.Guna2Panel PanelMainListViewAllOrdersCar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button GButtonSearchIDOrderCarSectionToListView;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxSearchByIDOrderCarSection;
         private System.Windows.Forms.ListView ListViewAllOrdersCar;
         private System.Windows.Forms.ColumnHeader IDOrder;
         private System.Windows.Forms.ColumnHeader NameClient;
@@ -539,5 +577,7 @@
         private System.Windows.Forms.ColumnHeader NumberCarpet;
         private System.Windows.Forms.ColumnHeader OtherDetails;
         private System.Windows.Forms.NotifyIcon notifyIconFoundOrder;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarpetGIF;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarGIF;
     }
 }

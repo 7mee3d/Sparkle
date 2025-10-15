@@ -16,7 +16,7 @@ namespace Sparkle
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainScreenSparkleProgram());
+            Application.Run(new SparkleLoginScreen());
         }
     }
 }

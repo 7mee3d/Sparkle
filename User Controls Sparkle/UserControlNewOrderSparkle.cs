@@ -1922,10 +1922,6 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void GTextBoxIDOrderCarSection_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
 

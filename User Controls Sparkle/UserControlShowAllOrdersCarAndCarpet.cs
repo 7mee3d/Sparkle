@@ -86,26 +86,37 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //Genaric Method Reset All List View Original Color Fore and Back 
-        private void resetBackColorAndForeColorInListView()
+        private void resetBackColorAndForeColorInListView(ListView LV )
         {
-            for (int counter = 0; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
+            for (int counter = 0; counter < LV.Items.Count; counter++)
             {
-                ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
-                ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
+                LV.Items[counter].BackColor = Color.White;
+                LV.Items[counter].ForeColor = Color.Black;
             }
        
         }
 
-        private void TakeAllItemListViewCarpetOrderBackForeColorWhite(int indexStartTakeColorWhite)
+        private void TakeAllItemListViewOrderBackForeColorWhite(int indexStartTakeColorWhite , ListView LV )
         {
-            for (int counter = indexStartTakeColorWhite + 1; counter < ListViewAllOrdersCarpet.Items.Count; counter++)
+            for (int counter = indexStartTakeColorWhite + 1; counter < LV.Items.Count; counter++)
             {
-                ListViewAllOrdersCarpet.Items[counter].BackColor = Color.White;
-                ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.White;
+                LV.Items[counter].BackColor = Color.White;
+                LV.Items[counter].ForeColor = Color.White;
             }
         }
 
+        private bool isDigitOrNot (char Character)
+        {
+            return ((Convert.ToInt32(Character) >= 48) && (Convert.ToInt32(Character) <= 57)); 
+        }
+   
+        private bool isAllCharacterInTextAreDigitOrNot (string text )
+        {
 
+            foreach (char Character in text) if (!isDigitOrNot(Character)) return false;
+
+            return true; 
+        }
 
         // -------------------------------------------- [ End Section Genaric Method styling or Reset  ] ----------------------------------------------
 
@@ -209,7 +220,7 @@ namespace Sparkle.User_Controls_Sparkle
                   return; 
               }*/
 
-            resetBackColorAndForeColorInListView();
+            resetBackColorAndForeColorInListView(ListViewAllOrdersCarpet);
 
             if (ListViewAllOrdersCarpet.Items[0].SubItems[0].Text == IDOrder)
             {
@@ -217,7 +228,7 @@ namespace Sparkle.User_Controls_Sparkle
                 ListViewAllOrdersCarpet.Items[0].ForeColor = Color.Black;
                 ListViewAllOrdersCarpet.Items[0].Focused = true;
                 ListViewAllOrdersCarpet.Items[0].EnsureVisible();
-                TakeAllItemListViewCarpetOrderBackForeColorWhite(0);
+                TakeAllItemListViewOrderBackForeColorWhite(0 , ListViewAllOrdersCarpet );
                 return;
             }
             else
@@ -238,9 +249,9 @@ namespace Sparkle.User_Controls_Sparkle
                         ListViewAllOrdersCarpet.Items[counter].ForeColor = Color.Black;
                         ListViewAllOrdersCarpet.Items[counter].Focused = true;
                         ListViewAllOrdersCarpet.Items[counter].EnsureVisible();
-                        //ListViewAllOrdersCarpet.Scrollable = false;
+                    //ListViewAllOrdersCarpet.Scrollable = false;
 
-                        TakeAllItemListViewCarpetOrderBackForeColorWhite(counter);
+                    TakeAllItemListViewOrderBackForeColorWhite(counter , ListViewAllOrdersCarpet);
 
 
                         return;
@@ -357,7 +368,46 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
 
+        private void searchByIDOrderCarSection (string IDOrderCarSection)
+        {
+            resetBackColorAndForeColorInListView(ListViewAllOrdersCar);
 
+            if (ListViewAllOrdersCar.Items[0].Text == IDOrderCarSection)
+            {
+                ListViewAllOrdersCar.Items[0].BackColor = Color.Yellow;
+                ListViewAllOrdersCar.Items[0].ForeColor = Color.Black;
+                ListViewAllOrdersCar.Items[0].Focused = true;
+
+                TakeAllItemListViewOrderBackForeColorWhite(0, ListViewAllOrdersCar);
+                return;
+
+            }
+            else
+            {
+                ListViewAllOrdersCar.Items[0].BackColor = Color.White;
+                ListViewAllOrdersCar.Items[0].ForeColor = Color.White;
+
+            }
+
+                for (int counter = 1; counter < ListViewAllOrdersCar.Items.Count; counter++)
+                {
+                    if (ListViewAllOrdersCar.Items[counter].Text == IDOrderCarSection)
+                    {
+                        ListViewAllOrdersCar.Items[counter].BackColor = Color.Yellow;
+                        ListViewAllOrdersCar.Items[counter].ForeColor = Color.Black;
+                        ListViewAllOrdersCar.Items[counter].Focused = true;
+                        ListViewAllOrdersCar.Items[counter].EnsureVisible();
+                        TakeAllItemListViewOrderBackForeColorWhite(counter, ListViewAllOrdersCar);
+                        return;
+                    }
+                    else
+                    {
+                        ListViewAllOrdersCar.Items[counter].BackColor = Color.White;
+                        ListViewAllOrdersCar.Items[counter].ForeColor = Color.White;
+                    }
+                }
+
+        }
 
 
         // ------------------------------------------- [ End Section Car ] ----------------------------------------------
@@ -379,7 +429,8 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 PanelMainListViewAllOrdersCarpet.Visible = true;
                 PanelMainListViewAllOrdersCar.Visible = false;
-
+                GPictureBoxCarpetGIF.Visible = true;
+                GPictureBoxCarGIF.Visible = false;
             }
         }
 
@@ -389,7 +440,8 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 PanelMainListViewAllOrdersCarpet.Visible = false;
                 PanelMainListViewAllOrdersCar.Visible = true;
-
+                GPictureBoxCarpetGIF.Visible = false;
+                GPictureBoxCarGIF.Visible = true;
             }
         }
 
@@ -401,12 +453,28 @@ namespace Sparkle.User_Controls_Sparkle
             SearchOrderByIDOrderCarpetSection(IdOrder);
         }
 
-
         private void GTextBoxSearchIDOrderCarpet_Click_1(object sender, EventArgs e)
         {
             // ListViewAllOrdersCarpet.Scrollable = true;
-            resetBackColorAndForeColorInListView();
+            resetBackColorAndForeColorInListView(ListViewAllOrdersCarpet);
         }
+
+        private void GButtonSearchIDOrderCarSectionToListView_Click(object sender, EventArgs e)
+        {
+            string IDOrderCarSection = GTextBoxSearchByIDOrderCarSection.Text; 
+
+            if(isAllCharacterInTextAreDigitOrNot(GTextBoxSearchByIDOrderCarSection.Text))
+            {
+                searchByIDOrderCarSection(IDOrderCarSection);
+            }
+        }
+
+        private void GTextBoxSearchByIDOrderCarSection_Click(object sender, EventArgs e)
+        {
+            GTextBoxSearchByIDOrderCarSection.Clear();
+            resetBackColorAndForeColorInListView(ListViewAllOrdersCar);
+        }
+
 
 
 
