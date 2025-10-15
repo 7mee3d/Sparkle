@@ -1,4 +1,5 @@
-﻿using Sparkle.User_Controls_Sparkle;
+﻿using Guna.UI2.WinForms;
+using Sparkle.User_Controls_Sparkle;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,8 @@ namespace Sparkle
 
 
         }
+
+
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -76,6 +79,8 @@ namespace Sparkle
         {
             UserControlNewOrderSparkle UCNOS = new UserControlNewOrderSparkle();
             addUserControlInThePaenl(UCNOS);
+
+
         }
 
         private void GButtonShowAllOrderCarAndCarpet_Click(object sender, EventArgs e)
@@ -85,9 +90,7 @@ namespace Sparkle
             addUserControlInThePaenl(UCSAOCAC);
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            this.MinimizeBox = true; 
-        }
+  
+
     }
 }

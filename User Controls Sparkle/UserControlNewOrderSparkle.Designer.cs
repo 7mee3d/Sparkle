@@ -47,6 +47,7 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GPanelOptionsCarpets = new Guna.UI2.WinForms.Guna2Panel();
             this.GPanelSizeCarpet = new Guna.UI2.WinForms.Guna2Panel();
@@ -119,7 +120,8 @@
             this.errorProviderCarSection = new System.Windows.Forms.ErrorProvider(this.components);
             this.GButtonResetAllOrder = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonAddNewOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GPictureBoxCarGIF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPictureBoxCarpetGIF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelFillInformationClientsCarpet.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -127,6 +129,7 @@
             this.guna2GradientPanel7.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GPanelOptionsCarpets.SuspendLayout();
             this.GPanelSizeCarpet.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -151,7 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CoreectProviderCarpet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CorrectProvidorCarSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCarSection)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelFillInformationClientsCarpet
@@ -409,6 +413,17 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
             this.guna2GradientPanel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.Order_Icon_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -1101,6 +1116,7 @@
             this.GTextBoxIDOrderCarSection.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxIDOrderCarSection.TabIndex = 14;
             this.GTextBoxIDOrderCarSection.Tag = "TID";
+            this.GTextBoxIDOrderCarSection.TextChanged += new System.EventHandler(this.GTextBoxIDOrderCarSection_TextChanged);
             // 
             // GPnaelInfroamtionOrderCar
             // 
@@ -1520,16 +1536,33 @@
             this.ButtonAddNewOrder.Text = "Add New Order";
             this.ButtonAddNewOrder.Click += new System.EventHandler(this.ButtonAddNewOrder_Click);
             // 
-            // pictureBox1
+            // GPictureBoxCarGIF
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.Order_Icon_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.GPictureBoxCarGIF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.BackgroundImage")));
+            this.GPictureBoxCarGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxCarGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.Image")));
+            this.GPictureBoxCarGIF.ImageRotate = 0F;
+            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(778, 127);
+            this.GPictureBoxCarGIF.Name = "GPictureBoxCarGIF";
+            this.GPictureBoxCarGIF.Size = new System.Drawing.Size(276, 181);
+            this.GPictureBoxCarGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxCarGIF.TabIndex = 18;
+            this.GPictureBoxCarGIF.TabStop = false;
+            this.GPictureBoxCarGIF.Visible = false;
+            // 
+            // GPictureBoxCarpetGIF
+            // 
+            this.GPictureBoxCarpetGIF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.BackgroundImage")));
+            this.GPictureBoxCarpetGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxCarpetGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.Image")));
+            this.GPictureBoxCarpetGIF.ImageRotate = 0F;
+            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(167, 141);
+            this.GPictureBoxCarpetGIF.Name = "GPictureBoxCarpetGIF";
+            this.GPictureBoxCarpetGIF.Size = new System.Drawing.Size(232, 148);
+            this.GPictureBoxCarpetGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxCarpetGIF.TabIndex = 18;
+            this.GPictureBoxCarpetGIF.TabStop = false;
+            this.GPictureBoxCarpetGIF.Visible = false;
             // 
             // UserControlNewOrderSparkle
             // 
@@ -1547,6 +1580,8 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.TextNoneAnyOption);
             this.Controls.Add(this.GPanelCarsOptions);
+            this.Controls.Add(this.GPictureBoxCarpetGIF);
+            this.Controls.Add(this.GPictureBoxCarGIF);
             this.Name = "UserControlNewOrderSparkle";
             this.Size = new System.Drawing.Size(1195, 809);
             this.Load += new System.EventHandler(this.UserControlNewOrderSparkle_Load);
@@ -1564,6 +1599,7 @@
             this.guna2GradientPanel2.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GPanelOptionsCarpets.ResumeLayout(false);
             this.GPanelOptionsCarpets.PerformLayout();
             this.GPanelSizeCarpet.ResumeLayout(false);
@@ -1604,7 +1640,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CoreectProviderCarpet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CorrectProvidorCarSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCarSection)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1702,5 +1739,7 @@
         private System.Windows.Forms.ErrorProvider CorrectProvidorCarSection;
         private System.Windows.Forms.ErrorProvider errorProviderCarSection;
         private Guna.UI2.WinForms.Guna2Button GButtonResetAllOrder;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarGIF;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarpetGIF;
     }
 }

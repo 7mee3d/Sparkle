@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlShowAllOrdersCarAndCarpet));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonSearchByIDOrderCarpet = new Guna.UI2.WinForms.Guna2Button();
             this.GTextBoxSearchIDOrderCarpet = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,6 +68,7 @@
             this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NumberCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.notifyIconFoundOrder = new System.Windows.Forms.NotifyIcon(this.components);
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewAllOrdersCarpet.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -465,6 +468,12 @@
             this.OtherDetails.Text = "Other Details";
             this.OtherDetails.Width = 150;
             // 
+            // notifyIconFoundOrder
+            // 
+            this.notifyIconFoundOrder.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconFoundOrder.Icon")));
+            this.notifyIconFoundOrder.Text = "notifyIcon1";
+            this.notifyIconFoundOrder.Visible = true;
+            // 
             // UserControlShowAllOrdersCarAndCarpet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,5 +538,6 @@
         private System.Windows.Forms.ColumnHeader ModelNameCar;
         private System.Windows.Forms.ColumnHeader NumberCarpet;
         private System.Windows.Forms.ColumnHeader OtherDetails;
+        private System.Windows.Forms.NotifyIcon notifyIconFoundOrder;
     }
 }

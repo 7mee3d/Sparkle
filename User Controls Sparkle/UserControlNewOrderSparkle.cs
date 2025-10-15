@@ -539,6 +539,9 @@ namespace Sparkle.User_Controls_Sparkle
                 PanelFillInformationClientsCarpet.Visible = true;
                 GPnaelInfroamtionOrderCar.Visible = false;
                 GPnaelIDOrderCar.Visible = false;
+                GPictureBoxCarpetGIF.Visible = true;
+                GPictureBoxCarGIF.Visible = false;
+
             }
 
             else if (GRadioButtonCarsSection.Checked)
@@ -550,7 +553,10 @@ namespace Sparkle.User_Controls_Sparkle
                 PanelFillInformationClientsCarpet.Visible = false;
 
                 GPnaelInfroamtionOrderCar.Visible = true;
-                GPnaelIDOrderCar.Visible = true; 
+                GPnaelIDOrderCar.Visible = true;
+
+                GPictureBoxCarpetGIF.Visible = false;
+                GPictureBoxCarGIF.Visible = true;
             }
         }
 
@@ -1916,8 +1922,13 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-       
-        
+        private void GTextBoxIDOrderCarSection_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         //-------------------------------- [End Section Car Create Form Finial Bill ]-------------------------------
 
 
