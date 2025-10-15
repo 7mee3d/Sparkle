@@ -27,7 +27,13 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-      
+        private bool searchOrderByIDInListVie(string IDOrder, ListView LV)
+        {
+            foreach (ListViewItem Item in LV.Items) if (Item.SubItems[0].Text == IDOrder) return true;
+            return false;
+        }
+
+
         // ------------------------------------------- [ Start Constants Section  ] ----------------------------------------------
 
         private const string _kPATH_FILE_NAME_CARPET_ORDERS = "CarpetsOrders.txt";
@@ -367,7 +373,6 @@ namespace Sparkle.User_Controls_Sparkle
         
         }
 
-
         private void searchByIDOrderCarSection (string IDOrderCarSection)
         {
             resetBackColorAndForeColorInListView(ListViewAllOrdersCar);
@@ -410,6 +415,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
 
+   
         // ------------------------------------------- [ End Section Car ] ----------------------------------------------
 
 
@@ -445,12 +451,32 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
-        private void GButtonSearchByIDOrderCarpet_Click(object sender, EventArgs e)
+        private void SearchOrderCarpetByID()
         {
             string IdOrder = GTextBoxSearchIDOrderCarpet.Text;
             GTextBoxSearchIDOrderCarpet.Clear();
 
-            SearchOrderByIDOrderCarpetSection(IdOrder);
+            if (isAllCharacterInTextAreDigitOrNot(IdOrder))
+            {
+                if (searchOrderByIDInListVie(IdOrder, ListViewAllOrdersCarpet))
+                {
+                    SearchOrderByIDOrderCarpetSection(IdOrder);
+                    notifyIconFoundOrder.ShowBalloonTip(1500, "Nofication order search Result", $"This Order ID [ {IdOrder} ] In System Sparkle", ToolTipIcon.Info);
+
+                }
+                else
+                {
+                    if (MessageBox.Show($"This ID Order [ {IdOrder} ] Not Found In The Orders Carpet", "Error Not Found ID Order Carpet", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        GTextBoxSearchIDOrderCarpet.Clear();
+                    }
+                }
+            }
+        }
+     
+        private void GButtonSearchByIDOrderCarpet_Click(object sender, EventArgs e)
+        {
+            SearchOrderCarpetByID();
         }
 
         private void GTextBoxSearchIDOrderCarpet_Click_1(object sender, EventArgs e)
@@ -459,14 +485,30 @@ namespace Sparkle.User_Controls_Sparkle
             resetBackColorAndForeColorInListView(ListViewAllOrdersCarpet);
         }
 
+        private void searchOrderCarByID()
+        {
+            string IDOrderCarSection = GTextBoxSearchByIDOrderCarSection.Text;
+
+            if (isAllCharacterInTextAreDigitOrNot(GTextBoxSearchByIDOrderCarSection.Text))
+            {
+                if (searchOrderByIDInListVie(IDOrderCarSection, ListViewAllOrdersCar))
+                {
+                    searchByIDOrderCarSection(IDOrderCarSection);
+                    notifyIconFoundOrder.ShowBalloonTip(1500, "Nofication order search Result", $"This Order ID [ {IDOrderCarSection} ] In System Sparkle", ToolTipIcon.Info);
+                }
+                else
+                {
+                    if (MessageBox.Show($"This ID Order [ {IDOrderCarSection} ] Not Found In The Orders Car", "Error Not Found ID Order Car", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        GTextBoxSearchByIDOrderCarSection.Clear();
+                    }
+                }
+            }
+        }
+       
         private void GButtonSearchIDOrderCarSectionToListView_Click(object sender, EventArgs e)
         {
-            string IDOrderCarSection = GTextBoxSearchByIDOrderCarSection.Text; 
-
-            if(isAllCharacterInTextAreDigitOrNot(GTextBoxSearchByIDOrderCarSection.Text))
-            {
-                searchByIDOrderCarSection(IDOrderCarSection);
-            }
+            searchOrderCarByID();
         }
 
         private void GTextBoxSearchByIDOrderCarSection_Click(object sender, EventArgs e)
