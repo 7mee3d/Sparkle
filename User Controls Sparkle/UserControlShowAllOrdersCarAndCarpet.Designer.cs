@@ -64,6 +64,8 @@
             this.Service = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherSerivce = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumberCarpet = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OtherDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewAllOrdersCarpet.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -126,7 +128,6 @@
             this.GTextBoxSearchIDOrderCarpet.SelectedText = "";
             this.GTextBoxSearchIDOrderCarpet.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearchIDOrderCarpet.TabIndex = 0;
-            this.GTextBoxSearchIDOrderCarpet.Click += new System.EventHandler(this.GTextBoxSearchIDOrderCarpet_Click);
             // 
             // PanelMainListViewAllOrdersCarpet
             // 
@@ -150,6 +151,8 @@
             this.SizeCarpet,
             this.TypeWash,
             this.OtherService,
+            this.NumberCarpet,
+            this.OtherDetails,
             this.TotalPriceOrder});
             this.ListViewAllOrdersCarpet.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewAllOrdersCarpet.FullRowSelect = true;
@@ -160,7 +163,6 @@
             this.ListViewAllOrdersCarpet.MultiSelect = false;
             this.ListViewAllOrdersCarpet.Name = "ListViewAllOrdersCarpet";
             this.ListViewAllOrdersCarpet.Size = new System.Drawing.Size(1195, 442);
-            this.ListViewAllOrdersCarpet.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ListViewAllOrdersCarpet.TabIndex = 0;
             this.ListViewAllOrdersCarpet.UseCompatibleStateImageBehavior = false;
             this.ListViewAllOrdersCarpet.View = System.Windows.Forms.View.Details;
@@ -208,7 +210,7 @@
             // TotalPriceOrder
             // 
             this.TotalPriceOrder.Text = "Total Price";
-            this.TotalPriceOrder.Width = 139;
+            this.TotalPriceOrder.Width = 150;
             // 
             // guna2GradientPanel1
             // 
@@ -393,7 +395,6 @@
             this.ListViewAllOrdersCar.MultiSelect = false;
             this.ListViewAllOrdersCar.Name = "ListViewAllOrdersCar";
             this.ListViewAllOrdersCar.Size = new System.Drawing.Size(1195, 442);
-            this.ListViewAllOrdersCar.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ListViewAllOrdersCar.TabIndex = 0;
             this.ListViewAllOrdersCar.UseCompatibleStateImageBehavior = false;
             this.ListViewAllOrdersCar.View = System.Windows.Forms.View.Details;
@@ -452,6 +453,16 @@
             // 
             this.TotalPrice.Text = "Total Price";
             this.TotalPrice.Width = 139;
+            // 
+            // NumberCarpet
+            // 
+            this.NumberCarpet.Text = "Number Carpet";
+            this.NumberCarpet.Width = 150;
+            // 
+            // OtherDetails
+            // 
+            this.OtherDetails.Text = "Other Details";
+            this.OtherDetails.Width = 150;
             // 
             // UserControlShowAllOrdersCarAndCarpet
             // 
@@ -515,5 +526,7 @@
         private System.Windows.Forms.ColumnHeader TotalPrice;
         private System.Windows.Forms.ColumnHeader NumberCar;
         private System.Windows.Forms.ColumnHeader ModelNameCar;
+        private System.Windows.Forms.ColumnHeader NumberCarpet;
+        private System.Windows.Forms.ColumnHeader OtherDetails;
     }
 }

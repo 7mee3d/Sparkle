@@ -157,7 +157,7 @@ namespace Sparkle.User_Controls_Sparkle
                 infoCarpetOrder.stOtherServiceCarpet = allInformationOrderCarpet[7];
                 infoCarpetOrder.stNumberCarpet = allInformationOrderCarpet[8];
                 infoCarpetOrder.stOtherDeatils = allInformationOrderCarpet[9];
-                infoCarpetOrder.stTotalPriceOrder = allInformationOrderCarpet[10];
+                infoCarpetOrder.stTotalPriceOrder = allInformationOrderCarpet[10] ;
             }
 
             return infoCarpetOrder; 
@@ -178,7 +178,7 @@ namespace Sparkle.User_Controls_Sparkle
             lineInformationOrder += informationOrderCarpet.stOtherServiceCarpet + Separtor; 
             lineInformationOrder += informationOrderCarpet.stNumberCarpet + Separtor; 
             lineInformationOrder += informationOrderCarpet.stOtherDeatils + Separtor; 
-            lineInformationOrder += informationOrderCarpet.stTotalPriceOrder ;
+            lineInformationOrder += informationOrderCarpet.stTotalPriceOrder;
 
             return lineInformationOrder; 
         }
@@ -197,7 +197,7 @@ namespace Sparkle.User_Controls_Sparkle
             lineInformationOrder += informationOrder[7] + Separtor;
             lineInformationOrder += informationOrder[8] + Separtor;
             lineInformationOrder += informationOrder[9] + Separtor;
-            lineInformationOrder += informationOrder[10] ;
+            lineInformationOrder += informationOrder[10]  ;
 
 
             return lineInformationOrder; 
@@ -294,8 +294,8 @@ namespace Sparkle.User_Controls_Sparkle
             allInformationCarpet.Add(returnWordTypeWash());
             allInformationCarpet.Add(returnTextOtherServiceCarpet());
             allInformationCarpet.Add(GNumricUPDownNumberCarpets.Value.ToString());
-            allInformationCarpet.Add(GTextBoxOtherSeviceCarpet.Text);
-            allInformationCarpet.Add(calcTotalPriveAllServiceCarpet().ToString());
+            allInformationCarpet.Add(GTextBoxOtherSeviceCarpet.Text == "" ?"None" : GTextBoxOtherSeviceCarpet.Text);
+            allInformationCarpet.Add(calcTotalPriveAllServiceCarpet().ToString() );
 
             return allInformationCarpet;
         }

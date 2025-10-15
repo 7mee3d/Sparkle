@@ -49,6 +49,7 @@
             this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -132,6 +133,7 @@
             // PanelMainWelcomeSparkle
             // 
             this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
+            this.PanelMainWelcomeSparkle.Controls.Add(this.guna2ControlBox1);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
@@ -440,6 +442,18 @@
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1128, 21);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(31, 29);
+            this.guna2ControlBox1.TabIndex = 3;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            // 
             // FormMainScreenSparkleProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,5 +498,6 @@
         private Guna.UI2.WinForms.Guna2Button GButtonRemoveOrUpdateClient;
         private Guna.UI2.WinForms.Guna2Button GButtonNewOrder;
         private Guna.UI2.WinForms.Guna2Button GButtonViewAllOrderCarAndCarpet;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
