@@ -356,6 +356,7 @@
             this.GTextBoxEmailClientSectionCarpet.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxEmailClientSectionCarpet.TabIndex = 2;
             this.GTextBoxEmailClientSectionCarpet.Tag = "TEmail";
+            this.GTextBoxEmailClientSectionCarpet.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxEmailClientSectionCarpet_Validating);
             // 
             // GTextBoxAddressClientSectionCarpet
             // 
@@ -1412,6 +1413,7 @@
             this.GTextBoxEmailClientCarSection.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxEmailClientCarSection.TabIndex = 2;
             this.GTextBoxEmailClientCarSection.Tag = "TEmail";
+            this.GTextBoxEmailClientCarSection.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxEmailClientCarSection_Validating);
             // 
             // GTextBoxAddressClientCarSection
             // 

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -102,6 +103,15 @@ namespace Sparkle.User_Controls_Sparkle
             CorrectProvidorCarSection.Clear();
         }
 
+        private bool isEmailCorrect (string email)
+        {
+            return (
+                    email.Contains("@gmail.com") ||
+                    email.Contains("@yahoo.com") ||
+                    email.Contains("@outlook.com") ||
+                    email.Contains("@hotmail.com")
+                );
+        }
 
         //------------------------------ [Start Section Carpet]-------------------------------
 
@@ -958,7 +968,25 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
+        private void setErrorAndCorrectControlsTextBoxEmail(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
+        {
+            Guna2TextBox GunaTextBox = sender as Guna2TextBox;
 
+            if (string.IsNullOrEmpty(GunaTextBox.Text) || !isEmailCorrect(GunaTextBox.Text))
+            {
+                eventCancel.Cancel = true;
+                GunaTextBox.Focus();
+                CorrectProvidorCarSection.SetError(GunaTextBox, "");
+                errorProviderCarSection.SetError(GunaTextBox, CaptionError);
+            }
+            else
+            {
+                eventCancel.Cancel = false;
+                errorProviderCarSection.SetError(GunaTextBox, "");
+                CorrectProvidorCarSection.SetError(GunaTextBox, CaptionCorrect);
+
+            }
+        }
         private void setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
         {
             Guna2TextBox GunaTextBox = sender as Guna2TextBox;
@@ -1919,6 +1947,17 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderSection.ShowDialog();
 
 
+
+        }
+
+        private void GTextBoxEmailClientCarSection_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxEmail(GTextBoxEmailClientCarSection, e, "This Email Not Valid", "Succsssfully");
+        }
+
+        private void GTextBoxEmailClientSectionCarpet_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorAndCorrectControlsTextBoxEmail(GTextBoxEmailClientSectionCarpet, e, "This Email Not Valid", "Succsssfully");
 
         }
 
