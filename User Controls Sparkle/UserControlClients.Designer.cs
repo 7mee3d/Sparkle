@@ -53,6 +53,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.errorProviderFormClients = new System.Windows.Forms.ErrorProvider(this.components);
             this.notifyIconAddClients = new System.Windows.Forms.NotifyIcon(this.components);
+            this.CorrectProviderAddCleint = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelFillInformationClients.SuspendLayout();
@@ -63,6 +64,7 @@
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CorrectProviderAddCleint)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -114,7 +116,7 @@
             this.PanelFillInformationClients.Controls.Add(this.guna2GradientPanel2);
             this.PanelFillInformationClients.Location = new System.Drawing.Point(25, 158);
             this.PanelFillInformationClients.Name = "PanelFillInformationClients";
-            this.PanelFillInformationClients.Size = new System.Drawing.Size(547, 651);
+            this.PanelFillInformationClients.Size = new System.Drawing.Size(590, 651);
             this.PanelFillInformationClients.TabIndex = 2;
             // 
             // ButtonAddNewClient
@@ -165,6 +167,7 @@
             this.GTextBoxPhoneClient.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxPhoneClient.TabIndex = 1;
             this.GTextBoxPhoneClient.Tag = "TPhone";
+            this.GTextBoxPhoneClient.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxPhoneClient_Validating);
             // 
             // guna2GradientPanel3
             // 
@@ -300,6 +303,7 @@
             this.GTextBoxNameClient.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxNameClient.TabIndex = 3;
             this.GTextBoxNameClient.Tag = "TName";
+            this.GTextBoxNameClient.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxNameClient_Validating);
             // 
             // GTextBoxEmailClient
             // 
@@ -323,6 +327,7 @@
             this.GTextBoxEmailClient.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxEmailClient.TabIndex = 2;
             this.GTextBoxEmailClient.Tag = "TEmail";
+            this.GTextBoxEmailClient.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxEmailClient_Validating);
             // 
             // GTextBoxAddressClient
             // 
@@ -346,6 +351,7 @@
             this.GTextBoxAddressClient.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxAddressClient.TabIndex = 0;
             this.GTextBoxAddressClient.Tag = "TAddress";
+            this.GTextBoxAddressClient.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxAddressClient_Validating);
             // 
             // guna2GradientPanel2
             // 
@@ -374,15 +380,16 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::Sparkle.Properties.Resources.New_Client_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(569, 49);
+            this.pictureBox2.Location = new System.Drawing.Point(614, 88);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(640, 874);
+            this.pictureBox2.Size = new System.Drawing.Size(597, 845);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // errorProviderFormClients
             // 
-            this.errorProviderFormClients.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.errorProviderFormClients.BlinkRate = 0;
+            this.errorProviderFormClients.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderFormClients.ContainerControl = this;
             this.errorProviderFormClients.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderFormClients.Icon")));
             // 
@@ -392,6 +399,13 @@
             this.notifyIconAddClients.Text = "notifyIcon1";
             this.notifyIconAddClients.Visible = true;
             this.notifyIconAddClients.BalloonTipClicked += new System.EventHandler(this.notifyIconAddClients_BalloonTipClicked);
+            // 
+            // CorrectProviderAddCleint
+            // 
+            this.CorrectProviderAddCleint.BlinkRate = 0;
+            this.CorrectProviderAddCleint.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.CorrectProviderAddCleint.ContainerControl = this;
+            this.CorrectProviderAddCleint.Icon = ((System.Drawing.Icon)(resources.GetObject("CorrectProviderAddCleint.Icon")));
             // 
             // UserControlClients
             // 
@@ -420,6 +434,7 @@
             this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderFormClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CorrectProviderAddCleint)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,5 +464,6 @@
         private Guna.UI2.WinForms.Guna2Button ButtonAddNewClient;
         private System.Windows.Forms.ErrorProvider errorProviderFormClients;
         private System.Windows.Forms.NotifyIcon notifyIconAddClients;
+        private System.Windows.Forms.ErrorProvider CorrectProviderAddCleint;
     }
 }

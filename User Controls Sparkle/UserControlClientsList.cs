@@ -70,7 +70,6 @@ namespace Sparkle.User_Controls_Sparkle
             return infoOneClient;
         }
 
-
         private List<string> SplitTheLineInformationClient (string lineInformationOneClientString)
         {
             List<string> informationOneClientString = new List<string>();
@@ -111,15 +110,15 @@ namespace Sparkle.User_Controls_Sparkle
 
             for (int counter = 0; counter < informationAllClientStucture.Count; counter++ )
             {
-                ListViewItem LVI = new ListViewItem(informationAllClientStucture[counter].stIDClient.ToString());
+                ListViewItem LVI = new ListViewItem(informationAllClientStucture[counter].stIDClient);
 
 
                 if (informationAllClientStucture.Count != 0)
                 {
-                    LVI.SubItems.Add(informationAllClientStucture[counter].stNameClient.ToString());
-                    LVI.SubItems.Add(informationAllClientStucture[counter].stAddressClient.ToString());
-                    LVI.SubItems.Add(informationAllClientStucture[counter].stEmailClient.ToString());
-                    LVI.SubItems.Add(informationAllClientStucture[counter].stPhoneClient.ToString());
+                    LVI.SubItems.Add(informationAllClientStucture[counter].stNameClient);
+                    LVI.SubItems.Add(informationAllClientStucture[counter].stAddressClient);
+                    LVI.SubItems.Add(informationAllClientStucture[counter].stEmailClient);
+                    LVI.SubItems.Add(informationAllClientStucture[counter].stPhoneClient);
                 }
 
                 ListViewClientsLists.Items.Add(LVI);
@@ -227,5 +226,8 @@ namespace Sparkle.User_Controls_Sparkle
         {
 
         }
+   
+     
+    
     }
 }

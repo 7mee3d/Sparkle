@@ -49,6 +49,7 @@
             this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.PanelMainWelcomeSparkle.SuspendLayout();
@@ -415,6 +416,7 @@
             this.label3.Size = new System.Drawing.Size(264, 82);
             this.label3.TabIndex = 1;
             this.label3.Text = "Sparkle";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -434,6 +436,7 @@
             this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
             this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
             this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -8);
@@ -465,6 +468,18 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label.Location = new System.Drawing.Point(494, 62);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 82);
+            this.label.TabIndex = 1;
+            this.label.Click += new System.EventHandler(this.label3_Click);
             // 
             // FormMainScreenSparkleProgram
             // 
@@ -510,5 +525,6 @@
         private Guna.UI2.WinForms.Guna2Button GButtonRemoveOrUpdateClient;
         private Guna.UI2.WinForms.Guna2Button GButtonNewOrder;
         private Guna.UI2.WinForms.Guna2Button GButtonViewAllOrderCarAndCarpet;
+        private System.Windows.Forms.Label label;
     }
 }

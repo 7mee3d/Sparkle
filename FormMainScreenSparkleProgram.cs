@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Sparkle
 {
     public partial class FormMainScreenSparkleProgram : Form
-    {
+    {       
         public FormMainScreenSparkleProgram()
         {
             InitializeComponent();
@@ -90,7 +90,9 @@ namespace Sparkle
             addUserControlInThePaenl(UCSAOCAC);
         }
 
-  
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

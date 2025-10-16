@@ -17,6 +17,9 @@ namespace Sparkle.User_Controls_Sparkle
         public UserControlClients()
         {
             InitializeComponent();
+            GTextBoxIDClient.Enabled = false;
+            GTextBoxIDClient.Text = (getLastIDClientInList() + 1).ToString();
+
         }
 
         struct stInformationClient
@@ -162,6 +165,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (!String.IsNullOrEmpty(GTextBoxIDClient.Text))
             {
+                // This verification is to reduce any future errors.
                 if (!isIDExistsInFile(GTextBoxIDClient.Text))
                 {
                     LiInformationClient.Add(GTextBoxIDClient.Text);
@@ -175,6 +179,10 @@ namespace Sparkle.User_Controls_Sparkle
                     //Notification
                     notifyIconAddClients.ShowBalloonTip(1500, "Sparkle Add New Client Notification", $"The Client ID [{GTextBoxIDClient.Text}] Add Sccuessfully , And you need to show list Client Click the Notification to open file Clients", ToolTipIcon.Info);
                     ResetAllTextBoxToDefault();
+
+                    //Automatically generate an ID based on the file
+                    GTextBoxIDClient.Text = (getLastIDClientInList() + 1).ToString();
+
                 }
                 else
                 {
@@ -190,8 +198,8 @@ namespace Sparkle.User_Controls_Sparkle
             addNewClintInSparkle();
 
         }
-      
-        private void setErrorProviser(object sender, CancelEventArgs e , string captionError)
+
+        private void setErrorProvider(object sender, CancelEventArgs e , string captionError , string captionCorrect )
         {
 
             Guna2TextBox GTB = sender as Guna2TextBox;
@@ -201,22 +209,109 @@ namespace Sparkle.User_Controls_Sparkle
                 //Error Provider must included this method
                 e.Cancel = true;
                 GTB.Focus();
-                MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CorrectProviderAddCleint.SetError(GTB ,"");
+                errorProviderFormClients.SetError(GTB, captionError);
+            }
+            else
+            {
+                //Correct Provider must included this method
+                e.Cancel = false;
+                //  MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProviderFormClients.SetError(GTB, "");
+                CorrectProviderAddCleint.SetError(GTB, captionCorrect);
             }
 
         }
-    
+
+        private bool isDigit (char Character)
+        {
+            return ((Convert.ToInt32(Character) >= 48) && (Convert.ToInt32(Character) <= 57));
+        }
+        private bool areHaveTextLettersOrNot (string text)
+        {
+            foreach (char Character in text)
+            {
+                if (!isDigit(Character))
+                {
+                    return true; 
+                }
+
+            }
+
+            return false;
+        }
+        private void setErrorProviderWithoutLetters(object sender, CancelEventArgs e, string captionError, string captionCorrect)
+        {
+
+            Guna2TextBox GTB = sender as Guna2TextBox;
+
+            if (string.IsNullOrEmpty(GTB.Text) || areHaveTextLettersOrNot(GTB.Text))
+            {
+                //Error Provider must included this method
+                e.Cancel = true;
+                GTB.Focus();
+                //MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CorrectProviderAddCleint.SetError(GTB, "");
+                errorProviderFormClients.SetError(GTB, captionError);
+            }
+            else
+            {
+                //Correct Provider must included this method
+                e.Cancel = false;
+                //  MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProviderFormClients.SetError(GTB, "");
+                CorrectProviderAddCleint.SetError(GTB, captionCorrect);
+            }
+
+        }
         private void GTextBoxIDClient_Validating(object sender, CancelEventArgs e)
         {
             
-            setErrorProviser(sender, e , "ID Box");
+            setErrorProvider(sender, e , "You must fill in this field to complete the customer addition process.", "Successful");
         }
 
         private void notifyIconAddClients_BalloonTipClicked(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
+            System.Diagnostics.Process.Start(_kPATH_FILE_CLIENT);
         }
 
-      
+        private int getLastIDClientInList()
+        {
+            List<string> infromationClientsLines = LoadAllLineInformationClientFromFile();
+            List<string> LastLineInformation = new List<string>();
+            LastLineInformation.AddRange(SplitLineInformationOneClinet(infromationClientsLines[infromationClientsLines.Count - 1]));
+
+            int lastIDClient = Convert.ToInt32(LastLineInformation[0]);
+
+            return lastIDClient;
+        }
+
+        private void GTextBoxNameClient_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorProvider(sender, e, "You must fill in this field to complete the customer addition process.", "Successful");
+
+        }
+
+        private void GTextBoxEmailClient_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorProvider(sender, e, "You must fill in this field to complete the customer addition process.", "Successful");
+
+        }
+
+        private void GTextBoxPhoneClient_Validating(object sender, CancelEventArgs e)
+        {
+
+            setErrorProviderWithoutLetters(sender, e, "You must fill in this field to complete the customer addition process. , You must enter a number, not letters.", "Successful");
+
+        }
+
+        private void GTextBoxAddressClient_Validating(object sender, CancelEventArgs e)
+        {
+            setErrorProvider(sender, e, "You must fill in this field to complete the customer addition process.", "Successful");
+
+        }
+  
+    
     }
 }

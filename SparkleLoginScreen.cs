@@ -13,13 +13,14 @@ namespace Sparkle
 {
     public partial class SparkleLoginScreen : Form
     {
-        public SparkleLoginScreen()
+        public SparkleLoginScreen( )
         {
             InitializeComponent();
       
         }
 
         const string kPATH_FILE = "UsersInformation.txt";
+  
 
         class stInformationUser
         {
@@ -169,7 +170,6 @@ namespace Sparkle
                         if(informationAllUsers[counter].numberAttempt > 0)
                         {
                             informationAllUsers[counter].numberAttempt = 3;
-
                             //Save All Change After the Login and reset the number attempt account to 3 atttempt original 
                             SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
                             GLabelWariningLastAttemptAccount.Text = ""; 

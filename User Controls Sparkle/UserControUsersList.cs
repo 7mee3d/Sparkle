@@ -208,8 +208,15 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GButtonSearchByUsername_Click(object sender, EventArgs e)
         {
-            string username = GTextBoxSearchUsersList.Text; 
-            SreachTheUsernameInListView(username); 
+            string username = GTextBoxSearchUsersList.Text;
+            if (SreachTheUsernameInListView(username)) { }
+            else
+            {
+                if (MessageBox.Show($"This Username [{username}] Not Found In Sparkle System Try enter Again", "Note Search By Username", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK){
+                    GTextBoxSearchUsersList.Clear();
+                    GTextBoxSearchUsersList.Focus();
+                }
+            }
         }
 
         private void UserControUsersList_Paint(object sender, PaintEventArgs e)
