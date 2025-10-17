@@ -480,7 +480,7 @@
             this.GRadioButtonSizeCarpetSmall.Location = new System.Drawing.Point(8, 5);
             this.GRadioButtonSizeCarpetSmall.Name = "GRadioButtonSizeCarpetSmall";
             this.GRadioButtonSizeCarpetSmall.Size = new System.Drawing.Size(107, 21);
-            this.GRadioButtonSizeCarpetSmall.TabIndex = 3;
+            this.GRadioButtonSizeCarpetSmall.TabIndex = 8;
             this.GRadioButtonSizeCarpetSmall.Text = "Small Carpet";
             this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderThickness = 2;
@@ -500,7 +500,7 @@
             this.GRadioButtonSizeCarpetMedium.Location = new System.Drawing.Point(126, 5);
             this.GRadioButtonSizeCarpetMedium.Name = "GRadioButtonSizeCarpetMedium";
             this.GRadioButtonSizeCarpetMedium.Size = new System.Drawing.Size(125, 21);
-            this.GRadioButtonSizeCarpetMedium.TabIndex = 3;
+            this.GRadioButtonSizeCarpetMedium.TabIndex = 9;
             this.GRadioButtonSizeCarpetMedium.Text = "Medium Carpet";
             this.GRadioButtonSizeCarpetMedium.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetMedium.UncheckedState.BorderThickness = 2;
@@ -520,7 +520,7 @@
             this.GRadioButtonSizeCarpetLarge.Location = new System.Drawing.Point(262, 5);
             this.GRadioButtonSizeCarpetLarge.Name = "GRadioButtonSizeCarpetLarge";
             this.GRadioButtonSizeCarpetLarge.Size = new System.Drawing.Size(109, 21);
-            this.GRadioButtonSizeCarpetLarge.TabIndex = 3;
+            this.GRadioButtonSizeCarpetLarge.TabIndex = 10;
             this.GRadioButtonSizeCarpetLarge.Text = "Large Carpet";
             this.GRadioButtonSizeCarpetLarge.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetLarge.UncheckedState.BorderThickness = 2;
@@ -546,9 +546,9 @@
             this.TotalPriceCarpetSection.ForeColor = System.Drawing.Color.White;
             this.TotalPriceCarpetSection.Location = new System.Drawing.Point(9, 0);
             this.TotalPriceCarpetSection.Name = "TotalPriceCarpetSection";
-            this.TotalPriceCarpetSection.Size = new System.Drawing.Size(57, 68);
+            this.TotalPriceCarpetSection.Size = new System.Drawing.Size(85, 68);
             this.TotalPriceCarpetSection.TabIndex = 8;
-            this.TotalPriceCarpetSection.Text = "0";
+            this.TotalPriceCarpetSection.Text = "0$";
             // 
             // GRadioButtonWashTypDeepWash
             // 
@@ -563,7 +563,7 @@
             this.GRadioButtonWashTypDeepWash.Location = new System.Drawing.Point(273, 103);
             this.GRadioButtonWashTypDeepWash.Name = "GRadioButtonWashTypDeepWash";
             this.GRadioButtonWashTypDeepWash.Size = new System.Drawing.Size(96, 21);
-            this.GRadioButtonWashTypDeepWash.TabIndex = 3;
+            this.GRadioButtonWashTypDeepWash.TabIndex = 12;
             this.GRadioButtonWashTypDeepWash.Text = "Deep wash";
             this.GRadioButtonWashTypDeepWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypDeepWash.UncheckedState.BorderThickness = 2;
@@ -583,7 +583,7 @@
             this.GRadioButtonWashTypNormalWash.Location = new System.Drawing.Point(155, 103);
             this.GRadioButtonWashTypNormalWash.Name = "GRadioButtonWashTypNormalWash";
             this.GRadioButtonWashTypNormalWash.Size = new System.Drawing.Size(111, 21);
-            this.GRadioButtonWashTypNormalWash.TabIndex = 3;
+            this.GRadioButtonWashTypNormalWash.TabIndex = 11;
             this.GRadioButtonWashTypNormalWash.Text = "Normal wash\n";
             this.GRadioButtonWashTypNormalWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypNormalWash.UncheckedState.BorderThickness = 2;
@@ -608,7 +608,7 @@
             0});
             this.GNumricUPDownNumberCarpets.Name = "GNumricUPDownNumberCarpets";
             this.GNumricUPDownNumberCarpets.Size = new System.Drawing.Size(100, 36);
-            this.GNumricUPDownNumberCarpets.TabIndex = 2;
+            this.GNumricUPDownNumberCarpets.TabIndex = 15;
             this.GNumricUPDownNumberCarpets.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GNumricUPDownNumberCarpets.Value = new decimal(new int[] {
             1,
@@ -629,7 +629,7 @@
             this.GCheckBoxOtherServicesHomeDelivery.Location = new System.Drawing.Point(229, 198);
             this.GCheckBoxOtherServicesHomeDelivery.Name = "GCheckBoxOtherServicesHomeDelivery";
             this.GCheckBoxOtherServicesHomeDelivery.Size = new System.Drawing.Size(129, 22);
-            this.GCheckBoxOtherServicesHomeDelivery.TabIndex = 1;
+            this.GCheckBoxOtherServicesHomeDelivery.TabIndex = 14;
             this.GCheckBoxOtherServicesHomeDelivery.Text = "Home delivery";
             this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesHomeDelivery.UncheckedState.BorderRadius = 1;
@@ -649,7 +649,7 @@
             this.GCheckBoxOtherServicesQuickDrying.Location = new System.Drawing.Point(75, 198);
             this.GCheckBoxOtherServicesQuickDrying.Name = "GCheckBoxOtherServicesQuickDrying";
             this.GCheckBoxOtherServicesQuickDrying.Size = new System.Drawing.Size(123, 22);
-            this.GCheckBoxOtherServicesQuickDrying.TabIndex = 1;
+            this.GCheckBoxOtherServicesQuickDrying.TabIndex = 13;
             this.GCheckBoxOtherServicesQuickDrying.Text = "Quick Drying";
             this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesQuickDrying.UncheckedState.BorderRadius = 1;
@@ -975,7 +975,7 @@
             this.GRadioButtonCarsSection.Location = new System.Drawing.Point(394, 16);
             this.GRadioButtonCarsSection.Name = "GRadioButtonCarsSection";
             this.GRadioButtonCarsSection.Size = new System.Drawing.Size(65, 28);
-            this.GRadioButtonCarsSection.TabIndex = 0;
+            this.GRadioButtonCarsSection.TabIndex = 19;
             this.GRadioButtonCarsSection.Tag = "Cars";
             this.GRadioButtonCarsSection.Text = "Cars";
             this.GRadioButtonCarsSection.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
@@ -999,7 +999,7 @@
             this.GRadioButtonCarpetsSection.Location = new System.Drawing.Point(29, 16);
             this.GRadioButtonCarpetsSection.Name = "GRadioButtonCarpetsSection";
             this.GRadioButtonCarpetsSection.Size = new System.Drawing.Size(91, 28);
-            this.GRadioButtonCarpetsSection.TabIndex = 0;
+            this.GRadioButtonCarpetsSection.TabIndex = 18;
             this.GRadioButtonCarpetsSection.Tag = "Carpets";
             this.GRadioButtonCarpetsSection.Text = "Carpets";
             this.GRadioButtonCarpetsSection.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
@@ -1115,7 +1115,7 @@
             this.GTextBoxIDOrderCarSection.PlaceholderText = "";
             this.GTextBoxIDOrderCarSection.SelectedText = "";
             this.GTextBoxIDOrderCarSection.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxIDOrderCarSection.TabIndex = 14;
+            this.GTextBoxIDOrderCarSection.TabIndex = 0;
             this.GTextBoxIDOrderCarSection.Tag = "TID";
             // 
             // GPnaelInfroamtionOrderCar
@@ -1182,7 +1182,7 @@
             this.GTextBoxPhoneClientCarSection.PlaceholderText = "Enter Here Phone Client";
             this.GTextBoxPhoneClientCarSection.SelectedText = "";
             this.GTextBoxPhoneClientCarSection.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxPhoneClientCarSection.TabIndex = 1;
+            this.GTextBoxPhoneClientCarSection.TabIndex = 4;
             this.GTextBoxPhoneClientCarSection.Tag = "TPhone";
             this.GTextBoxPhoneClientCarSection.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxPhoneClientCarSection_Validating);
             // 
@@ -1206,7 +1206,7 @@
             this.GTextBoxNumberCar.PlaceholderText = "Enter Here Number Car";
             this.GTextBoxNumberCar.SelectedText = "";
             this.GTextBoxNumberCar.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxNumberCar.TabIndex = 14;
+            this.GTextBoxNumberCar.TabIndex = 1;
             this.GTextBoxNumberCar.Tag = "TID";
             this.GTextBoxNumberCar.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxNumberCar_Validating);
             // 
@@ -1342,7 +1342,7 @@
             this.GTextBoxCarModel.PlaceholderText = "Enter Here Car Model\n";
             this.GTextBoxCarModel.SelectedText = "";
             this.GTextBoxCarModel.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxCarModel.TabIndex = 3;
+            this.GTextBoxCarModel.TabIndex = 2;
             this.GTextBoxCarModel.Tag = "TName";
             this.GTextBoxCarModel.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxCarModel_Validating);
             // 
@@ -1366,7 +1366,7 @@
             this.GTextBoxCarDetailsCarSection.PlaceholderText = "Enter Here Capet details";
             this.GTextBoxCarDetailsCarSection.SelectedText = "";
             this.GTextBoxCarDetailsCarSection.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxCarDetailsCarSection.TabIndex = 0;
+            this.GTextBoxCarDetailsCarSection.TabIndex = 7;
             this.GTextBoxCarDetailsCarSection.Tag = "TAddress";
             // 
             // guna2GradientPanel12
@@ -1411,7 +1411,7 @@
             this.GTextBoxEmailClientCarSection.PlaceholderText = "Enter Here Email Client";
             this.GTextBoxEmailClientCarSection.SelectedText = "";
             this.GTextBoxEmailClientCarSection.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxEmailClientCarSection.TabIndex = 2;
+            this.GTextBoxEmailClientCarSection.TabIndex = 5;
             this.GTextBoxEmailClientCarSection.Tag = "TEmail";
             this.GTextBoxEmailClientCarSection.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxEmailClientCarSection_Validating);
             // 
@@ -1435,7 +1435,7 @@
             this.GTextBoxAddressClientCarSection.PlaceholderText = "Enter Here Address Client";
             this.GTextBoxAddressClientCarSection.SelectedText = "";
             this.GTextBoxAddressClientCarSection.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxAddressClientCarSection.TabIndex = 0;
+            this.GTextBoxAddressClientCarSection.TabIndex = 6;
             this.GTextBoxAddressClientCarSection.Tag = "TAddress";
             this.GTextBoxAddressClientCarSection.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxAddressClientCarSection_Validating);
             // 
@@ -1507,7 +1507,7 @@
             this.GButtonResetAllOrder.Location = new System.Drawing.Point(971, 710);
             this.GButtonResetAllOrder.Name = "GButtonResetAllOrder";
             this.GButtonResetAllOrder.Size = new System.Drawing.Size(178, 55);
-            this.GButtonResetAllOrder.TabIndex = 8;
+            this.GButtonResetAllOrder.TabIndex = 17;
             this.GButtonResetAllOrder.Text = "Reset";
             this.GButtonResetAllOrder.Click += new System.EventHandler(this.ButtonResetAllOrder_Click);
             // 
@@ -1533,7 +1533,7 @@
             this.ButtonAddNewOrder.Location = new System.Drawing.Point(628, 710);
             this.ButtonAddNewOrder.Name = "ButtonAddNewOrder";
             this.ButtonAddNewOrder.Size = new System.Drawing.Size(323, 55);
-            this.ButtonAddNewOrder.TabIndex = 8;
+            this.ButtonAddNewOrder.TabIndex = 16;
             this.ButtonAddNewOrder.Text = "Add New Order";
             this.ButtonAddNewOrder.Click += new System.EventHandler(this.ButtonAddNewOrder_Click);
             // 

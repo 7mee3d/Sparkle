@@ -184,13 +184,14 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private bool isFoundIDClientInSystem (string ID)
+        private bool isFoundIDClientInSystem(string ID)
         {
             List<stInformationClient> informationAllClientsStructure = LoadAllLinesInformationClientsToListStructure();
 
-            foreach(stInformationClient infoOneClient in informationAllClientsStructure)
-                if (infoOneClient.stID.Trim() == ID.Trim()) return true; 
-
+            if (!string.IsNullOrEmpty(ID)) { 
+            foreach (stInformationClient infoOneClient in informationAllClientsStructure)
+                if (infoOneClient.stID.Trim() == ID.Trim()) return true;
+        }
             return false;
         }
 
