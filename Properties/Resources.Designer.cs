@@ -93,6 +93,16 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background_Image_Form_Finial_Bill_Orders_ {
+            get {
+                object obj = ResourceManager.GetObject("Background Image Form Finial Bill Orders ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background_Sparkle_Users {
             get {
                 object obj = ResourceManager.GetObject("Background Sparkle Users", resourceCulture);

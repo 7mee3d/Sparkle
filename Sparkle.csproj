@@ -217,6 +217,7 @@
     <None Include="Resources\reset Original.png" />
     <None Include="Resources\completed Order.png" />
     <None Include="Resources\Final Bill Sparkle Order.png" />
+    <None Include="Resources\Background Image Form Finial Bill Orders .png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

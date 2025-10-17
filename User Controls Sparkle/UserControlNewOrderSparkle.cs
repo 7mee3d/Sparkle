@@ -1256,7 +1256,7 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.BackColor = Color.White;
             frmConfirmAddOrderCarpetSection.Size = new Size (500 , Convert.ToInt32(Math.Round(700.5)) );
 
-            frmConfirmAddOrderCarpetSection.BackgroundImage = Image.FromFile(@"C:\Users\PC\Downloads\Background Image Form Finial Bill Orders .png");
+            frmConfirmAddOrderCarpetSection.BackgroundImage = Resources.Background_Image_Form_Finial_Bill_Orders_;
             frmConfirmAddOrderCarpetSection.BackgroundImageLayout = ImageLayout.Zoom;
 
             setLabelFinialBill(frmConfirmAddOrderCarpetSection);
@@ -1613,8 +1613,7 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderSection.BackColor = Color.White;
             frmConfirmAddOrderSection.Size = new Size(500, Convert.ToInt32(Math.Round(700.5)));
 
-          //  frmConfirmAddOrderSection.BackgroundImage = Resources.Final_Bill_Sparkle_Order;
-            frmConfirmAddOrderSection.BackgroundImage = Image.FromFile(@"C:\Users\PC\Downloads\Background Image Form Finial Bill Orders .png");
+              frmConfirmAddOrderSection.BackgroundImage = Resources.Background_Image_Form_Finial_Bill_Orders_;
             frmConfirmAddOrderSection.BackgroundImageLayout = ImageLayout.Zoom;
 
             setLabelFinialBill(frmConfirmAddOrderSection);
