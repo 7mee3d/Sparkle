@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Sparkle.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.Design;
 using System.Windows.Forms;
 
 namespace Sparkle.User_Controls_Sparkle
@@ -1201,6 +1203,34 @@ namespace Sparkle.User_Controls_Sparkle
         Form frmConfirmAddOrderSection;
 
 
+        //Method Change State Hover and Check button Gradient Button 
+        private void ChangeropertiesButtons (Guna2GradientButton GBTN)
+        {
+
+            GBTN.Text = "Order Now";
+            GBTN.Location = new Point(300, 625);
+            GBTN.ForeColor = Color.FromArgb(255, 4, 187, 156);
+            GBTN.FillColor = Color.White;
+            GBTN.FillColor2 = Color.White;
+            GBTN.Animated = true;
+            GBTN.AnimatedGIF = true;
+            GBTN.BorderRadius = 10;
+            GBTN.BackColor = Color.Transparent;
+
+
+
+            //Check State 
+            GBTN.CheckedState.BorderColor = Color.White;
+            GBTN.CheckedState.FillColor = Color.FromArgb(2, 120, 100);
+
+            //GBTNover State
+            GBTN.HoverState.FillColor = Color.FromArgb(2, 120, 100);
+            GBTN.HoverState.FillColor2 = Color.FromArgb(2, 120, 100);
+            GBTN.HoverState.ForeColor = Color.White;
+            GBTN.HoverState.BorderColor = Color.FromArgb(2, 120, 100);
+        }
+       
+        
         //-------------------------------- [Start Section Carpet Create Form Finial Bill ]-------------------------------
 
 
@@ -1226,6 +1256,9 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.BackColor = Color.White;
             frmConfirmAddOrderCarpetSection.Size = new Size (500 , Convert.ToInt32(Math.Round(700.5)) );
 
+            frmConfirmAddOrderCarpetSection.BackgroundImage = Image.FromFile(@"C:\Users\PC\Downloads\Background Image Form Finial Bill Orders .png");
+            frmConfirmAddOrderCarpetSection.BackgroundImageLayout = ImageLayout.Zoom;
+
             setLabelFinialBill(frmConfirmAddOrderCarpetSection);
       
             setLabelsOrderCarpetSection(frmConfirmAddOrderCarpetSection);
@@ -1237,12 +1270,14 @@ namespace Sparkle.User_Controls_Sparkle
             Label lblFinialBill = new Label();
 
             lblFinialBill.Text = "Finial Bill";
-            lblFinialBill.Font = new Font("Garamond", 35, FontStyle.Bold);
+            lblFinialBill.Font = new Font("Garamond", 40, FontStyle.Bold);
             lblFinialBill.ForeColor = Color.FromArgb(255, 4, 187, 156);
-            lblFinialBill.Width = 250;
+            lblFinialBill.Width = 350;
             lblFinialBill.Height = 100; 
-            lblFinialBill.Top = 30;
-            lblFinialBill.Left = 140; 
+            lblFinialBill.Top = 55;
+            lblFinialBill.Left = 125;
+            lblFinialBill.BackColor = Color.Transparent;
+
             frmConfirmAddOrderCarpetSection.Controls.Add(lblFinialBill);
         }
 
@@ -1517,9 +1552,10 @@ namespace Sparkle.User_Controls_Sparkle
          
 
         }
-
+    
         private void ButtonOrderNowNewForm()
         {
+
             //setLabelsOrderCarpetSection();
             frmConfirmAddOrderSection = new Form();
             setTitleAndSizeAndLocationFormSectionCarpet(frmConfirmAddOrderSection);
@@ -1527,16 +1563,11 @@ namespace Sparkle.User_Controls_Sparkle
             
             Guna2GradientButton G2B = new Guna2GradientButton();
 
-            G2B.Text = "Order Now";
-            G2B.Location = new Point(300, 620);
-            G2B.FillColor = Color.FromArgb(255, 4, 187, 156);
-            G2B.FillColor2 = Color.White; 
-            G2B.Animated = true;
-            G2B.AnimatedGIF = true;
-            G2B.BorderRadius = 10;
+            ChangeropertiesButtons(G2B);
+            //Add Button to form 
             frmConfirmAddOrderSection.Controls.Add(G2B);
 
-            
+
             G2B.Click += (Sender, e) =>
             {
                 OrderNow();
@@ -1581,6 +1612,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             frmConfirmAddOrderSection.BackColor = Color.White;
             frmConfirmAddOrderSection.Size = new Size(500, Convert.ToInt32(Math.Round(700.5)));
+
+          //  frmConfirmAddOrderSection.BackgroundImage = Resources.Final_Bill_Sparkle_Order;
+            frmConfirmAddOrderSection.BackgroundImage = Image.FromFile(@"C:\Users\PC\Downloads\Background Image Form Finial Bill Orders .png");
+            frmConfirmAddOrderSection.BackgroundImageLayout = ImageLayout.Zoom;
 
             setLabelFinialBill(frmConfirmAddOrderSection);
 
@@ -1925,16 +1960,11 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderSection = new Form();
             setTitleAndSizeAndLocationFormSectionCar(frmConfirmAddOrderSection);
 
-
             Guna2GradientButton G2B = new Guna2GradientButton();
 
-            G2B.Text = "Order Now";
-            G2B.Location = new Point(300, 620);
-            G2B.FillColor = Color.FromArgb(255, 4, 187, 156);
-            G2B.FillColor2 = Color.White;
-            G2B.Animated = true;
-            G2B.AnimatedGIF = true;
-            G2B.BorderRadius = 10;
+            ChangeropertiesButtons(G2B);
+
+            //Add Button To Form Final Bill Order
             frmConfirmAddOrderSection.Controls.Add(G2B);
 
 
