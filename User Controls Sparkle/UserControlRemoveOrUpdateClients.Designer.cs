@@ -60,6 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.notifyIconFoundClientInSystemSparkle = new System.Windows.Forms.NotifyIcon(this.components);
             this.GPanelFillInformationClientToUpdate.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
@@ -533,6 +534,12 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
+            // notifyIconFoundClientInSystemSparkle
+            // 
+            this.notifyIconFoundClientInSystemSparkle.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconFoundClientInSystemSparkle.Icon")));
+            this.notifyIconFoundClientInSystemSparkle.Text = "notifyIcon1";
+            this.notifyIconFoundClientInSystemSparkle.Visible = true;
+            // 
             // UserControlRemoveOrUpdateClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,5 +606,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NotifyIcon notifyIconFoundClientInSystemSparkle;
     }
 }

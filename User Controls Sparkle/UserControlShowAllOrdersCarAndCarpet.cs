@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design.Behavior;
 
 namespace Sparkle.User_Controls_Sparkle
 {
@@ -451,32 +452,46 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
-        private void SearchOrderCarpetByID()
+        private void SearchOrderByIDCarpet(string IDOrderCarpet )
         {
-            string IdOrder = GTextBoxSearchIDOrderCarpet.Text;
-            GTextBoxSearchIDOrderCarpet.Clear();
-
-            if (isAllCharacterInTextAreDigitOrNot(IdOrder))
+            
+            if (isAllCharacterInTextAreDigitOrNot(IDOrderCarpet))
             {
-                if (searchOrderByIDInListVie(IdOrder, ListViewAllOrdersCarpet))
+                if (searchOrderByIDInListVie(IDOrderCarpet, ListViewAllOrdersCarpet))
                 {
-                    SearchOrderByIDOrderCarpetSection(IdOrder);
-                    notifyIconFoundOrder.ShowBalloonTip(1500, "Nofication order search Result", $"This Order ID [ {IdOrder} ] In System Sparkle", ToolTipIcon.Info);
+                    SearchOrderByIDOrderCarpetSection(IDOrderCarpet);
+                    notifyIconFoundOrder.ShowBalloonTip(1500, "Nofication order search Result", $"This Order ID [ {IDOrderCarpet} ] In System Sparkle", ToolTipIcon.Info);
 
                 }
                 else
                 {
-                    if (MessageBox.Show($"This ID Order [ {IdOrder} ] Not Found In The Orders Carpet", "Error Not Found ID Order Carpet", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    if (MessageBox.Show($"This ID Order [ {IDOrderCarpet} ] Not Found In The Orders Carpet", "Error Not Found ID Order Carpet", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                     {
                         GTextBoxSearchIDOrderCarpet.Clear();
                     }
                 }
             }
         }
+   
+        private void SearchOrderCarpet()
+        {
+            string IdOrder = GTextBoxSearchIDOrderCarpet.Text;
+            GTextBoxSearchIDOrderCarpet.Clear();
+
+            if (!string.IsNullOrEmpty(IdOrder))
+            {
+                SearchOrderByIDCarpet(IDOrderCarpet: IdOrder);
+            }
+            else
+            {
+                MessageBox.Show($"The Box ID Order is Empty , Please Enter the ID Order to Search Order By ID", "Error Not Found ID Order Car", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
      
         private void GButtonSearchByIDOrderCarpet_Click(object sender, EventArgs e)
         {
-            SearchOrderCarpetByID();
+            SearchOrderCarpet();
         }
 
         private void GTextBoxSearchIDOrderCarpet_Click_1(object sender, EventArgs e)
@@ -485,9 +500,8 @@ namespace Sparkle.User_Controls_Sparkle
             resetBackColorAndForeColorInListView(ListViewAllOrdersCarpet);
         }
 
-        private void searchOrderCarByID()
+        private void searchOrderByIdOrderCar(string IDOrderCarSection)
         {
-            string IDOrderCarSection = GTextBoxSearchByIDOrderCarSection.Text;
 
             if (isAllCharacterInTextAreDigitOrNot(GTextBoxSearchByIDOrderCarSection.Text))
             {
@@ -504,6 +518,16 @@ namespace Sparkle.User_Controls_Sparkle
                     }
                 }
             }
+        }
+    
+        private void searchOrderCar()
+        {
+            string IDOrderCarSection = GTextBoxSearchByIDOrderCarSection.Text;
+
+            if (!string.IsNullOrEmpty(IDOrderCarSection))
+            {
+                searchOrderByIdOrderCar(IDOrderCarSection : IDOrderCarSection);
+            }
             else
             {
                 MessageBox.Show($"The Box ID Order is Empty , Please Enter the ID Order to Search Order By ID", "Error Not Found ID Order Car", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -512,7 +536,7 @@ namespace Sparkle.User_Controls_Sparkle
        
         private void GButtonSearchIDOrderCarSectionToListView_Click(object sender, EventArgs e)
         {
-            searchOrderCarByID();
+            searchOrderCar();
         }
 
         private void GTextBoxSearchByIDOrderCarSection_Click(object sender, EventArgs e)
