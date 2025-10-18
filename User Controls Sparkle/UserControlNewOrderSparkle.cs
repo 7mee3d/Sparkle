@@ -970,6 +970,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
+      
         private void setErrorAndCorrectControlsTextBoxEmail(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
         {
             Guna2TextBox GunaTextBox = sender as Guna2TextBox;
@@ -989,6 +990,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
+      
         private void setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(object sender, CancelEventArgs eventCancel, string CaptionError, string CaptionCorrect)
         {
             Guna2TextBox GunaTextBox = sender as Guna2TextBox;
@@ -1105,6 +1107,7 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
      
+
         /*private bool ValidateCarpetSection()
         {
             return FlagsFillTextBoxInformationCarpet[0] &&
@@ -1229,6 +1232,20 @@ namespace Sparkle.User_Controls_Sparkle
             GBTN.HoverState.ForeColor = Color.White;
             GBTN.HoverState.BorderColor = Color.FromArgb(2, 120, 100);
         }
+
+        private void DrawElipse(PaintEventArgs Draw)
+        {
+
+            Color WhiteGreen = Color.FromArgb(90, 4, 187, 156);
+            Pen pen = new Pen(WhiteGreen);
+
+            pen.Width = 3;
+            SolidBrush SB = new SolidBrush(WhiteGreen); 
+            Draw.Graphics.FillEllipse(SB, 340, 430, 130, 130);
+            Draw.Graphics.DrawEllipse(pen, 340, 430, 130, 130);
+
+     
+        }
        
         
         //-------------------------------- [Start Section Carpet Create Form Finial Bill ]-------------------------------
@@ -1255,7 +1272,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             frmConfirmAddOrderCarpetSection.BackColor = Color.White;
             frmConfirmAddOrderCarpetSection.Size = new Size (500 , Convert.ToInt32(Math.Round(700.5)) );
-
+            frmConfirmAddOrderCarpetSection.Paint += (s, e) =>
+            {
+                DrawElipse(e);
+            };
             frmConfirmAddOrderCarpetSection.BackgroundImage = Resources.Background_Image_Form_Finial_Bill_Orders_;
             frmConfirmAddOrderCarpetSection.BackgroundImageLayout = ImageLayout.Zoom;
 
@@ -1504,12 +1524,8 @@ namespace Sparkle.User_Controls_Sparkle
         private void setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet(Form frmConfirmAddOrderCarpetSection)
         {
 
-
-
-
             Label lblOtherSeviceCarpet = new Label();
             Label lblResultOtherSeviceCarpet = new Label();
-
 
 
             //Label Other Service  Carpet
@@ -1525,10 +1541,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Type Wash Carpet
             lblResultOtherSeviceCarpet.Text = returnTextOtherServiceCarpet();
-            lblResultOtherSeviceCarpet.Font = new Font("Garamond", 12, FontStyle.Bold);
-            lblResultOtherSeviceCarpet.Top = 620;
-            lblResultOtherSeviceCarpet.Left = 100;
-            lblResultOtherSeviceCarpet.Width = 150;
+            lblResultOtherSeviceCarpet.Font = new Font("Garamond", 11, FontStyle.Bold);
+            lblResultOtherSeviceCarpet.Top = 610;
+            lblResultOtherSeviceCarpet.Left = 50;
+            lblResultOtherSeviceCarpet.Width = 130;
             lblResultOtherSeviceCarpet.BackColor = Color.Transparent;
             lblResultOtherSeviceCarpet.Height = 150;
 
@@ -1536,7 +1552,28 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.Controls.Add(lblResultOtherSeviceCarpet);
 
         }
-     
+      
+        private void setLabelTotalPriceCarpet(Form frmConfirmAddOrderCarpetSection)
+        {
+
+            Label lblTotalPriceCarpet = new Label();
+
+
+            //Label Other Service  Carpet
+            lblTotalPriceCarpet.Text = Convert.ToString(calcTotalPriveAllServiceCarpet() + "$");
+            lblTotalPriceCarpet.Font = new Font("Garamond", 40, FontStyle.Bold);
+            lblTotalPriceCarpet.Top = 465;
+            lblTotalPriceCarpet.Width = 200;
+            lblTotalPriceCarpet.Left = 345;
+            lblTotalPriceCarpet.Height = 100;
+            lblTotalPriceCarpet.BackColor = Color.Transparent;
+            lblTotalPriceCarpet.ForeColor = Color.White;
+
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblTotalPriceCarpet);
+
+        }
+
         private void setLabelsOrderCarpetSection(Form frmConfirmAddOrderCarpetSection)
         {
 
@@ -1549,7 +1586,7 @@ namespace Sparkle.User_Controls_Sparkle
             setLabelSizeCarpetAndLabelResultSizeCarpet(frmConfirmAddOrderCarpetSection);
             setLabelTypeWashCarpetAndLabelResultTypeWashCarpet(frmConfirmAddOrderCarpetSection);
             setLabelOtherServiceCarpetAndLabelResultOtherServiceCarpet(frmConfirmAddOrderCarpetSection);
-         
+            setLabelTotalPriceCarpet(frmConfirmAddOrderCarpetSection);
 
         }
     
@@ -1616,6 +1653,10 @@ namespace Sparkle.User_Controls_Sparkle
               frmConfirmAddOrderSection.BackgroundImage = Resources.Background_Image_Form_Finial_Bill_Orders_;
             frmConfirmAddOrderSection.BackgroundImageLayout = ImageLayout.Zoom;
 
+            frmConfirmAddOrderSection.Paint += (s, e) =>
+            {
+                DrawElipse(e);
+            };
             setLabelFinialBill(frmConfirmAddOrderSection);
 
             setLabelsOrderCarSection(frmConfirmAddOrderSection);
@@ -1934,6 +1975,27 @@ namespace Sparkle.User_Controls_Sparkle
             frmConfirmAddOrderCarpetSection.Controls.Add(lblResultOtherSeviceCar);
 
         }
+       
+        private void setLabelTotalPriceCar(Form frmConfirmAddOrderCarpetSection)
+        {
+
+            Label lblTotalPriceCar = new Label();
+
+
+            //Label Other Service  Carpet
+            lblTotalPriceCar.Text = Convert.ToString(calcTotalPriceOfWashCar() + "$");
+            lblTotalPriceCar.Font = new Font("Garamond", 40, FontStyle.Bold);
+            lblTotalPriceCar.Top = 465;
+            lblTotalPriceCar.Width = 200;
+            lblTotalPriceCar.Left = 345;
+            lblTotalPriceCar.Height = 100;
+            lblTotalPriceCar.BackColor = Color.Transparent;
+            lblTotalPriceCar.ForeColor = Color.White;
+
+
+            frmConfirmAddOrderCarpetSection.Controls.Add(lblTotalPriceCar);
+
+        }
 
         private void setLabelsOrderCarSection(Form frmConfirmAddOrderCarpetSection)
         {
@@ -1949,10 +2011,10 @@ namespace Sparkle.User_Controls_Sparkle
             setLabelSizeCarpetAndLabelResultSizeCar(frmConfirmAddOrderCarpetSection);
             setLabelTypeWashCarpetAndLabelResultTypeWashServiceCar(frmConfirmAddOrderCarpetSection);
             setLabelOtherServiceCarpetAndLabelResultOtherServiceCar(frmConfirmAddOrderCarpetSection);
-
+            setLabelTotalPriceCar(frmConfirmAddOrderCarpetSection);
 
         }
-
+     
         private void ButtonOrderNowNewFormCar()
         {
             //setLabelsOrderCarpetSection();
