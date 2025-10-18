@@ -209,14 +209,23 @@ namespace Sparkle.User_Controls_Sparkle
         private void GButtonSearchByUsername_Click(object sender, EventArgs e)
         {
             string username = GTextBoxSearchUsersList.Text;
-            if (SreachTheUsernameInListView(username)) { }
-            else
-            {
-                if (MessageBox.Show($"This Username [{username}] Not Found In Sparkle System Try enter Again", "Note Search By Username", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK){
-                    GTextBoxSearchUsersList.Clear();
-                    GTextBoxSearchUsersList.Focus();
+
+            if (!string.IsNullOrEmpty(username))
+                if (SreachTheUsernameInListView(username)) { }
+                else
+                {
+                    if (MessageBox.Show($"This Username [{username}] Not Found In Sparkle System Try enter Again", "Note Search By Username", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    {
+                        GTextBoxSearchUsersList.Clear();
+                        GTextBoxSearchUsersList.Focus();
+                    }
                 }
-            }
+
+            else
+                MessageBox.Show($"The Box Username Already empty\nPlease Enter the Username to be Search in Sparkle System", "Warning! Username Box Empty", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+
         }
 
         private void UserControUsersList_Paint(object sender, PaintEventArgs e)
