@@ -115,6 +115,62 @@ namespace Sparkle.User_Controls_Sparkle
                 );
         }
 
+        private bool isControlInUserControlIsEmptyOrNot()
+        {
+            foreach (Control OutterControl in this.Controls)
+            {
+                if (OutterControl is Guna2Panel G2P)
+                {
+                    foreach (Control innerControl in G2P.Controls)
+                    {
+                        if (innerControl is Guna2TextBox G2TB)
+                        {
+                            if ((G2TB.Name == GTextBoxIDOrderCarpet.Name) || (G2TB.Name == GTextBoxIDOrderCarSection.Name))
+                            {
+                                continue;
+                            }
+
+                            if (!string.IsNullOrEmpty(G2TB.Text))
+                            {
+                                return false;
+                            }
+
+                        }
+                        if (innerControl is Guna2RadioButton G2RB)
+                        {
+                            if (G2RB.Tag != "Carpets" || G2RB.Tag != "Cars")
+                                if (G2RB.Checked)
+                                    return false;
+                        }
+
+                        if (innerControl is Guna2CheckBox G2CB)
+                        {
+                            if (G2CB.Checked)
+                                return false;
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        private void resetAllControlInUserControlOrderNow()
+        {
+            if (!isControlInUserControlIsEmptyOrNot())
+            {
+                resetAllCheckBoxiesOtherServive();
+                ResetAllControlPanel();
+                ResetAllTextBoxInUserControl();
+            }
+            else
+            {
+                MessageBox.Show("The All Boxies And Choices this Order are Already Empty \nTry Fill Boxies and choices To Perform Reset All Order", "Warning! Reset Order", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+      
+        
         //------------------------------ [Start Section Carpet]-------------------------------
 
 
@@ -482,7 +538,7 @@ namespace Sparkle.User_Controls_Sparkle
             allInformationCarSection.Add(returnTypeWashCarWord());
             allInformationCarSection.Add(returnLineWordServiceCar());
             allInformationCarSection.Add(TotalPriceCarSection.Text);
-            allInformationCarSection.Add(GTextBoxCarDetailsCarSection.Text);
+            allInformationCarSection.Add(GTextBoxCarDetailsCarSection.Text == "" ? "None" : GTextBoxCarDetailsCarSection.Text);
 
             return allInformationCarSection;
 
@@ -1195,14 +1251,16 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void ButtonResetAllOrder_Click(object sender, EventArgs e)
         {
-            resetAllCheckBoxiesOtherServive();
-            ResetAllControlPanel();
-            ResetAllTextBoxInUserControl();
-        
+
+            resetAllControlInUserControlOrderNow();
         }
 
 
+
         //--------------------------- [End Section Controls Validating ]-------------------------------
+
+
+
 
 
         //-------------------------------- [End Section Controls]-------------------------------
@@ -1214,7 +1272,7 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         //Method Change State Hover and Check button Gradient Button 
-        private void ChangeropertiesButtons (Guna2GradientButton GBTN)
+        private void ChangePropertiesButtons (Guna2GradientButton GBTN)
         {
 
             GBTN.Text = "Order Now";
@@ -1607,7 +1665,7 @@ namespace Sparkle.User_Controls_Sparkle
             
             Guna2GradientButton G2B = new Guna2GradientButton();
 
-            ChangeropertiesButtons(G2B);
+            ChangePropertiesButtons(G2B);
             //Add Button to form 
             frmConfirmAddOrderSection.Controls.Add(G2B);
 
@@ -2030,7 +2088,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             Guna2GradientButton G2B = new Guna2GradientButton();
 
-            ChangeropertiesButtons(G2B);
+            ChangePropertiesButtons(G2B);
 
             //Add Button To Form Final Bill Order
             frmConfirmAddOrderSection.Controls.Add(G2B);

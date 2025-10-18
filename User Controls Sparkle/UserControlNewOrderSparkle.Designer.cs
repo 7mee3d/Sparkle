@@ -1052,7 +1052,7 @@
             this.GTextBoxIDOrderCarpet.SelectedText = "";
             this.GTextBoxIDOrderCarpet.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxIDOrderCarpet.TabIndex = 14;
-            this.GTextBoxIDOrderCarpet.Tag = "TID";
+            this.GTextBoxIDOrderCarpet.Tag = "IDCarpet";
             // 
             // GPnaelIDOrderCarpet
             // 
@@ -1116,7 +1116,7 @@
             this.GTextBoxIDOrderCarSection.SelectedText = "";
             this.GTextBoxIDOrderCarSection.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxIDOrderCarSection.TabIndex = 0;
-            this.GTextBoxIDOrderCarSection.Tag = "TID";
+            this.GTextBoxIDOrderCarSection.Tag = "IDCar";
             // 
             // GPnaelInfroamtionOrderCar
             // 
