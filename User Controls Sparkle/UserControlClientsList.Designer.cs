@@ -191,7 +191,6 @@
             this.GTextBoxSearch.SelectedText = "";
             this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearch.TabIndex = 0;
-            this.GTextBoxSearch.TextChanged += new System.EventHandler(this.GTextBoxSearch_TextChanged);
             // 
             // UserControlClientsList
             // 

@@ -896,19 +896,26 @@ namespace Sparkle.User_Controls_Sparkle
             if (GRadioButtonCarpetsSection.Checked)
             {
 
-                SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
-                MessageBox.Show("Done Save Order");
-                ResetAllTextBoxInUserControl();
+
+                if (MessageBox.Show("Click the OK To Be Confirm This Order and The Cansel This Order Click The Cansel Button", "Confirm This Order", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
+
+                }
+               
+                    ResetAllTextBoxInUserControl();
+                    ResetAllControlPanel();
+
 
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
-               
-                ResetAllControlPanel();
               
             }
             else if (GRadioButtonCarsSection.Checked)
             {
-                SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
-                MessageBox.Show("Done Save Order");
+                /////////// error save in the file
+                if (MessageBox.Show("Click the OK To Be Confirm This Order and The Cansel This Order Click The Cansel Button", "Confirm This Order", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
+                
 
                 ResetAllTextBoxInUserControl();
 
@@ -1241,8 +1248,8 @@ namespace Sparkle.User_Controls_Sparkle
 
             pen.Width = 3;
             SolidBrush SB = new SolidBrush(WhiteGreen); 
-            Draw.Graphics.FillEllipse(SB, 340, 430, 130, 130);
-            Draw.Graphics.DrawEllipse(pen, 340, 430, 130, 130);
+            Draw.Graphics.FillEllipse(SB, 344, 430, 130, 130);
+            Draw.Graphics.DrawEllipse(pen, 344, 430, 130, 130);
 
      
         }
@@ -1564,7 +1571,7 @@ namespace Sparkle.User_Controls_Sparkle
             lblTotalPriceCarpet.Font = new Font("Garamond", 40, FontStyle.Bold);
             lblTotalPriceCarpet.Top = 465;
             lblTotalPriceCarpet.Width = 200;
-            lblTotalPriceCarpet.Left = 345;
+            lblTotalPriceCarpet.Left = 348;
             lblTotalPriceCarpet.Height = 100;
             lblTotalPriceCarpet.BackColor = Color.Transparent;
             lblTotalPriceCarpet.ForeColor = Color.White;
@@ -1987,7 +1994,7 @@ namespace Sparkle.User_Controls_Sparkle
             lblTotalPriceCar.Font = new Font("Garamond", 40, FontStyle.Bold);
             lblTotalPriceCar.Top = 465;
             lblTotalPriceCar.Width = 200;
-            lblTotalPriceCar.Left = 345;
+            lblTotalPriceCar.Left = 348;
             lblTotalPriceCar.Height = 100;
             lblTotalPriceCar.BackColor = Color.Transparent;
             lblTotalPriceCar.ForeColor = Color.White;
@@ -2051,8 +2058,6 @@ namespace Sparkle.User_Controls_Sparkle
             setErrorAndCorrectControlsTextBoxEmail(GTextBoxEmailClientSectionCarpet, e, "This Email Not Valid", "Succsssfully");
 
         }
-
-
 
 
         //-------------------------------- [End Section Car Create Form Finial Bill ]-------------------------------

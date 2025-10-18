@@ -504,6 +504,10 @@ namespace Sparkle.User_Controls_Sparkle
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show($"The Box ID Order is Empty , Please Enter the ID Order to Search Order By ID", "Error Not Found ID Order Car", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
        
         private void GButtonSearchIDOrderCarSectionToListView_Click(object sender, EventArgs e)

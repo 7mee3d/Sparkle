@@ -175,7 +175,7 @@ namespace Sparkle.User_Controls_Sparkle
                 ListViewClientsLists.Items[counter].BackColor = Color.White;
                 ListViewClientsLists.Items[counter].ForeColor = Color.Black;
 
-                if (AreEqual (ListViewClientsLists.Items[counter].Text , ID) )
+                if (AreEqual (ListViewClientsLists.Items[counter].Text , ID) && ( !string.IsNullOrEmpty(ListViewClientsLists.Items[counter].Text)&&  !string.IsNullOrEmpty(ID)) )
                 {
                     ListViewClientsLists.Items[counter].BackColor = Color.Yellow;   
                     ListViewClientsLists.Items[counter].ForeColor = Color.Black;
@@ -217,16 +217,13 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (!isExsitsIDInTheList(ID))
             {
-                MessageBox.Show($"This ID {ID} Not Found Go to the Section Client add this ID in the DB", "Note The Clients List ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"This ID {ID} Not Found Go to the Section Client add this ID in the DB OR The Box Is Empty ", "Note The Clients List ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+          
         }
 
-        private void GTextBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-   
+ 
      
     
     }

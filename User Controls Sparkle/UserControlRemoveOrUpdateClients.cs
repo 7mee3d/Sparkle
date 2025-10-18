@@ -334,7 +334,7 @@ namespace Sparkle.User_Controls_Sparkle
         private void GTextBoxIDClient_Validating(object sender, CancelEventArgs e)
         {
             
-  string ID = GTextBoxIDClient.Text;
+         string ID = GTextBoxIDClient.Text;
 
             if (string.IsNullOrEmpty(ID)  || !isAllCharacterInTextIsDigit (ID))
             {
@@ -350,13 +350,6 @@ namespace Sparkle.User_Controls_Sparkle
                 errorProviderCoreectFillTextBox.SetError(GTextBoxIDClient, "Successful");
 
             }
-        }
-
-        private void GRadioButtonUpdateMode_CheckedChanged(object sender, EventArgs e)
-        {
-          
-
-          
         }
 
         private void CheckedChangedRadioButonModesInSystemSparkle(object sender, EventArgs e)
