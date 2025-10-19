@@ -9,15 +9,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sparkle.User_Controls_Sparkle
 {
     public partial class UserControlRemoveOrUpdateUsers : UserControl
     {
+        //File Path
+        const string _kPATH_FILE_USER = "UsersInformation.txt";
 
+        //Information One User 
+        class stInformationUser
+        {
+            public string stUsername;
+            public string stPassword;
+            public int stNumberAttempt;
+
+            //Flags 
+
+            //Flag Remove 
+            public bool IsUsernameToBeRemove = false;
+
+
+        }
+       
+        // ------------------------ [ Start Genaric Method ] ----------------------
+       
         private void EnabelAllTextBoxiesInPanel (bool flagEnableAllTextBoxiesOrNot = true)
         {
-
 
             foreach (Control outterControl in this.Controls )
             {
@@ -33,7 +52,9 @@ namespace Sparkle.User_Controls_Sparkle
                                 GTB.Enabled = true;
                             }
                             else
+                            {
                                 GTB.Enabled = flagEnableAllTextBoxiesOrNot;
+                            }
                         }
                     }
                 }
@@ -47,35 +68,27 @@ namespace Sparkle.User_Controls_Sparkle
             GTextBoxNewPasswordUsername.Clear();
  
         }
+       
         public UserControlRemoveOrUpdateUsers()
         {
             InitializeComponent();
             EnabelAllTextBoxiesInPanel(false);
             GRadioButtonNone.Checked = true; 
         }
-        const string kPATH_FILE_USER = "UsersInformation.txt";
-
-        class stInformationUser
-        {
-            public string stUsername;
-            public string stPassword;
-            public int stNumberAttempt;
-
-            //Flags 
-
-            //Flag Remove 
-            public bool IsUsernameToBeRemove = false; 
 
 
-        }
+        // ------------------------ [ End Genaric Method ] ----------------------
 
+
+        // ------------------------ [ Start I/O Method ] ----------------------
+ 
         private List<string> LoadAllInformationUsersLinesFromFile() {
 
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close();
 
-            System.IO.StreamReader ReadAllLinesFromFileInfromationUsers = new System.IO.StreamReader(kPATH_FILE_USER);
+            System.IO.StreamReader ReadAllLinesFromFileInfromationUsers = new System.IO.StreamReader(_kPATH_FILE_USER);
 
             List<string> allInformationUsersLinesAfterReadInfoFromFile = new List<string>(); 
 
@@ -94,6 +107,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         private stInformationUser ConvertInformationUserLineToData (List<string> informationOneUserString)
         {
+
             stInformationUser informationUserStructure = new stInformationUser();
 
             informationUserStructure.stUsername = informationOneUserString[0];
@@ -105,21 +119,22 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-       private  List<string> SplitLineINfomationUserToListInfo (string lineInformationOneUser ) {
-
+        private  List<string> SplitLineINfomationUserToListInfo (string lineInformationOneUser ) {
 
             List<string> informationUserAfterSplitLine = new List<string>(); 
 
             if (!string.IsNullOrEmpty(lineInformationOneUser))
             {
-                informationUserAfterSplitLine.AddRange(lineInformationOneUser.Split(new String[] { "||" }, StringSplitOptions.RemoveEmptyEntries)) ; 
+                informationUserAfterSplitLine.AddRange(
+                    lineInformationOneUser.Split(new String[] { "||" }, StringSplitOptions.RemoveEmptyEntries)
+                    ) ; 
             }
 
             return informationUserAfterSplitLine; 
 
         }
 
-       private List<stInformationUser> LoadAllInformationUsersAfterConvertLinesToDataListStructure()
+        private List<stInformationUser> LoadAllInformationUsersAfterConvertLinesToDataListStructure()
         {
             List<string> linesInformationUsersList = LoadAllInformationUsersLinesFromFile();
             List<stInformationUser> informationUsersAfterConvertLineToData = new List<stInformationUser>(); 
@@ -131,7 +146,6 @@ namespace Sparkle.User_Controls_Sparkle
 
             return informationUsersAfterConvertLineToData;
         }
-
 
         private string ConvertDataToLine (stInformationUser informationOneUser , string Separator = "||")
         {
@@ -149,10 +163,10 @@ namespace Sparkle.User_Controls_Sparkle
         private void SaveAllInformationUsersStructureToFile(List<stInformationUser> allInfroamtionUserStruct)
         {
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close();
 
-            System.IO.StreamWriter WriteAllInformationUserToFile = new System.IO.StreamWriter(kPATH_FILE_USER);
+            System.IO.StreamWriter WriteAllInformationUserToFile = new System.IO.StreamWriter(_kPATH_FILE_USER);
 
             foreach (stInformationUser infoOneUser in allInfroamtionUserStruct)
             {
@@ -166,6 +180,12 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
 
+        // ------------------------ [ End I/O Method ] ----------------------
+
+
+
+        // ------------------------ [ Start [ Remove - Update - Search Method ] ] ----------------------
+
         private bool isFoundTheUsernameInSystemSparkle (string username )
         {
             List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
@@ -178,28 +198,17 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
 
         }
+
         private void CheckedChangedRadioButonModesInSystemSparkle(object sender, EventArgs e)
         {
             if (GRadioButtonRemoveMode.Checked)
-            {
-
                 GPanelFillInformationUsernameToUpdate.Visible = false;
-
-            }
-
 
             if (GRadioButtonNone.Checked)
-            {
-
                 GPanelFillInformationUsernameToUpdate.Visible = false;
 
-            }
-
             if (GRadioButtonUpdateMode.Checked)
-            {
-
                 GPanelFillInformationUsernameToUpdate.Visible = true;
-            }
 
         }
 
@@ -220,6 +229,7 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
 
         }
+     
         private bool ModifyInformationUser(string username)
         {
             List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
@@ -242,58 +252,64 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-        private void DrawLineOfUserControlRemoveAndUpdate(PaintEventArgs e)
+        private void RemoveUserByUsernameAfterClickRemove(string username)
         {
 
-            Color whiteGreen = Color.FromArgb(255, 4, 187, 156);
-
-            Pen pen = new Pen(whiteGreen);
-
-            pen.Width = 4;
-
-            Point p1 = new Point(0, 430);
-            Point p2 = new Point(687, 430);
-
-            e.Graphics.DrawLine(pen, p1, p2);
-        }
-
-        private void RemoveUserByUsernameAfterClickRemove ()
-        {
-            string username = GTextBoxUsername.Text;
+            string usernameTemp = username; 
 
             if (GRadioButtonNone.Checked)
             {
-                MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !"
+                    , "Error None Mode"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
+
                 ClearAllTextBoxiesAndModes();
                 return;
             }
             if (GRadioButtonUpdateMode.Checked)
             {
-                MessageBox.Show($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information User !", "Error Update Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information User !"
+                    , "Error Update Mode"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
 
                 ClearAllTextBoxiesAndModes();
                 return;
             }
             if (GRadioButtonRemoveMode.Checked)
             {
-                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
-                    if (RemoveUsernameInSystemSparkle(username))
-                        MessageBox.Show("Done");
-                    else MessageBox.Show($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !", "Error Remove User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)) if (RemoveUsernameInSystemSparkle(username)) {
 
+                        MessageBox.Show
+                            ($"Successfully Remove This Username [{usernameTemp}] "
+                            , "Remove Username From System Spakle"
+                            , MessageBoxButtons.OK
+                            , MessageBoxIcon.Information);
+                 }
+                else { 
+
+                MessageBox.Show
+                            ($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !"
+                            , "Error Remove User"
+                            , MessageBoxButtons.OK
+                            , MessageBoxIcon.Error);
+                 }
             }
             ClearAllTextBoxiesAndModes();
         }
 
-           private void UpdateInformationUser ()
-        {
-            string username = GTextBoxUsername.Text;
+        private void UpdateInformationUser(string username) {
+      
             if (GRadioButtonNone.Checked)
             {
                 MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update]in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ClearAllTextBoxiesAndModes();
                 return;
             }
+
 
             if (GRadioButtonUpdateMode.Checked)
             {
@@ -314,25 +330,89 @@ namespace Sparkle.User_Controls_Sparkle
         private void GButtonSearchUsername_Click(object sender, EventArgs e)
         {
             string Username = GTextBoxUsername.Text;
+            if (!string.IsNullOrEmpty(Username))
+            {
+                if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked)
+                    EnabelAllTextBoxiesInPanel(true);
+                else EnabelAllTextBoxiesInPanel(false);
+            }
+            else
+            {
+              MessageBox.Show
+                    ($"Warning!! The Username is empty , Please Try to fill username to be Search "
+                    , "Error Update User Information"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
 
-            if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked )
-                EnabelAllTextBoxiesInPanel(true);
-            else EnabelAllTextBoxiesInPanel(false);
+            }
+
         }
 
         private void GButtonRemoveUser_Click(object sender, EventArgs e)
         {
-            RemoveUserByUsernameAfterClickRemove();
+            string Username = GTextBoxUsername.Text;
+            if (!string.IsNullOrEmpty(Username)) {
+                RemoveUserByUsernameAfterClickRemove(username: Username);
+            }
+            else
+            {
+                MessageBox.Show
+                    ($"Warning!! The Username is empty , Please Try to fill username to be Update Information User"
+                    , "Error Update User Information"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
+
+            }
+
         }
 
         private void GButtonUpdateUser_Click(object sender, EventArgs e)
         {
-            UpdateInformationUser();
+            string Username = GTextBoxUsername.Text;
+
+            if (!string.IsNullOrEmpty(Username))
+            {
+                UpdateInformationUser(username: Username);
+            }
+            else
+            {
+                MessageBox.Show
+                    ($"Warning!! The Username is empty , Please Try to fill username to be Update Information User"
+                    , "Error Update User Information"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
+            }
+        }
+
+     
+        // ------------------------ [ End [ Remove - Update - Search Method ] ] ----------------------
+
+
+
+        // ------------------------ [ Start Draw Section  ] ----------------------
+    
+        private void DrawLineOfUserControlRemoveAndUpdate(PaintEventArgs e)
+        {
+
+            Color whiteGreen = Color.FromArgb(255, 4, 187, 156);
+
+            Pen pen = new Pen(whiteGreen);
+
+            pen.Width = 4;
+
+            Point p1 = new Point(0, 430);
+            Point p2 = new Point(687, 430);
+
+            e.Graphics.DrawLine(pen, p1, p2);
         }
 
         private void UserControlRemoveOrUpdateUsers_Paint(object sender, PaintEventArgs e)
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
+       
+        
+        // ------------------------ [ End Draw Section  ] ----------------------
+
     }
 }

@@ -19,7 +19,8 @@ namespace Sparkle.User_Controls_Sparkle
             InitializeComponent();
         }
 
-        const string kPATH_FILE_CLIENT = "InformationClients.txt";
+        //File Path 
+        const string _kPATH_FILE_CLIENT = "InformationClients.txt";
 
         struct stInformationOneClient
         {
@@ -35,10 +36,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<string> allInformationClientsFromFile = new List<string>();
 
-            if (!System.IO.File.Exists(kPATH_FILE_CLIENT))
-                System.IO.File.Create(kPATH_FILE_CLIENT).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_CLIENT))
+                System.IO.File.Create(_kPATH_FILE_CLIENT).Close();
 
-            System.IO.StreamReader ReadAllLinesFromFile = new System.IO.StreamReader(kPATH_FILE_CLIENT);
+            System.IO.StreamReader ReadAllLinesFromFile = new System.IO.StreamReader(_kPATH_FILE_CLIENT);
 
             string lineInformationOneClient = null;
 
@@ -128,23 +129,6 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
         
-        private void PaintTheLine( PaintEventArgs e)
-        {
-            Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
-
-            Pen pen = new Pen(WhiteGreen);
-            pen.Width = 3;
-            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
-
-            //Points Line
-            Point p1 = new Point(0, 523);
-            Point p2 = new Point(1200, 523);
-
-            //Draw the Line
-            e.Graphics.DrawLine(pen, p1, p2);
-        }
-
         private bool AreEqual(string textOne , string textTwo )
         {
             return (textOne == textTwo);
@@ -206,11 +190,6 @@ namespace Sparkle.User_Controls_Sparkle
             pushAllInformationClientsToListView();
         }
 
-        private void UserControlClientsList_Paint(object sender, PaintEventArgs e)
-        {
-            PaintTheLine(e);
-        }
-
         private void GButtonSearchByID_Click(object sender, EventArgs e)
         {
             string ID = GTextBoxSearch.Text;
@@ -220,11 +199,35 @@ namespace Sparkle.User_Controls_Sparkle
                 MessageBox.Show($"This ID {ID} Not Found Go to the Section Client add this ID in the DB OR The Box Is Empty ", "Note The Clients List ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-          
+
+            GTextBoxSearch.Clear();
+            GTextBoxSearch.Focus(); 
+        }
+      
+        // -- Paint The Line Section --
+        private void PaintTheLine(PaintEventArgs e)
+        {
+            Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
+
+            Pen pen = new Pen(WhiteGreen);
+            pen.Width = 3;
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+
+            //Points Line
+            Point p1 = new Point(0, 523);
+            Point p2 = new Point(1200, 523);
+
+            //Draw the Line
+            e.Graphics.DrawLine(pen, p1, p2);
         }
 
- 
-     
-    
+        private void UserControlClientsList_Paint(object sender, PaintEventArgs e)
+        {
+            PaintTheLine(e);
+        }
+
+
+
     }
 }
