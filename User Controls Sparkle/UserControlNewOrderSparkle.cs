@@ -22,18 +22,16 @@ namespace Sparkle.User_Controls_Sparkle
         const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
         const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
 
-        bool[] FlagsFillTextBoxInformationCarpet = { false , false , false , false , false , false};
         
         public UserControlNewOrderSparkle()
         {
             InitializeComponent();
             GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
             GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
-            GTextBoxIDOrderCarpet.Enabled = false;
-            GTextBoxIDOrderCarSection.Enabled = false;
-            GRadioButtonCarpetsSection.Checked = true; 
+            InaitalAfterLoadUserControlNewOrderSetting();
         }
 
+        bool[] areAllBoxiesFillArrayCarpet = { false, false, false, false/*, false, false*/ }; 
 
         //Reset All Text Boxies
         private void ResetAllTextBoxInUserControl ()
@@ -139,8 +137,9 @@ namespace Sparkle.User_Controls_Sparkle
                         if (innerControl is Guna2RadioButton G2RB)
                         {
                             if (G2RB.Tag != "Carpets" || G2RB.Tag != "Cars")
-                                if (G2RB.Checked)
-                                    return false;
+                               // if(G2RB.Tag != "Small Carpet" || G2RB.Tag != "Small Carpet")
+                                    if (G2RB.Checked)
+                                         return false;
                         }
 
                         if (innerControl is Guna2CheckBox G2CB)
@@ -169,7 +168,58 @@ namespace Sparkle.User_Controls_Sparkle
             }
         }
 
-      
+        private void checkAllBoxiesSectionCarpetFillOrNote()
+        {
+            if (GTextBoxNameClientSectionCarpet.Text != "")
+                areAllBoxiesFillArrayCarpet[0] = true;
+
+            if (GTextBoxEmailClientSectionCarpet.Text != "")
+                areAllBoxiesFillArrayCarpet[1] = true;
+
+            if (GTextBoxPhoneClientSectionCarpet.Text != "")
+                areAllBoxiesFillArrayCarpet[2] = true;
+
+            if (GTextBoxAddressClientSectionCarpet.Text != "")
+                areAllBoxiesFillArrayCarpet[3] = true;
+
+           /* if (!GRadioButtonSizeCarpetSmall.Checked || !GRadioButtonSizeCarpetMedium.Checked || !GRadioButtonSizeCarpetLarge.Checked)
+                areAllBoxiesFillArrayCarpet[4] = true;
+
+            if (!GRadioButtonWashTypNormalWash.Checked || !GRadioButtonWashTypDeepWash.Checked)
+                areAllBoxiesFillArrayCarpet[5] = true;*/
+
+        }
+  
+        private bool areAllBoxiesIsFillOrNote()
+        {
+            areAllBoxiesFillArrayCarpet[0] = false;
+            areAllBoxiesFillArrayCarpet[1] = false;
+            areAllBoxiesFillArrayCarpet[2] = false;
+            areAllBoxiesFillArrayCarpet[3] = false;
+
+
+            checkAllBoxiesSectionCarpetFillOrNote();
+
+            return 
+                
+           (areAllBoxiesFillArrayCarpet[0] &&
+           areAllBoxiesFillArrayCarpet[1]  &&
+           areAllBoxiesFillArrayCarpet[2]  &&
+           areAllBoxiesFillArrayCarpet[3] 
+
+                );
+        }
+
+        private void InaitalAfterLoadUserControlNewOrderSetting()
+        {
+            GTextBoxIDOrderCarpet.Enabled = false;
+            GRadioButtonCarpetsSection.Checked = true;
+            /*GRadioButtonSizeCarpetSmall.Checked = true;
+            GRadioButtonSizeSmallCar.Checked = true;
+            GRadioButtonWashTypNormalWash.Checked = true; 
+            GTextBoxIDOrderCarSection.Enabled = false;
+          */
+        }
         
         //------------------------------ [Start Section Carpet]-------------------------------
 
@@ -828,19 +878,16 @@ namespace Sparkle.User_Controls_Sparkle
             if (GRadioButtonSizeCarpetSmall.Checked)
             {
                 wordSizeCarpet = "Small";
-                FlagsFillTextBoxInformationCarpet[3] = true;
             }
 
             if (GRadioButtonSizeCarpetMedium.Checked)
             {
                 wordSizeCarpet = "Medium";
-                FlagsFillTextBoxInformationCarpet[3] = true;
             }
 
             if (GRadioButtonSizeCarpetLarge.Checked)
             {
                 wordSizeCarpet = "Large";
-                FlagsFillTextBoxInformationCarpet[3] = true;
             }
 
             return wordSizeCarpet;
@@ -868,13 +915,11 @@ namespace Sparkle.User_Controls_Sparkle
             if (GRadioButtonWashTypNormalWash.Checked)
             {
                 wordTypeWash = "Normal Wash";
-                FlagsFillTextBoxInformationCarpet[4] = true;
             }
 
             if (GRadioButtonWashTypDeepWash.Checked)
             {
                 wordTypeWash = "Deep Wash";
-                FlagsFillTextBoxInformationCarpet[4] = true;
             }
 
             return wordTypeWash; 
@@ -903,13 +948,11 @@ namespace Sparkle.User_Controls_Sparkle
             if (GCheckBoxOtherServicesQuickDrying.Checked)
             {
                 wordOtherSevice += " Quick Drying";
-                FlagsFillTextBoxInformationCarpet[5] = true;
             }
 
             if (GCheckBoxOtherServicesHomeDelivery.Checked){
 
                 wordOtherSevice += " Home Delivery";
-                FlagsFillTextBoxInformationCarpet[5] = true;
 
             }
 
@@ -968,7 +1011,7 @@ namespace Sparkle.User_Controls_Sparkle
             }
             else if (GRadioButtonCarsSection.Checked)
             {
-                /////////// error save in the file
+                
                 if (MessageBox.Show("Click the OK To Be Confirm This Order and The Cansel This Order Click The Cansel Button", "Confirm This Order", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                     SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
                 
@@ -1184,18 +1227,26 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void ButtonAddNewOrder_Click(object sender, EventArgs e) 
         {
-            //setTitleAndSizeAndLocationFormSectionCarpet();
 
+            if (GRadioButtonCarpetsSection.Checked /*&& ValidateCarpetSection()*/)
+            {
+                if (areAllBoxiesIsFillOrNote()) 
+                    ButtonOrderNowNewForm();
 
-            if (GRadioButtonCarpetsSection.Checked /*&& ValidateCarpetSection()*/) ButtonOrderNowNewForm();
-            /* else
-             {
-                 MessageBox.Show("Cant Complete this operation");
-             }*/
+                else MessageBox.Show
+                        ("Connot Add This Order Becouse the boxies is empty and not completed the all information order" +
+                        "\nPlease Fill All Boxies Information and add order", "Warning! Add New Order",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
 
+            }
             else if (GRadioButtonCarsSection.Checked) ButtonOrderNowNewFormCar();
-
+          
+        
         }
+           
+            
+        
 
 
 
@@ -1205,19 +1256,16 @@ namespace Sparkle.User_Controls_Sparkle
         private void GTextBoxNameClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
-            FlagsFillTextBoxInformationCarpet[0] = true;
         }
 
         private void GTextBoxAddressClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarpet(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
-            FlagsFillTextBoxInformationCarpet[1] = true;
         }
 
         private void GTextBoxPhoneClientSectionCarpet_Validating(object sender, CancelEventArgs e)
         {
             setErrorAndCorrectControlsTextBoxCarWithDigitWithoutLetters(sender, e, "Please do not enter any numbers or leave this field blank. ", "Successful");
-            FlagsFillTextBoxInformationCarpet[2] = true;
         }
 
         private void GTextBoxNumberCar_Validating(object sender, CancelEventArgs e)
@@ -1253,6 +1301,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
 
             resetAllControlInUserControlOrderNow();
+            //InaitalAfterLoadUserControlNewOrderSetting();
         }
 
 
@@ -1674,6 +1723,7 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 OrderNow();
                 frmConfirmAddOrderSection.Close();
+                InaitalAfterLoadUserControlNewOrderSetting();
             };
 
             frmConfirmAddOrderSection.ShowDialog();

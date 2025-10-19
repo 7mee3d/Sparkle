@@ -481,6 +481,7 @@
             this.GRadioButtonSizeCarpetSmall.Name = "GRadioButtonSizeCarpetSmall";
             this.GRadioButtonSizeCarpetSmall.Size = new System.Drawing.Size(107, 21);
             this.GRadioButtonSizeCarpetSmall.TabIndex = 8;
+            this.GRadioButtonSizeCarpetSmall.Tag = "Small Carpet";
             this.GRadioButtonSizeCarpetSmall.Text = "Small Carpet";
             this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSizeCarpetSmall.UncheckedState.BorderThickness = 2;
@@ -584,6 +585,7 @@
             this.GRadioButtonWashTypNormalWash.Name = "GRadioButtonWashTypNormalWash";
             this.GRadioButtonWashTypNormalWash.Size = new System.Drawing.Size(111, 21);
             this.GRadioButtonWashTypNormalWash.TabIndex = 11;
+            this.GRadioButtonWashTypNormalWash.Tag = "Normal wash\n";
             this.GRadioButtonWashTypNormalWash.Text = "Normal wash\n";
             this.GRadioButtonWashTypNormalWash.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypNormalWash.UncheckedState.BorderThickness = 2;
