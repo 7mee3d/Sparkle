@@ -32,6 +32,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         bool[] areAllBoxiesFillArrayCarpet = { false, false, false, false/*, false, false*/ }; 
+        bool[] areAllBoxiesFillArrayCar = { false, false, false, false, false, false }; 
 
         //Reset All Text Boxies
         private void ResetAllTextBoxInUserControl ()
@@ -189,8 +190,30 @@ namespace Sparkle.User_Controls_Sparkle
                 areAllBoxiesFillArrayCarpet[5] = true;*/
 
         }
-  
-        private bool areAllBoxiesIsFillOrNote()
+       
+        private void checkAllBoxiesSectionCarFillOrNot()
+        {
+            if (GTextBoxNameClientCarSection.Text != "")
+                areAllBoxiesFillArrayCar[0] = true;
+
+            if (GTextBoxEmailClientCarSection.Text != "")
+                areAllBoxiesFillArrayCar[1] = true;
+
+            if (GTextBoxPhoneClientCarSection.Text != "")
+                areAllBoxiesFillArrayCar[2] = true;
+
+            if (GTextBoxAddressClientCarSection.Text != "")
+                areAllBoxiesFillArrayCar[3] = true;
+
+            if (GTextBoxCarModel.Text != "")
+                areAllBoxiesFillArrayCar[4] = true;
+
+            if (GTextBoxNumberCar.Text != "")
+                areAllBoxiesFillArrayCar[5] = true;
+
+        }
+
+        private bool areAllBoxiesIsFillOrNotCarpet()
         {
             areAllBoxiesFillArrayCarpet[0] = false;
             areAllBoxiesFillArrayCarpet[1] = false;
@@ -209,17 +232,45 @@ namespace Sparkle.User_Controls_Sparkle
 
                 );
         }
+    
+        private bool areAllBoxiesIsFillOrNotCar()
+        {
+            areAllBoxiesFillArrayCar[0] = false;
+            areAllBoxiesFillArrayCar[1] = false;
+            areAllBoxiesFillArrayCar[2] = false;
+            areAllBoxiesFillArrayCar[3] = false;
+            areAllBoxiesFillArrayCar[4] = false;
+            areAllBoxiesFillArrayCar[5] = false;
 
+
+            checkAllBoxiesSectionCarFillOrNot();
+
+            return
+
+           (areAllBoxiesFillArrayCar[0] &&
+           areAllBoxiesFillArrayCar[1] &&
+           areAllBoxiesFillArrayCar[2] &&
+           areAllBoxiesFillArrayCar[3] &&
+           areAllBoxiesFillArrayCar[4] &&
+           areAllBoxiesFillArrayCar[5] 
+
+                );
+        }
+    
         private void InaitalAfterLoadUserControlNewOrderSetting()
         {
             GTextBoxIDOrderCarpet.Enabled = false;
             GRadioButtonCarpetsSection.Checked = true;
+            GTextBoxIDOrderCarSection.Enabled = false;
+
             /*GRadioButtonSizeCarpetSmall.Checked = true;
             GRadioButtonSizeSmallCar.Checked = true;
             GRadioButtonWashTypNormalWash.Checked = true; 
-            GTextBoxIDOrderCarSection.Enabled = false;
+            
           */
         }
+        
+       
         
         //------------------------------ [Start Section Carpet]-------------------------------
 
@@ -1001,25 +1052,30 @@ namespace Sparkle.User_Controls_Sparkle
                     SaveAllInformationOrderAfterConvertDataToLineTOFile(allInformationOptionsCarpet());
 
                 }
-               
-                    ResetAllTextBoxInUserControl();
-                    ResetAllControlPanel();
+                //Reset All Controls
+                ResetAllTextBoxInUserControl();
+                ResetAllControlPanel();
 
 
+                //Update ID Order Automatic
                 GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
-              
+
             }
             else if (GRadioButtonCarsSection.Checked)
             {
-                
+
                 if (MessageBox.Show("Click the OK To Be Confirm This Order and The Cansel This Order Click The Cansel Button", "Confirm This Order", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
                     SaveAllInformationOrderCarToFile(AllInformationStringCarSection());
-                
 
+                }
+
+                //Reset All Controls
                 ResetAllTextBoxInUserControl();
-
-                GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
                 ResetAllControlPanel();
+
+                //Update ID Order Automatic
+                GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
 
             }
         }
@@ -1212,7 +1268,7 @@ namespace Sparkle.User_Controls_Sparkle
                 updateTotalPriceSectionCarWash();
             }
         }
-     
+
 
         /*private bool ValidateCarpetSection()
         {
@@ -1225,29 +1281,43 @@ namespace Sparkle.User_Controls_Sparkle
         }*/
 
 
-        private void ButtonAddNewOrder_Click(object sender, EventArgs e) 
+        private void ButtonAddNewOrder_Click(object sender, EventArgs e)
         {
 
-            if (GRadioButtonCarpetsSection.Checked /*&& ValidateCarpetSection()*/)
+            if (GRadioButtonCarpetsSection.Checked )
             {
-                if (areAllBoxiesIsFillOrNote()) 
+                if (areAllBoxiesIsFillOrNotCarpet())
+                {
                     ButtonOrderNowNewForm();
-
-                else MessageBox.Show
+                }
+                else
+                {
+                    MessageBox.Show
                         ("Connot Add This Order Becouse the boxies is empty and not completed the all information order" +
                         "\nPlease Fill All Boxies Information and add order", "Warning! Add New Order",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
+                }
 
             }
-            else if (GRadioButtonCarsSection.Checked) ButtonOrderNowNewFormCar();
-          
-        
+            else if (GRadioButtonCarsSection.Checked)
+            {
+                if (areAllBoxiesIsFillOrNotCar())
+                {
+                    ButtonOrderNowNewFormCar();
+                }
+                else
+                {
+                    MessageBox.Show
+                   ("Connot Add This Order Becouse the boxies is empty and not completed the all information order" +
+                   "\nPlease Fill All Boxies Information and add order", "Warning! Add New Order",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning);
+                }
+            }
         }
            
             
-        
-
 
 
         //------------------------------ [Start Section Controls Validating ]-------------------------------
