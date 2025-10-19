@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sparkle
 {
@@ -19,9 +20,11 @@ namespace Sparkle
       
         }
 
-        const string kPATH_FILE = "UsersInformation.txt";
+        //Path File 
+        private const string _kPATH_FILE_USERS_INFORMATION = "UsersInformation.txt";
   
 
+        //Information One User
         class stInformationUser
         {
             
@@ -30,22 +33,24 @@ namespace Sparkle
             public int numberAttempt ;
 
         }
+     
         private void ClearAlTextInTheTextBoxAfterClick(object sender)
         {
             Guna2TextBox GTextBox = (sender as Guna2TextBox  );
             GTextBox.Text = "";
 
         }
+      
         private List<string> LoadLineInformationUsersFromFile ()
         {
             List<string> informationUserLine = new List<string>();
 
-            if (!System.IO.File.Exists(kPATH_FILE))
+            if (!System.IO.File.Exists(_kPATH_FILE_USERS_INFORMATION))
             {
-                System.IO.File.Create(kPATH_FILE).Close(); 
+                System.IO.File.Create(_kPATH_FILE_USERS_INFORMATION).Close(); 
             }
 
-            System.IO.StreamReader ReadInformationAllUsers = new System.IO.StreamReader(kPATH_FILE);
+            System.IO.StreamReader ReadInformationAllUsers = new System.IO.StreamReader(_kPATH_FILE_USERS_INFORMATION);
 
             string lineInformationOneUser = "";
 
@@ -71,7 +76,6 @@ namespace Sparkle
 
             return splitInformationLineToParts;
     }
-
 
         private stInformationUser ConvertLineInformationUserToDataStruct (List<string> InformationUser)
         {
@@ -113,6 +117,7 @@ namespace Sparkle
         {
             return (strOne == strTwo);
         }
+    
         private string ConvertDataInformationUserToLine(stInformationUser informationUser, string separator = "||")
         {
 
@@ -139,12 +144,13 @@ namespace Sparkle
 
             return informationUserLines;
         }
+     
         private void SaveAllDataInformationUsersInTheFile(List<string> informationUserLines)
         {
-            if (!System.IO.File.Exists(kPATH_FILE))
-                System.IO.File.Create(kPATH_FILE).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USERS_INFORMATION))
+                System.IO.File.Create(_kPATH_FILE_USERS_INFORMATION).Close();
 
-            System.IO.StreamWriter saveLineInTheFile = new System.IO.StreamWriter(kPATH_FILE);
+            System.IO.StreamWriter saveLineInTheFile = new System.IO.StreamWriter(_kPATH_FILE_USERS_INFORMATION);
 
             foreach (string lineInfoUser in informationUserLines)
             {
@@ -156,6 +162,7 @@ namespace Sparkle
 
 
         }
+    
         private bool areFoundUsernameAndPassword(string username , string password , ref bool isFoundUsername  )
         {
             //Load all data to List 
@@ -214,22 +221,17 @@ namespace Sparkle
             //Login Faild in the account 
             return false; 
         }
-     
-        
-       
-        private void ButtonLoginTheSparkle_Click(object sender, EventArgs e)
+            
+        private void LoginSystemSparkle (string Username , string Password )
         {
-
-            string username = GTextBoxUsernameLogin.Text.Trim();
-            string password = GTextBoxPasswordLogin.Text.Trim();
-
             bool isFoundUsername = false;
 
-            if (areFoundUsernameAndPassword(username, password, ref isFoundUsername)) {
-                FormMainScreenSparkleProgram FrmSparkleMainScreen = new FormMainScreenSparkleProgram() ;
+            if (areFoundUsernameAndPassword(Username, Password, ref isFoundUsername))
+            {
+                FormMainScreenSparkleProgram FrmSparkleMainScreen = new FormMainScreenSparkleProgram();
                 this.Hide();
-                FrmSparkleMainScreen.Show(); 
-                    }
+                FrmSparkleMainScreen.Show();
+            }
 
             if (isFoundUsername)
             {
@@ -242,6 +244,30 @@ namespace Sparkle
                 GTextBoxPasswordLogin.Clear();
                 GTextBoxUsernameLogin.Focus();
             }
+        }
+     
+        private void ButtonLoginTheSparkle_Click(object sender, EventArgs e)
+        {
+
+            string username = GTextBoxUsernameLogin.Text.Trim();
+            string password = GTextBoxPasswordLogin.Text.Trim();
+
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            {
+                LoginSystemSparkle(Username: username, Password: password);
+            }
+            else
+            {
+                MessageBox.Show
+                    ("The Username and Password is empty not have any information\n,Please enter the username and password To Login System Sparkle "
+                    , "Warning!! Login System Sparkle"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
+
+                GTextBoxUsernameLogin.Focus();
+            }
+
+
         }
 
     
