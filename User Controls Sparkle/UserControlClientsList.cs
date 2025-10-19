@@ -103,7 +103,7 @@ namespace Sparkle.User_Controls_Sparkle
             return informationAllClientStucture;
         }
 
-        private void pushAllInformationClientsToListView ()
+        private void pushAllInformationClientsToListView ( )
         {
             List<stInformationOneClient> informationAllClientStucture = SaveAllInformationClientToListStructure();
 
@@ -123,7 +123,6 @@ namespace Sparkle.User_Controls_Sparkle
                 }
 
                 ListViewClientsLists.Items.Add(LVI);
-
             }
 
 
@@ -184,10 +183,17 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
         }
 
+
+        private int numberClientInSystem ()
+        {
+            return (ListViewClientsLists.Items.Count);
+        }
         private void UserControlClientsList_Load(object sender, EventArgs e)
         {
           
             pushAllInformationClientsToListView();
+            LblNumberClient.Text = numberClientInSystem().ToString();
+
         }
 
         private void GButtonSearchByID_Click(object sender, EventArgs e)
@@ -204,6 +210,7 @@ namespace Sparkle.User_Controls_Sparkle
             GTextBoxSearch.Focus(); 
         }
       
+
         // -- Paint The Line Section --
         private void PaintTheLine(PaintEventArgs e)
         {
@@ -227,7 +234,6 @@ namespace Sparkle.User_Controls_Sparkle
             PaintTheLine(e);
         }
 
-
-
+   
     }
 }

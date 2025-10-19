@@ -16,9 +16,11 @@ namespace Sparkle.User_Controls_Sparkle
         {
             InitializeComponent();
             pushAllInformationUsersToListView();
+            LblNumberUser.Text = numberUserInSystemSparkle().ToString(); 
         }
 
-        const string kPATH_FILE_USER = "UsersInformation.txt";
+        //Path File
+       private const string _kPATH_FILE_USER = "UsersInformation.txt";
 
         struct stInformationUser
         {
@@ -27,6 +29,7 @@ namespace Sparkle.User_Controls_Sparkle
             public int stNumberAttempt;
 
         }
+     
         private string ConvertListSplitInformationUserToLine(List<string> informationUser, string Separator = "||")
         {
             string lineInformationUser = "";
@@ -44,10 +47,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<string> informationAllUserLines = new List<string>();
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close();
 
-            System.IO.StreamReader loadAllInformationUsersToList = new System.IO.StreamReader(kPATH_FILE_USER);
+            System.IO.StreamReader loadAllInformationUsersToList = new System.IO.StreamReader(_kPATH_FILE_USER);
 
             string lineInformationUser = null;
 
@@ -111,10 +114,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string lineInformationUser = ConvertListSplitInformationUserToLine(informationOneUser, "||");
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close();
 
-            System.IO.StreamWriter saveAllInformationLineUserToFile = new System.IO.StreamWriter(kPATH_FILE_USER, true);
+            System.IO.StreamWriter saveAllInformationLineUserToFile = new System.IO.StreamWriter(_kPATH_FILE_USER, true);
 
             if (!string.IsNullOrEmpty(lineInformationUser))
             {
@@ -126,6 +129,7 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
+    
         private void PaintTheLine(PaintEventArgs e)
         {
             Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
@@ -142,6 +146,7 @@ namespace Sparkle.User_Controls_Sparkle
             //Draw the Line
             e.Graphics.DrawLine(pen, p1, p2);
         }
+      
         private void pushAllInformationUsersToListView ()
         {
             List<stInformationUser> informationAllUsersData = SaveAllInformationUserToListSturcture();
@@ -162,7 +167,6 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
-
 
         private bool SreachTheUsernameInListView (string username )
         {
@@ -201,6 +205,7 @@ namespace Sparkle.User_Controls_Sparkle
             return false;
 
         }
+    
         private void UserControUsersList_Load(object sender, EventArgs e)
         {
             pushAllInformationUsersToListView();
@@ -228,11 +233,16 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private int numberUserInSystemSparkle()
+        {
+            return (ListViewUsersLists.Items.Count);
+        }
+     
         private void UserControUsersList_Paint(object sender, PaintEventArgs e)
         {
             PaintTheLine(e);
         }
 
-     
+ 
     }
 }

@@ -41,10 +41,15 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonSearchByID = new Guna.UI2.WinForms.Guna2Button();
             this.GTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.GPanelNumberClientInSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNumberClient = new System.Windows.Forms.Label();
+            this.GPictureBoxClientPanelNumebrClient = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelMainListViewClientsList.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.GPanelNumberClientInSparkle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -192,11 +197,47 @@
             this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearch.TabIndex = 0;
             // 
+            // GPanelNumberClientInSparkle
+            // 
+            this.GPanelNumberClientInSparkle.BorderRadius = 10;
+            this.GPanelNumberClientInSparkle.Controls.Add(this.LblNumberClient);
+            this.GPanelNumberClientInSparkle.Controls.Add(this.GPictureBoxClientPanelNumebrClient);
+            this.GPanelNumberClientInSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GPanelNumberClientInSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.GPanelNumberClientInSparkle.Location = new System.Drawing.Point(25, 204);
+            this.GPanelNumberClientInSparkle.Name = "GPanelNumberClientInSparkle";
+            this.GPanelNumberClientInSparkle.Size = new System.Drawing.Size(206, 81);
+            this.GPanelNumberClientInSparkle.TabIndex = 4;
+            // 
+            // LblNumberClient
+            // 
+            this.LblNumberClient.AutoSize = true;
+            this.LblNumberClient.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumberClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.LblNumberClient.Location = new System.Drawing.Point(123, 39);
+            this.LblNumberClient.Name = "LblNumberClient";
+            this.LblNumberClient.Size = new System.Drawing.Size(19, 21);
+            this.LblNumberClient.TabIndex = 5;
+            this.LblNumberClient.Text = "0";
+            // 
+            // GPictureBoxClientPanelNumebrClient
+            // 
+            this.GPictureBoxClientPanelNumebrClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxClientPanelNumebrClient.Image = global::Sparkle.Properties.Resources.One_client_;
+            this.GPictureBoxClientPanelNumebrClient.ImageRotate = 0F;
+            this.GPictureBoxClientPanelNumebrClient.Location = new System.Drawing.Point(25, 16);
+            this.GPictureBoxClientPanelNumebrClient.Name = "GPictureBoxClientPanelNumebrClient";
+            this.GPictureBoxClientPanelNumebrClient.Size = new System.Drawing.Size(62, 58);
+            this.GPictureBoxClientPanelNumebrClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxClientPanelNumebrClient.TabIndex = 5;
+            this.GPictureBoxClientPanelNumebrClient.TabStop = false;
+            // 
             // UserControlClientsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.GPanelNumberClientInSparkle);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.PanelMainListViewClientsList);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -209,6 +250,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelMainListViewClientsList.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.GPanelNumberClientInSparkle.ResumeLayout(false);
+            this.GPanelNumberClientInSparkle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +272,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxSearch;
         private Guna.UI2.WinForms.Guna2Button GButtonSearchByID;
+        private Guna.UI2.WinForms.Guna2Panel GPanelNumberClientInSparkle;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxClientPanelNumebrClient;
+        private System.Windows.Forms.Label LblNumberClient;
     }
 }

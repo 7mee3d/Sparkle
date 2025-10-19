@@ -41,8 +41,11 @@ namespace Sparkle.User_Controls_Sparkle
                 if(OutterControl is Guna2Panel G2P)
                     foreach(Control innerControl in OutterControl.Controls)
                         if (innerControl is Guna2TextBox G2TB)
-                            G2TB.Clear();                
-         
+                            G2TB.Clear();
+
+
+            errorProviderFormClients.Clear();
+            CorrectProviderAddCleint.Clear();
         }
    
         private string ConvertSeriseStringToLine(List<string> informationClient, string Separator = ";||;")
@@ -159,7 +162,7 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
         }
     
-        private void addNewClintInSparkle()
+        private void addNewClient()
         {
             List<string> LiInformationClient = new List<string>();
 
@@ -191,6 +194,12 @@ namespace Sparkle.User_Controls_Sparkle
                     GTextBoxIDClient.Clear();
                 }
             }
+          }
+
+        private void addNewClintInSparkle()
+        {
+            addNewClient();
+
         }
       
         private void ButtonAddNewClient_Click(object sender, EventArgs e)
@@ -228,6 +237,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             return ((Convert.ToInt32(Character) >= 48) && (Convert.ToInt32(Character) <= 57));
         }
+      
         private bool areHaveTextLettersOrNot (string text)
         {
             foreach (char Character in text)
@@ -241,6 +251,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             return false;
         }
+     
         private void setErrorProviderWithoutLetters(object sender, CancelEventArgs e, string captionError, string captionCorrect)
         {
 
@@ -265,6 +276,7 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
+     
         private void GTextBoxIDClient_Validating(object sender, CancelEventArgs e)
         {
             
@@ -311,7 +323,7 @@ namespace Sparkle.User_Controls_Sparkle
             setErrorProvider(sender, e, "You must fill in this field to complete the customer addition process.", "Successful");
 
         }
+
   
-    
     }
 }
