@@ -17,7 +17,8 @@ namespace Sparkle.User_Controls_Sparkle
             InitializeComponent();
         }
 
-        const string kPATH_FILE_USER = "UsersInformation.txt";
+        private const string _kPATH_FILE_USER = "UsersInformation.txt";
+        private const int _KEY_CRYPT = 2;
 
         struct stInformationUser
         {
@@ -26,6 +27,20 @@ namespace Sparkle.User_Controls_Sparkle
             public int stNumberAttempt;
 
         }
+        private string EncryptPassword(string password, int keyCrypt)
+        {
+            string passwordAfterEncrypt = "";
+
+            foreach (char Character in password)
+            {
+                int ASCIICharacter = Convert.ToInt32(Character);
+                int resultAfterEncryptPassword = ASCIICharacter + keyCrypt;
+                passwordAfterEncrypt += Convert.ToChar(resultAfterEncryptPassword);
+            }
+
+            return passwordAfterEncrypt;
+        }
+
 
         private string ConvertListSplitInformationUserToLine(List <string> informationUser , string Separator = "||")
         {
@@ -44,10 +59,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<string> informationAllUserLines = new List<string>();
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close() ;
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close() ;
 
-            System.IO.StreamReader loadAllInformationUsersToList = new System.IO.StreamReader(kPATH_FILE_USER); 
+            System.IO.StreamReader loadAllInformationUsersToList = new System.IO.StreamReader(_kPATH_FILE_USER); 
 
             string lineInformationUser = null;
 
@@ -111,10 +126,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             string lineInformationUser = ConvertListSplitInformationUserToLine(informationOneUser, "||");
 
-            if (!System.IO.File.Exists(kPATH_FILE_USER))
-                System.IO.File.Create(kPATH_FILE_USER).Close();
+            if (!System.IO.File.Exists(_kPATH_FILE_USER))
+                System.IO.File.Create(_kPATH_FILE_USER).Close();
 
-            System.IO.StreamWriter saveAllInformationLineUserToFile = new System.IO.StreamWriter(kPATH_FILE_USER , true );
+            System.IO.StreamWriter saveAllInformationLineUserToFile = new System.IO.StreamWriter(_kPATH_FILE_USER, true );
 
             if (!string.IsNullOrEmpty(lineInformationUser))
             {
@@ -180,7 +195,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             List<string> informationUser = new List<string>();
             informationUser.Add(username);
-            informationUser.Add(password);
+            informationUser.Add(EncryptPassword(password, keyCrypt: _KEY_CRYPT));
 
             if (!string.IsNullOrEmpty(username))
             {

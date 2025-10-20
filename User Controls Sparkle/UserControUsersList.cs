@@ -22,6 +22,19 @@ namespace Sparkle.User_Controls_Sparkle
         //Path File
        private const string _kPATH_FILE_USER = "UsersInformation.txt";
 
+        private string DecreyptPassword(string password, int keyCrypt)
+        {
+            string passwordAfterDecrypt = "";
+            foreach (char Character in password)
+            {
+                int ASCIICharacter = Convert.ToInt32(Character);
+                int resultASCIIAfterDecryptPassword = ASCIICharacter - keyCrypt;
+                passwordAfterDecrypt += Convert.ToChar(resultASCIIAfterDecryptPassword);
+            }
+            return passwordAfterDecrypt;
+        }
+
+
         struct stInformationUser
         {
             public string stUsername;
@@ -155,7 +168,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             
                 ListViewItem LVI = new ListViewItem(informationAllUsersData[counter].stUsername);
-                LVI.SubItems.Add(informationAllUsersData[counter].stPassword);
+                LVI.SubItems.Add(DecreyptPassword (informationAllUsersData[counter].stPassword , 2));
                 
                 ListViewUsersLists.Items.Add(LVI);
 

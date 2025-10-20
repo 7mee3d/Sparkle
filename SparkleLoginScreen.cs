@@ -22,7 +22,19 @@ namespace Sparkle
 
         //Path File 
         private const string _kPATH_FILE_USERS_INFORMATION = "UsersInformation.txt";
-  
+        private const int _KEY_CRYPT = 2; 
+        private string DecreyptPassword(string password, int keyCrypt)
+        {
+            string passwordAfterDecrypt = "";
+            foreach (char Character in password)
+            {
+                int ASCIICharacter = Convert.ToInt32(Character);
+                int resultASCIIAfterDecryptPassword = ASCIICharacter - keyCrypt;
+                passwordAfterDecrypt += Convert.ToChar(resultASCIIAfterDecryptPassword);
+            }
+            return passwordAfterDecrypt;
+        }
+
 
         //Information One User
         class stInformationUser
@@ -172,7 +184,7 @@ namespace Sparkle
             {
                 if (areEqualSideStringCompare(informationAllUsers[counter].stUsername, username))
                 {
-                    if(areEqualSideStringCompare(informationAllUsers[counter].stPassword , password))
+                    if(areEqualSideStringCompare(DecreyptPassword(informationAllUsers[counter].stPassword, keyCrypt: _KEY_CRYPT), password))
                     {
                         if(informationAllUsers[counter].numberAttempt > 0)
                         {
@@ -186,7 +198,7 @@ namespace Sparkle
                         else
                         {
 
-                            MessageBox.Show("Lock Account Login Sparkle", "Note Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Lock Account Login Sparkle,\nPlease Contact The Admin To Be UnLock Account ", "Note Login Sparkle", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             GLabelWariningLastAttemptAccount.Text = "";
                         }
                     }
