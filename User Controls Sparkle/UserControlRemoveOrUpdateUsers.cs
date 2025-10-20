@@ -73,7 +73,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             InitializeComponent();
             EnabelAllTextBoxiesInPanel(false);
-            GRadioButtonNone.Checked = true; 
+            GRadioButtonNone.Checked = true;
         }
 
 
@@ -81,7 +81,7 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         // ------------------------ [ Start I/O Method ] ----------------------
- 
+
         private List<string> LoadAllInformationUsersLinesFromFile() {
 
 
@@ -198,17 +198,29 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
 
         }
-
+      
         private void CheckedChangedRadioButonModesInSystemSparkle(object sender, EventArgs e)
         {
             if (GRadioButtonRemoveMode.Checked)
+            {
                 GPanelFillInformationUsernameToUpdate.Visible = false;
+                //GPnaelInformationUserNotEnableReoveSection.Visible = true;
+
+            }
 
             if (GRadioButtonNone.Checked)
+            {
                 GPanelFillInformationUsernameToUpdate.Visible = false;
+                //GPnaelInformationUserNotEnableReoveSection.Visible = false;
+
+            }
 
             if (GRadioButtonUpdateMode.Checked)
+            {
                 GPanelFillInformationUsernameToUpdate.Visible = true;
+                //GPnaelInformationUserNotEnableReoveSection.Visible = false;
+
+            }
 
         }
 
@@ -270,6 +282,7 @@ namespace Sparkle.User_Controls_Sparkle
             }
             if (GRadioButtonUpdateMode.Checked)
             {
+
                 MessageBox.Show
                     ($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information User !"
                     , "Error Update Mode"
@@ -281,7 +294,9 @@ namespace Sparkle.User_Controls_Sparkle
             }
             if (GRadioButtonRemoveMode.Checked)
             {
-                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)) if (RemoveUsernameInSystemSparkle(username)) {
+                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
+                    //LoadInformationUserToBoxiesBeforeRemove(username);
+                    if (RemoveUsernameInSystemSparkle(username)) {
 
                         MessageBox.Show
                             ($"Successfully Remove This Username [{usernameTemp}] "
@@ -333,7 +348,9 @@ namespace Sparkle.User_Controls_Sparkle
             if (!string.IsNullOrEmpty(Username))
             {
                 if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked)
+                {
                     EnabelAllTextBoxiesInPanel(true);
+                }
                 else EnabelAllTextBoxiesInPanel(false);
             }
             else
@@ -348,6 +365,14 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+       /* private void LoadInformationUserToBoxiesBeforeRemove(string username )
+        {
+            
+                GTextBoxUsernameRemoveSectionUser.Text = username;
+                GTextBoxPasswordRemoveSectionUser.Text = isFoundTheUsernameInSystemSparkleReturnPasswordUsername(username);
+           
+        }*/
+     
         private void GButtonRemoveUser_Click(object sender, EventArgs e)
         {
             string Username = GTextBoxUsername.Text;

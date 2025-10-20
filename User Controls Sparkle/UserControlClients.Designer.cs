@@ -388,7 +388,7 @@
             // 
             // errorProviderFormClients
             // 
-            this.errorProviderFormClients.BlinkRate = 0;
+            this.errorProviderFormClients.BlinkRate = 30;
             this.errorProviderFormClients.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderFormClients.ContainerControl = this;
             this.errorProviderFormClients.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderFormClients.Icon")));
@@ -402,7 +402,7 @@
             // 
             // CorrectProviderAddCleint
             // 
-            this.CorrectProviderAddCleint.BlinkRate = 0;
+            this.CorrectProviderAddCleint.BlinkRate = 30;
             this.CorrectProviderAddCleint.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.CorrectProviderAddCleint.ContainerControl = this;
             this.CorrectProviderAddCleint.Icon = ((System.Drawing.Icon)(resources.GetObject("CorrectProviderAddCleint.Icon")));

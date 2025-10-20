@@ -290,7 +290,12 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (GRadioButtonNone.Checked)
             {
-                MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !"
+                    , "Error None Mode"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
+
                 ClearAllTextBoxiesAndModes();
                 return;
             }
@@ -299,22 +304,24 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 if (!string.IsNullOrEmpty(ID))
                 {
-                    if (updateInformationOneClient(ID))
-                        if ((MessageBox.Show($"Are you sure you want to Update this This Client [{ID}] Information?", "Confirm Update Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
-                        {
-                            notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
-                            //  MessageBox.Show("The Update was successful.", "Note Update Information Client" , MessageBoxButtons.OK);    
-                        }
-                    /*  else
-                      {
-                          MessageBox.Show($"Sorry This ID [{ID}] Not Found In Sparkle System !", "Error Not Found Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                      }*/
-                }
-                else
-                {
-                    MessageBox.Show("Error! This Box already Empty , Please Enter the ID To Be Search", "Error Search By ID ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (GTextBoxNameClient.Enabled)
+                    {
+                        if (updateInformationOneClient(ID))
+                            if (
+                                (MessageBox.Show
+                                ($"Are you sure you want to Update this This Client [{ID}] Information?"
+                                , "Confirm Update Client"
+                                , MessageBoxButtons.OKCancel
+                                , MessageBoxIcon.Exclamation) == DialogResult.OK)
+                                ) notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
+                    }
+                    else
+                        MessageBox.Show("Error! This Box already Not Enable,\nPlease Enter the ID and Go To The Search Button To Be Search ID Client To\nComplete Update Client", "Error Update Client By ID ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+                else
+                    MessageBox.Show("Error! This Box already Empty , Please Enter the ID To Be Search", "Error Search By ID ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
             ClearAllTextBoxiesAndModes();

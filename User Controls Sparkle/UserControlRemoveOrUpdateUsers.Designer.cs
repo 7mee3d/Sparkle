@@ -49,6 +49,13 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.GPnaelInformationUserNotEnableReoveSection = new Guna.UI2.WinForms.Guna2Panel();
+            this.GTextBoxPasswordRemoveSectionUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.GTextBoxUsernameRemoveSectionUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.GPanelUsernameTextBoxAndRadioButton.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.GPnaelButtonsRemoveUpdateSearch.SuspendLayout();
@@ -57,6 +64,9 @@
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GPnaelInformationUserNotEnableReoveSection.SuspendLayout();
+            this.guna2GradientPanel4.SuspendLayout();
+            this.guna2GradientPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // GPanelUsernameTextBoxAndRadioButton
@@ -402,11 +412,115 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Remove Or Update User";
             // 
+            // GPnaelInformationUserNotEnableReoveSection
+            // 
+            this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.GTextBoxPasswordRemoveSectionUser);
+            this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.guna2GradientPanel4);
+            this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.GTextBoxUsernameRemoveSectionUser);
+            this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.guna2GradientPanel5);
+            this.GPnaelInformationUserNotEnableReoveSection.Location = new System.Drawing.Point(25, 443);
+            this.GPnaelInformationUserNotEnableReoveSection.Name = "GPnaelInformationUserNotEnableReoveSection";
+            this.GPnaelInformationUserNotEnableReoveSection.Size = new System.Drawing.Size(663, 312);
+            this.GPnaelInformationUserNotEnableReoveSection.TabIndex = 21;
+            // 
+            // GTextBoxPasswordRemoveSectionUser
+            // 
+            this.GTextBoxPasswordRemoveSectionUser.Animated = true;
+            this.GTextBoxPasswordRemoveSectionUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxPasswordRemoveSectionUser.BorderRadius = 10;
+            this.GTextBoxPasswordRemoveSectionUser.BorderThickness = 2;
+            this.GTextBoxPasswordRemoveSectionUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxPasswordRemoveSectionUser.DefaultText = "";
+            this.GTextBoxPasswordRemoveSectionUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxPasswordRemoveSectionUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxPasswordRemoveSectionUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxPasswordRemoveSectionUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxPasswordRemoveSectionUser.Enabled = false;
+            this.GTextBoxPasswordRemoveSectionUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxPasswordRemoveSectionUser.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxPasswordRemoveSectionUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxPasswordRemoveSectionUser.Location = new System.Drawing.Point(211, 187);
+            this.GTextBoxPasswordRemoveSectionUser.Name = "GTextBoxPasswordRemoveSectionUser";
+            this.GTextBoxPasswordRemoveSectionUser.PlaceholderText = "Enter Here New Password";
+            this.GTextBoxPasswordRemoveSectionUser.SelectedText = "";
+            this.GTextBoxPasswordRemoveSectionUser.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxPasswordRemoveSectionUser.TabIndex = 6;
+            this.GTextBoxPasswordRemoveSectionUser.Tag = "TPhone";
+            // 
+            // guna2GradientPanel4
+            // 
+            this.guna2GradientPanel4.BorderRadius = 15;
+            this.guna2GradientPanel4.Controls.Add(this.label4);
+            this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(49, 187);
+            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel4.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(9, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 27);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Password";
+            // 
+            // GTextBoxUsernameRemoveSectionUser
+            // 
+            this.GTextBoxUsernameRemoveSectionUser.Animated = true;
+            this.GTextBoxUsernameRemoveSectionUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxUsernameRemoveSectionUser.BorderRadius = 10;
+            this.GTextBoxUsernameRemoveSectionUser.BorderThickness = 2;
+            this.GTextBoxUsernameRemoveSectionUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxUsernameRemoveSectionUser.DefaultText = "";
+            this.GTextBoxUsernameRemoveSectionUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxUsernameRemoveSectionUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxUsernameRemoveSectionUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxUsernameRemoveSectionUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxUsernameRemoveSectionUser.Enabled = false;
+            this.GTextBoxUsernameRemoveSectionUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxUsernameRemoveSectionUser.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.GTextBoxUsernameRemoveSectionUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxUsernameRemoveSectionUser.Location = new System.Drawing.Point(211, 110);
+            this.GTextBoxUsernameRemoveSectionUser.Name = "GTextBoxUsernameRemoveSectionUser";
+            this.GTextBoxUsernameRemoveSectionUser.PlaceholderText = "Enter Here New Username";
+            this.GTextBoxUsernameRemoveSectionUser.SelectedText = "";
+            this.GTextBoxUsernameRemoveSectionUser.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxUsernameRemoveSectionUser.TabIndex = 5;
+            this.GTextBoxUsernameRemoveSectionUser.Tag = "TAddress";
+            // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.BorderRadius = 15;
+            this.guna2GradientPanel5.Controls.Add(this.label5);
+            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(49, 110);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel5.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(16, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 27);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Username";
+            // 
             // UserControlRemoveOrUpdateUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.GPnaelInformationUserNotEnableReoveSection);
             this.Controls.Add(this.GPanelUsernameTextBoxAndRadioButton);
             this.Controls.Add(this.GPnaelButtonsRemoveUpdateSearch);
             this.Controls.Add(this.GPanelFillInformationUsernameToUpdate);
@@ -427,6 +541,11 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GPnaelInformationUserNotEnableReoveSection.ResumeLayout(false);
+            this.guna2GradientPanel4.ResumeLayout(false);
+            this.guna2GradientPanel4.PerformLayout();
+            this.guna2GradientPanel5.ResumeLayout(false);
+            this.guna2GradientPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +573,12 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel GPnaelInformationUserNotEnableReoveSection;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxPasswordRemoveSectionUser;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox GTextBoxUsernameRemoveSectionUser;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private System.Windows.Forms.Label label5;
     }
 }
