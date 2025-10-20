@@ -428,7 +428,7 @@
             this.GTextBoxNewUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxNewUsername.Location = new System.Drawing.Point(211, 80);
             this.GTextBoxNewUsername.Name = "GTextBoxNewUsername";
-            this.GTextBoxNewUsername.PlaceholderText = "Enter Here New Username";
+            this.GTextBoxNewUsername.PlaceholderText = "";
             this.GTextBoxNewUsername.SelectedText = "";
             this.GTextBoxNewUsername.Size = new System.Drawing.Size(353, 43);
             this.GTextBoxNewUsername.TabIndex = 5;
@@ -498,10 +498,11 @@
             this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.guna2GradientPanel4);
             this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.GTextBoxUsernameRemoveSectionUser);
             this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.guna2GradientPanel5);
-            this.GPnaelInformationUserNotEnableReoveSection.Location = new System.Drawing.Point(607, 3);
+            this.GPnaelInformationUserNotEnableReoveSection.Location = new System.Drawing.Point(25, 443);
             this.GPnaelInformationUserNotEnableReoveSection.Name = "GPnaelInformationUserNotEnableReoveSection";
             this.GPnaelInformationUserNotEnableReoveSection.Size = new System.Drawing.Size(663, 312);
             this.GPnaelInformationUserNotEnableReoveSection.TabIndex = 21;
+            this.GPnaelInformationUserNotEnableReoveSection.Visible = false;
             // 
             // GTextBoxPasswordRemoveSectionUser
             // 

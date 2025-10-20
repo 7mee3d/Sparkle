@@ -53,6 +53,10 @@ namespace Sparkle.User_Controls_Sparkle
                             if (GTB == GTextBoxUsername)
                             {
                                 GTB.Enabled = true;
+                            }else if (GTB == GTextBoxNewUsername)
+                            {
+                                GTB.Enabled = false;
+
                             }
                             else
                             {
@@ -273,9 +277,9 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 if (username == infoUser.stUsername)
                 {
-                    infoUser.stUsername = GTextBoxNewUsername.Text;
-                    if (isFoundTheUsernameInSystemSparkle(infoUser.stUsername)) return false;
-                    else 
+                   GTextBoxNewUsername.Text = infoUser.stUsername ;
+                   // if (isFoundTheUsernameInSystemSparkle(infoUser.stUsername)) return false;
+                 //   else 
                         infoUser.stPassword = EncryptPassword (GTextBoxNewPasswordUsername.Text , keyCrypt: _KEY_CRYPT) ;
 
                     if (GRadioButtonLockAccount.Checked)
@@ -404,6 +408,7 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked)
                 {
+                    GTextBoxNewUsername.Text = Username;
                     string statusAccount = isAccountLock(Username);
                     LabelStatusAccountLockOrUnLock.Text = $"The Account is [{statusAccount}] , Is he change status Account ?";
                     EnabelAllTextBoxiesInPanel(true);
