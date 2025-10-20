@@ -71,6 +71,12 @@
             this.notifyIconFoundOrder = new System.Windows.Forms.NotifyIcon(this.components);
             this.GPictureBoxCarpetGIF = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GPictureBoxCarGIF = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPanelNumberOrdersCarpetSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNumberOrdersCarpet = new System.Windows.Forms.Label();
+            this.GPictureBoxUserPanelNumebrUser = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPanelNumberOrdersCar = new Guna.UI2.WinForms.Guna2Panel();
+            this.LabelNumberOrdersCar = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewAllOrdersCarpet.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -80,6 +86,10 @@
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).BeginInit();
+            this.GPanelNumberOrdersCarpetSparkle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxUserPanelNumebrUser)).BeginInit();
+            this.GPanelNumberOrdersCar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -508,11 +518,85 @@
             this.GPictureBoxCarGIF.TabStop = false;
             this.GPictureBoxCarGIF.Visible = false;
             // 
+            // GPanelNumberOrdersCarpetSparkle
+            // 
+            this.GPanelNumberOrdersCarpetSparkle.BorderRadius = 10;
+            this.GPanelNumberOrdersCarpetSparkle.Controls.Add(this.LblNumberOrdersCarpet);
+            this.GPanelNumberOrdersCarpetSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
+            this.GPanelNumberOrdersCarpetSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GPanelNumberOrdersCarpetSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.GPanelNumberOrdersCarpetSparkle.Location = new System.Drawing.Point(25, 179);
+            this.GPanelNumberOrdersCarpetSparkle.Name = "GPanelNumberOrdersCarpetSparkle";
+            this.GPanelNumberOrdersCarpetSparkle.Size = new System.Drawing.Size(167, 81);
+            this.GPanelNumberOrdersCarpetSparkle.TabIndex = 21;
+            this.GPanelNumberOrdersCarpetSparkle.Visible = false;
+            // 
+            // LblNumberOrdersCarpet
+            // 
+            this.LblNumberOrdersCarpet.AutoSize = true;
+            this.LblNumberOrdersCarpet.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumberOrdersCarpet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.LblNumberOrdersCarpet.Location = new System.Drawing.Point(103, 40);
+            this.LblNumberOrdersCarpet.Name = "LblNumberOrdersCarpet";
+            this.LblNumberOrdersCarpet.Size = new System.Drawing.Size(19, 21);
+            this.LblNumberOrdersCarpet.TabIndex = 5;
+            this.LblNumberOrdersCarpet.Text = "0";
+            // 
+            // GPictureBoxUserPanelNumebrUser
+            // 
+            this.GPictureBoxUserPanelNumebrUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GPictureBoxUserPanelNumebrUser.Image = global::Sparkle.Properties.Resources.Order_Icon_;
+            this.GPictureBoxUserPanelNumebrUser.ImageRotate = 0F;
+            this.GPictureBoxUserPanelNumebrUser.Location = new System.Drawing.Point(15, 22);
+            this.GPictureBoxUserPanelNumebrUser.Name = "GPictureBoxUserPanelNumebrUser";
+            this.GPictureBoxUserPanelNumebrUser.Size = new System.Drawing.Size(54, 54);
+            this.GPictureBoxUserPanelNumebrUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
+            this.GPictureBoxUserPanelNumebrUser.TabStop = false;
+            // 
+            // GPanelNumberOrdersCar
+            // 
+            this.GPanelNumberOrdersCar.BorderRadius = 10;
+            this.GPanelNumberOrdersCar.Controls.Add(this.LabelNumberOrdersCar);
+            this.GPanelNumberOrdersCar.Controls.Add(this.guna2PictureBox1);
+            this.GPanelNumberOrdersCar.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GPanelNumberOrdersCar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.GPanelNumberOrdersCar.Location = new System.Drawing.Point(25, 179);
+            this.GPanelNumberOrdersCar.Name = "GPanelNumberOrdersCar";
+            this.GPanelNumberOrdersCar.Size = new System.Drawing.Size(167, 81);
+            this.GPanelNumberOrdersCar.TabIndex = 22;
+            this.GPanelNumberOrdersCar.Visible = false;
+            // 
+            // LabelNumberOrdersCar
+            // 
+            this.LabelNumberOrdersCar.AutoSize = true;
+            this.LabelNumberOrdersCar.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelNumberOrdersCar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.LabelNumberOrdersCar.Location = new System.Drawing.Point(103, 40);
+            this.LabelNumberOrdersCar.Name = "LabelNumberOrdersCar";
+            this.LabelNumberOrdersCar.Size = new System.Drawing.Size(19, 21);
+            this.LabelNumberOrdersCar.TabIndex = 5;
+            this.LabelNumberOrdersCar.Text = "0";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.Order_Icon_;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 22);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(54, 54);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // UserControlShowAllOrdersCarAndCarpet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.GPanelNumberOrdersCar);
+            this.Controls.Add(this.GPanelNumberOrdersCarpetSparkle);
             this.Controls.Add(this.PanelMainListViewAllOrdersCar);
             this.Controls.Add(this.GCPanelChoiceSectionToViewOrdersCarOrCarpet);
             this.Controls.Add(this.PanelMainListViewAllOrdersCarpet);
@@ -532,6 +616,12 @@
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).EndInit();
+            this.GPanelNumberOrdersCarpetSparkle.ResumeLayout(false);
+            this.GPanelNumberOrdersCarpetSparkle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxUserPanelNumebrUser)).EndInit();
+            this.GPanelNumberOrdersCar.ResumeLayout(false);
+            this.GPanelNumberOrdersCar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,5 +669,11 @@
         private System.Windows.Forms.NotifyIcon notifyIconFoundOrder;
         private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarpetGIF;
         private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxCarGIF;
+        private Guna.UI2.WinForms.Guna2Panel GPanelNumberOrdersCarpetSparkle;
+        private System.Windows.Forms.Label LblNumberOrdersCarpet;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxUserPanelNumebrUser;
+        private Guna.UI2.WinForms.Guna2Panel GPanelNumberOrdersCar;
+        private System.Windows.Forms.Label LabelNumberOrdersCar;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

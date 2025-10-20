@@ -438,6 +438,9 @@ namespace Sparkle.User_Controls_Sparkle
                 PanelMainListViewAllOrdersCar.Visible = false;
                 GPictureBoxCarpetGIF.Visible = true;
                 GPictureBoxCarGIF.Visible = false;
+                GPanelNumberOrdersCarpetSparkle.Visible = true; 
+                GPanelNumberOrdersCar.Visible = false;
+                LblNumberOrdersCarpet.Text = numberOrdersCarpetSection().ToString();
             }
         }
 
@@ -449,6 +452,9 @@ namespace Sparkle.User_Controls_Sparkle
                 PanelMainListViewAllOrdersCar.Visible = true;
                 GPictureBoxCarpetGIF.Visible = false;
                 GPictureBoxCarGIF.Visible = true;
+                GPanelNumberOrdersCarpetSparkle.Visible = false;
+                GPanelNumberOrdersCar.Visible = true;
+                LabelNumberOrdersCar.Text = numberOrdersCarSection().ToString();
             }
         }
 
@@ -545,8 +551,14 @@ namespace Sparkle.User_Controls_Sparkle
             resetBackColorAndForeColorInListView(ListViewAllOrdersCar);
         }
 
-
-
+        private int numberOrdersCarpetSection()
+        {
+            return (ListViewAllOrdersCarpet.Items.Count); 
+        }
+        private int numberOrdersCarSection()
+        {
+            return (ListViewAllOrdersCar.Items.Count);
+        }
 
         // ------------------------------------------- [ End Section Controls ] ----------------------------------------------
 
