@@ -147,7 +147,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByID);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 158);
+            this.guna2Panel1.Location = new System.Drawing.Point(713, 175);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(458, 92);
             this.guna2Panel1.TabIndex = 3;

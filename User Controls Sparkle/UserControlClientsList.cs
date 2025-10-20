@@ -217,13 +217,13 @@ namespace Sparkle.User_Controls_Sparkle
             Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
 
             Pen pen = new Pen(WhiteGreen);
-            pen.Width = 3;
+            pen.Width = 4;
             pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
             //Points Line
-            Point p1 = new Point(0, 523);
-            Point p2 = new Point(1200, 523);
+            Point p1 = new Point(0, 290);
+            Point p2 = new Point(1200, 290);
 
             //Draw the Line
             e.Graphics.DrawLine(pen, p1, p2);

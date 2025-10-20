@@ -26,8 +26,7 @@ namespace Sparkle.User_Controls_Sparkle
         public UserControlNewOrderSparkle()
         {
             InitializeComponent();
-            GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
-            GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
+          
             InaitalAfterLoadUserControlNewOrderSetting();
         }
 
@@ -104,6 +103,8 @@ namespace Sparkle.User_Controls_Sparkle
             CorrectProvidorCarSection.Clear();
         }
 
+       
+        //Genaric Method 
         private bool isEmailCorrect (string email)
         {
             return (
@@ -262,6 +263,9 @@ namespace Sparkle.User_Controls_Sparkle
             GTextBoxIDOrderCarpet.Enabled = false;
             GRadioButtonCarpetsSection.Checked = true;
             GTextBoxIDOrderCarSection.Enabled = false;
+
+            GTextBoxIDOrderCarpet.Text = (lastIDOrderInFile() + 1).ToString();
+            GTextBoxIDOrderCarSection.Text = (TakeLastIDOrderCarSection() + 1).ToString();
 
             /*GRadioButtonSizeCarpetSmall.Checked = true;
             GRadioButtonSizeSmallCar.Checked = true;
@@ -1477,7 +1481,7 @@ namespace Sparkle.User_Controls_Sparkle
             lblFinialBill.Font = new Font("Garamond", 40, FontStyle.Bold);
             lblFinialBill.ForeColor = Color.FromArgb(255, 4, 187, 156);
             lblFinialBill.Width = 350;
-            lblFinialBill.Height = 100; 
+            lblFinialBill.Height = 90; 
             lblFinialBill.Top = 55;
             lblFinialBill.Left = 125;
             lblFinialBill.BackColor = Color.Transparent;
@@ -1502,7 +1506,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label ID Order 
             lblResultIDOrder.Text = GTextBoxIDOrderCarpet.Text;
-            lblResultIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultIDOrder.Font = new Font("Garamond", 15, FontStyle.Bold);
             lblResultIDOrder.Top = 150;
             lblResultIDOrder.Left = 130;
             lblResultIDOrder.Width = 50;
@@ -1534,10 +1538,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Name Client 
             lblResultNameClient.Text = GTextBoxNameClientSectionCarpet.Text;
-            lblResultNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNameClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultNameClient.Top = 210;
             lblResultNameClient.Left = 160;
-            lblResultNameClient.Width = 150;
+            lblResultNameClient.Width = 300;
             lblResultNameClient.BackColor = Color.Transparent;
             lblResultNameClient.Height = 40;
 
@@ -1566,10 +1570,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Address Client 
             lblResultAddressClient.Text = GTextBoxAddressClientSectionCarpet.Text;
-            lblResultAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultAddressClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultAddressClient.Top = 270;
             lblResultAddressClient.Left = 170;
-            lblResultAddressClient.Width = 200;
+            lblResultAddressClient.Width = 300;
             lblResultAddressClient.BackColor = Color.Transparent;
             lblResultAddressClient.Height = 40;
 
@@ -1595,10 +1599,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Email Client 
             lblResultEmailClient.Text = GTextBoxEmailClientSectionCarpet.Text;
-            lblResultEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultEmailClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultEmailClient.Top = 330;
             lblResultEmailClient.Left = 160;
-            lblResultEmailClient.Width = 200;
+            lblResultEmailClient.Width = 350;
             lblResultEmailClient.BackColor = Color.Transparent;
             lblResultEmailClient.Height = 40;
 
@@ -1625,10 +1629,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Phone Client 
             lblResultPhoneClient.Text = GTextBoxPhoneClientSectionCarpet.Text;
-            lblResultPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultPhoneClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultPhoneClient.Top = 390;
             lblResultPhoneClient.Left = 160;
-            lblResultPhoneClient.Width = 100;
+            lblResultPhoneClient.Width = 150;
             lblResultPhoneClient.BackColor = Color.Transparent;
             lblResultPhoneClient.Height = 40;
 
@@ -1659,10 +1663,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Size Carpet
             lblResultSizeCarpet.Text = returnWordSizeCarpt();
-            lblResultSizeCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultSizeCarpet.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultSizeCarpet.Top = 450;
             lblResultSizeCarpet.Left = 160;
-            lblResultSizeCarpet.Width = 60;
+            lblResultSizeCarpet.Width = 100;
             lblResultSizeCarpet.BackColor = Color.Transparent;
             lblResultSizeCarpet.Height = 40;
 
@@ -1693,7 +1697,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Type Wash Carpet
             lblResultTypeWashCarpet.Text = returnWordTypeWash();
-            lblResultTypeWashCarpet.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultTypeWashCarpet.Font = new Font("Garamond", 13, FontStyle.Bold);
             lblResultTypeWashCarpet.Top = 510;
             lblResultTypeWashCarpet.Left = 155;
             lblResultTypeWashCarpet.Width = 160;
@@ -1774,14 +1778,13 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
     
-        private void ButtonOrderNowNewForm()
+        private void orderNowFinialBillForm()
         {
-
             //setLabelsOrderCarpetSection();
             frmConfirmAddOrderSection = new Form();
             setTitleAndSizeAndLocationFormSectionCarpet(frmConfirmAddOrderSection);
 
-            
+
             Guna2GradientButton G2B = new Guna2GradientButton();
 
             ChangePropertiesButtons(G2B);
@@ -1797,9 +1800,11 @@ namespace Sparkle.User_Controls_Sparkle
             };
 
             frmConfirmAddOrderSection.ShowDialog();
+        }
 
-
-
+        private void ButtonOrderNowNewForm()
+        {
+            orderNowFinialBillForm();
         }
 
 
@@ -1896,10 +1901,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Number Car
             lblResultNumberCar.Text = GTextBoxNumberCar.Text;
-            lblResultNumberCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNumberCar.Font = new Font("Garamond", 13, FontStyle.Bold);
             lblResultNumberCar.Top = 190;
             lblResultNumberCar.Left = 160;
-            lblResultNumberCar.Width = 150;
+            lblResultNumberCar.Width = 200;
 
             lblResultNumberCar.Height = 20;
 
@@ -1928,10 +1933,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Model Car
             lblResultModelCar.Text = GTextBoxCarModel.Text;
-            lblResultModelCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultModelCar.Font = new Font("Garamond", 13, FontStyle.Bold);
             lblResultModelCar.Top = 230;
             lblResultModelCar.Left = 160;
-            lblResultModelCar.Width = 150;
+            lblResultModelCar.Width = 300;
             lblResultModelCar.BackColor = Color.Transparent;
             lblResultModelCar.Height = 40;
 
@@ -1958,10 +1963,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Name Client 
             lblResultNameClient.Text = GTextBoxNameClientCarSection.Text;
-            lblResultNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultNameClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultNameClient.Top = 270;
             lblResultNameClient.Left = 160;
-            lblResultNameClient.Width = 150;
+            lblResultNameClient.Width = 300;
             lblResultNameClient.BackColor = Color.Transparent;
             lblResultNameClient.Height = 40;
 
@@ -1988,10 +1993,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Address Client 
             lblResultAddressClient.Text = GTextBoxAddressClientCarSection.Text;
-            lblResultAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultAddressClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultAddressClient.Top = 310;
             lblResultAddressClient.Left = 170;
-            lblResultAddressClient.Width = 200;
+            lblResultAddressClient.Width = 300;
             lblResultAddressClient.BackColor = Color.Transparent;
             lblResultAddressClient.Height = 40;
 
@@ -2018,10 +2023,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Email Client 
             lblResultEmailClient.Text = GTextBoxEmailClientCarSection.Text;
-            lblResultEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultEmailClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultEmailClient.Top = 350;
             lblResultEmailClient.Left = 160;
-            lblResultEmailClient.Width = 200;
+            lblResultEmailClient.Width = 300;
             lblResultEmailClient.BackColor = Color.Transparent;
             lblResultEmailClient.Height = 40;
 
@@ -2048,10 +2053,10 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Phone Client 
             lblResultPhoneClient.Text = GTextBoxPhoneClientCarSection.Text;
-            lblResultPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultPhoneClient.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultPhoneClient.Top = 390;
             lblResultPhoneClient.Left = 160;
-            lblResultPhoneClient.Width = 100;
+            lblResultPhoneClient.Width = 250;
             lblResultPhoneClient.BackColor = Color.Transparent;
             lblResultPhoneClient.Height = 40;
 
@@ -2082,7 +2087,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Size Carpet
             lblResultSizeCar.Text = returnWordSizeCar();
-            lblResultSizeCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultSizeCar.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultSizeCar.Top = 430;
             lblResultSizeCar.Left = 160;
             lblResultSizeCar.Width = 150;
@@ -2115,7 +2120,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             // Result Label Type Wash Carpet
             lblResultTypeWashCar.Text = returnTypeWashCarWord();
-            lblResultTypeWashCar.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblResultTypeWashCar.Font = new Font("Garamond", 12, FontStyle.Bold);
             lblResultTypeWashCar.Top = 470;
             lblResultTypeWashCar.Left = 120;
             lblResultTypeWashCar.Width = 100;

@@ -53,7 +53,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByUsername);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchUsersList);
-            this.guna2Panel1.Location = new System.Drawing.Point(738, 244);
+            this.guna2Panel1.Location = new System.Drawing.Point(713, 175);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(454, 94);
             this.guna2Panel1.TabIndex = 6;
@@ -106,9 +106,9 @@
             // PanelMainListViewClientsList
             // 
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewUsersLists);
-            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 365);
+            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 291);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 444);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 500);
             this.PanelMainListViewClientsList.TabIndex = 5;
             // 
             // ListViewUsersLists
@@ -122,13 +122,14 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 3);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 8);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
-            this.ListViewUsersLists.Size = new System.Drawing.Size(1195, 441);
+            this.ListViewUsersLists.Size = new System.Drawing.Size(1192, 510);
             this.ListViewUsersLists.TabIndex = 0;
             this.ListViewUsersLists.UseCompatibleStateImageBehavior = false;
             this.ListViewUsersLists.View = System.Windows.Forms.View.Details;
+            this.ListViewUsersLists.SelectedIndexChanged += new System.EventHandler(this.ListViewUsersLists_SelectedIndexChanged);
             // 
             // ColumnUsername
             // 
@@ -183,7 +184,7 @@
             this.GPanelNumberUsernSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberUsernSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberUsernSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(25, 251);
+            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(25, 204);
             this.GPanelNumberUsernSparkle.Name = "GPanelNumberUsernSparkle";
             this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(206, 81);
             this.GPanelNumberUsernSparkle.TabIndex = 7;

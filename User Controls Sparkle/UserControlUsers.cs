@@ -26,6 +26,7 @@ namespace Sparkle.User_Controls_Sparkle
             public int stNumberAttempt;
 
         }
+
         private string ConvertListSplitInformationUserToLine(List <string> informationUser , string Separator = "||")
         {
             string lineInformationUser = "";

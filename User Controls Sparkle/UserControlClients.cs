@@ -290,13 +290,19 @@ namespace Sparkle.User_Controls_Sparkle
 
         private int getLastIDClientInList()
         {
+
+            int lastIDClient = 0; 
+
             List<string> infromationClientsLines = LoadAllLineInformationClientFromFile();
             List<string> LastLineInformation = new List<string>();
-            LastLineInformation.AddRange(SplitLineInformationOneClinet(infromationClientsLines[infromationClientsLines.Count - 1]));
 
-            int lastIDClient = Convert.ToInt32(LastLineInformation[0]);
+            if (infromationClientsLines.Count > 0)
+            {
+                LastLineInformation.AddRange(SplitLineInformationOneClinet(infromationClientsLines[infromationClientsLines.Count - 1]));
+                lastIDClient = Convert.ToInt32(LastLineInformation[0]);
+            }
 
-            return lastIDClient;
+                return lastIDClient;
         }
 
         private void GTextBoxNameClient_Validating(object sender, CancelEventArgs e)

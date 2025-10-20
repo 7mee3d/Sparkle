@@ -172,7 +172,7 @@ namespace Sparkle
             {
                 if (areEqualSideStringCompare(informationAllUsers[counter].stUsername, username))
                 {
-                    if(areEqualSideStringCompare(informationAllUsers[counter].stPassword, password))
+                    if(areEqualSideStringCompare(informationAllUsers[counter].stPassword , password))
                     {
                         if(informationAllUsers[counter].numberAttempt > 0)
                         {
