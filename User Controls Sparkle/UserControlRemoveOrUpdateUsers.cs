@@ -17,6 +17,8 @@ namespace Sparkle.User_Controls_Sparkle
     {
         //File Path
         const string _kPATH_FILE_USER = "UsersInformation.txt";
+        private const int _KEY_CRYPT = 2;
+
 
         //Information One User 
         class stInformationUser
@@ -32,9 +34,10 @@ namespace Sparkle.User_Controls_Sparkle
 
 
         }
-       
+
+
         // ------------------------ [ Start Genaric Method ] ----------------------
-       
+
         private void EnabelAllTextBoxiesInPanel (bool flagEnableAllTextBoxiesOrNot = true)
         {
 
@@ -66,7 +69,12 @@ namespace Sparkle.User_Controls_Sparkle
             GRadioButtonNone.Checked = true;
             GTextBoxNewUsername.Clear();
             GTextBoxNewPasswordUsername.Clear();
- 
+            GRadioButtonLockAccount.Checked = false;
+            GRadioButtonUnLockAccount.Checked = false;
+            GTextBoxUsername.Clear();
+            EnabelAllTextBoxiesInPanel(false);
+            LabelStatusAccountLockOrUnLock.Text = "";
+
         }
        
         public UserControlRemoveOrUpdateUsers()
@@ -74,6 +82,21 @@ namespace Sparkle.User_Controls_Sparkle
             InitializeComponent();
             EnabelAllTextBoxiesInPanel(false);
             GRadioButtonNone.Checked = true;
+        }
+
+
+        private string EncryptPassword(string password, int keyCrypt)
+        {
+            string passwordAfterEncrypt = "";
+
+            foreach (char Character in password)
+            {
+                int ASCIICharacter = Convert.ToInt32(Character);
+                int resultAfterEncryptPassword = ASCIICharacter + keyCrypt;
+                passwordAfterEncrypt += Convert.ToChar(resultAfterEncryptPassword);
+            }
+
+            return passwordAfterEncrypt;
         }
 
 
@@ -253,9 +276,14 @@ namespace Sparkle.User_Controls_Sparkle
                     infoUser.stUsername = GTextBoxNewUsername.Text;
                     if (isFoundTheUsernameInSystemSparkle(infoUser.stUsername)) return false;
                     else 
-                        infoUser.stPassword = GTextBoxNewPasswordUsername.Text; 
+                        infoUser.stPassword = EncryptPassword (GTextBoxNewPasswordUsername.Text , keyCrypt: _KEY_CRYPT) ;
 
-                    SaveAllInformationUsersStructureToFile(allInfroamtionUserStruct);
+                    if (GRadioButtonLockAccount.Checked)
+                        infoUser.stNumberAttempt = 0;
+                    else
+                        infoUser.stNumberAttempt = 3; 
+
+                        SaveAllInformationUsersStructureToFile(allInfroamtionUserStruct);
                     return true;
                 }
             }
@@ -316,6 +344,29 @@ namespace Sparkle.User_Controls_Sparkle
             ClearAllTextBoxiesAndModes();
         }
 
+        private string isAccountLock (string username )
+        {
+            List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
+
+            foreach (stInformationUser infoUser in allInfroamtionUserStruct)
+            {
+                if (username == infoUser.stUsername)
+                {
+                    if (infoUser.stNumberAttempt > 0) { 
+                        GRadioButtonUnLockAccount.Checked = true;
+                        return "UnLock";
+                    }
+                    else
+                    {
+                        GRadioButtonLockAccount.Checked = true;
+                        return "Lock";
+
+                    }
+                }
+            }
+            return "None";
+       
+        }
         private void UpdateInformationUser(string username) {
       
             if (GRadioButtonNone.Checked)
@@ -330,9 +381,13 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 if (MessageBox.Show($"Are you sure you want to Update this This User [{username}] Information?", "Confirm Update Username", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
                 {
+
                     if (ModifyInformationUser(username))
-                       // notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
-                      MessageBox.Show("The Update was successful.", "Note Update Information User" , MessageBoxButtons.OK);
+                    {
+                        // notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, "Notification Update Information Client", "This Client Information has been successfully Updated .If you would like to view the Updated information, click on the notification.", ToolTipIcon.Info);
+                        MessageBox.Show("The Update was successful.", "Note Update Information User", MessageBoxButtons.OK);
+                   
+                    }
                     else
                         MessageBox.Show($"Sorry This New Username is Exsits or Not Found This username in the Sparkle System !", "Error Update User Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -349,6 +404,8 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked)
                 {
+                    string statusAccount = isAccountLock(Username);
+                    LabelStatusAccountLockOrUnLock.Text = $"The Account is [{statusAccount}] , Is he change status Account ?";
                     EnabelAllTextBoxiesInPanel(true);
                 }
                 else EnabelAllTextBoxiesInPanel(false);
@@ -435,8 +492,8 @@ namespace Sparkle.User_Controls_Sparkle
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
-       
-        
+
+
         // ------------------------ [ End Draw Section  ] ----------------------
 
     }
