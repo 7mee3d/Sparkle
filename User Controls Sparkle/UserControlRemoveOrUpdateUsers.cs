@@ -58,7 +58,14 @@ namespace Sparkle.User_Controls_Sparkle
                                 GTB.Enabled = false;
 
                             }
-                            else
+                        
+                        else if (GTB == GTextBoxNewPasswordUsername)
+                        {
+                            GTB.Enabled = false;
+
+                        }
+
+                        else
                             {
                                 GTB.Enabled = flagEnableAllTextBoxiesOrNot;
                             }
@@ -213,6 +220,19 @@ namespace Sparkle.User_Controls_Sparkle
 
         // ------------------------ [ Start [ Remove - Update - Search Method ] ] ----------------------
 
+        private bool chnagePasswordOrNot ()
+        {
+            if(GRadioButtonChangePassword.Checked )
+            {
+                GTextBoxNewPasswordUsername.Enabled = true;
+                return true; 
+            }else
+            {
+                GTextBoxNewPasswordUsername.Enabled = false;
+                return false;
+
+            }
+        }
         private bool isFoundTheUsernameInSystemSparkle (string username )
         {
             List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
@@ -273,14 +293,17 @@ namespace Sparkle.User_Controls_Sparkle
         {
             List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
 
+            string lastPassword = "";
             foreach (stInformationUser infoUser in allInfroamtionUserStruct)
             {
                 if (username == infoUser.stUsername)
                 {
+                    lastPassword = infoUser.stPassword;
                    GTextBoxNewUsername.Text = infoUser.stUsername ;
-                   // if (isFoundTheUsernameInSystemSparkle(infoUser.stUsername)) return false;
-                 //   else 
-                        infoUser.stPassword = EncryptPassword (GTextBoxNewPasswordUsername.Text , keyCrypt: _KEY_CRYPT) ;
+                    if (chnagePasswordOrNot())
+                        infoUser.stPassword = EncryptPassword(GTextBoxNewPasswordUsername.Text, keyCrypt: _KEY_CRYPT);
+                    else
+                        infoUser.stPassword = lastPassword; 
 
                     if (GRadioButtonLockAccount.Checked)
                         infoUser.stNumberAttempt = 0;
@@ -497,6 +520,19 @@ namespace Sparkle.User_Controls_Sparkle
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
+
+       
+
+        private void changeStateRadioButtonChangePassword(object sender, EventArgs e)
+        {
+            if (GRadioButtonChangePassword.Checked)
+                GTextBoxNewPasswordUsername.Enabled = true;
+          
+            if(GRadioButtonUnChangePassword.Checked)
+                GTextBoxNewPasswordUsername.Enabled = false;
+
+        }
+
 
 
         // ------------------------ [ End Draw Section  ] ----------------------

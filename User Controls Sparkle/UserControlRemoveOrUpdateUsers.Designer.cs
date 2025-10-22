@@ -40,6 +40,8 @@
             this.GButtonSearchUsername = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonRemoveUser = new Guna.UI2.WinForms.Guna2Button();
             this.GPanelFillInformationUsernameToUpdate = new Guna.UI2.WinForms.Guna2Panel();
+            this.GRadioButtonChangePassword = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.GRadioButtonUnChangePassword = new Guna.UI2.WinForms.Guna2RadioButton();
             this.LabelStatusAccountLockOrUnLock = new System.Windows.Forms.Label();
             this.GRadioButtonLockAccount = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonUnLockAccount = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -61,6 +63,10 @@
             this.GTextBoxUsernameRemoveSectionUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientPanel8 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.GPanelUsernameTextBoxAndRadioButton.SuspendLayout();
             this.guna2GradientPanel6.SuspendLayout();
             this.GPnaelButtonsRemoveUpdateSearch.SuspendLayout();
@@ -73,6 +79,9 @@
             this.GPnaelInformationUserNotEnableReoveSection.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2GradientPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // GPanelUsernameTextBoxAndRadioButton
@@ -282,9 +291,10 @@
             // 
             // GPanelFillInformationUsernameToUpdate
             // 
+            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel8);
+            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2Panel2);
+            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2Panel1);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.LabelStatusAccountLockOrUnLock);
-            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GRadioButtonLockAccount);
-            this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GRadioButtonUnLockAccount);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel7);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.GTextBoxNewPasswordUsername);
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel3);
@@ -292,16 +302,58 @@
             this.GPanelFillInformationUsernameToUpdate.Controls.Add(this.guna2GradientPanel2);
             this.GPanelFillInformationUsernameToUpdate.Location = new System.Drawing.Point(25, 443);
             this.GPanelFillInformationUsernameToUpdate.Name = "GPanelFillInformationUsernameToUpdate";
-            this.GPanelFillInformationUsernameToUpdate.Size = new System.Drawing.Size(663, 312);
+            this.GPanelFillInformationUsernameToUpdate.Size = new System.Drawing.Size(663, 366);
             this.GPanelFillInformationUsernameToUpdate.TabIndex = 18;
             this.GPanelFillInformationUsernameToUpdate.Visible = false;
+            // 
+            // GRadioButtonChangePassword
+            // 
+            this.GRadioButtonChangePassword.AutoSize = true;
+            this.GRadioButtonChangePassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonChangePassword.CheckedState.BorderThickness = 0;
+            this.GRadioButtonChangePassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GRadioButtonChangePassword.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonChangePassword.CheckedState.InnerOffset = -4;
+            this.GRadioButtonChangePassword.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GRadioButtonChangePassword.Location = new System.Drawing.Point(175, 10);
+            this.GRadioButtonChangePassword.Name = "GRadioButtonChangePassword";
+            this.GRadioButtonChangePassword.Size = new System.Drawing.Size(137, 22);
+            this.GRadioButtonChangePassword.TabIndex = 21;
+            this.GRadioButtonChangePassword.Text = "Change Password";
+            this.GRadioButtonChangePassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonChangePassword.UncheckedState.BorderThickness = 2;
+            this.GRadioButtonChangePassword.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonChangePassword.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonChangePassword.CheckedChanged += new System.EventHandler(this.changeStateRadioButtonChangePassword);
+            // 
+            // GRadioButtonUnChangePassword
+            // 
+            this.GRadioButtonUnChangePassword.AutoSize = true;
+            this.GRadioButtonUnChangePassword.Checked = true;
+            this.GRadioButtonUnChangePassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonUnChangePassword.CheckedState.BorderThickness = 0;
+            this.GRadioButtonUnChangePassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GRadioButtonUnChangePassword.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.GRadioButtonUnChangePassword.CheckedState.InnerOffset = -4;
+            this.GRadioButtonUnChangePassword.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GRadioButtonUnChangePassword.Location = new System.Drawing.Point(8, 10);
+            this.GRadioButtonUnChangePassword.Name = "GRadioButtonUnChangePassword";
+            this.GRadioButtonUnChangePassword.Size = new System.Drawing.Size(156, 22);
+            this.GRadioButtonUnChangePassword.TabIndex = 22;
+            this.GRadioButtonUnChangePassword.TabStop = true;
+            this.GRadioButtonUnChangePassword.Text = "UnChange Password";
+            this.GRadioButtonUnChangePassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonUnChangePassword.UncheckedState.BorderThickness = 2;
+            this.GRadioButtonUnChangePassword.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonUnChangePassword.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonUnChangePassword.CheckedChanged += new System.EventHandler(this.changeStateRadioButtonChangePassword);
             // 
             // LabelStatusAccountLockOrUnLock
             // 
             this.LabelStatusAccountLockOrUnLock.AutoSize = true;
             this.LabelStatusAccountLockOrUnLock.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelStatusAccountLockOrUnLock.ForeColor = System.Drawing.Color.Red;
-            this.LabelStatusAccountLockOrUnLock.Location = new System.Drawing.Point(222, 289);
+            this.LabelStatusAccountLockOrUnLock.Location = new System.Drawing.Point(209, 337);
             this.LabelStatusAccountLockOrUnLock.Name = "LabelStatusAccountLockOrUnLock";
             this.LabelStatusAccountLockOrUnLock.Size = new System.Drawing.Size(0, 17);
             this.LabelStatusAccountLockOrUnLock.TabIndex = 20;
@@ -315,7 +367,7 @@
             this.GRadioButtonLockAccount.CheckedState.InnerColor = System.Drawing.Color.White;
             this.GRadioButtonLockAccount.CheckedState.InnerOffset = -4;
             this.GRadioButtonLockAccount.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonLockAccount.Location = new System.Drawing.Point(378, 250);
+            this.GRadioButtonLockAccount.Location = new System.Drawing.Point(186, 11);
             this.GRadioButtonLockAccount.Name = "GRadioButtonLockAccount";
             this.GRadioButtonLockAccount.Size = new System.Drawing.Size(116, 22);
             this.GRadioButtonLockAccount.TabIndex = 18;
@@ -334,7 +386,7 @@
             this.GRadioButtonUnLockAccount.CheckedState.InnerColor = System.Drawing.Color.White;
             this.GRadioButtonUnLockAccount.CheckedState.InnerOffset = -4;
             this.GRadioButtonUnLockAccount.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonUnLockAccount.Location = new System.Drawing.Point(226, 250);
+            this.GRadioButtonUnLockAccount.Location = new System.Drawing.Point(19, 11);
             this.GRadioButtonUnLockAccount.Name = "GRadioButtonUnLockAccount";
             this.GRadioButtonUnLockAccount.Size = new System.Drawing.Size(135, 22);
             this.GRadioButtonUnLockAccount.TabIndex = 19;
@@ -349,7 +401,7 @@
             this.guna2GradientPanel7.BorderRadius = 15;
             this.guna2GradientPanel7.Controls.Add(this.label7);
             this.guna2GradientPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel7.Location = new System.Drawing.Point(49, 239);
+            this.guna2GradientPanel7.Location = new System.Drawing.Point(49, 278);
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel7.TabIndex = 12;
@@ -378,10 +430,11 @@
             this.GTextBoxNewPasswordUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.GTextBoxNewPasswordUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.GTextBoxNewPasswordUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxNewPasswordUsername.Enabled = false;
             this.GTextBoxNewPasswordUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxNewPasswordUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxNewPasswordUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxNewPasswordUsername.Location = new System.Drawing.Point(211, 157);
+            this.GTextBoxNewPasswordUsername.Location = new System.Drawing.Point(211, 212);
             this.GTextBoxNewPasswordUsername.Name = "GTextBoxNewPasswordUsername";
             this.GTextBoxNewPasswordUsername.PlaceholderText = "Enter Here New Password";
             this.GTextBoxNewPasswordUsername.SelectedText = "";
@@ -394,7 +447,7 @@
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.label3);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(49, 156);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(49, 212);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel3.TabIndex = 7;
@@ -500,7 +553,7 @@
             this.GPnaelInformationUserNotEnableReoveSection.Controls.Add(this.guna2GradientPanel5);
             this.GPnaelInformationUserNotEnableReoveSection.Location = new System.Drawing.Point(25, 443);
             this.GPnaelInformationUserNotEnableReoveSection.Name = "GPnaelInformationUserNotEnableReoveSection";
-            this.GPnaelInformationUserNotEnableReoveSection.Size = new System.Drawing.Size(663, 312);
+            this.GPnaelInformationUserNotEnableReoveSection.Size = new System.Drawing.Size(663, 366);
             this.GPnaelInformationUserNotEnableReoveSection.TabIndex = 21;
             this.GPnaelInformationUserNotEnableReoveSection.Visible = false;
             // 
@@ -596,6 +649,46 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Username";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.GRadioButtonChangePassword);
+            this.guna2Panel1.Controls.Add(this.GRadioButtonUnChangePassword);
+            this.guna2Panel1.Location = new System.Drawing.Point(211, 146);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(321, 43);
+            this.guna2Panel1.TabIndex = 23;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.GRadioButtonLockAccount);
+            this.guna2Panel2.Controls.Add(this.GRadioButtonUnLockAccount);
+            this.guna2Panel2.Location = new System.Drawing.Point(211, 278);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(321, 43);
+            this.guna2Panel2.TabIndex = 24;
+            // 
+            // guna2GradientPanel8
+            // 
+            this.guna2GradientPanel8.BorderRadius = 15;
+            this.guna2GradientPanel8.Controls.Add(this.label8);
+            this.guna2GradientPanel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2GradientPanel8.Location = new System.Drawing.Point(49, 146);
+            this.guna2GradientPanel8.Name = "guna2GradientPanel8";
+            this.guna2GradientPanel8.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel8.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(6, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(143, 21);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Status Password";
+            // 
             // UserControlRemoveOrUpdateUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +723,12 @@
             this.guna2GradientPanel4.PerformLayout();
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2GradientPanel5.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2GradientPanel8.ResumeLayout(false);
+            this.guna2GradientPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -669,5 +768,11 @@
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonLockAccount;
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonUnLockAccount;
         private System.Windows.Forms.Label LabelStatusAccountLockOrUnLock;
+        private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonChangePassword;
+        private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonUnChangePassword;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel8;
+        private System.Windows.Forms.Label label8;
     }
 }
