@@ -220,6 +220,14 @@ namespace Sparkle.User_Controls_Sparkle
 
         // ------------------------ [ Start [ Remove - Update - Search Method ] ] ----------------------
 
+        stInformationUser informationUser = new stInformationUser();
+
+        private void showAllInformationUserBeforeRemove (stInformationUser informationU)
+        {
+            GTextBoxUsernameRemoveSectionUser.Text = informationU.stUsername;
+            GTextBoxPasswordRemoveSectionUser.Text = informationU.stPassword; 
+        }
+
         private bool chnagePasswordOrNot ()
         {
             if(GRadioButtonChangePassword.Checked )
@@ -233,13 +241,17 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
-        private bool isFoundTheUsernameInSystemSparkle (string username )
+     
+        private bool isFoundTheUsernameInSystemSparkle (string username , ref stInformationUser informationUser )
         {
             List<stInformationUser> allInfroamtionUserStruct = LoadAllInformationUsersAfterConvertLinesToDataListStructure();
 
             foreach (stInformationUser infoUser in allInfroamtionUserStruct)
             {
-                if (infoUser.stUsername == username) return true; 
+                if (infoUser.stUsername == username) {
+                    informationUser = infoUser;
+                    return true; 
+                }
             }
 
             return false; 
@@ -251,21 +263,21 @@ namespace Sparkle.User_Controls_Sparkle
             if (GRadioButtonRemoveMode.Checked)
             {
                 GPanelFillInformationUsernameToUpdate.Visible = false;
-                //GPnaelInformationUserNotEnableReoveSection.Visible = true;
+                GPnaelInformationUserNotEnableReoveSection.Visible = true;
 
             }
 
             if (GRadioButtonNone.Checked)
             {
                 GPanelFillInformationUsernameToUpdate.Visible = false;
-                //GPnaelInformationUserNotEnableReoveSection.Visible = false;
+                GPnaelInformationUserNotEnableReoveSection.Visible = false;
 
             }
 
             if (GRadioButtonUpdateMode.Checked)
             {
                 GPanelFillInformationUsernameToUpdate.Visible = true;
-                //GPnaelInformationUserNotEnableReoveSection.Visible = false;
+                GPnaelInformationUserNotEnableReoveSection.Visible = false;
 
             }
 
@@ -349,24 +361,36 @@ namespace Sparkle.User_Controls_Sparkle
             }
             if (GRadioButtonRemoveMode.Checked)
             {
-                if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
-                    //LoadInformationUserToBoxiesBeforeRemove(username);
-                    if (RemoveUsernameInSystemSparkle(username)) {
+                if (GTextBoxUsernameRemoveSectionUser.Text != "")
+                {
+                    if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
+                        if (RemoveUsernameInSystemSparkle(username))
+                        {
 
-                        MessageBox.Show
-                            ($"Successfully Remove This Username [{usernameTemp}] "
-                            , "Remove Username From System Spakle"
-                            , MessageBoxButtons.OK
-                            , MessageBoxIcon.Information);
-                 }
-                else { 
+                            MessageBox.Show
+                                ($"Successfully Remove This Username [{usernameTemp}] "
+                                , "Remove Username From System Spakle"
+                                , MessageBoxButtons.OK
+                                , MessageBoxIcon.Information);
+                        }
+                        else
+                        {
 
-                MessageBox.Show
-                            ($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !"
-                            , "Error Remove User"
-                            , MessageBoxButtons.OK
-                            , MessageBoxIcon.Error);
-                 }
+                            MessageBox.Show
+                                        ($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !"
+                                        , "Error Remove User"
+                                        , MessageBoxButtons.OK
+                                        , MessageBoxIcon.Error);
+                        }
+                }
+                else
+                {
+                    MessageBox.Show
+                                       ($"Warning!! You Must Search The Username To Be Remove , Go Write Username Then Click Search Then Remove Username.."
+                                       , "Error Remove User"
+                                       , MessageBoxButtons.OK
+                                       , MessageBoxIcon.Warning);
+                }
             }
             ClearAllTextBoxiesAndModes();
         }
@@ -394,6 +418,7 @@ namespace Sparkle.User_Controls_Sparkle
             return "None";
        
         }
+   
         private void UpdateInformationUser(string username) {
       
             if (GRadioButtonNone.Checked)
@@ -429,12 +454,15 @@ namespace Sparkle.User_Controls_Sparkle
             string Username = GTextBoxUsername.Text;
             if (!string.IsNullOrEmpty(Username))
             {
-                if (isFoundTheUsernameInSystemSparkle(Username) && GRadioButtonUpdateMode.Checked)
+                if (isFoundTheUsernameInSystemSparkle(Username , ref informationUser ) )
                 {
+                    if(GRadioButtonRemoveMode.Checked)
+                        showAllInformationUserBeforeRemove(informationUser);
+
                     GTextBoxNewUsername.Text = Username;
                     string statusAccount = isAccountLock(Username);
                     LabelStatusAccountLockOrUnLock.Text = $"The Account is [{statusAccount}] , Is he change status Account ?";
-                    EnabelAllTextBoxiesInPanel(true);
+                   
                 }
                 else EnabelAllTextBoxiesInPanel(false);
             }
@@ -449,14 +477,6 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
-
-       /* private void LoadInformationUserToBoxiesBeforeRemove(string username )
-        {
-            
-                GTextBoxUsernameRemoveSectionUser.Text = username;
-                GTextBoxPasswordRemoveSectionUser.Text = isFoundTheUsernameInSystemSparkleReturnPasswordUsername(username);
-           
-        }*/
      
         private void GButtonRemoveUser_Click(object sender, EventArgs e)
         {
@@ -520,9 +540,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
-
-       
-
+    
         private void changeStateRadioButtonChangePassword(object sender, EventArgs e)
         {
             if (GRadioButtonChangePassword.Checked)
