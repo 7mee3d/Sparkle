@@ -183,14 +183,17 @@ namespace Sparkle.User_Controls_Sparkle
             informationOneClient.stPhoneClient = allInformationGetTextBoxInformationClients[3];
 
         }
-
-        private bool isFoundIDClientInSystem(string ID)
+       
+        private bool isFoundIDClientInSystem(string ID , ref stInformationClient infoClient)
         {
             List<stInformationClient> informationAllClientsStructure = LoadAllLinesInformationClientsToListStructure();
 
-            if (!string.IsNullOrEmpty(ID)) { 
-            foreach (stInformationClient infoOneClient in informationAllClientsStructure)
-                if (infoOneClient.stID == ID) return true;
+            if (!string.IsNullOrEmpty(ID)) {
+                foreach (stInformationClient infoOneClient in informationAllClientsStructure)
+                    if (infoOneClient.stID == ID) {
+                        infoClient = infoOneClient; 
+                        return true;
+                    }
         }
             return false;
         }
@@ -232,7 +235,9 @@ namespace Sparkle.User_Controls_Sparkle
             return true; 
 
         }
-      
+
+        stInformationClient informationClient = new stInformationClient();
+
         private bool RemoveClientOfSystemSparkleAndFile(string ID)
         {
             List<stInformationClient> informationAllClientsStructure = LoadAllLinesInformationClientsToListStructure();
@@ -250,27 +255,53 @@ namespace Sparkle.User_Controls_Sparkle
             return false;
         }
 
+        private void showAllInformationClientBeforeRemove(stInformationClient informationClient)
+        {
+            GTextBoxSectionRemoveClientAddress.Text = informationClient.stAddressClient;
+            GTextBoxSectionRemoveClientPhone.Text = informationClient.stPhoneClient;
+            GTextBoxSectionRemoveClientEmail.Text = informationClient.stEmailClient;
+            GTextBoxSectionRemoveClientName.Text = informationClient.stNameClient;
+        }
+
         private bool IsFoundIDClientInSystemSparkleBySearch(string ID)
         {
   
 
             if (!string.IsNullOrEmpty(ID))
             {
-                if (isFoundIDClientInSystem(ID))
+                if (isFoundIDClientInSystem(ID , ref informationClient))
                 {
-                    EnableAllTextBoxOrNot(true);
-                    notifyIconFoundClientInSystemSparkle.ShowBalloonTip(1000, "Search Cleint By ID In Sparkle System", $"This ID [{ID}] is Found In Sparkle System , Now Able To Update and Remove This Client Via By Select The Mode [ Update , Remove ] Client", ToolTipIcon.Info);
+                    if (GRadioButtonRemoveMode.Checked)
+                        showAllInformationClientBeforeRemove(informationClient);
+
+                    if (GRadioButtonUpdateMode.Checked)
+                        EnableAllTextBoxOrNot(true);
+                    
+                    notifyIconFoundClientInSystemSparkle.ShowBalloonTip
+                        (1000,
+                        "Search Cleint By ID In Sparkle System"
+                        , $"This ID [{ID}] is Found In Sparkle System , Now Able To Update and Remove This Client Via By Select The Mode [ Update , Remove ] Client"
+                        , ToolTipIcon.Info);
+
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show($"Warning! This ID Cleint [{ID}] Not Found In Sparkle System , Please Try Enter Aother ID to be Search in system ", "Warning Search By ID ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show
+                        ($"Warning! This ID Cleint [{ID}] Not Found In Sparkle System , Please Try Enter Aother ID to be Search in system "
+                        , "Warning Search By ID "
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Warning);
                     EnableAllTextBoxOrNot(false);
                     
                 }
             }
             else
-                MessageBox.Show("Error! This Box already Empty , Please Enter the ID To Be Search", "Error Search By ID ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ("Error! This Box already Empty , Please Enter the ID To Be Search"
+                    , "Error Search By ID "
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
 
 
             return false;
@@ -282,6 +313,7 @@ namespace Sparkle.User_Controls_Sparkle
             string IDClient = GTextBoxIDClient.Text; 
 
             IsFoundIDClientInSystemSparkleBySearch(ID: IDClient);
+
         }
 
         private void GButtonUpdateClient_Click(object sender, EventArgs e)
@@ -335,31 +367,72 @@ namespace Sparkle.User_Controls_Sparkle
         private void GButtonRemoveClient_Click(object sender, EventArgs e)
         {
             string ID = GTextBoxIDClient.Text;
+
             if(GRadioButtonNone.Checked)
             {
-                MessageBox.Show($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ($"Sorry This None Mode not perform any process [Remove or Update] in system Sparkle !"
+                    , "Error None Mode"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
+
                 ClearAllTextBoxiesAndModes();
                 return; 
             }
             if (GRadioButtonUpdateMode.Checked)
             {
-                MessageBox.Show($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information Client !", "Error None Mode", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show
+                    ($"Sorry This Update Mode not perform This process [Update] in system Sparkle ,Please Switch the Update Mode to Perform Update Information Client !"
+                    , "Error None Mode"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
 
                 ClearAllTextBoxiesAndModes();
                 return;
             }
             if (GRadioButtonRemoveMode.Checked)
             {
-                if (!string.IsNullOrEmpty(ID))
+                if (GTextBoxSectionRemoveClientAddress.Text != "")
                 {
-                    if ((MessageBox.Show($"Are you sure you want to Remove this This Client [{ID}] Information?", "Confirm Remove Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
-                        if (RemoveClientOfSystemSparkleAndFile(ID))
-                            notifyIconRemoveAndUpdateClient.ShowBalloonTip(1500, $"Notification Remove Client This ID [{ID}]", "This Client Information has been successfully Remove in Sparkle System .If you would like to view the Removed This Client, click on the notification.", ToolTipIcon.Info);
-                        else MessageBox.Show($"Sorry This ID [{ID}] Not Found in System Sparkle Try Agian Enter ID Valid !", "Error Remove Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (!string.IsNullOrEmpty(ID))
+                    {
+                        if ((MessageBox.Show
+                            ($"Are you sure you want to Remove this This Client [{ID}] Information?"
+                            , "Confirm Remove Client"
+                            , MessageBoxButtons.OKCancel
+                            , MessageBoxIcon.Exclamation) == DialogResult.OK))
+
+                            if (RemoveClientOfSystemSparkleAndFile(ID))
+                                notifyIconRemoveAndUpdateClient.ShowBalloonTip
+                                    (1500
+                                    , $"Notification Remove Client This ID [{ID}]"
+                                    , "This Client Information has been successfully Remove in Sparkle System .If you would like to view the Removed This Client, click on the notification."
+                                    , ToolTipIcon.Info);
+
+
+                            else MessageBox.Show
+                                    ($"Sorry This ID [{ID}] Not Found in System Sparkle Try Agian Enter ID Valid !"
+                                    , "Error Remove Client"
+                                    , MessageBoxButtons.OK
+                                    , MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show
+                            ("Error! This Box already Empty , Please Enter the ID To Be Search"
+                            , "Error Search By ID "
+                            , MessageBoxButtons.OK
+                            , MessageBoxIcon.Error);
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error! This Box already Empty , Please Enter the ID To Be Search", "Error Search By ID ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show
+                        ("Warning! Must Be Search the Client Bu ID then to be remove the Client"
+                        , "Error Remove By ID "
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Error);
 
                 }
             }
@@ -390,14 +463,25 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 e.Cancel = true;
                 GTextBoxIDClient.Focus();
-                errorProviderCoreectFillTextBox.SetError(GTextBoxIDClient, "");
-                errorProviderRemoveOrUpdate.SetError(GTextBoxIDClient, "Please note that this field is mandatory in order to complete the rest of the operations, such as searching, updating, and deleting. ");
+
+                errorProviderCoreectFillTextBox.SetError
+                    (GTextBoxIDClient
+                    , "");
+
+                errorProviderRemoveOrUpdate.SetError
+                    (GTextBoxIDClient
+                    , "Please note that this field is mandatory in order to complete the rest of the operations, such as searching, updating, and deleting. ");
             }
             else
             {
                 e.Cancel = false;
-                errorProviderRemoveOrUpdate.SetError(GTextBoxIDClient, "");
-                errorProviderCoreectFillTextBox.SetError(GTextBoxIDClient, "Successful");
+                errorProviderRemoveOrUpdate.SetError
+                    (GTextBoxIDClient
+                    , "");
+
+                errorProviderCoreectFillTextBox.SetError
+                    (GTextBoxIDClient
+                    , "Successful");
 
             }
         }
@@ -408,6 +492,7 @@ namespace Sparkle.User_Controls_Sparkle
             {
 
                 GPanelFillInformationClientToUpdate.Visible = false;
+                GPanelInformationClientBeforeRemove.Visible = true; 
 
             }
 
@@ -416,6 +501,7 @@ namespace Sparkle.User_Controls_Sparkle
             {
 
                 GPanelFillInformationClientToUpdate.Visible = false;
+                GPanelInformationClientBeforeRemove.Visible = false;
 
             }
 
@@ -423,6 +509,7 @@ namespace Sparkle.User_Controls_Sparkle
             {
 
                 GPanelFillInformationClientToUpdate.Visible = true;
+                GPanelInformationClientBeforeRemove.Visible = false;
             }
 
         }
