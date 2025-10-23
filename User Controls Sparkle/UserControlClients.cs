@@ -34,6 +34,15 @@ namespace Sparkle.User_Controls_Sparkle
         //Path File
         private const string _kPATH_FILE_CLIENT = "InformationClients.txt";
 
+        private bool theEmailIsCorrect (string Email)
+        {
+            return (
+                   Email.Contains("@gmail.com") ||
+                   Email.Contains("@outlook.com") ||
+                   Email.Contains("@yahoo.com") ||
+                   Email.Contains("@hotmail.com")
+                );
+        }
         private void ResetAllTextBoxToDefault()
         {
 
@@ -232,7 +241,30 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
+        private void setErrorProviderEmail(object sender, CancelEventArgs e, string captionError, string captionCorrect)
+        {
 
+            Guna2TextBox GTB = sender as Guna2TextBox;
+
+            if (string.IsNullOrEmpty(GTB.Text) || !theEmailIsCorrect(GTB.Text))
+            {
+                //Error Provider must included this method
+                e.Cancel = true;
+                GTB.Focus();
+                //MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CorrectProviderAddCleint.SetError(GTB, "");
+                errorProviderFormClients.SetError(GTB, captionError);
+            }
+            else
+            {
+                //Correct Provider must included this method
+                e.Cancel = false;
+                //  MessageBox.Show($"This {captionError} Must Be Fill ", "Note The Add Clients", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProviderFormClients.SetError(GTB, "");
+                CorrectProviderAddCleint.SetError(GTB, captionCorrect);
+            }
+
+        }
         private bool isDigit (char Character)
         {
             return ((Convert.ToInt32(Character) >= 48) && (Convert.ToInt32(Character) <= 57));
@@ -313,7 +345,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GTextBoxEmailClient_Validating(object sender, CancelEventArgs e)
         {
-            setErrorProvider(sender, e, "You must fill in this field to complete the customer addition process.", "Successful");
+            setErrorProviderEmail(sender, e, "You must fill in this field to complete the customer addition process\nOR Have the Email @gmail.com , @outlook.com atc...", "Successful");
 
         }
 

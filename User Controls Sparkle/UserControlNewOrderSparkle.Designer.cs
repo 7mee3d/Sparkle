@@ -195,7 +195,7 @@
             this.GTextBoxPhoneClientSectionCarpet.PlaceholderText = "Enter Here Phone Client";
             this.GTextBoxPhoneClientSectionCarpet.SelectedText = "";
             this.GTextBoxPhoneClientSectionCarpet.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxPhoneClientSectionCarpet.TabIndex = 1;
+            this.GTextBoxPhoneClientSectionCarpet.TabIndex = 2;
             this.GTextBoxPhoneClientSectionCarpet.Tag = "TPhone";
             this.GTextBoxPhoneClientSectionCarpet.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxPhoneClientSectionCarpet_Validating);
             // 
@@ -285,7 +285,7 @@
             this.GTextBoxNameClientSectionCarpet.PlaceholderText = "Enter Here Name Client";
             this.GTextBoxNameClientSectionCarpet.SelectedText = "";
             this.GTextBoxNameClientSectionCarpet.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxNameClientSectionCarpet.TabIndex = 3;
+            this.GTextBoxNameClientSectionCarpet.TabIndex = 1;
             this.GTextBoxNameClientSectionCarpet.Tag = "TName";
             this.GTextBoxNameClientSectionCarpet.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxNameClientSectionCarpet_Validating);
             // 
@@ -309,7 +309,7 @@
             this.GTextBoxOtherSeviceCarpet.PlaceholderText = "Enter Here Capet details";
             this.GTextBoxOtherSeviceCarpet.SelectedText = "";
             this.GTextBoxOtherSeviceCarpet.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxOtherSeviceCarpet.TabIndex = 0;
+            this.GTextBoxOtherSeviceCarpet.TabIndex = 5;
             this.GTextBoxOtherSeviceCarpet.Tag = "TAddress";
             // 
             // guna2GradientPanel7
@@ -354,7 +354,7 @@
             this.GTextBoxEmailClientSectionCarpet.PlaceholderText = "Enter Here Email Client";
             this.GTextBoxEmailClientSectionCarpet.SelectedText = "";
             this.GTextBoxEmailClientSectionCarpet.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxEmailClientSectionCarpet.TabIndex = 2;
+            this.GTextBoxEmailClientSectionCarpet.TabIndex = 3;
             this.GTextBoxEmailClientSectionCarpet.Tag = "TEmail";
             this.GTextBoxEmailClientSectionCarpet.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxEmailClientSectionCarpet_Validating);
             // 
@@ -378,7 +378,7 @@
             this.GTextBoxAddressClientSectionCarpet.PlaceholderText = "Enter Here Address Client";
             this.GTextBoxAddressClientSectionCarpet.SelectedText = "";
             this.GTextBoxAddressClientSectionCarpet.Size = new System.Drawing.Size(353, 43);
-            this.GTextBoxAddressClientSectionCarpet.TabIndex = 0;
+            this.GTextBoxAddressClientSectionCarpet.TabIndex = 4;
             this.GTextBoxAddressClientSectionCarpet.Tag = "TAddress";
             this.GTextBoxAddressClientSectionCarpet.Validating += new System.ComponentModel.CancelEventHandler(this.GTextBoxAddressClientSectionCarpet_Validating);
             // 
@@ -1136,7 +1136,7 @@
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.GTextBoxEmailClientCarSection);
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.GTextBoxAddressClientCarSection);
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.guna2GradientPanel13);
-            this.GPnaelInfroamtionOrderCar.Location = new System.Drawing.Point(24, 361);
+            this.GPnaelInfroamtionOrderCar.Location = new System.Drawing.Point(22, 361);
             this.GPnaelInfroamtionOrderCar.Name = "GPnaelInfroamtionOrderCar";
             this.GPnaelInfroamtionOrderCar.Size = new System.Drawing.Size(560, 401);
             this.GPnaelInfroamtionOrderCar.TabIndex = 16;
