@@ -334,7 +334,7 @@ namespace Sparkle.User_Controls_Sparkle
         private void RemoveUserByUsernameAfterClickRemove(string username)
         {
 
-            string usernameTemp = username; 
+            string usernameTemp = username;
 
             if (GRadioButtonNone.Checked)
             {
@@ -361,27 +361,42 @@ namespace Sparkle.User_Controls_Sparkle
             }
             if (GRadioButtonRemoveMode.Checked)
             {
+
                 if (GTextBoxUsernameRemoveSectionUser.Text != "")
                 {
-                    if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
-                        if (RemoveUsernameInSystemSparkle(username))
-                        {
+                    if (GTextBoxUsernameRemoveSectionUser.Text != "Admin")
+                    {
+                        if ((MessageBox.Show($"Are you sure you want to Remove this User [{username}] Information?", "Confirm Remove User", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK))
+                            if (RemoveUsernameInSystemSparkle(username))
+                            {
 
-                            MessageBox.Show
-                                ($"Successfully Remove This Username [{usernameTemp}] "
-                                , "Remove Username From System Spakle"
-                                , MessageBoxButtons.OK
-                                , MessageBoxIcon.Information);
-                        }
-                        else
-                        {
+                                MessageBox.Show
+                                    ($"Successfully Remove This Username [{usernameTemp}] "
+                                    , "Remove Username From System Spakle"
+                                    , MessageBoxButtons.OK
+                                    , MessageBoxIcon.Information);
+                            }
+                            else
+                            {
 
-                            MessageBox.Show
-                                        ($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !"
-                                        , "Error Remove User"
-                                        , MessageBoxButtons.OK
-                                        , MessageBoxIcon.Error);
-                        }
+                                MessageBox.Show
+                                            ($"Sorry This Username [{username}] Not Found in System Sparkle Try Agian Enter Username Valid !"
+                                            , "Error Remove User"
+                                            , MessageBoxButtons.OK
+                                            , MessageBoxIcon.Error);
+                            }
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show
+                                         ($"Sorry This Username [{username}] Not Remove Becouse This username is Admin all System Connot Be Remove in system !"
+                                         , "Error Remove User"
+                                         , MessageBoxButtons.OK
+                                         , MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else
                 {
@@ -391,8 +406,8 @@ namespace Sparkle.User_Controls_Sparkle
                                        , MessageBoxButtons.OK
                                        , MessageBoxIcon.Warning);
                 }
+                ClearAllTextBoxiesAndModes();
             }
-            ClearAllTextBoxiesAndModes();
         }
 
         private string isAccountLock (string username )
