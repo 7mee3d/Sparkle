@@ -73,6 +73,16 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Access_Denied__Sparkle {
+            get {
+                object obj = ResourceManager.GetObject("Access Denied! Sparkle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_Client {
             get {
                 object obj = ResourceManager.GetObject("add Client", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sparkle.Properties {
         internal static System.Drawing.Bitmap Background_Sparkle_Users {
             get {
                 object obj = ResourceManager.GetObject("Background Sparkle Users", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Illustrative_Cleaning_Service_Magnet_1 {
+            get {
+                object obj = ResourceManager.GetObject("Blue Illustrative Cleaning Service Magnet 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

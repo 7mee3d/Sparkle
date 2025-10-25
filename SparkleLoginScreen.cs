@@ -19,6 +19,7 @@ namespace Sparkle
         public string stUsername;
         public string stPassword;
         public int numberAttempt;
+        public short permission;
 
     }
 
@@ -99,8 +100,11 @@ namespace Sparkle
             informationUserOne.stUsername = InformationUser[0];
             informationUserOne.stPassword = InformationUser[1];
 
-            if (InformationUser.Count > 2)
-                informationUserOne.numberAttempt = Convert.ToInt32(InformationUser[2]);
+            if (InformationUser.Count > 3)
+            {
+                informationUserOne.permission = Convert.ToInt16(InformationUser[2]);
+                informationUserOne.numberAttempt = Convert.ToInt32(InformationUser[3]);
+            }
 
 
             return informationUserOne;
@@ -139,6 +143,7 @@ namespace Sparkle
             string lineInformation = "";
             lineInformation += informationUser.stUsername + separator;
             lineInformation += informationUser.stPassword + separator;
+            lineInformation += informationUser.permission + separator;
             lineInformation += informationUser.numberAttempt.ToString();
 
             return lineInformation;

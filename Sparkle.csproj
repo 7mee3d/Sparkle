@@ -216,6 +216,8 @@
     <None Include="Resources\completed Order.png" />
     <None Include="Resources\Final Bill Sparkle Order.png" />
     <None Include="Resources\Background Image Form Finial Bill Orders .png" />
+    <None Include="Resources\Blue Illustrative Cleaning Service Magnet 1.png" />
+    <None Include="Resources\Access Denied! Sparkle.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

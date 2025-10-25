@@ -148,6 +148,12 @@
   <data name="Final Bill Sparkle Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Final Bill Sparkle Order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background Image Form Finial Bill Orders " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Image Form Finial Bill Orders .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue Illustrative Cleaning Service Magnet 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Illustrative Cleaning Service Magnet 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,7 +223,7 @@
   <data name="client" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background Image Form Finial Bill Orders " type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background Image Form Finial Bill Orders .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Access Denied! Sparkle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Access Denied! Sparkle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
