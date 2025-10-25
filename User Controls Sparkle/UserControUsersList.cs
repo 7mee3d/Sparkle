@@ -39,6 +39,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             public string stUsername;
             public string stPassword;
+            public short stperission; 
             public int stNumberAttempt;
 
         }
@@ -49,6 +50,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             lineInformationUser += informationUser[0] + Separator;
             lineInformationUser += informationUser[1] + Separator;
+            lineInformationUser += Convert.ToString( informationUser[2]) + Separator;
             lineInformationUser += Convert.ToString(3);
 
             return lineInformationUser;
@@ -97,7 +99,9 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 infoOneUser.stUsername = informationAfterSplitLine[0];
                 infoOneUser.stPassword = informationAfterSplitLine[1];
-                infoOneUser.stNumberAttempt = Convert.ToInt32(informationAfterSplitLine[2]);
+                infoOneUser.stperission = Convert.ToInt16(informationAfterSplitLine[2]);
+
+                infoOneUser.stNumberAttempt = Convert.ToInt32(informationAfterSplitLine[3]);
             }
 
             return infoOneUser;
@@ -163,13 +167,19 @@ namespace Sparkle.User_Controls_Sparkle
         private void pushAllInformationUsersToListView ()
         {
             List<stInformationUser> informationAllUsersData = SaveAllInformationUserToListSturcture();
-
+            
             for (int counter = 0; counter < informationAllUsersData.Count; counter++) {
 
-            
+                string statusAccount = "";
                 ListViewItem LVI = new ListViewItem(informationAllUsersData[counter].stUsername);
                 LVI.SubItems.Add(DecreyptPassword (informationAllUsersData[counter].stPassword , 2));
-                
+                if (informationAllUsersData[counter].stNumberAttempt > 0)
+                    statusAccount = "UnLock Account";
+                else
+                    statusAccount = "Lock Account";
+               
+                LVI.SubItems.Add(informationAllUsersData[counter].stperission.ToString());
+                LVI.SubItems.Add(statusAccount);
                 ListViewUsersLists.Items.Add(LVI);
 
                 if (informationAllUsersData[counter].stUsername == "Admin")

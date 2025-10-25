@@ -41,6 +41,8 @@
             this.GPanelNumberUsernSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.LblNumberUser = new System.Windows.Forms.Label();
             this.GPictureBoxUserPanelNumebrUser = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.StatusAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Permissions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewClientsList.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -116,7 +118,9 @@
             this.ListViewUsersLists.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListViewUsersLists.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnUsername,
-            this.ColumnPassword});
+            this.ColumnPassword,
+            this.Permissions,
+            this.StatusAccount});
             this.ListViewUsersLists.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewUsersLists.FullRowSelect = true;
             this.ListViewUsersLists.GridLines = true;
@@ -134,12 +138,12 @@
             // ColumnUsername
             // 
             this.ColumnUsername.Text = "Username";
-            this.ColumnUsername.Width = 600;
+            this.ColumnUsername.Width = 400;
             // 
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 590;
+            this.ColumnPassword.Width = 400;
             // 
             // guna2GradientPanel1
             // 
@@ -212,6 +216,16 @@
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;
             // 
+            // StatusAccount
+            // 
+            this.StatusAccount.Text = "Status Account";
+            this.StatusAccount.Width = 200;
+            // 
+            // Permissions
+            // 
+            this.Permissions.Text = "Permissions User";
+            this.Permissions.Width = 200;
+            // 
             // UserControUsersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,5 +265,7 @@
         private Guna.UI2.WinForms.Guna2Panel GPanelNumberUsernSparkle;
         private System.Windows.Forms.Label LblNumberUser;
         private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxUserPanelNumebrUser;
+        private System.Windows.Forms.ColumnHeader StatusAccount;
+        private System.Windows.Forms.ColumnHeader Permissions;
     }
 }

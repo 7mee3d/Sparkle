@@ -25,6 +25,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             public string stUsername;
             public string stPassword;
+            public short stPermission;
             public int stNumberAttempt;
 
             //Flags 
@@ -146,8 +147,9 @@ namespace Sparkle.User_Controls_Sparkle
 
             informationUserStructure.stUsername = informationOneUserString[0];
             informationUserStructure.stPassword = informationOneUserString[1];
+            informationUserStructure.stPermission = Convert.ToInt16(informationOneUserString[2]);
 
-            informationUserStructure.stNumberAttempt = Convert.ToInt32( informationOneUserString[2]);
+            informationUserStructure.stNumberAttempt = Convert.ToInt32( informationOneUserString[3]);
 
             return informationUserStructure;
 
@@ -188,6 +190,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             lineInformationUser += informationOneUser.stUsername + Separator;
             lineInformationUser += informationOneUser.stPassword + Separator;
+            lineInformationUser += informationOneUser.stPermission + Separator;
             lineInformationUser += informationOneUser.stNumberAttempt;
 
             return lineInformationUser; 
