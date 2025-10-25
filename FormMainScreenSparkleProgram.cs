@@ -24,7 +24,7 @@ namespace Sparkle
             InitializeComponent();
             informationUserAfterLoginSparkle = informationuser;
         }
-
+      
  
         private void addUserControlInThePaenl (UserControl ControlUser )
         {
@@ -32,12 +32,15 @@ namespace Sparkle
             PanelMainWelcomeSparkle.Controls.Clear();
             PanelMainWelcomeSparkle.Controls.Add(ControlUser);
 
-            ControlUser.BringToFront(); 
+           // ControlUser.(); 
 
 
         }
 
-
+        private void timerSparkleSystemLogin_Tick(object sender, EventArgs e)
+        {
+            LabelDateNow.Text = DateTime.Now.ToString();
+        }
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -100,7 +103,18 @@ namespace Sparkle
         private void FormMainScreenSparkleProgram_Load(object sender, EventArgs e)
         {
             //Test The Information Passing form Main Screen from Login 
-            MessageBox.Show($"Welcome [{informationUserAfterLoginSparkle.stUsername}]");
+            // MessageBox.Show($"Welcome [{informationUserAfterLoginSparkle.stUsername}]");
+            LbaelUsernameAfterLogin.Text = informationUserAfterLoginSparkle.stUsername; 
+        }
+
+        private void FormMainScreenSparkleProgram_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void LabelDateNow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

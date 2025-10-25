@@ -217,9 +217,9 @@
             this.pictureBoxUsers.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxUsers.BackgroundImage = global::Sparkle.Properties.Resources.Background_Sparkle_Users;
             this.pictureBoxUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxUsers.Location = new System.Drawing.Point(481, 0);
+            this.pictureBoxUsers.Location = new System.Drawing.Point(508, 88);
             this.pictureBoxUsers.Name = "pictureBoxUsers";
-            this.pictureBoxUsers.Size = new System.Drawing.Size(759, 918);
+            this.pictureBoxUsers.Size = new System.Drawing.Size(759, 721);
             this.pictureBoxUsers.TabIndex = 4;
             this.pictureBoxUsers.TabStop = false;
             // 

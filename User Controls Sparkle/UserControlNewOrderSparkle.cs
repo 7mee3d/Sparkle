@@ -689,9 +689,26 @@ namespace Sparkle.User_Controls_Sparkle
             event1.Graphics.DrawLine(pen, point1, point2);
 
         }
-  
+     /*   public void DrawRectangleToShowLoginUsername(PaintEventArgs PaintShape)
+        {
+
+            Color WhiteGreen = //Color.FromArgb(4, 187, 156);
+                Color.White;
+
+            Pen pen = new Pen(WhiteGreen);
+
+            pen.Width = 2;
+
+            SolidBrush SB = new SolidBrush(WhiteGreen);
+            SB.Color = WhiteGreen;
+
+            PaintShape.Graphics.DrawRectangle(pen, 614, 0, 100, 50);
+            PaintShape.Graphics.FillRectangle(SB, 614, 0, 100, 50);
+
+        }*/
         private void UserControlNewOrderSparkle_Paint(object sender, PaintEventArgs e)
         {
+           // DrawRectangleToShowLoginUsername(e);
             DrawLineVarticalBetweenSectionAndInformationClient(e);
         }
 
