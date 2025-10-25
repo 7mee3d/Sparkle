@@ -32,17 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainScreenSparkleProgram));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.LbaelUsernameAfterLogin = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
-            this.timerSparkleSystemLogin = new System.Windows.Forms.Timer(this.components);
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonRemoveOrUpdateUsers = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonViewAllOrderCarAndCarpet = new Guna.UI2.WinForms.Guna2Button();
@@ -52,11 +41,22 @@
             this.GButtonRemoveOrUpdateClient = new Guna.UI2.WinForms.Guna2Button();
             this.GButtonClientListSection = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonClients = new Guna.UI2.WinForms.Guna2Button();
+            this.LabelDateNow = new System.Windows.Forms.Label();
+            this.LbaelUsernameAfterLogin = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.timerSparkleSystemLogin = new System.Windows.Forms.Timer(this.components);
             this.guna2GradientPanel1.SuspendLayout();
-            this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,128 +90,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(222, 801);
             this.guna2GradientPanel1.TabIndex = 0;
-            // 
-            // LabelDateNow
-            // 
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.BackColor = System.Drawing.Color.Transparent;
-            this.LabelDateNow.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDateNow.ForeColor = System.Drawing.Color.White;
-            this.LabelDateNow.Location = new System.Drawing.Point(23, 173);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(0, 14);
-            this.LabelDateNow.TabIndex = 1;
-            // 
-            // LbaelUsernameAfterLogin
-            // 
-            this.LbaelUsernameAfterLogin.AutoSize = true;
-            this.LbaelUsernameAfterLogin.BackColor = System.Drawing.Color.Transparent;
-            this.LbaelUsernameAfterLogin.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbaelUsernameAfterLogin.ForeColor = System.Drawing.Color.White;
-            this.LbaelUsernameAfterLogin.Location = new System.Drawing.Point(117, 152);
-            this.LbaelUsernameAfterLogin.Name = "LbaelUsernameAfterLogin";
-            this.LbaelUsernameAfterLogin.Size = new System.Drawing.Size(31, 14);
-            this.LbaelUsernameAfterLogin.TabIndex = 1;
-            this.LbaelUsernameAfterLogin.Text = "------";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 152);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 14);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Welcome Back : ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Garamond", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 60);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sparkle";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 426);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(553, 96);
-            this.label2.TabIndex = 1;
-            this.label2.Text = resources.GetString("label2.Text");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label3.Location = new System.Drawing.Point(65, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 82);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Sparkle";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Elephant", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(26, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(778, 146);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Welcome To";
-            // 
-            // PanelMainWelcomeSparkle
-            // 
-            this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
-            this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
-            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -13);
-            this.PanelMainWelcomeSparkle.Name = "PanelMainWelcomeSparkle";
-            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 826);
-            this.PanelMainWelcomeSparkle.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(75, 551);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 113);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
-    " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.BackColor = System.Drawing.Color.Transparent;
-            this.label.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label.Location = new System.Drawing.Point(494, 62);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(0, 82);
-            this.label.TabIndex = 1;
-            // 
-            // timerSparkleSystemLogin
-            // 
-            this.timerSparkleSystemLogin.Enabled = true;
-            this.timerSparkleSystemLogin.Tick += new System.EventHandler(this.timerSparkleSystemLogin_Tick);
             // 
             // guna2Button6
             // 
@@ -500,6 +378,53 @@
             this.ButtonClients.Text = "Clients";
             this.ButtonClients.Click += new System.EventHandler(this.ButtonClients_Click);
             // 
+            // LabelDateNow
+            // 
+            this.LabelDateNow.AutoSize = true;
+            this.LabelDateNow.BackColor = System.Drawing.Color.Transparent;
+            this.LabelDateNow.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDateNow.ForeColor = System.Drawing.Color.White;
+            this.LabelDateNow.Location = new System.Drawing.Point(23, 178);
+            this.LabelDateNow.Name = "LabelDateNow";
+            this.LabelDateNow.Size = new System.Drawing.Size(0, 14);
+            this.LabelDateNow.TabIndex = 1;
+            // 
+            // LbaelUsernameAfterLogin
+            // 
+            this.LbaelUsernameAfterLogin.AutoSize = true;
+            this.LbaelUsernameAfterLogin.BackColor = System.Drawing.Color.Transparent;
+            this.LbaelUsernameAfterLogin.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbaelUsernameAfterLogin.ForeColor = System.Drawing.Color.White;
+            this.LbaelUsernameAfterLogin.Location = new System.Drawing.Point(117, 157);
+            this.LbaelUsernameAfterLogin.Name = "LbaelUsernameAfterLogin";
+            this.LbaelUsernameAfterLogin.Size = new System.Drawing.Size(31, 14);
+            this.LbaelUsernameAfterLogin.TabIndex = 1;
+            this.LbaelUsernameAfterLogin.Text = "------";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(23, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 14);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Welcome Back : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Garamond", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(16, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 60);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sparkle";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -511,6 +436,76 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(75, 426);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(553, 96);
+            this.label2.TabIndex = 1;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label3.Location = new System.Drawing.Point(65, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 82);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Sparkle";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Elephant", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label4.Location = new System.Drawing.Point(26, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(778, 146);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Welcome To";
+            // 
+            // PanelMainWelcomeSparkle
+            // 
+            this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
+            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -13);
+            this.PanelMainWelcomeSparkle.Name = "PanelMainWelcomeSparkle";
+            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 826);
+            this.PanelMainWelcomeSparkle.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(75, 551);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(387, 113);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
+    " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
+            this.label.Location = new System.Drawing.Point(494, 62);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 82);
+            this.label.TabIndex = 1;
             // 
             // guna2PictureBox2
             // 
@@ -525,6 +520,11 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
+            // 
+            // timerSparkleSystemLogin
+            // 
+            this.timerSparkleSystemLogin.Enabled = true;
+            this.timerSparkleSystemLogin.Tick += new System.EventHandler(this.timerSparkleSystemLogin_Tick);
             // 
             // FormMainScreenSparkleProgram
             // 
@@ -542,9 +542,9 @@
             this.Load += new System.EventHandler(this.FormMainScreenSparkleProgram_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PanelMainWelcomeSparkle.ResumeLayout(false);
             this.PanelMainWelcomeSparkle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 

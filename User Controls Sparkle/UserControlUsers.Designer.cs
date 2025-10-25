@@ -40,16 +40,31 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxUsers = new System.Windows.Forms.PictureBox();
+            this.GRadioButtonFullAccessAllSections = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.GRadioButtonSpecialPremissions = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.GPanelAddUserSectionPermissions = new Guna.UI2.WinForms.Guna2Panel();
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionClientSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionClientListSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionUsersSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection = new Guna.UI2.WinForms.Guna2CheckBox();
             this.PanelFillInformationUsers.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.UpperPanelUserLabels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).BeginInit();
+            this.GPanelAddUserSectionPermissions.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelFillInformationUsers
             // 
+            this.PanelFillInformationUsers.Controls.Add(this.GPanelAddUserSectionPermissions);
+            this.PanelFillInformationUsers.Controls.Add(this.GRadioButtonSpecialPremissions);
+            this.PanelFillInformationUsers.Controls.Add(this.GRadioButtonFullAccessAllSections);
             this.PanelFillInformationUsers.Controls.Add(this.ButtonAddNewUser);
             this.PanelFillInformationUsers.Controls.Add(this.GTextBoxPasswordUser);
             this.PanelFillInformationUsers.Controls.Add(this.guna2GradientPanel3);
@@ -79,7 +94,7 @@
             this.ButtonAddNewUser.Image = global::Sparkle.Properties.Resources.add_Client_Black;
             this.ButtonAddNewUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonAddNewUser.ImageOffset = new System.Drawing.Point(55, 0);
-            this.ButtonAddNewUser.Location = new System.Drawing.Point(120, 479);
+            this.ButtonAddNewUser.Location = new System.Drawing.Point(106, 546);
             this.ButtonAddNewUser.Name = "ButtonAddNewUser";
             this.ButtonAddNewUser.Size = new System.Drawing.Size(303, 55);
             this.ButtonAddNewUser.TabIndex = 3;
@@ -223,6 +238,216 @@
             this.pictureBoxUsers.TabIndex = 4;
             this.pictureBoxUsers.TabStop = false;
             // 
+            // GRadioButtonFullAccessAllSections
+            // 
+            this.GRadioButtonFullAccessAllSections.Animated = true;
+            this.GRadioButtonFullAccessAllSections.AutoSize = true;
+            this.GRadioButtonFullAccessAllSections.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonFullAccessAllSections.CheckedState.BorderThickness = 1;
+            this.GRadioButtonFullAccessAllSections.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonFullAccessAllSections.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonFullAccessAllSections.CheckedState.InnerOffset = -4;
+            this.GRadioButtonFullAccessAllSections.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GRadioButtonFullAccessAllSections.Location = new System.Drawing.Point(163, 372);
+            this.GRadioButtonFullAccessAllSections.Name = "GRadioButtonFullAccessAllSections";
+            this.GRadioButtonFullAccessAllSections.Size = new System.Drawing.Size(98, 21);
+            this.GRadioButtonFullAccessAllSections.TabIndex = 4;
+            this.GRadioButtonFullAccessAllSections.Text = "Full Access";
+            this.GRadioButtonFullAccessAllSections.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonFullAccessAllSections.UncheckedState.BorderThickness = 3;
+            this.GRadioButtonFullAccessAllSections.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonFullAccessAllSections.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonFullAccessAllSections.CheckedChanged += new System.EventHandler(this.GRadioButtonFullAccessAllSections_CheckedChanged);
+            // 
+            // GRadioButtonSpecialPremissions
+            // 
+            this.GRadioButtonSpecialPremissions.Animated = true;
+            this.GRadioButtonSpecialPremissions.AutoSize = true;
+            this.GRadioButtonSpecialPremissions.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSpecialPremissions.CheckedState.BorderThickness = 1;
+            this.GRadioButtonSpecialPremissions.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSpecialPremissions.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GRadioButtonSpecialPremissions.CheckedState.InnerOffset = -4;
+            this.GRadioButtonSpecialPremissions.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold);
+            this.GRadioButtonSpecialPremissions.Location = new System.Drawing.Point(286, 372);
+            this.GRadioButtonSpecialPremissions.Name = "GRadioButtonSpecialPremissions";
+            this.GRadioButtonSpecialPremissions.Size = new System.Drawing.Size(144, 21);
+            this.GRadioButtonSpecialPremissions.TabIndex = 4;
+            this.GRadioButtonSpecialPremissions.Text = "Special Permission";
+            this.GRadioButtonSpecialPremissions.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GRadioButtonSpecialPremissions.UncheckedState.BorderThickness = 3;
+            this.GRadioButtonSpecialPremissions.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonSpecialPremissions.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.GRadioButtonSpecialPremissions.CheckedChanged += new System.EventHandler(this.GRadioButtonSpecialPremissions_CheckedChanged);
+            // 
+            // GPanelAddUserSectionPermissions
+            // 
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionUsersListSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionShowAllOrders);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionUsersSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionClientListSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionClientSection);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionNewOrderSection);
+            this.GPanelAddUserSectionPermissions.Location = new System.Drawing.Point(3, 416);
+            this.GPanelAddUserSectionPermissions.Name = "GPanelAddUserSectionPermissions";
+            this.GPanelAddUserSectionPermissions.Size = new System.Drawing.Size(541, 100);
+            this.GPanelAddUserSectionPermissions.TabIndex = 5;
+            this.GPanelAddUserSectionPermissions.Visible = false;
+            // 
+            // GCheckBoxAddUserSpecialPermissionNewOrderSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Location = new System.Drawing.Point(3, 12);
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Name = "GCheckBoxAddUserSpecialPermissionNewOrderSection";
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Size = new System.Drawing.Size(151, 21);
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.Text = "New Order Section";
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionNewOrderSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionClientSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionClientSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Location = new System.Drawing.Point(160, 12);
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Name = "GCheckBoxAddUserSpecialPermissionClientSection";
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Size = new System.Drawing.Size(116, 21);
+            this.GCheckBoxAddUserSpecialPermissionClientSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.Text = "Client Section";
+            this.GCheckBoxAddUserSpecialPermissionClientSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionClientSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Location = new System.Drawing.Point(283, 12);
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Name = "GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection";
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Size = new System.Drawing.Size(225, 21);
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Text = "Remove/Update Client Section";
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionShowAllOrders
+            // 
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Location = new System.Drawing.Point(2, 45);
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Name = "GCheckBoxAddUserSpecialPermissionShowAllOrders";
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Size = new System.Drawing.Size(183, 21);
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Text = "Show All Orders Section";
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionClientListSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Location = new System.Drawing.Point(191, 44);
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Name = "GCheckBoxAddUserSpecialPermissionClientListSection";
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Size = new System.Drawing.Size(145, 21);
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.Text = "Client List Section";
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionClientListSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionUsersSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Location = new System.Drawing.Point(342, 45);
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Name = "GCheckBoxAddUserSpecialPermissionUsersSection";
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Size = new System.Drawing.Size(113, 21);
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Text = "Users Section";
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionUsersListSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Location = new System.Drawing.Point(2, 76);
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Name = "GCheckBoxAddUserSpecialPermissionUsersListSection";
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Size = new System.Drawing.Size(142, 21);
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Text = "Users List Section";
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection
+            // 
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Location = new System.Drawing.Point(150, 76);
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Name = "GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection";
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Size = new System.Drawing.Size(222, 21);
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Text = "Remove/Update Users Section";
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // UserControlUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +459,7 @@
             this.Name = "UserControlUsers";
             this.Size = new System.Drawing.Size(1195, 809);
             this.PanelFillInformationUsers.ResumeLayout(false);
+            this.PanelFillInformationUsers.PerformLayout();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel2.ResumeLayout(false);
@@ -242,6 +468,8 @@
             this.UpperPanelUserLabels.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsers)).EndInit();
+            this.GPanelAddUserSectionPermissions.ResumeLayout(false);
+            this.GPanelAddUserSectionPermissions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +488,16 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonFullAccessAllSections;
+        private Guna.UI2.WinForms.Guna2Panel GPanelAddUserSectionPermissions;
+        private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonSpecialPremissions;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionClientSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionNewOrderSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionShowAllOrders;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionUsersListSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionUsersSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionClientListSection;
     }
 }

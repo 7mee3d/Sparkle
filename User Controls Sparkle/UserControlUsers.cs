@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,21 @@ namespace Sparkle.User_Controls_Sparkle
             InitializeComponent();
         }
 
+        //Constants
         private const string _kPATH_FILE_USER = "UsersInformation.txt";
         private const int _KEY_CRYPT = 2;
+        short Permissions = 0;
+
 
         struct stInformationUser
         {
             public string stUsername;
             public string stPassword;
             public int stNumberAttempt;
+            public short stpermission;
 
         }
+       
         private string EncryptPassword(string password, int keyCrypt)
         {
             string passwordAfterEncrypt = "";
@@ -41,14 +47,38 @@ namespace Sparkle.User_Controls_Sparkle
             return passwordAfterEncrypt;
         }
 
+        private void setInitalControls()
+        {
 
+            foreach(Control outterControl in this.Controls)
+            {
+                if(outterControl is Guna2Panel G2P)
+                {
+                    foreach(Control innerControl in G2P.Controls)
+                    {
+
+                        if (innerControl is Guna2RadioButton G2RB)
+                            G2RB.Checked = false;
+
+                        if(innerControl is Guna2Panel G2B2 )
+                        foreach (Control innerInnerCotrol in G2B2.Controls)
+                        if (innerInnerCotrol is Guna2CheckBox G2CB)
+                            G2CB.Checked = false;
+
+                    }
+                }
+            }
+            GPanelAddUserSectionPermissions.Visible = false; 
+        }
+    
         private string ConvertListSplitInformationUserToLine(List <string> informationUser , string Separator = "||")
         {
             string lineInformationUser = "";
 
             lineInformationUser += informationUser[0] + Separator;
             lineInformationUser += informationUser[1] + Separator;
-            lineInformationUser += Convert.ToString(3 );
+            lineInformationUser += informationUser[2] + Separator;
+            lineInformationUser += Convert.ToString(3);
 
             return lineInformationUser; 
 
@@ -96,7 +126,8 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 infoOneUser.stUsername = informationAfterSplitLine[0];
                 infoOneUser.stPassword = informationAfterSplitLine[1];
-                infoOneUser.stNumberAttempt = Convert.ToInt32(informationAfterSplitLine[2]);
+                infoOneUser.stpermission = Convert.ToInt16(informationAfterSplitLine[2]);
+                infoOneUser.stNumberAttempt = Convert.ToInt32(informationAfterSplitLine[3]);
             }
 
             return infoOneUser;
@@ -108,7 +139,7 @@ namespace Sparkle.User_Controls_Sparkle
             List<string> informationAllUserLines = LoadTheAllInformationUserLinesInTheList();
             List<stInformationUser> informationAllUsersData = new List<stInformationUser>();
 
-            if(informationAllUserLines.Count>0)
+            if(informationAllUserLines.Count > 0)
             {
 
                 foreach(string lineInformationUser in informationAllUserLines)
@@ -188,14 +219,66 @@ namespace Sparkle.User_Controls_Sparkle
         
         }
 
+        private short addPermissionsAllSection()
+        {
+            short PermissionsInsideMethod = 0;
+
+            if (GCheckBoxAddUserSpecialPermissionNewOrderSection.Checked)
+                PermissionsInsideMethod += 1;
+
+            if (GCheckBoxAddUserSpecialPermissionShowAllOrders.Checked)
+                PermissionsInsideMethod += 2;
+
+            if (GCheckBoxAddUserSpecialPermissionClientSection.Checked)
+                PermissionsInsideMethod += 4;
+
+            if (GCheckBoxAddUserSpecialPermissionClientListSection.Checked)
+                PermissionsInsideMethod += 8;
+
+            if (GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Checked)
+                PermissionsInsideMethod += 16;
+
+            if (GCheckBoxAddUserSpecialPermissionUsersSection.Checked)
+                PermissionsInsideMethod += 32;
+
+            if (GCheckBoxAddUserSpecialPermissionUsersListSection.Checked)
+                PermissionsInsideMethod += 64;
+
+            if (GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Checked)
+                PermissionsInsideMethod += 128;
+
+            return PermissionsInsideMethod;
+        }
+
+        private void setPermissions()
+        {
+            if ( GRadioButtonFullAccessAllSections.Checked) {
+
+                GPanelAddUserSectionPermissions.Visible = false;
+                Permissions = -1;
+                return; 
+
+            }
+
+            if(GRadioButtonSpecialPremissions.Checked)
+            {
+                GPanelAddUserSectionPermissions.Visible = true;
+                Permissions = addPermissionsAllSection();
+            }
+        }
+
         private void addNewUserToSparkle()
         {
+            setPermissions();
             string username = GTextBoxUsername.Text;
             string password = GTextBoxPasswordUser.Text;
+            
 
             List<string> informationUser = new List<string>();
             informationUser.Add(username);
             informationUser.Add(EncryptPassword(password, keyCrypt: _KEY_CRYPT));
+            informationUser.Add(Permissions.ToString());
+
 
             if (!string.IsNullOrEmpty(username))
             {
@@ -228,6 +311,7 @@ namespace Sparkle.User_Controls_Sparkle
                         GTextBoxUsername.Clear();
                     }
                 }
+                setInitalControls();
             }
             else
             {
@@ -243,5 +327,17 @@ namespace Sparkle.User_Controls_Sparkle
         {
             addNewUserToSparkle();
         }
+
+        private void GRadioButtonFullAccessAllSections_CheckedChanged(object sender, EventArgs e)
+        {
+            setPermissions();
+        }
+
+        private void GRadioButtonSpecialPremissions_CheckedChanged(object sender, EventArgs e)
+        {
+            setPermissions();
+        }
+  
+    
     }
 }

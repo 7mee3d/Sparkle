@@ -45,7 +45,7 @@ namespace Sparkle
       
         private void timerSparkleSystemLogin_Tick(object sender, EventArgs e)
         {
-            LabelDateNow.Text = DateTime.Now.ToString();
+            LabelDateNow.Text = DateTime.Now.ToString("dd/M/yyyy hh:mm:ss tt");
         }
       
         private bool isPassPermission(short numberPermission , enPermission permission )
@@ -72,6 +72,7 @@ namespace Sparkle
             ShowMessageAccessDenied();
 
         }
+    
         private void ButtonClients_Click(object sender, EventArgs e)
         {
 
@@ -165,6 +166,7 @@ namespace Sparkle
             // MessageBox.Show($"Welcome [{informationUserAfterLoginSparkle.stUsername}]");
             LbaelUsernameAfterLogin.Text = informationUserAfterLoginSparkle.stUsername; 
         }
+     
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
