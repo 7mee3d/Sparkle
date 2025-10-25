@@ -12,13 +12,20 @@ using System.Windows.Forms;
 
 namespace Sparkle
 {
+  
     public partial class FormMainScreenSparkleProgram : Form
-    {       
-        public FormMainScreenSparkleProgram()
+  
+    {
+   
+        private stInformationUser informationUserAfterLoginSparkle;
+
+        public FormMainScreenSparkleProgram(stInformationUser informationuser)
         {
             InitializeComponent();
+            informationUserAfterLoginSparkle = informationuser;
         }
 
+ 
         private void addUserControlInThePaenl (UserControl ControlUser )
         {
             ControlUser.Dock = DockStyle.Fill;
@@ -90,9 +97,10 @@ namespace Sparkle
             addUserControlInThePaenl(UCSAOCAC);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void FormMainScreenSparkleProgram_Load(object sender, EventArgs e)
         {
-
+            //Test The Information Passing form Main Screen from Login 
+            MessageBox.Show($"Welcome [{informationUserAfterLoginSparkle.stUsername}]");
         }
     }
 }
