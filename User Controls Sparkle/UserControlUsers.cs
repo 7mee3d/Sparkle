@@ -247,6 +247,10 @@ namespace Sparkle.User_Controls_Sparkle
             if (GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection.Checked)
                 PermissionsInsideMethod += 128;
 
+            if (GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Checked)
+                PermissionsInsideMethod += 256;
+
+
             return PermissionsInsideMethod;
         }
 

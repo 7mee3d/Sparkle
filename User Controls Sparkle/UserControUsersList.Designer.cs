@@ -126,7 +126,7 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 64);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 8);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
             this.ListViewUsersLists.Size = new System.Drawing.Size(1192, 510);

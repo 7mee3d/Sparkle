@@ -1,6 +1,6 @@
 ﻿namespace Sparkle.User_Controls_Sparkle
 {
-    partial class UserControlاHistoryLoginSparkle
+    partial class UserControlHistoryLoginSparkle
     {
         /// <summary> 
         /// Required designer variable.
@@ -162,11 +162,10 @@
             this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(3, 8);
             this.ListViewHistoryLoginSparkle.MultiSelect = false;
             this.ListViewHistoryLoginSparkle.Name = "ListViewHistoryLoginSparkle";
-            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1192, 510);
+            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1189, 510);
             this.ListViewHistoryLoginSparkle.TabIndex = 0;
             this.ListViewHistoryLoginSparkle.UseCompatibleStateImageBehavior = false;
             this.ListViewHistoryLoginSparkle.View = System.Windows.Forms.View.Details;
-            this.ListViewHistoryLoginSparkle.SelectedIndexChanged += new System.EventHandler(this.ListViewUsersLists_SelectedIndexChanged);
             // 
             // ColumnUsername
             // 
@@ -176,7 +175,7 @@
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 420;
+            this.ColumnPassword.Width = 425;
             // 
             // DateTime
             // 
@@ -218,7 +217,7 @@
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;
             // 
-            // UserControlاHistoryLoginSparkle
+            // UserControlHistoryLoginSparkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,8 +226,9 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.PanelMainListViewHistoryLoginSparkle);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Name = "UserControlاHistoryLoginSparkle";
+            this.Name = "UserControlHistoryLoginSparkle";
             this.Size = new System.Drawing.Size(1195, 809);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlHistoryLoginSparkle_Paint);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -109,11 +109,11 @@
     <Compile Include="User Controls Sparkle\UserControlUsers.Designer.cs">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.cs">
+    <Compile Include="User Controls Sparkle\UserControlHistoryLoginSparkle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.Designer.cs">
-      <DependentUpon>UserControlاHistoryLoginSparkle.cs</DependentUpon>
+    <Compile Include="User Controls Sparkle\UserControlHistoryLoginSparkle.Designer.cs">
+      <DependentUpon>UserControlHistoryLoginSparkle.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls Sparkle\UserControUsersList.cs">
       <SubType>UserControl</SubType>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="User Controls Sparkle\UserControlUsers.resx">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.resx">
-      <DependentUpon>UserControlاHistoryLoginSparkle.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls Sparkle\UserControlHistoryLoginSparkle.resx">
+      <DependentUpon>UserControlHistoryLoginSparkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControUsersList.resx">
       <DependentUpon>UserControUsersList.cs</DependentUpon>

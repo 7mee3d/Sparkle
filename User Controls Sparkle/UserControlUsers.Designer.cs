@@ -51,6 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxUsers = new System.Windows.Forms.PictureBox();
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle = new Guna.UI2.WinForms.Guna2CheckBox();
             this.PanelFillInformationUsers.SuspendLayout();
             this.GPanelAddUserSectionPermissions.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -80,6 +81,7 @@
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionUsersListSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionShowAllOrders);
+            this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionUsersSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionClientListSection);
@@ -448,6 +450,25 @@
             this.pictureBoxUsers.TabIndex = 4;
             this.pictureBoxUsers.TabStop = false;
             // 
+            // GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle
+            // 
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Animated = true;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.AutoSize = true;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.BorderRadius = 1;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.BorderThickness = 1;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Location = new System.Drawing.Point(422, 76);
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Name = "GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle";
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Size = new System.Drawing.Size(121, 21);
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.TabIndex = 6;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Text = "History Login ";
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.UncheckedState.BorderColor = System.Drawing.Color.Silver;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.UncheckedState.BorderRadius = 0;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.UncheckedState.BorderThickness = 0;
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // UserControlUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,5 +520,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionUsersSection;
         private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionRemoveUpdateUserSection;
         private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionClientListSection;
+        private Guna.UI2.WinForms.Guna2CheckBox GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle;
     }
 }

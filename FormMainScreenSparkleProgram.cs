@@ -27,7 +27,8 @@ namespace Sparkle
             ekREMOVE_UPDATE_CLIENTS = 16 ,
             ekUSERS = 32 ,
             ekUSERS_LIST = 64 ,
-            ekREMOVE_UPDATE_USERS = 128 
+            ekREMOVE_UPDATE_USERS = 128 ,
+            ekSHOW_HISTORY_LOGIN_SPAARKLE = 256
             
         };
 
@@ -175,6 +176,15 @@ namespace Sparkle
             SLS.Show();
         }
 
-       
+        private void GButtonHistroyLoginSparkleSystemUsers_Click(object sender, EventArgs e)
+        {
+            UserControlHistoryLoginSparkle UCHLS = new UserControlHistoryLoginSparkle();
+
+            if (isPassPermission(informationUserAfterLoginSparkle.permission, enPermission.ekSHOW_HISTORY_LOGIN_SPAARKLE))
+                addUserControlInThePaenl(UCHLS);
+
+            else
+                ChangeBackgroundUserControlAccessDenied();
+        }
     }
 }
