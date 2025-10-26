@@ -104,21 +104,20 @@
             this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.BorderColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2Button6.Image = global::Sparkle.Properties.Resources.close;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(5, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2Button6.ImageSize = new System.Drawing.Size(35, 35);
             this.guna2Button6.Location = new System.Drawing.Point(0, 710);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.PressedColor = System.Drawing.Color.White;
             this.guna2Button6.Size = new System.Drawing.Size(222, 57);
             this.guna2Button6.TabIndex = 1;
-            this.guna2Button6.Text = "Exit Sparkle";
+            this.guna2Button6.Text = "Logout Sparkle";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // GButtonRemoveOrUpdateUsers

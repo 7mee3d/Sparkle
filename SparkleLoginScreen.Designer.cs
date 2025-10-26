@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SparkleLoginScreen));
             this.GBorderLessFormRaduis = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.MainPanelShadowLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -37,7 +36,9 @@
             this.GTextBoxPasswordLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.GTextBoxUsernameLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelLoginWord = new System.Windows.Forms.Label();
+            this.PictureBoxExitApplicationSparkle = new System.Windows.Forms.PictureBox();
             this.MainPanelShadowLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExitApplicationSparkle)).BeginInit();
             this.SuspendLayout();
             // 
             // GBorderLessFormRaduis
@@ -170,6 +171,20 @@
             this.labelLoginWord.TabIndex = 0;
             this.labelLoginWord.Text = "Log in";
             // 
+            // PictureBoxExitApplicationSparkle
+            // 
+            this.PictureBoxExitApplicationSparkle.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBoxExitApplicationSparkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureBoxExitApplicationSparkle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBoxExitApplicationSparkle.Image = global::Sparkle.Properties.Resources.close;
+            this.PictureBoxExitApplicationSparkle.Location = new System.Drawing.Point(12, 717);
+            this.PictureBoxExitApplicationSparkle.Name = "PictureBoxExitApplicationSparkle";
+            this.PictureBoxExitApplicationSparkle.Size = new System.Drawing.Size(71, 71);
+            this.PictureBoxExitApplicationSparkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxExitApplicationSparkle.TabIndex = 1;
+            this.PictureBoxExitApplicationSparkle.TabStop = false;
+            this.PictureBoxExitApplicationSparkle.Click += new System.EventHandler(this.PictureBoxExitApplicationSparkle_Click);
+            // 
             // SparkleLoginScreen
             // 
             this.AcceptButton = this.ButtonLoginTheSparkle;
@@ -178,14 +193,15 @@
             this.BackgroundImage = global::Sparkle.Properties.Resources.Finial_Edit_the_background_image_Login_Screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1420, 800);
+            this.Controls.Add(this.PictureBoxExitApplicationSparkle);
             this.Controls.Add(this.MainPanelShadowLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SparkleLoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MainPanelShadowLogin.ResumeLayout(false);
             this.MainPanelShadowLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExitApplicationSparkle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +215,7 @@
         private Guna.UI2.WinForms.Guna2TextBox GTextBoxPasswordLogin;
         private Guna.UI2.WinForms.Guna2Button ButtonLoginTheSparkle;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLabelWariningLastAttemptAccount;
+        private System.Windows.Forms.PictureBox PictureBoxExitApplicationSparkle;
     }
 }
 

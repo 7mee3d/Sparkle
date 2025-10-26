@@ -17,6 +17,7 @@ namespace Sparkle
     public partial class FormMainScreenSparkleProgram : Form
   
     {
+        SparkleLoginScreen SLS; 
         enum enPermission
         {
             ekNEW_ORDER = 1 ,
@@ -169,8 +170,9 @@ namespace Sparkle
      
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+            SLS = new SparkleLoginScreen();
+            this.Hide();
+            SLS.Show();
         }
 
        

@@ -1,14 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sparkle
 {
@@ -242,14 +235,14 @@ namespace Sparkle
             //Login Faild in the account 
             return false;
         }
-
+        FormMainScreenSparkleProgram FrmSparkleMainScreen;
         private void LoginSystemSparkle(string Username, string Password)
         {
             bool isFoundUsername = false;
 
             if (areFoundUsernameAndPassword(Username, Password, ref isFoundUsername , ref informationUser))
             {
-                FormMainScreenSparkleProgram FrmSparkleMainScreen = new FormMainScreenSparkleProgram(informationUser);
+                FrmSparkleMainScreen = new FormMainScreenSparkleProgram(informationUser);
                 this.Hide();
                 FrmSparkleMainScreen.Show();
             }
@@ -291,6 +284,9 @@ namespace Sparkle
 
         }
 
-
+        private void PictureBoxExitApplicationSparkle_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
