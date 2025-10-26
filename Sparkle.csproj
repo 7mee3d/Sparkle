@@ -109,6 +109,12 @@
     <Compile Include="User Controls Sparkle\UserControlUsers.Designer.cs">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.Designer.cs">
+      <DependentUpon>UserControlاHistoryLoginSparkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls Sparkle\UserControUsersList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControlUsers.resx">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls Sparkle\UserControlاHistoryLoginSparkle.resx">
+      <DependentUpon>UserControlاHistoryLoginSparkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls Sparkle\UserControUsersList.resx">
       <DependentUpon>UserControUsersList.cs</DependentUpon>
@@ -218,6 +227,7 @@
     <None Include="Resources\Background Image Form Finial Bill Orders .png" />
     <None Include="Resources\Blue Illustrative Cleaning Service Magnet 1.png" />
     <None Include="Resources\Access Denied! Sparkle.png" />
+    <None Include="Resources\History Log.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
