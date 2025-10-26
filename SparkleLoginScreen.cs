@@ -14,6 +14,9 @@ namespace Sparkle
         public int numberAttempt;
         public short permission;
 
+        //DateTime Login Sparkle
+        public string stDateTimeNowLoginSparkle; 
+
     }
 
     public partial class SparkleLoginScreen : Form
@@ -26,6 +29,8 @@ namespace Sparkle
 
         //Path File 
         private const string _kPATH_FILE_USERS_INFORMATION = "UsersInformation.txt";
+        private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = "HistoryLoginSparkle.txt";
+
         private const int _KEY_CRYPT = 2;
         private string DecreyptPassword(string password, int keyCrypt)
         {
@@ -49,16 +54,16 @@ namespace Sparkle
 
         }
 
-        private List<string> LoadLineInformationUsersFromFile()
+        private List<string> LoadLineInformationUsersFromFile(string PathFileToLoadInformation )
         {
             List<string> informationUserLine = new List<string>();
 
-            if (!System.IO.File.Exists(_kPATH_FILE_USERS_INFORMATION))
+            if (!System.IO.File.Exists(PathFileToLoadInformation))
             {
-                System.IO.File.Create(_kPATH_FILE_USERS_INFORMATION).Close();
+                System.IO.File.Create(PathFileToLoadInformation).Close();
             }
 
-            System.IO.StreamReader ReadInformationAllUsers = new System.IO.StreamReader(_kPATH_FILE_USERS_INFORMATION);
+            System.IO.StreamReader ReadInformationAllUsers = new System.IO.StreamReader(PathFileToLoadInformation);
 
             string lineInformationOneUser = "";
 
@@ -73,14 +78,14 @@ namespace Sparkle
 
         }
 
-        private List<string> SplitTheLineInformation(string LineInformation)
+        private List<string> SplitTheLineInformation(string LineInformation , string Separator )
         {
 
             List<string> splitInformationLineToParts = new List<string>();
 
             if (!string.IsNullOrEmpty(LineInformation))
             {
-                splitInformationLineToParts.AddRange(LineInformation.Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries));
+                splitInformationLineToParts.AddRange(LineInformation.Split(new string[] { Separator }, StringSplitOptions.RemoveEmptyEntries));
             }
 
             return splitInformationLineToParts;
@@ -103,10 +108,10 @@ namespace Sparkle
             return informationUserOne;
 
         }
-
+       
         private List<stInformationUser> storeInformationAllUserst()
         {
-            List<string> InformationUserString = LoadLineInformationUsersFromFile();
+            List<string> InformationUserString = LoadLineInformationUsersFromFile(_kPATH_FILE_USERS_INFORMATION);
             List<stInformationUser> InformationAllUsersStruct = new List<stInformationUser>();
 
             if (InformationUserString != null)
@@ -116,7 +121,7 @@ namespace Sparkle
 
                 foreach (string lineInfoUser in InformationUserString)
                 {
-                    lineInfromationUser = SplitTheLineInformation(lineInfoUser);
+                    lineInfromationUser = SplitTheLineInformation(lineInfoUser , "||");
                     informationUserSt = ConvertLineInformationUserToDataStruct(lineInfromationUser);
                     InformationAllUsersStruct.Add(informationUserSt);
                 }
@@ -125,6 +130,19 @@ namespace Sparkle
             return InformationAllUsersStruct;
         }
 
+        private string ConvertDataInformationUserHistoryLoginSparkleToLine(stInformationUser informationUser, string separator = "$$$//$$$")
+        {
+
+            string lineInformationHistoryLogin = "";
+            lineInformationHistoryLogin += informationUser.stUsername + separator;
+            lineInformationHistoryLogin += informationUser.stPassword + separator;
+            lineInformationHistoryLogin += DateTime.Now.ToString();
+
+
+            return lineInformationHistoryLogin;
+        }
+
+     
         private bool areEqualSideStringCompare(string strOne, string strTwo)
         {
             return (strOne == strTwo);
@@ -142,7 +160,8 @@ namespace Sparkle
             return lineInformation;
         }
 
-        private List<string> ConvertDataInformationAllUserToLineBeforePush(List<stInformationUser> informationUsers)
+      
+        private List<string> ConvertDataInformationAllUserToLineBeforePush(List<stInformationUser> informationUsers   )
         {
             List<string> informationUserLines = new List<string>();
 
@@ -150,7 +169,7 @@ namespace Sparkle
 
             foreach (stInformationUser infoOneUser in informationUsers)
             {
-                line = ConvertDataInformationUserToLine(infoOneUser, "||");
+                line = ConvertDataInformationUserToLine(infoOneUser, "||" );
                 if (line != null)
                     informationUserLines.Add(line);
             }
@@ -165,11 +184,27 @@ namespace Sparkle
 
             System.IO.StreamWriter saveLineInTheFile = new System.IO.StreamWriter(_kPATH_FILE_USERS_INFORMATION);
 
-            foreach (string lineInfoUser in informationUserLines)
+            foreach (string lineInformationUser in informationUserLines)
             {
-                if (lineInfoUser != null)
-                    saveLineInTheFile.WriteLine(lineInfoUser);
+                if (lineInformationUser != null)
+                    saveLineInTheFile.WriteLine(lineInformationUser);
             }
+
+
+            saveLineInTheFile.Close();
+
+
+        }
+
+        private void SaveAllDataHistoryLoginSparkleInTheFile(string historyLoginSparkleINformationOneUser)
+        {
+            if (!System.IO.File.Exists(_kPATH_FILE_HISTORY_LOGIN_SPARKLE))
+                System.IO.File.Create(_kPATH_FILE_HISTORY_LOGIN_SPARKLE).Close();
+
+            System.IO.StreamWriter saveLineInTheFile = new System.IO.StreamWriter(_kPATH_FILE_HISTORY_LOGIN_SPARKLE, true );
+
+            if (historyLoginSparkleINformationOneUser != null)
+                saveLineInTheFile.WriteLine(historyLoginSparkleINformationOneUser);
 
             saveLineInTheFile.Close();
 
@@ -192,6 +227,7 @@ namespace Sparkle
                             informationAllUsers[counter].numberAttempt = 3;
                             //Save All Change After the Login and reset the number attempt account to 3 atttempt original 
                             SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
+                            SaveAllDataHistoryLoginSparkleInTheFile(ConvertDataInformationUserHistoryLoginSparkleToLine(informationAllUsers[counter], "$$$//$$$"));
                             GLabelWariningLastAttemptAccount.Text = "";
                             informationUser = informationAllUsers[counter];
                             return true;
@@ -231,7 +267,7 @@ namespace Sparkle
             }
 
             //Save All Change after to check in the file 
-            SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers));
+            SaveAllDataInformationUsersInTheFile(ConvertDataInformationAllUserToLineBeforePush(informationAllUsers ));
             //Login Faild in the account 
             return false;
         }

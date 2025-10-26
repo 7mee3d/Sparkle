@@ -16,5 +16,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             InitializeComponent();
         }
+
+        private void ListViewUsersLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

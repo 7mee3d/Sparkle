@@ -35,14 +35,14 @@
             this.ListViewUsersLists = new System.Windows.Forms.ListView();
             this.ColumnUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnPassword = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Permissions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StatusAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.GPanelNumberUsernSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.LblNumberUser = new System.Windows.Forms.Label();
             this.GPictureBoxUserPanelNumebrUser = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.StatusAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Permissions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewClientsList.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -126,7 +126,7 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 8);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 64);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
             this.ListViewUsersLists.Size = new System.Drawing.Size(1192, 510);
@@ -144,6 +144,16 @@
             // 
             this.ColumnPassword.Text = "Password";
             this.ColumnPassword.Width = 400;
+            // 
+            // Permissions
+            // 
+            this.Permissions.Text = "Permissions User";
+            this.Permissions.Width = 200;
+            // 
+            // StatusAccount
+            // 
+            this.StatusAccount.Text = "Status Account";
+            this.StatusAccount.Width = 200;
             // 
             // guna2GradientPanel1
             // 
@@ -215,16 +225,6 @@
             this.GPictureBoxUserPanelNumebrUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;
-            // 
-            // StatusAccount
-            // 
-            this.StatusAccount.Text = "Status Account";
-            this.StatusAccount.Width = 200;
-            // 
-            // Permissions
-            // 
-            this.Permissions.Text = "Permissions User";
-            this.Permissions.Width = 200;
             // 
             // UserControUsersList
             // 
