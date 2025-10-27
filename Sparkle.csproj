@@ -228,6 +228,7 @@
     <None Include="Resources\Blue Illustrative Cleaning Service Magnet 1.png" />
     <None Include="Resources\Access Denied! Sparkle.png" />
     <None Include="Resources\History Log.png" />
+    <None Include="Resources\remove Icon.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

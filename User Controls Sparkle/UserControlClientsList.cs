@@ -22,14 +22,24 @@ namespace Sparkle.User_Controls_Sparkle
         //File Path 
         const string _kPATH_FILE_CLIENT = "InformationClients.txt";
 
-        struct stInformationOneClient
+        class stInformationOneClient
         {
             public string stIDClient;
             public string stNameClient;
             public string stAddressClient;
             public string stEmailClient;
-            public string stPhoneClient; 
+            public string stPhoneClient;
 
+            public bool IsClientToBeRemove;
+        }
+
+
+        private void RefreshDataAfterRemoveClient()
+        {
+            ListViewClientsLists.Items.Clear();
+            pushAllInformationClientsToListView();
+            ListViewClientsLists.Refresh();
+            LblNumberClient.Text = numberClientInSystem().ToString();
         }
 
         private List<string> LoadAllLineInformationClientsFromFile()
@@ -55,6 +65,16 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private void UserControlClientsList_Load(object sender, EventArgs e)
+        {
+
+            pushAllInformationClientsToListView();
+            LblNumberClient.Text = numberClientInSystem().ToString();
+            removeClientToolStripMenuItem.Enabled = false;
+
+
+        }
+        
         private stInformationOneClient ConvertLineToDataStruct (List<string> informationOneClient )
         {
             stInformationOneClient infoOneClient = new stInformationOneClient(); 
@@ -183,19 +203,11 @@ namespace Sparkle.User_Controls_Sparkle
             return false; 
         }
 
-
         private int numberClientInSystem ()
         {
             return (ListViewClientsLists.Items.Count);
         }
-        private void UserControlClientsList_Load(object sender, EventArgs e)
-        {
-          
-            pushAllInformationClientsToListView();
-            LblNumberClient.Text = numberClientInSystem().ToString();
-
-        }
-
+      
         private void GButtonSearchByID_Click(object sender, EventArgs e)
         {
             string ID = GTextBoxSearch.Text;
@@ -211,7 +223,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
       
 
-        // -- Paint The Line Section --
+        // -- Start Paint The Line Section --
         private void PaintTheLine(PaintEventArgs e)
         {
             Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
@@ -234,6 +246,86 @@ namespace Sparkle.User_Controls_Sparkle
             PaintTheLine(e);
         }
 
+    
+        // -- End Paint The Line Section --
+
+
+        private string ConvertDataInformationClientToLine(stInformationOneClient informationOneClient, string Separator = ";||;")
+        {
+
+            string lineInformationCleint = "";
+
+            lineInformationCleint += informationOneClient.stIDClient + Separator;
+            lineInformationCleint += informationOneClient.stNameClient + Separator;
+            lineInformationCleint += informationOneClient.stAddressClient + Separator;
+            lineInformationCleint += informationOneClient.stEmailClient + Separator;
+            lineInformationCleint += informationOneClient.stPhoneClient;
+
+            return lineInformationCleint;
+
+        }
+
+        private void SaveAllInformationClientsStructureToFile(List<stInformationOneClient> allInfroamtionClientsStruct)
+        {
+
+            if (!System.IO.File.Exists(_kPATH_FILE_CLIENT))
+                System.IO.File.Create(_kPATH_FILE_CLIENT).Close();
+
+            System.IO.StreamWriter WriteAllInformationUserToFile = new System.IO.StreamWriter(_kPATH_FILE_CLIENT);
+
+            foreach (stInformationOneClient infoOneClient in allInfroamtionClientsStruct)
+            {
+                if (infoOneClient.IsClientToBeRemove == false)
+                    WriteAllInformationUserToFile.WriteLine(ConvertDataInformationClientToLine(infoOneClient, ";||;"));
+            }
+
+            WriteAllInformationUserToFile.Close();
+
+
+        }
+       
+        private bool RemoveClientInSystemSparkle(string IDClient)
+        {
+            List<stInformationOneClient> allInfroamtionClientsStruct = SaveAllInformationClientToListStructure();
+
+            foreach (stInformationOneClient informationClient in allInfroamtionClientsStruct)
+            {
+                if (IDClient == informationClient.stIDClient)
+                {
+                    informationClient.IsClientToBeRemove = true;
+                    SaveAllInformationClientsStructureToFile(allInfroamtionClientsStruct);
+                    return true;
+                }
+            }
+
+            return false;
+
+        }
+    
+        private void GContextMenuStripRemoveClient_Opening(object sender, CancelEventArgs e)
+        {
+            bool hasSelection = (ListViewClientsLists.SelectedItems.Count > 0);
+
+            removeClientToolStripMenuItem.Enabled = hasSelection;
+        }
+
+        private void removeClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ListViewClientsLists.SelectedItems.Count > 0)
+                if (MessageBox.Show($"Are You Sure To Be Remove This Client ID [{ListViewClientsLists.SelectedItems[0].Text}]", "Note Remove Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+
+                    RemoveClientInSystemSparkle(ListViewClientsLists.SelectedItems[0].Text);
+                    RefreshDataAfterRemoveClient();
+                    MessageBox.Show("Done Remove Cleint", "Message After Remove Client" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+               
+                }
+
+            
+           
+        }
    
+    
     }
+    
 }

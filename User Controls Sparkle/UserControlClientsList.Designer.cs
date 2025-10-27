@@ -44,12 +44,17 @@
             this.GPanelNumberClientInSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.LblNumberClient = new System.Windows.Forms.Label();
             this.GPictureBoxClientPanelNumebrClient = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GContextMenuStripRemoveClient = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.removeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelMainListViewClientsList.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.GPanelNumberClientInSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).BeginInit();
+            this.GContextMenuStripRemoveClient.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -105,6 +110,7 @@
             this.ColumnAddress,
             this.ColumnEmail,
             this.ColumnPhone});
+            this.ListViewClientsLists.ContextMenuStrip = this.GContextMenuStripRemoveClient;
             this.ListViewClientsLists.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewClientsLists.FullRowSelect = true;
             this.ListViewClientsLists.GridLines = true;
@@ -232,6 +238,51 @@
             this.GPictureBoxClientPanelNumebrClient.TabIndex = 5;
             this.GPictureBoxClientPanelNumebrClient.TabStop = false;
             // 
+            // GContextMenuStripRemoveClient
+            // 
+            this.GContextMenuStripRemoveClient.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GContextMenuStripRemoveClient.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.GContextMenuStripRemoveClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripSeparator1,
+            this.removeClientToolStripMenuItem});
+            this.GContextMenuStripRemoveClient.Name = "GContextMenuStripRemoveClient";
+            this.GContextMenuStripRemoveClient.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.ColorTable = null;
+            this.GContextMenuStripRemoveClient.RenderStyle.RoundedEdges = true;
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.GContextMenuStripRemoveClient.RenderStyle.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(207, 77);
+            this.GContextMenuStripRemoveClient.Opening += new System.ComponentModel.CancelEventHandler(this.GContextMenuStripRemoveClient_Opening);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.White;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Enabled = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 15);
+            this.toolStripTextBox1.Text = "Operation Section";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            // 
+            // removeClientToolStripMenuItem
+            // 
+            this.removeClientToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.removeClientToolStripMenuItem.Image = global::Sparkle.Properties.Resources.remove_Icon;
+            this.removeClientToolStripMenuItem.Name = "removeClientToolStripMenuItem";
+            this.removeClientToolStripMenuItem.Size = new System.Drawing.Size(206, 28);
+            this.removeClientToolStripMenuItem.Text = "Remove Client";
+            this.removeClientToolStripMenuItem.Click += new System.EventHandler(this.removeClientToolStripMenuItem_Click);
+            // 
             // UserControlClientsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +304,8 @@
             this.GPanelNumberClientInSparkle.ResumeLayout(false);
             this.GPanelNumberClientInSparkle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).EndInit();
+            this.GContextMenuStripRemoveClient.ResumeLayout(false);
+            this.GContextMenuStripRemoveClient.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +328,9 @@
         private Guna.UI2.WinForms.Guna2Panel GPanelNumberClientInSparkle;
         private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxClientPanelNumebrClient;
         private System.Windows.Forms.Label LblNumberClient;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip GContextMenuStripRemoveClient;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem removeClientToolStripMenuItem;
     }
 }
