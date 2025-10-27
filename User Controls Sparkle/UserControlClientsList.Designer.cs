@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelMainListViewClientsList = new Guna.UI2.WinForms.Guna2Panel();
             this.ListViewClientsLists = new System.Windows.Forms.ListView();
@@ -38,23 +37,26 @@
             this.ColumnAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.GButtonSearchByID = new Guna.UI2.WinForms.Guna2Button();
-            this.GTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.GPanelNumberClientInSparkle = new Guna.UI2.WinForms.Guna2Panel();
-            this.LblNumberClient = new System.Windows.Forms.Label();
-            this.GPictureBoxClientPanelNumebrClient = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GContextMenuStripRemoveClient = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.GButtonSearchByID = new Guna.UI2.WinForms.Guna2Button();
+            this.GPanelNumberClientInSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNumberClient = new System.Windows.Forms.Label();
+            this.GPictureBoxClientPanelNumebrClient = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GTextBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.removeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showAllInformationClientClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelMainListViewClientsList.SuspendLayout();
+            this.GContextMenuStripRemoveClient.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.GPanelNumberClientInSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).BeginInit();
-            this.GContextMenuStripRemoveClient.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -67,19 +69,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
             this.guna2GradientPanel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Sparkle.Properties.Resources.List_Clients;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -149,6 +138,44 @@
             this.ColumnPhone.Text = "Phone";
             this.ColumnPhone.Width = 165;
             // 
+            // GContextMenuStripRemoveClient
+            // 
+            this.GContextMenuStripRemoveClient.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GContextMenuStripRemoveClient.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.GContextMenuStripRemoveClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripSeparator1,
+            this.removeClientToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.showAllInformationClientClientToolStripMenuItem});
+            this.GContextMenuStripRemoveClient.Name = "GContextMenuStripRemoveClient";
+            this.GContextMenuStripRemoveClient.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.ColorTable = null;
+            this.GContextMenuStripRemoveClient.RenderStyle.RoundedEdges = true;
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.GContextMenuStripRemoveClient.RenderStyle.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
+            this.GContextMenuStripRemoveClient.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(320, 111);
+            this.GContextMenuStripRemoveClient.Opening += new System.ComponentModel.CancelEventHandler(this.GContextMenuStripRemoveClient_Opening);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.White;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Enabled = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 15);
+            this.toolStripTextBox1.Text = "Operation Section";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(316, 6);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByID);
@@ -178,30 +205,6 @@
             this.GButtonSearchByID.TabIndex = 1;
             this.GButtonSearchByID.Text = "Search";
             this.GButtonSearchByID.Click += new System.EventHandler(this.GButtonSearchByID_Click);
-            // 
-            // GTextBoxSearch
-            // 
-            this.GTextBoxSearch.Animated = true;
-            this.GTextBoxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearch.BorderRadius = 20;
-            this.GTextBoxSearch.BorderThickness = 2;
-            this.GTextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GTextBoxSearch.DefaultText = "";
-            this.GTextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.GTextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.GTextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.GTextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GTextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxSearch.IconLeft = global::Sparkle.Properties.Resources.Search;
-            this.GTextBoxSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.GTextBoxSearch.Location = new System.Drawing.Point(3, 46);
-            this.GTextBoxSearch.Name = "GTextBoxSearch";
-            this.GTextBoxSearch.PlaceholderText = "Search By ID";
-            this.GTextBoxSearch.SelectedText = "";
-            this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
-            this.GTextBoxSearch.TabIndex = 0;
             // 
             // GPanelNumberClientInSparkle
             // 
@@ -238,50 +241,64 @@
             this.GPictureBoxClientPanelNumebrClient.TabIndex = 5;
             this.GPictureBoxClientPanelNumebrClient.TabStop = false;
             // 
-            // GContextMenuStripRemoveClient
+            // GTextBoxSearch
             // 
-            this.GContextMenuStripRemoveClient.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GContextMenuStripRemoveClient.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.GContextMenuStripRemoveClient.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.toolStripSeparator1,
-            this.removeClientToolStripMenuItem});
-            this.GContextMenuStripRemoveClient.Name = "GContextMenuStripRemoveClient";
-            this.GContextMenuStripRemoveClient.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
-            this.GContextMenuStripRemoveClient.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
-            this.GContextMenuStripRemoveClient.RenderStyle.ColorTable = null;
-            this.GContextMenuStripRemoveClient.RenderStyle.RoundedEdges = true;
-            this.GContextMenuStripRemoveClient.RenderStyle.SelectionArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
-            this.GContextMenuStripRemoveClient.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
-            this.GContextMenuStripRemoveClient.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.GContextMenuStripRemoveClient.RenderStyle.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
-            this.GContextMenuStripRemoveClient.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(207, 77);
-            this.GContextMenuStripRemoveClient.Opening += new System.ComponentModel.CancelEventHandler(this.GContextMenuStripRemoveClient_Opening);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.White;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox1.Enabled = false;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 15);
-            this.toolStripTextBox1.Text = "Operation Section";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            this.GTextBoxSearch.Animated = true;
+            this.GTextBoxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearch.BorderRadius = 20;
+            this.GTextBoxSearch.BorderThickness = 2;
+            this.GTextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GTextBoxSearch.DefaultText = "";
+            this.GTextBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.GTextBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.GTextBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.GTextBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.GTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GTextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GTextBoxSearch.IconLeft = global::Sparkle.Properties.Resources.Search;
+            this.GTextBoxSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.GTextBoxSearch.Location = new System.Drawing.Point(3, 46);
+            this.GTextBoxSearch.Name = "GTextBoxSearch";
+            this.GTextBoxSearch.PlaceholderText = "Search By ID";
+            this.GTextBoxSearch.SelectedText = "";
+            this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
+            this.GTextBoxSearch.TabIndex = 0;
             // 
             // removeClientToolStripMenuItem
             // 
             this.removeClientToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.removeClientToolStripMenuItem.Image = global::Sparkle.Properties.Resources.remove_Icon;
             this.removeClientToolStripMenuItem.Name = "removeClientToolStripMenuItem";
-            this.removeClientToolStripMenuItem.Size = new System.Drawing.Size(206, 28);
+            this.removeClientToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
             this.removeClientToolStripMenuItem.Text = "Remove Client";
             this.removeClientToolStripMenuItem.Click += new System.EventHandler(this.removeClientToolStripMenuItem_Click);
+            // 
+            // showAllInformationClientClientToolStripMenuItem
+            // 
+            this.showAllInformationClientClientToolStripMenuItem.Image = global::Sparkle.Properties.Resources.Show_Information;
+            this.showAllInformationClientClientToolStripMenuItem.Name = "showAllInformationClientClientToolStripMenuItem";
+            this.showAllInformationClientClientToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.showAllInformationClientClientToolStripMenuItem.Text = "Show All Information Client";
+            this.showAllInformationClientClientToolStripMenuItem.Click += new System.EventHandler(this.showAllInformationClientClientToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sparkle.Properties.Resources.client;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::Sparkle.Properties.Resources.List_Clients;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(316, 6);
             // 
             // UserControlClientsList
             // 
@@ -298,14 +315,14 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlClientsList_Paint);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelMainListViewClientsList.ResumeLayout(false);
+            this.GContextMenuStripRemoveClient.ResumeLayout(false);
+            this.GContextMenuStripRemoveClient.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.GPanelNumberClientInSparkle.ResumeLayout(false);
             this.GPanelNumberClientInSparkle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxClientPanelNumebrClient)).EndInit();
-            this.GContextMenuStripRemoveClient.ResumeLayout(false);
-            this.GContextMenuStripRemoveClient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,5 +349,7 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem removeClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showAllInformationClientClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

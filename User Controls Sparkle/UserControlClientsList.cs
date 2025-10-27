@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using Sparkle.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -301,12 +303,15 @@ namespace Sparkle.User_Controls_Sparkle
             return false;
 
         }
-    
+
+        // ----------------------------------------[ Start Section Show Context Menu Strip ] --------------------------------------
+
         private void GContextMenuStripRemoveClient_Opening(object sender, CancelEventArgs e)
         {
             bool hasSelection = (ListViewClientsLists.SelectedItems.Count > 0);
 
             removeClientToolStripMenuItem.Enabled = hasSelection;
+            showAllInformationClientClientToolStripMenuItem.Enabled = hasSelection;
         }
 
         private void removeClientToolStripMenuItem_Click(object sender, EventArgs e)
@@ -324,8 +329,263 @@ namespace Sparkle.User_Controls_Sparkle
             
            
         }
-   
-    
+
+
+        // ----------------------------------------[ End Section Show Context Menu Strip ] --------------------------------------
+
+
+        private void showAllInformationClientClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowInformationClientAfterSelect();
+        }
+
+        // ----------------------------------------[ Start Section Show New Form ] --------------------------------------
+
+
+        Form frmShowAllInformationOneClient;
+
+        private void ShowInformationClientAfterSelect()
+        {
+            frmShowAllInformationOneClient = new Form();
+            setLabelShowInformationClient(frmShowAllInformationOneClient);
+            setTitleAndSizeAndLocationFormSectionCar(frmShowAllInformationOneClient);
+
+                frmShowAllInformationOneClient.Show();
+        }
+      
+        private void setLabelShowInformationClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip)
+        {
+            Label lblShowInformationClient= new Label();
+
+            lblShowInformationClient.Text = "Info Client";
+            lblShowInformationClient.Font = new Font("Garamond", 40, FontStyle.Bold);
+            lblShowInformationClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+            lblShowInformationClient.Width = 350;
+            lblShowInformationClient.Height = 60;
+            lblShowInformationClient.Top = 55;
+            lblShowInformationClient.Left = 125;
+            lblShowInformationClient.BackColor = Color.Transparent;
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblShowInformationClient);
+        }
+
+        private void setTitleAndSizeAndLocationFormSectionCar(Form frmShowAllInformationOneClientAfterlickMenuContextStip)
+        {
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Text = "Info Client";
+            frmShowAllInformationOneClientAfterlickMenuContextStip.StartPosition = FormStartPosition.CenterScreen;
+
+            //Controls Form 
+            Guna2BorderlessForm GBLEF = new Guna2BorderlessForm();
+            Guna2ShadowForm G2SF = new Guna2ShadowForm();
+            Guna2ControlBox CloseFormControlBox = new Guna2ControlBox();
+            
+            //Properties Form 
+            GBLEF.BorderRadius = 20;
+            G2SF.ShadowColor = Color.FromArgb(90, 4, 187, 156);
+            G2SF.SetShadowForm(frmShowAllInformationOneClientAfterlickMenuContextStip);
+            GBLEF.ContainerControl = frmShowAllInformationOneClientAfterlickMenuContextStip;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.MinimizeBox = false;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.MaximizeBox = false;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.ControlBox = false;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.BackColor = Color.White;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Size = new Size(500, Convert.ToInt32(Math.Round(700.5)));
+            frmShowAllInformationOneClientAfterlickMenuContextStip.BackgroundImage = Resources.Background_Image_Form_Finial_Bill_Orders_;
+            frmShowAllInformationOneClientAfterlickMenuContextStip.BackgroundImageLayout = ImageLayout.Zoom;
+
+            //Control Box Close Form properties 
+            CloseFormControlBox.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.CloseBox;
+            CloseFormControlBox.FillColor = Color.Transparent;
+            CloseFormControlBox.BorderColor = Color.FromArgb(4, 187, 156);
+            CloseFormControlBox.BorderThickness = 2;
+            CloseFormControlBox.HoverState.FillColor = Color.FromArgb(4, 187, 156);
+            CloseFormControlBox.HoverState.IconColor = Color.White ;
+            CloseFormControlBox.IconColor = Color.White;
+            CloseFormControlBox.IconColor = Color.FromArgb(4, 187, 156); 
+            CloseFormControlBox.BackColor = Color.Transparent;
+            CloseFormControlBox.Size = new Size(40, 30);
+            CloseFormControlBox.Location = new Point(frmShowAllInformationOneClientAfterlickMenuContextStip.Width - 80, 20); 
+            CloseFormControlBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            CloseFormControlBox.Animated = true; 
+            
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(CloseFormControlBox);
+            setLabelShowInformationClient(frmShowAllInformationOneClientAfterlickMenuContextStip);
+            SetAllLabelsToFormShowInformationClient(frmShowAllInformationOneClientAfterlickMenuContextStip);
+
+        }
+
+        private void setLabelIDClientAndResultIDClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip , string IDClient )
+        {
+            Label lblIDClient = new Label();
+            Label lblResultIDClient = new Label();
+
+            // Label ID Client 
+            lblIDClient.Text = "ID Client :";
+            lblIDClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblIDClient.BackColor = Color.Transparent;
+            lblIDClient.Top = 160;
+            lblIDClient.Left = 10;
+            lblIDClient.Width = 120;
+            lblIDClient.Height = 40;
+            lblIDClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label ID Order 
+            lblResultIDClient.Text = IDClient;
+            lblResultIDClient.Font = new Font("Garamond", 15, FontStyle.Bold);
+            lblResultIDClient.Top = 160;
+            lblResultIDClient.Left = 130;
+            lblResultIDClient.Width = 50;
+            lblResultIDClient.BackColor = Color.Transparent;
+
+
+
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblIDClient);
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblResultIDClient);
+
+        }
+
+        private void setLabelNameClientAndResultNameClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip, string NameClient)
+        {
+            Label lblNameClient = new Label();
+            Label lblResultNameClient = new Label();
+
+            // Label name Client 
+            lblNameClient.Text = "Name Client :";
+            lblNameClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblNameClient.BackColor = Color.Transparent;
+            lblNameClient.Top = 260;
+            lblNameClient.Left = 10;
+            lblNameClient.Width = 145;
+            lblNameClient.Height = 40;
+            lblNameClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label ID Order 
+            lblResultNameClient.Text = NameClient;
+            lblResultNameClient.Font = new Font("Garamond", 15, FontStyle.Bold);
+            lblResultNameClient.Top = 260;
+            lblResultNameClient.Left = 150;
+            lblResultNameClient.Width = 250;
+            lblResultNameClient.BackColor = Color.Transparent;
+
+
+
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblNameClient);
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblResultNameClient);
+
+        }
+
+        private void setLabelAddressClientAndResultAddressClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip, string AddressClient)
+        {
+            Label lblAddressClient = new Label();
+            Label lblResultAddressClient = new Label();
+
+            // Label name Client 
+            lblAddressClient.Text = "Address Client:";
+            lblAddressClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblAddressClient.BackColor = Color.Transparent;
+            lblAddressClient.Top = 360;
+            lblAddressClient.Left = 10;
+            lblAddressClient.Width = 155;
+            lblAddressClient.Height = 40;
+            lblAddressClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label ID Order 
+            lblResultAddressClient.Text = AddressClient;
+            lblResultAddressClient.Font = new Font("Garamond", 15, FontStyle.Bold);
+            lblResultAddressClient.Top = 360;
+            lblResultAddressClient.Left = 160;
+            lblResultAddressClient.Width = 400;
+            lblResultAddressClient.Height = 100;
+            lblResultAddressClient.BackColor = Color.Transparent;
+
+
+
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblAddressClient);
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblResultAddressClient);
+
+        }
+
+        private void setLabelEmailClientAndResultAddressClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip, string EmailClient)
+        {
+            Label lblEmailClient = new Label();
+            Label lblResultEmailClient = new Label();
+
+            // Label Email Client 
+            lblEmailClient.Text = "Email Client:";
+            lblEmailClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblEmailClient.BackColor = Color.Transparent;
+            lblEmailClient.Top = 460;
+            lblEmailClient.Left = 10;
+            lblEmailClient.Width = 160;
+            lblEmailClient.Height = 40;
+            lblEmailClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Email  Client
+            lblResultEmailClient.Text = EmailClient;
+            lblResultEmailClient.Font = new Font("Garamond", 15, FontStyle.Bold);
+            lblResultEmailClient.Top = 460;
+            lblResultEmailClient.Left = 165;
+            lblResultEmailClient.Width = 400;
+            lblResultEmailClient.BackColor = Color.Transparent;
+
+
+
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblEmailClient);
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblResultEmailClient);
+
+        }
+
+        private void setLabelPhoneClientAndResultAddressClient(Form frmShowAllInformationOneClientAfterlickMenuContextStip, string PhoneClient)
+        {
+            Label lblPhoneClient = new Label();
+            Label lblResultPhoneClient = new Label();
+
+            // Label Phone Client 
+            lblPhoneClient.Text = "Phone Client:";
+            lblPhoneClient.Font = new Font("Garamond", 16, FontStyle.Bold);
+            lblPhoneClient.BackColor = Color.Transparent;
+            lblPhoneClient.Top = 560;
+            lblPhoneClient.Left = 10;
+            lblPhoneClient.Width = 150;
+            lblPhoneClient.Height = 40;
+            lblPhoneClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
+
+            // Result Label Phone  Client
+            lblResultPhoneClient.Text = PhoneClient;
+            lblResultPhoneClient.Font = new Font("Garamond", 15, FontStyle.Bold);
+            lblResultPhoneClient.Top = 560;
+            lblResultPhoneClient.Left = 155;
+            lblResultPhoneClient.Width = 250;
+            lblResultPhoneClient.BackColor = Color.Transparent;
+
+
+
+
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblPhoneClient);
+            frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblResultPhoneClient);
+
+
+
+        }
+
+        private void SetAllLabelsToFormShowInformationClient (Form frmShowAllInformationOneClientAfterlickMenuContextStip)
+        {
+            setLabelIDClientAndResultIDClient(frmShowAllInformationOneClientAfterlickMenuContextStip, ListViewClientsLists.SelectedItems[0].Text);
+            setLabelNameClientAndResultNameClient(frmShowAllInformationOneClientAfterlickMenuContextStip, ListViewClientsLists.SelectedItems[0].SubItems[1].Text);
+            setLabelAddressClientAndResultAddressClient(frmShowAllInformationOneClientAfterlickMenuContextStip, ListViewClientsLists.SelectedItems[0].SubItems[2].Text);
+            setLabelEmailClientAndResultAddressClient(frmShowAllInformationOneClientAfterlickMenuContextStip, ListViewClientsLists.SelectedItems[0].SubItems[3].Text);
+            setLabelPhoneClientAndResultAddressClient(frmShowAllInformationOneClientAfterlickMenuContextStip, ListViewClientsLists.SelectedItems[0].SubItems[4].Text);
+        }
+
+
+
+        // ----------------------------------------[ End Section Show New Form ] --------------------------------------
+
     }
-    
+
 }
