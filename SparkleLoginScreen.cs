@@ -6,24 +6,24 @@ using System.Windows.Forms;
 namespace Sparkle
 {
     //Information One User
-    public class stInformationUser
-    {
-
-        public string stUsername;
-        public string stPassword;
-        public int numberAttempt;
-        public short permission;
-
-        //DateTime Login Sparkle
-        public string stDateTimeNowLoginSparkle; 
-
-    }
 
     public partial class SparkleLoginScreen : Form
     {
         public SparkleLoginScreen()
         {
             InitializeComponent();
+
+        }
+        public class stInformationUser
+        {
+
+            public string stUsername;
+            public string stPassword;
+            public int numberAttempt;
+            public short permission;
+
+            //DateTime Login Sparkle
+            public string stDateTimeNowLoginSparkle;
 
         }
 
@@ -136,7 +136,7 @@ namespace Sparkle
             string lineInformationHistoryLogin = "";
             lineInformationHistoryLogin += informationUser.stUsername + separator;
             lineInformationHistoryLogin += informationUser.stPassword + separator;
-            lineInformationHistoryLogin += DateTime.Now.ToString();
+            lineInformationHistoryLogin += DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
 
 
             return lineInformationHistoryLogin;

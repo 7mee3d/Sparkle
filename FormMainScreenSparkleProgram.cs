@@ -32,9 +32,9 @@ namespace Sparkle
             
         };
 
-        private stInformationUser informationUserAfterLoginSparkle;
+        private SparkleLoginScreen.stInformationUser informationUserAfterLoginSparkle;
 
-        public FormMainScreenSparkleProgram(stInformationUser informationuser)
+        public FormMainScreenSparkleProgram(SparkleLoginScreen.stInformationUser informationuser)
         {
             InitializeComponent();
             informationUserAfterLoginSparkle = informationuser;

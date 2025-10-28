@@ -114,6 +114,7 @@
             this.GButtonSearchByUsernameHistoryLogin.Size = new System.Drawing.Size(88, 42);
             this.GButtonSearchByUsernameHistoryLogin.TabIndex = 1;
             this.GButtonSearchByUsernameHistoryLogin.Text = "Search";
+            this.GButtonSearchByUsernameHistoryLogin.Click += new System.EventHandler(this.GButtonSearchByUsernameHistoryLogin_Click);
             // 
             // GTextBoxSearchHistoryLoginByUsername
             // 
@@ -144,7 +145,7 @@
             this.PanelMainListViewHistoryLoginSparkle.Controls.Add(this.ListViewHistoryLoginSparkle);
             this.PanelMainListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 291);
             this.PanelMainListViewHistoryLoginSparkle.Name = "PanelMainListViewHistoryLoginSparkle";
-            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 500);
+            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 518);
             this.PanelMainListViewHistoryLoginSparkle.TabIndex = 7;
             // 
             // ListViewHistoryLoginSparkle
@@ -159,10 +160,10 @@
             this.ListViewHistoryLoginSparkle.GridLines = true;
             this.ListViewHistoryLoginSparkle.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewHistoryLoginSparkle.HideSelection = false;
-            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(3, 8);
+            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(3, 5);
             this.ListViewHistoryLoginSparkle.MultiSelect = false;
             this.ListViewHistoryLoginSparkle.Name = "ListViewHistoryLoginSparkle";
-            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1189, 510);
+            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1189, 513);
             this.ListViewHistoryLoginSparkle.TabIndex = 0;
             this.ListViewHistoryLoginSparkle.UseCompatibleStateImageBehavior = false;
             this.ListViewHistoryLoginSparkle.View = System.Windows.Forms.View.Details;
@@ -175,12 +176,12 @@
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 425;
+            this.ColumnPassword.Width = 420;
             // 
             // DateTime
             // 
-            this.DateTime.Text = "Date Time";
-            this.DateTime.Width = 350;
+            this.DateTime.Text = "Date Time Login Sparkle";
+            this.DateTime.Width = 340;
             // 
             // GPanelNumberUsernSparkle
             // 

@@ -520,7 +520,14 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (!string.IsNullOrEmpty(Username))
             {
+                if(Username != "Admin")
                 UpdateInformationUser(username: Username);
+                else MessageBox.Show
+                    ($"Warning!! The Username is Admin Connot Be Update Any Information Admin , Please Try to fill another username to be Update Information User"
+                    , "Error Update User Information"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning);
+
             }
             else
             {

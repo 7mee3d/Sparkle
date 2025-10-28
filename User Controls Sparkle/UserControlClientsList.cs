@@ -497,7 +497,7 @@ namespace Sparkle.User_Controls_Sparkle
             lblResultAddressClient.Font = new Font("Garamond", 15, FontStyle.Bold);
             lblResultAddressClient.Top = 360;
             lblResultAddressClient.Left = 160;
-            lblResultAddressClient.Width = 400;
+            lblResultAddressClient.Width = 300;
             lblResultAddressClient.Height = 100;
             lblResultAddressClient.BackColor = Color.Transparent;
 
@@ -525,11 +525,13 @@ namespace Sparkle.User_Controls_Sparkle
             lblEmailClient.ForeColor = Color.FromArgb(255, 4, 187, 156);
 
             // Result Label Email  Client
+            lblResultEmailClient.AutoSize = true; 
             lblResultEmailClient.Text = EmailClient;
             lblResultEmailClient.Font = new Font("Garamond", 15, FontStyle.Bold);
             lblResultEmailClient.Top = 460;
             lblResultEmailClient.Left = 165;
-            lblResultEmailClient.Width = 400;
+            lblResultEmailClient.Width = 300;
+            lblEmailClient.Height = 80;
             lblResultEmailClient.BackColor = Color.Transparent;
 
 

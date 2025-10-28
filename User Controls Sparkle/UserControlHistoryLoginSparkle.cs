@@ -168,7 +168,10 @@ namespace Sparkle.User_Controls_Sparkle
         {
             PaintTheLine(e);
         }
-  
-    
+
+        private void GButtonSearchByUsernameHistoryLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
