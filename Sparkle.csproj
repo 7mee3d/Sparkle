@@ -232,6 +232,7 @@
     <None Include="Resources\History Log.png" />
     <None Include="Resources\remove Icon.png" />
     <None Include="Resources\Show Information.png" />
+    <None Include="Resources\history Login Users.png" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

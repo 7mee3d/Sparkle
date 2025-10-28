@@ -138,10 +138,10 @@ namespace Sparkle.User_Controls_Sparkle
 
                 ListViewHistoryLoginSparkle.Items.Add(LVI);
             }
-
+            
         }
 
-        private void pushAllInformationHistoryLoginSparkleToListViewAfterSearch(string partsOfUsernameToSearch )
+        private void pushAllInformationHistoryLoginSparkleToListViewAfterSearch(string partsOfUsernameToSearch, ref int numberHistoryUserLoginSparkle)
         {
             List<stInformationUser> AllInformationUsersHistoryLogin = storeInformationAllUsersHistoryLoginSystemSparkleToStructure();
 
@@ -156,18 +156,21 @@ namespace Sparkle.User_Controls_Sparkle
 
                     ListViewHistoryLoginSparkle.Items.Add(LVI);
                 }
+
+                numberHistoryUserLoginSparkle = ListViewHistoryLoginSparkle.Items.Count;
+
             }
-
         }
-
         private void searchTheHistoryLoginUsername()
         {
             string username = GTextBoxSearchHistoryLoginByUsername.Text;
 
             if (!string.IsNullOrEmpty(username))
             {
+                int numberOfHistoryLogUser = 0;
                 ListViewHistoryLoginSparkle.Items.Clear();
-                pushAllInformationHistoryLoginSparkleToListViewAfterSearch(username);
+                pushAllInformationHistoryLoginSparkleToListViewAfterSearch(username , ref numberOfHistoryLogUser);
+                numberLoginUserInSparkleSystem.Text = numberOfHistoryLogUser.ToString();
             }
             else
                 MessageBox.Show(
@@ -218,12 +221,15 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GTextBoxSearchHistoryLoginByUsername_Click(object sender, EventArgs e)
         {
+           
             if (!string.IsNullOrEmpty(GTextBoxSearchHistoryLoginByUsername.Text))
             {
                 GTextBoxSearchHistoryLoginByUsername.Clear();
                 pushAllInformationHistoryLoginSparkleToListView();
+
             }
 
         }
+
     }
 }

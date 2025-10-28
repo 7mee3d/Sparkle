@@ -42,12 +42,17 @@
             this.GPanelNumberUsernSparkle = new Guna.UI2.WinForms.Guna2Panel();
             this.LblNumberHistoryLoginSparkle = new System.Windows.Forms.Label();
             this.GPictureBoxUserPanelNumebrUser = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.numberLoginUserInSparkleSystem = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.PanelMainListViewHistoryLoginSparkle.SuspendLayout();
             this.GPanelNumberUsernSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxUserPanelNumebrUser)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -219,11 +224,47 @@
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.Controls.Add(this.numberLoginUserInSparkleSystem);
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(261, 204);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(206, 81);
+            this.guna2Panel2.TabIndex = 10;
+            // 
+            // numberLoginUserInSparkleSystem
+            // 
+            this.numberLoginUserInSparkleSystem.AutoSize = true;
+            this.numberLoginUserInSparkleSystem.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberLoginUserInSparkleSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
+            this.numberLoginUserInSparkleSystem.Location = new System.Drawing.Point(123, 39);
+            this.numberLoginUserInSparkleSystem.Name = "numberLoginUserInSparkleSystem";
+            this.numberLoginUserInSparkleSystem.Size = new System.Drawing.Size(19, 21);
+            this.numberLoginUserInSparkleSystem.TabIndex = 5;
+            this.numberLoginUserInSparkleSystem.Text = "0";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.history_Login_Users;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 18);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(57, 56);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // UserControlHistoryLoginSparkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.GPanelNumberUsernSparkle);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.PanelMainListViewHistoryLoginSparkle);
@@ -239,6 +280,9 @@
             this.GPanelNumberUsernSparkle.ResumeLayout(false);
             this.GPanelNumberUsernSparkle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxUserPanelNumebrUser)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +303,8 @@
         private Guna.UI2.WinForms.Guna2Panel GPanelNumberUsernSparkle;
         private System.Windows.Forms.Label LblNumberHistoryLoginSparkle;
         private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxUserPanelNumebrUser;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label numberLoginUserInSparkleSystem;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
