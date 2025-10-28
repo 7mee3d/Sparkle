@@ -139,6 +139,7 @@
             this.GTextBoxSearchHistoryLoginByUsername.SelectedText = "";
             this.GTextBoxSearchHistoryLoginByUsername.Size = new System.Drawing.Size(340, 46);
             this.GTextBoxSearchHistoryLoginByUsername.TabIndex = 0;
+            this.GTextBoxSearchHistoryLoginByUsername.Click += new System.EventHandler(this.GTextBoxSearchHistoryLoginByUsername_Click);
             // 
             // PanelMainListViewHistoryLoginSparkle
             // 

@@ -33,6 +33,12 @@ namespace Sparkle.User_Controls_Sparkle
         private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = "HistoryLoginSparkle.txt";
         private const int _KEY_CRYPT = 2;
 
+       private bool areSameUsernameOrNot (string username , string partsOfUsername)
+        {
+            return (username.Contains(partsOfUsername));
+        }
+
+
         private string DecreyptPassword(string password, int keyCrypt)
         {
             string passwordAfterDecrypt = "";
@@ -135,6 +141,42 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
+        private void pushAllInformationHistoryLoginSparkleToListViewAfterSearch(string partsOfUsernameToSearch )
+        {
+            List<stInformationUser> AllInformationUsersHistoryLogin = storeInformationAllUsersHistoryLoginSystemSparkleToStructure();
+
+            foreach (stInformationUser informationHistoryLog in AllInformationUsersHistoryLogin)
+            {
+                if (areSameUsernameOrNot(informationHistoryLog.stUsername, partsOfUsernameToSearch))
+                {
+                    ListViewItem LVI = new ListViewItem(informationHistoryLog.stUsername);
+
+                    LVI.SubItems.Add(DecreyptPassword(informationHistoryLog.stPassword, _KEY_CRYPT));
+                    LVI.SubItems.Add(informationHistoryLog.stDateTimeNowLoginSparkle);
+
+                    ListViewHistoryLoginSparkle.Items.Add(LVI);
+                }
+            }
+
+        }
+
+        private void searchTheHistoryLoginUsername()
+        {
+            string username = GTextBoxSearchHistoryLoginByUsername.Text;
+
+            if (!string.IsNullOrEmpty(username))
+            {
+                ListViewHistoryLoginSparkle.Items.Clear();
+                pushAllInformationHistoryLoginSparkleToListViewAfterSearch(username);
+            }
+            else
+                MessageBox.Show(
+                        "The Text Username Already Empty\nPlease Enter the Username to be Search in History Login"
+                        , "Warning!! Search History Login"
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Warning
+                        );
+        }
         private int numberHistoryLoginSparkle()
         {
             return (ListViewHistoryLoginSparkle.Items.Count); 
@@ -171,6 +213,16 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GButtonSearchByUsernameHistoryLogin_Click(object sender, EventArgs e)
         {
+            searchTheHistoryLoginUsername();
+        }
+
+        private void GTextBoxSearchHistoryLoginByUsername_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(GTextBoxSearchHistoryLoginByUsername.Text))
+            {
+                GTextBoxSearchHistoryLoginByUsername.Clear();
+                pushAllInformationHistoryLoginSparkleToListView();
+            }
 
         }
     }
