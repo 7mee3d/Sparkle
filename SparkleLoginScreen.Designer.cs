@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SparkleLoginScreen));
             this.GBorderLessFormRaduis = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.MainPanelShadowLogin = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.GCPictureBoxShowHideShowPassword = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.GLabelWariningLastAttemptAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ButtonLoginTheSparkle = new Guna.UI2.WinForms.Guna2Button();
             this.GTextBoxPasswordLogin = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,6 +40,7 @@
             this.labelLoginWord = new System.Windows.Forms.Label();
             this.PictureBoxExitApplicationSparkle = new System.Windows.Forms.PictureBox();
             this.MainPanelShadowLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GCPictureBoxShowHideShowPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExitApplicationSparkle)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +54,7 @@
             // MainPanelShadowLogin
             // 
             this.MainPanelShadowLogin.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanelShadowLogin.Controls.Add(this.GCPictureBoxShowHideShowPassword);
             this.MainPanelShadowLogin.Controls.Add(this.GLabelWariningLastAttemptAccount);
             this.MainPanelShadowLogin.Controls.Add(this.ButtonLoginTheSparkle);
             this.MainPanelShadowLogin.Controls.Add(this.GTextBoxPasswordLogin);
@@ -65,6 +68,24 @@
             this.MainPanelShadowLogin.ShadowDepth = 50;
             this.MainPanelShadowLogin.Size = new System.Drawing.Size(534, 688);
             this.MainPanelShadowLogin.TabIndex = 0;
+            // 
+            // GCPictureBoxShowHideShowPassword
+            // 
+            this.GCPictureBoxShowHideShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.GCPictureBoxShowHideShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GCPictureBoxShowHideShowPassword.FillColor = System.Drawing.Color.Transparent;
+            this.GCPictureBoxShowHideShowPassword.Image = global::Sparkle.Properties.Resources.eye_show_gif_Image;
+            this.GCPictureBoxShowHideShowPassword.ImageRotate = 0F;
+            this.GCPictureBoxShowHideShowPassword.Location = new System.Drawing.Point(391, 378);
+            this.GCPictureBoxShowHideShowPassword.Name = "GCPictureBoxShowHideShowPassword";
+            this.GCPictureBoxShowHideShowPassword.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.GCPictureBoxShowHideShowPassword.Size = new System.Drawing.Size(23, 26);
+            this.GCPictureBoxShowHideShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GCPictureBoxShowHideShowPassword.TabIndex = 2;
+            this.GCPictureBoxShowHideShowPassword.TabStop = false;
+            this.GCPictureBoxShowHideShowPassword.Tag = "Show Password";
+            this.GCPictureBoxShowHideShowPassword.UseTransparentBackground = true;
+            this.GCPictureBoxShowHideShowPassword.Click += new System.EventHandler(this.GCPictureBoxShowHideShowPassword_Click);
             // 
             // GLabelWariningLastAttemptAccount
             // 
@@ -203,6 +224,7 @@
             this.Text = "Form1";
             this.MainPanelShadowLogin.ResumeLayout(false);
             this.MainPanelShadowLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GCPictureBoxShowHideShowPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExitApplicationSparkle)).EndInit();
             this.ResumeLayout(false);
 
@@ -218,6 +240,7 @@
         private Guna.UI2.WinForms.Guna2Button ButtonLoginTheSparkle;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLabelWariningLastAttemptAccount;
         private System.Windows.Forms.PictureBox PictureBoxExitApplicationSparkle;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox GCPictureBoxShowHideShowPassword;
     }
 }
 

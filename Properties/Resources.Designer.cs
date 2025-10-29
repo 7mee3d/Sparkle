@@ -193,6 +193,36 @@ namespace Sparkle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye_hide_image_ {
+            get {
+                object obj = ResourceManager.GetObject("eye hide image ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_show {
+            get {
+                object obj = ResourceManager.GetObject("eye show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_show_gif_Image {
+            get {
+                object obj = ResourceManager.GetObject("eye show gif Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Final_Bill_Sparkle_Order {
             get {
                 object obj = ResourceManager.GetObject("Final Bill Sparkle Order", resourceCulture);

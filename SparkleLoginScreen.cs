@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Sparkle.Properties;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -14,6 +15,15 @@ namespace Sparkle
             InitializeComponent();
 
         }
+
+        enum enViewImagePassword
+        {
+            ekSHOW_PASSWORD = 1 , 
+            ekHIDE_PASSWORD = 2 
+        }
+
+
+        enViewImagePassword initalViewPassword = enViewImagePassword.ekSHOW_PASSWORD; 
         public class stInformationUser
         {
 
@@ -46,6 +56,24 @@ namespace Sparkle
 
 
       
+        private void changeImageandShowOrHidePassword (Guna2CirclePictureBox PictureBoxViewPassword)
+        {
+            if(initalViewPassword == enViewImagePassword.ekSHOW_PASSWORD)
+            {
+                PictureBoxViewPassword.Image = Resources.eye_hide_image_;
+                GTextBoxPasswordLogin.PasswordChar = '\0';
+                initalViewPassword = enViewImagePassword.ekHIDE_PASSWORD;
+            }
+            else
+            {
+
+                PictureBoxViewPassword.Image = Resources.eye_show_gif_Image;
+                GTextBoxPasswordLogin.PasswordChar = '*';
+                initalViewPassword = enViewImagePassword.ekSHOW_PASSWORD;
+
+            }
+        }
+
         stInformationUser informationUser = new stInformationUser(); 
         private void ClearAlTextInTheTextBoxAfterClick(object sender)
         {
@@ -323,6 +351,11 @@ namespace Sparkle
         private void PictureBoxExitApplicationSparkle_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void GCPictureBoxShowHideShowPassword_Click(object sender, EventArgs e)
+        {
+            changeImageandShowOrHidePassword(GCPictureBoxShowHideShowPassword);
         }
     }
 }
