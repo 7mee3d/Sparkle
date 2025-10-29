@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Sparkle.User_Controls_Sparkle
 {
@@ -30,6 +31,7 @@ namespace Sparkle.User_Controls_Sparkle
             setNumberHisrtoySparkleLoginToScreen();
         }
 
+        //Constants
         private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = "HistoryLoginSparkle.txt";
         private const int _KEY_CRYPT = 2;
 
@@ -38,16 +40,17 @@ namespace Sparkle.User_Controls_Sparkle
             return (username.Contains(partsOfUsername));
         }
 
-
         private string DecreyptPassword(string password, int keyCrypt)
         {
             string passwordAfterDecrypt = "";
+
             foreach (char Character in password)
             {
                 int ASCIICharacter = Convert.ToInt32(Character);
                 int resultASCIIAfterDecryptPassword = ASCIICharacter - keyCrypt;
                 passwordAfterDecrypt += Convert.ToChar(resultASCIIAfterDecryptPassword);
             }
+
             return passwordAfterDecrypt;
         }
 
@@ -56,9 +59,7 @@ namespace Sparkle.User_Controls_Sparkle
             List<string> informationUserLine = new List<string>();
 
             if (!System.IO.File.Exists(PathFileToLoadInformation))
-            {
                 System.IO.File.Create(PathFileToLoadInformation).Close();
-            }
 
             System.IO.StreamReader ReadInformationAllUsers = new System.IO.StreamReader(PathFileToLoadInformation);
 
@@ -147,7 +148,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             foreach (stInformationUser informationHistoryLog in AllInformationUsersHistoryLogin)
             {
-                if (areSameUsernameOrNot(informationHistoryLog.stUsername, partsOfUsernameToSearch))
+                if (areSameUsernameOrNot(informationHistoryLog.stUsername.ToLower(), partsOfUsernameToSearch.ToLower()))
                 {
                     ListViewItem LVI = new ListViewItem(informationHistoryLog.stUsername);
 
@@ -161,15 +162,15 @@ namespace Sparkle.User_Controls_Sparkle
 
             }
         }
-        private void searchTheHistoryLoginUsername()
-        {
-            string username = GTextBoxSearchHistoryLoginByUsername.Text;
 
-            if (!string.IsNullOrEmpty(username))
+        private void searchToUsernameHistoryLoginSparkleSystemOperation (string Username )
+        {
+         
+            if (!string.IsNullOrEmpty(Username))
             {
                 int numberOfHistoryLogUser = 0;
                 ListViewHistoryLoginSparkle.Items.Clear();
-                pushAllInformationHistoryLoginSparkleToListViewAfterSearch(username , ref numberOfHistoryLogUser);
+                pushAllInformationHistoryLoginSparkleToListViewAfterSearch(Username, ref numberOfHistoryLogUser);
                 numberLoginUserInSparkleSystem.Text = numberOfHistoryLogUser.ToString();
             }
             else
@@ -180,6 +181,15 @@ namespace Sparkle.User_Controls_Sparkle
                         , MessageBoxIcon.Warning
                         );
         }
+      
+        private void searchTheHistoryLoginUsername()
+        {
+            string username = GTextBoxSearchHistoryLoginByUsername.Text;
+
+            searchToUsernameHistoryLoginSparkleSystemOperation(Username:  username); 
+
+        }
+  
         private int numberHistoryLoginSparkle()
         {
             return (ListViewHistoryLoginSparkle.Items.Count); 
@@ -190,7 +200,18 @@ namespace Sparkle.User_Controls_Sparkle
             LblNumberHistoryLoginSparkle.Text = numberHistoryLoginSparkle().ToString(); 
         }
 
+        private void AfterClickTextBoxUsernameEnterToBeSearch()
+        {
 
+            if (!string.IsNullOrEmpty(GTextBoxSearchHistoryLoginByUsername.Text))
+            {
+                GTextBoxSearchHistoryLoginByUsername.Clear();
+                pushAllInformationHistoryLoginSparkleToListView();
+                numberLoginUserInSparkleSystem.Text = "0"; 
+            }
+        }
+    
+        
         //Draw Section 
         private void PaintTheLine(PaintEventArgs e)
         {
@@ -221,15 +242,9 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GTextBoxSearchHistoryLoginByUsername_Click(object sender, EventArgs e)
         {
-           
-            if (!string.IsNullOrEmpty(GTextBoxSearchHistoryLoginByUsername.Text))
-            {
-                GTextBoxSearchHistoryLoginByUsername.Clear();
-                pushAllInformationHistoryLoginSparkleToListView();
-
-            }
-
+            AfterClickTextBoxUsernameEnterToBeSearch();
         }
 
+   
     }
 }
