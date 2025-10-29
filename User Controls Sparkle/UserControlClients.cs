@@ -43,6 +43,7 @@ namespace Sparkle.User_Controls_Sparkle
                    Email.Contains("@hotmail.com")
                 );
         }
+     
         private void ResetAllTextBoxToDefault()
         {
 
@@ -205,16 +206,39 @@ namespace Sparkle.User_Controls_Sparkle
             }
           }
 
+        private bool checkAllFieldsAddClientIsFullInformationClient()
+        {
+            return (
+               !string.IsNullOrEmpty(GTextBoxAddressClient.Text) &&
+               !string.IsNullOrEmpty(GTextBoxNameClient.Text) &&
+               !string.IsNullOrEmpty(GTextBoxEmailClient.Text) &&
+               !string.IsNullOrEmpty(GTextBoxPhoneClient.Text));
+           
+        }
+   
         private void addNewClintInSparkle()
         {
             addNewClient();
 
         }
-      
+
+        private void addNewClientAfterViadtionFeilds ()
+        {
+            if (checkAllFieldsAddClientIsFullInformationClient())
+                addNewClintInSparkle();
+            else
+                MessageBox.Show(
+                    "Warning!! Connot be add new client becouse the fields infroamtion client all empty\nPlease Fill All information client To Be Add in System Spakle"
+                    , "Warning! Add New Client"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Warning
+                  );
+
+        }
+  
         private void ButtonAddNewClient_Click(object sender, EventArgs e)
         {
-            addNewClintInSparkle();
-
+            addNewClientAfterViadtionFeilds();
         }
 
         private void setErrorProvider(object sender, CancelEventArgs e , string captionError , string captionCorrect )
@@ -241,6 +265,7 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
+   
         private void setErrorProviderEmail(object sender, CancelEventArgs e, string captionError, string captionCorrect)
         {
 
@@ -265,11 +290,12 @@ namespace Sparkle.User_Controls_Sparkle
             }
 
         }
+   
         private bool isDigit (char Character)
         {
             return ((Convert.ToInt32(Character) >= 48) && (Convert.ToInt32(Character) <= 57));
         }
-      
+     
         private bool areHaveTextLettersOrNot (string text)
         {
             foreach (char Character in text)

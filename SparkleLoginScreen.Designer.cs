@@ -199,7 +199,7 @@
             this.PictureBoxExitApplicationSparkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PictureBoxExitApplicationSparkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBoxExitApplicationSparkle.Image = global::Sparkle.Properties.Resources.close;
-            this.PictureBoxExitApplicationSparkle.Location = new System.Drawing.Point(12, 717);
+            this.PictureBoxExitApplicationSparkle.Location = new System.Drawing.Point(41, 717);
             this.PictureBoxExitApplicationSparkle.Name = "PictureBoxExitApplicationSparkle";
             this.PictureBoxExitApplicationSparkle.Size = new System.Drawing.Size(71, 71);
             this.PictureBoxExitApplicationSparkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

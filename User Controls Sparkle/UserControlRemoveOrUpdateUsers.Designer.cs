@@ -99,13 +99,13 @@
             // GRadioButtonUpdateMode
             // 
             this.GRadioButtonUpdateMode.AutoSize = true;
-            this.GRadioButtonUpdateMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonUpdateMode.CheckedState.BorderThickness = 0;
-            this.GRadioButtonUpdateMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GRadioButtonUpdateMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GRadioButtonUpdateMode.CheckedState.BorderThickness = 1;
+            this.GRadioButtonUpdateMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GRadioButtonUpdateMode.CheckedState.InnerColor = System.Drawing.Color.White;
             this.GRadioButtonUpdateMode.CheckedState.InnerOffset = -4;
             this.GRadioButtonUpdateMode.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonUpdateMode.Location = new System.Drawing.Point(378, 74);
+            this.GRadioButtonUpdateMode.Location = new System.Drawing.Point(377, 74);
             this.GRadioButtonUpdateMode.Name = "GRadioButtonUpdateMode";
             this.GRadioButtonUpdateMode.Size = new System.Drawing.Size(112, 22);
             this.GRadioButtonUpdateMode.TabIndex = 17;
@@ -119,9 +119,9 @@
             // GRadioButtonNone
             // 
             this.GRadioButtonNone.AutoSize = true;
-            this.GRadioButtonNone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonNone.CheckedState.BorderThickness = 0;
-            this.GRadioButtonNone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GRadioButtonNone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GRadioButtonNone.CheckedState.BorderThickness = 1;
+            this.GRadioButtonNone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GRadioButtonNone.CheckedState.InnerColor = System.Drawing.Color.White;
             this.GRadioButtonNone.CheckedState.InnerOffset = -4;
             this.GRadioButtonNone.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,13 +139,13 @@
             // GRadioButtonRemoveMode
             // 
             this.GRadioButtonRemoveMode.AutoSize = true;
-            this.GRadioButtonRemoveMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.GRadioButtonRemoveMode.CheckedState.BorderThickness = 0;
-            this.GRadioButtonRemoveMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GRadioButtonRemoveMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
+            this.GRadioButtonRemoveMode.CheckedState.BorderThickness = 1;
+            this.GRadioButtonRemoveMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GRadioButtonRemoveMode.CheckedState.InnerColor = System.Drawing.Color.White;
             this.GRadioButtonRemoveMode.CheckedState.InnerOffset = -4;
             this.GRadioButtonRemoveMode.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonRemoveMode.Location = new System.Drawing.Point(226, 74);
+            this.GRadioButtonRemoveMode.Location = new System.Drawing.Point(197, 74);
             this.GRadioButtonRemoveMode.Name = "GRadioButtonRemoveMode";
             this.GRadioButtonRemoveMode.Size = new System.Drawing.Size(118, 22);
             this.GRadioButtonRemoveMode.TabIndex = 17;

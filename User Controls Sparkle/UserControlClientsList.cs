@@ -348,7 +348,7 @@ namespace Sparkle.User_Controls_Sparkle
         {
             frmShowAllInformationOneClient = new Form();
             setLabelShowInformationClient(frmShowAllInformationOneClient);
-            setTitleAndSizeAndLocationFormSectionCar(frmShowAllInformationOneClient);
+            setTitleAndSizeAndLocationFormAndAllSetting(frmShowAllInformationOneClient);
 
                 frmShowAllInformationOneClient.Show();
         }
@@ -369,7 +369,7 @@ namespace Sparkle.User_Controls_Sparkle
             frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(lblShowInformationClient);
         }
 
-        private void setTitleAndSizeAndLocationFormSectionCar(Form frmShowAllInformationOneClientAfterlickMenuContextStip)
+        private void setTitleAndSizeAndLocationFormAndAllSetting(Form frmShowAllInformationOneClientAfterlickMenuContextStip)
         {
 
             frmShowAllInformationOneClientAfterlickMenuContextStip.Text = "Info Client";
@@ -406,8 +406,8 @@ namespace Sparkle.User_Controls_Sparkle
             CloseFormControlBox.Size = new Size(40, 30);
             CloseFormControlBox.Location = new Point(frmShowAllInformationOneClientAfterlickMenuContextStip.Width - 80, 20); 
             CloseFormControlBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            CloseFormControlBox.Animated = true; 
-            
+            CloseFormControlBox.Animated = true;
+            CloseFormControlBox.Cursor = Cursors.Hand; 
 
             frmShowAllInformationOneClientAfterlickMenuContextStip.Controls.Add(CloseFormControlBox);
             setLabelShowInformationClient(frmShowAllInformationOneClientAfterlickMenuContextStip);
