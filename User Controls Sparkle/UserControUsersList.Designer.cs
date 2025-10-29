@@ -198,9 +198,9 @@
             this.GPanelNumberUsernSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberUsernSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberUsernSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(25, 204);
+            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 196);
             this.GPanelNumberUsernSparkle.Name = "GPanelNumberUsernSparkle";
-            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(206, 81);
+            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(182, 73);
             this.GPanelNumberUsernSparkle.TabIndex = 7;
             // 
             // LblNumberUser
@@ -208,7 +208,7 @@
             this.LblNumberUser.AutoSize = true;
             this.LblNumberUser.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumberUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.LblNumberUser.Location = new System.Drawing.Point(123, 39);
+            this.LblNumberUser.Location = new System.Drawing.Point(117, 36);
             this.LblNumberUser.Name = "LblNumberUser";
             this.LblNumberUser.Size = new System.Drawing.Size(19, 21);
             this.LblNumberUser.TabIndex = 5;
@@ -219,9 +219,9 @@
             this.GPictureBoxUserPanelNumebrUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxUserPanelNumebrUser.Image = global::Sparkle.Properties.Resources.user_Image_;
             this.GPictureBoxUserPanelNumebrUser.ImageRotate = 0F;
-            this.GPictureBoxUserPanelNumebrUser.Location = new System.Drawing.Point(27, 18);
+            this.GPictureBoxUserPanelNumebrUser.Location = new System.Drawing.Point(15, 19);
             this.GPictureBoxUserPanelNumebrUser.Name = "GPictureBoxUserPanelNumebrUser";
-            this.GPictureBoxUserPanelNumebrUser.Size = new System.Drawing.Size(57, 56);
+            this.GPictureBoxUserPanelNumebrUser.Size = new System.Drawing.Size(42, 48);
             this.GPictureBoxUserPanelNumebrUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;

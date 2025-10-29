@@ -55,10 +55,14 @@
             this.label = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timerSparkleSystemLogin = new System.Windows.Forms.Timer(this.components);
+            this.GPictureBoxLinkedIn = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPictureBoxGitHub = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.PanelMainWelcomeSparkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxGitHub)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -525,6 +529,8 @@
             // PanelMainWelcomeSparkle
             // 
             this.PanelMainWelcomeSparkle.BackColor = System.Drawing.Color.White;
+            this.PanelMainWelcomeSparkle.Controls.Add(this.GPictureBoxGitHub);
+            this.PanelMainWelcomeSparkle.Controls.Add(this.GPictureBoxLinkedIn);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label5);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label2);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label4);
@@ -577,6 +583,34 @@
             this.timerSparkleSystemLogin.Enabled = true;
             this.timerSparkleSystemLogin.Tick += new System.EventHandler(this.timerSparkleSystemLogin_Tick);
             // 
+            // GPictureBoxLinkedIn
+            // 
+            this.GPictureBoxLinkedIn.BackColor = System.Drawing.Color.Transparent;
+            this.GPictureBoxLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GPictureBoxLinkedIn.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxLinkedIn.Image")));
+            this.GPictureBoxLinkedIn.ImageRotate = 0F;
+            this.GPictureBoxLinkedIn.Location = new System.Drawing.Point(79, 667);
+            this.GPictureBoxLinkedIn.Name = "GPictureBoxLinkedIn";
+            this.GPictureBoxLinkedIn.Size = new System.Drawing.Size(55, 51);
+            this.GPictureBoxLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxLinkedIn.TabIndex = 3;
+            this.GPictureBoxLinkedIn.TabStop = false;
+            this.GPictureBoxLinkedIn.Click += new System.EventHandler(this.GPictureBoxLinkedIn_Click);
+            // 
+            // GPictureBoxGitHub
+            // 
+            this.GPictureBoxGitHub.BackColor = System.Drawing.Color.Transparent;
+            this.GPictureBoxGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GPictureBoxGitHub.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxGitHub.Image")));
+            this.GPictureBoxGitHub.ImageRotate = 0F;
+            this.GPictureBoxGitHub.Location = new System.Drawing.Point(140, 667);
+            this.GPictureBoxGitHub.Name = "GPictureBoxGitHub";
+            this.GPictureBoxGitHub.Size = new System.Drawing.Size(55, 51);
+            this.GPictureBoxGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxGitHub.TabIndex = 3;
+            this.GPictureBoxGitHub.TabStop = false;
+            this.GPictureBoxGitHub.Click += new System.EventHandler(this.GPictureBoxGitHub_Click);
+            // 
             // FormMainScreenSparkleProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,6 +631,8 @@
             this.PanelMainWelcomeSparkle.ResumeLayout(false);
             this.PanelMainWelcomeSparkle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxGitHub)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,5 +664,7 @@
         private System.Windows.Forms.Label LabelDateNow;
         private System.Windows.Forms.Timer timerSparkleSystemLogin;
         private Guna.UI2.WinForms.Guna2Button GButtonLogHistorySparkleLoginUsers;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxLinkedIn;
+        private Guna.UI2.WinForms.Guna2PictureBox GPictureBoxGitHub;
     }
 }

@@ -95,7 +95,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByUsernameHistoryLogin);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchHistoryLoginByUsername);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 175);
+            this.guna2Panel1.Location = new System.Drawing.Point(714, 196);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(454, 94);
             this.guna2Panel1.TabIndex = 8;
@@ -149,9 +149,9 @@
             // PanelMainListViewHistoryLoginSparkle
             // 
             this.PanelMainListViewHistoryLoginSparkle.Controls.Add(this.ListViewHistoryLoginSparkle);
-            this.PanelMainListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 291);
+            this.PanelMainListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 315);
             this.PanelMainListViewHistoryLoginSparkle.Name = "PanelMainListViewHistoryLoginSparkle";
-            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 518);
+            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 494);
             this.PanelMainListViewHistoryLoginSparkle.TabIndex = 7;
             // 
             // ListViewHistoryLoginSparkle
@@ -161,15 +161,15 @@
             this.ColumnUsername,
             this.ColumnPassword,
             this.DateTime});
-            this.ListViewHistoryLoginSparkle.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListViewHistoryLoginSparkle.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewHistoryLoginSparkle.FullRowSelect = true;
             this.ListViewHistoryLoginSparkle.GridLines = true;
             this.ListViewHistoryLoginSparkle.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewHistoryLoginSparkle.HideSelection = false;
-            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(3, 5);
+            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 3);
             this.ListViewHistoryLoginSparkle.MultiSelect = false;
             this.ListViewHistoryLoginSparkle.Name = "ListViewHistoryLoginSparkle";
-            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1189, 513);
+            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 491);
             this.ListViewHistoryLoginSparkle.TabIndex = 0;
             this.ListViewHistoryLoginSparkle.UseCompatibleStateImageBehavior = false;
             this.ListViewHistoryLoginSparkle.View = System.Windows.Forms.View.Details;
@@ -196,9 +196,9 @@
             this.GPanelNumberUsernSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberUsernSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberUsernSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(25, 204);
+            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 196);
             this.GPanelNumberUsernSparkle.Name = "GPanelNumberUsernSparkle";
-            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(206, 81);
+            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(182, 73);
             this.GPanelNumberUsernSparkle.TabIndex = 9;
             // 
             // LblNumberHistoryLoginSparkle
@@ -206,7 +206,7 @@
             this.LblNumberHistoryLoginSparkle.AutoSize = true;
             this.LblNumberHistoryLoginSparkle.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNumberHistoryLoginSparkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.LblNumberHistoryLoginSparkle.Location = new System.Drawing.Point(123, 39);
+            this.LblNumberHistoryLoginSparkle.Location = new System.Drawing.Point(124, 32);
             this.LblNumberHistoryLoginSparkle.Name = "LblNumberHistoryLoginSparkle";
             this.LblNumberHistoryLoginSparkle.Size = new System.Drawing.Size(19, 21);
             this.LblNumberHistoryLoginSparkle.TabIndex = 5;
@@ -217,9 +217,9 @@
             this.GPictureBoxUserPanelNumebrUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxUserPanelNumebrUser.Image = global::Sparkle.Properties.Resources.History_Log;
             this.GPictureBoxUserPanelNumebrUser.ImageRotate = 0F;
-            this.GPictureBoxUserPanelNumebrUser.Location = new System.Drawing.Point(27, 18);
+            this.GPictureBoxUserPanelNumebrUser.Location = new System.Drawing.Point(20, 23);
             this.GPictureBoxUserPanelNumebrUser.Name = "GPictureBoxUserPanelNumebrUser";
-            this.GPictureBoxUserPanelNumebrUser.Size = new System.Drawing.Size(57, 56);
+            this.GPictureBoxUserPanelNumebrUser.Size = new System.Drawing.Size(40, 42);
             this.GPictureBoxUserPanelNumebrUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GPictureBoxUserPanelNumebrUser.TabIndex = 5;
             this.GPictureBoxUserPanelNumebrUser.TabStop = false;
@@ -231,9 +231,9 @@
             this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel2.Location = new System.Drawing.Point(261, 204);
+            this.guna2Panel2.Location = new System.Drawing.Point(257, 196);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(206, 81);
+            this.guna2Panel2.Size = new System.Drawing.Size(182, 73);
             this.guna2Panel2.TabIndex = 10;
             // 
             // numberLoginUserInSparkleSystem
@@ -241,7 +241,7 @@
             this.numberLoginUserInSparkleSystem.AutoSize = true;
             this.numberLoginUserInSparkleSystem.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberLoginUserInSparkleSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.numberLoginUserInSparkleSystem.Location = new System.Drawing.Point(123, 39);
+            this.numberLoginUserInSparkleSystem.Location = new System.Drawing.Point(124, 32);
             this.numberLoginUserInSparkleSystem.Name = "numberLoginUserInSparkleSystem";
             this.numberLoginUserInSparkleSystem.Size = new System.Drawing.Size(19, 21);
             this.numberLoginUserInSparkleSystem.TabIndex = 5;
@@ -252,9 +252,9 @@
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2PictureBox1.Image = global::Sparkle.Properties.Resources.history_Login_Users;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 18);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 23);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(57, 56);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 42);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 5;
             this.guna2PictureBox1.TabStop = false;

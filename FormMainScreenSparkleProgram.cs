@@ -186,5 +186,19 @@ namespace Sparkle
             else
                 ChangeBackgroundUserControlAccessDenied();
         }
+
+        private void GPictureBoxLinkedIn_Click(object sender, EventArgs e)
+        {
+            string URL_LinkedIn = @"https://www.linkedin.com/in/ahmed-j-al-mobayed";
+
+            System.Diagnostics.Process.Start(URL_LinkedIn);
+        }
+
+        private void GPictureBoxGitHub_Click(object sender, EventArgs e)
+        {
+            string URL_GitHub = @"https://github.com/7mee3d";
+
+            System.Diagnostics.Process.Start(URL_GitHub);
+        }
     }
 }

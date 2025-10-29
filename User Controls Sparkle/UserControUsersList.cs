@@ -152,7 +152,7 @@ namespace Sparkle.User_Controls_Sparkle
             Color WhiteGreen = Color.FromArgb(255, 4, 187, 156);
 
             Pen pen = new Pen(WhiteGreen);
-            pen.Width = 4;
+            pen.Width = 7;
             pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
