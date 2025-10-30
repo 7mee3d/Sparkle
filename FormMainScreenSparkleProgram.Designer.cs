@@ -51,18 +51,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PanelMainWelcomeSparkle = new Guna.UI2.WinForms.Guna2Panel();
+            this.GPictureBoxGitHub = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GPictureBoxLinkedIn = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timerSparkleSystemLogin = new System.Windows.Forms.Timer(this.components);
-            this.GPictureBoxLinkedIn = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.GPictureBoxGitHub = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.PanelMainWelcomeSparkle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxGitHub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -151,7 +151,7 @@
             this.GButtonLogHistorySparkleLoginUsers.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.GButtonLogHistorySparkleLoginUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonLogHistorySparkleLoginUsers.Image = global::Sparkle.Properties.Resources.History_Log;
-            this.GButtonLogHistorySparkleLoginUsers.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.GButtonLogHistorySparkleLoginUsers.ImageOffset = new System.Drawing.Point(-24, 0);
             this.GButtonLogHistorySparkleLoginUsers.Location = new System.Drawing.Point(0, 673);
             this.GButtonLogHistorySparkleLoginUsers.Name = "GButtonLogHistorySparkleLoginUsers";
             this.GButtonLogHistorySparkleLoginUsers.PressedColor = System.Drawing.Color.White;
@@ -184,7 +184,7 @@
             this.GButtonRemoveOrUpdateUsers.HoverState.CustomBorderColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonRemoveOrUpdateUsers.Image = global::Sparkle.Properties.Resources.List_Users_Image_2;
-            this.GButtonRemoveOrUpdateUsers.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.GButtonRemoveOrUpdateUsers.ImageOffset = new System.Drawing.Point(-10, 0);
             this.GButtonRemoveOrUpdateUsers.Location = new System.Drawing.Point(0, 615);
             this.GButtonRemoveOrUpdateUsers.Name = "GButtonRemoveOrUpdateUsers";
             this.GButtonRemoveOrUpdateUsers.PressedColor = System.Drawing.Color.White;
@@ -218,7 +218,6 @@
             this.GButtonViewAllOrderCarAndCarpet.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonViewAllOrderCarAndCarpet.Image = global::Sparkle.Properties.Resources.completed_Order;
             this.GButtonViewAllOrderCarAndCarpet.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonViewAllOrderCarAndCarpet.ImageOffset = new System.Drawing.Point(10, 0);
             this.GButtonViewAllOrderCarAndCarpet.Location = new System.Drawing.Point(0, 267);
             this.GButtonViewAllOrderCarAndCarpet.Name = "GButtonViewAllOrderCarAndCarpet";
             this.GButtonViewAllOrderCarAndCarpet.PressedColor = System.Drawing.Color.White;
@@ -253,7 +252,6 @@
             this.GButtonNewOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonNewOrder.Image = global::Sparkle.Properties.Resources.Order_Icon_;
             this.GButtonNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonNewOrder.ImageOffset = new System.Drawing.Point(10, 0);
             this.GButtonNewOrder.Location = new System.Drawing.Point(0, 209);
             this.GButtonNewOrder.Name = "GButtonNewOrder";
             this.GButtonNewOrder.PressedColor = System.Drawing.Color.White;
@@ -287,7 +285,6 @@
             this.GButtonUsersList.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonUsersList.Image = global::Sparkle.Properties.Resources.group_Users;
             this.GButtonUsersList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonUsersList.ImageOffset = new System.Drawing.Point(10, 0);
             this.GButtonUsersList.Location = new System.Drawing.Point(0, 557);
             this.GButtonUsersList.Name = "GButtonUsersList";
             this.GButtonUsersList.PressedColor = System.Drawing.Color.White;
@@ -321,7 +318,6 @@
             this.GButtonUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonUsers.Image = global::Sparkle.Properties.Resources.user_Image_;
             this.GButtonUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonUsers.ImageOffset = new System.Drawing.Point(10, 0);
             this.GButtonUsers.ImageSize = new System.Drawing.Size(15, 15);
             this.GButtonUsers.Location = new System.Drawing.Point(0, 499);
             this.GButtonUsers.Name = "GButtonUsers";
@@ -390,7 +386,6 @@
             this.GButtonClientListSection.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonClientListSection.Image = global::Sparkle.Properties.Resources.List_Clients;
             this.GButtonClientListSection.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonClientListSection.ImageOffset = new System.Drawing.Point(10, 0);
             this.GButtonClientListSection.Location = new System.Drawing.Point(0, 383);
             this.GButtonClientListSection.Name = "GButtonClientListSection";
             this.GButtonClientListSection.PressedColor = System.Drawing.Color.White;
@@ -424,7 +419,6 @@
             this.ButtonClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.ButtonClients.Image = global::Sparkle.Properties.Resources.One_client_;
             this.ButtonClients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonClients.ImageOffset = new System.Drawing.Point(10, 0);
             this.ButtonClients.Location = new System.Drawing.Point(0, 325);
             this.ButtonClients.Name = "ButtonClients";
             this.ButtonClients.PressedColor = System.Drawing.Color.White;
@@ -542,6 +536,34 @@
             this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 826);
             this.PanelMainWelcomeSparkle.TabIndex = 2;
             // 
+            // GPictureBoxGitHub
+            // 
+            this.GPictureBoxGitHub.BackColor = System.Drawing.Color.Transparent;
+            this.GPictureBoxGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GPictureBoxGitHub.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxGitHub.Image")));
+            this.GPictureBoxGitHub.ImageRotate = 0F;
+            this.GPictureBoxGitHub.Location = new System.Drawing.Point(140, 667);
+            this.GPictureBoxGitHub.Name = "GPictureBoxGitHub";
+            this.GPictureBoxGitHub.Size = new System.Drawing.Size(55, 51);
+            this.GPictureBoxGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxGitHub.TabIndex = 3;
+            this.GPictureBoxGitHub.TabStop = false;
+            this.GPictureBoxGitHub.Click += new System.EventHandler(this.GPictureBoxGitHub_Click);
+            // 
+            // GPictureBoxLinkedIn
+            // 
+            this.GPictureBoxLinkedIn.BackColor = System.Drawing.Color.Transparent;
+            this.GPictureBoxLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GPictureBoxLinkedIn.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxLinkedIn.Image")));
+            this.GPictureBoxLinkedIn.ImageRotate = 0F;
+            this.GPictureBoxLinkedIn.Location = new System.Drawing.Point(79, 667);
+            this.GPictureBoxLinkedIn.Name = "GPictureBoxLinkedIn";
+            this.GPictureBoxLinkedIn.Size = new System.Drawing.Size(55, 51);
+            this.GPictureBoxLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GPictureBoxLinkedIn.TabIndex = 3;
+            this.GPictureBoxLinkedIn.TabStop = false;
+            this.GPictureBoxLinkedIn.Click += new System.EventHandler(this.GPictureBoxLinkedIn_Click);
+            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
@@ -583,34 +605,6 @@
             this.timerSparkleSystemLogin.Enabled = true;
             this.timerSparkleSystemLogin.Tick += new System.EventHandler(this.timerSparkleSystemLogin_Tick);
             // 
-            // GPictureBoxLinkedIn
-            // 
-            this.GPictureBoxLinkedIn.BackColor = System.Drawing.Color.Transparent;
-            this.GPictureBoxLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GPictureBoxLinkedIn.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxLinkedIn.Image")));
-            this.GPictureBoxLinkedIn.ImageRotate = 0F;
-            this.GPictureBoxLinkedIn.Location = new System.Drawing.Point(79, 667);
-            this.GPictureBoxLinkedIn.Name = "GPictureBoxLinkedIn";
-            this.GPictureBoxLinkedIn.Size = new System.Drawing.Size(55, 51);
-            this.GPictureBoxLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GPictureBoxLinkedIn.TabIndex = 3;
-            this.GPictureBoxLinkedIn.TabStop = false;
-            this.GPictureBoxLinkedIn.Click += new System.EventHandler(this.GPictureBoxLinkedIn_Click);
-            // 
-            // GPictureBoxGitHub
-            // 
-            this.GPictureBoxGitHub.BackColor = System.Drawing.Color.Transparent;
-            this.GPictureBoxGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GPictureBoxGitHub.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxGitHub.Image")));
-            this.GPictureBoxGitHub.ImageRotate = 0F;
-            this.GPictureBoxGitHub.Location = new System.Drawing.Point(140, 667);
-            this.GPictureBoxGitHub.Name = "GPictureBoxGitHub";
-            this.GPictureBoxGitHub.Size = new System.Drawing.Size(55, 51);
-            this.GPictureBoxGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GPictureBoxGitHub.TabIndex = 3;
-            this.GPictureBoxGitHub.TabStop = false;
-            this.GPictureBoxGitHub.Click += new System.EventHandler(this.GPictureBoxGitHub_Click);
-            // 
             // FormMainScreenSparkleProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,9 +624,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PanelMainWelcomeSparkle.ResumeLayout(false);
             this.PanelMainWelcomeSparkle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxGitHub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxLinkedIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -998,5 +998,3 @@
 998&&//&&Nadr MakkiX&&//&&Riyadh&&//&&nadr.makkix@example.test&&//&&99918102112&&//&&Large&&//&&Eco Wash&&//&&Quick Drying - Home Delivery&&//&&5&&//&&None&&//&&182
 999&&//&&DinaX AzzamX&&//&&Ankara&&//&&dinax.azzamx@no-mail.test&&//&&99991699003&&//&&XL&&//&&Eco Wash&&//&&Quick Drying - Home Delivery&&//&&5&&//&&None&&//&&182
 1000&&//&&HalaX NassarX&&//&&Istanbul&&//&&halax.nassarx@example.test&&//&&999665395629&&//&&Large&&//&&Eco Wash&&//&&Quick Drying - Home Delivery&&//&&5&&//&&None&&//&&182
-
-

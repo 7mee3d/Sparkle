@@ -38,8 +38,8 @@ namespace Sparkle
         }
 
         //Path File 
-        private const string _kPATH_FILE_USERS_INFORMATION = "../../Data_Sparkle/UsersInformation.txt";
-        private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = "../../Data_Sparkle/HistoryLoginSparkle.txt";
+        private const string _kPATH_FILE_USERS_INFORMATION = @"../../Data_Sparkle/UsersInformation.txt";
+        private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = @"../../Data_Sparkle/HistoryLoginSparkle.txt";
 
         private const int _KEY_CRYPT = 2;
         private string DecreyptPassword(string password, int keyCrypt)
