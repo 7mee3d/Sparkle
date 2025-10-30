@@ -19,8 +19,8 @@ namespace Sparkle.User_Controls_Sparkle
 
 
           //Path File 
-        const string kPATH_FILE_CARPETS_ORDERS = "CarpetsOrders.txt";
-        const string kPATH_FILE_CARS_ORDERS = "CarOrders.txt";
+        const string kPATH_FILE_CARPETS_ORDERS = @"../../Data_Sparkle/CarpetsOrders.txt";
+        const string kPATH_FILE_CARS_ORDERS = @"../../Data_Sparkle/CarOrders.txt";
 
         
         public UserControlNewOrderSparkle()

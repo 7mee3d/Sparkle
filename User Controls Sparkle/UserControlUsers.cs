@@ -19,7 +19,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //Constants
-        private const string _kPATH_FILE_USER = "UsersInformation.txt";
+        private const string _kPATH_FILE_USER = @"../../Data_Sparkle/UsersInformation.txt";
         private const int _KEY_CRYPT = 2;
         short Permissions = 0;
 

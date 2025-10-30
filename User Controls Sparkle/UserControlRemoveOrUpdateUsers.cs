@@ -16,7 +16,7 @@ namespace Sparkle.User_Controls_Sparkle
     public partial class UserControlRemoveOrUpdateUsers : UserControl
     {
         //File Path
-        const string _kPATH_FILE_USER = "UsersInformation.txt";
+        const string _kPATH_FILE_USER = @"../../Data_Sparkle/UsersInformation.txt";
         private const int _KEY_CRYPT = 2;
 
 

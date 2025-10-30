@@ -22,7 +22,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //File Path 
-        const string _kPATH_FILE_CLIENT = "InformationClients.txt";
+        const string _kPATH_FILE_CLIENT = @"../../Data_Sparkle/InformationClients.txt";
 
         class stInformationOneClient
         {

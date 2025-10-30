@@ -67,7 +67,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //File Name (Path)
-        const string kPATH_FILE_CLIENT = "InformationClients.txt";
+        const string kPATH_FILE_CLIENT = @"../../Data_Sparkle/InformationClients.txt";
 
         private List<string> LoadAllLineInformationClientFromFile()
         {
@@ -361,7 +361,25 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void notifyIconRemoveAndUpdateClient_BalloonTipClicked_1(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(kPATH_FILE_CLIENT);
+
+            string fullPathFile = System.IO.Path.GetFullPath(kPATH_FILE_CLIENT);
+
+            try
+            {
+                if (System.IO.File.Exists(fullPathFile))
+                    System.Diagnostics.Process.Start("explorer.exe", fullPathFile);
+                else
+                    MessageBox.Show(
+                        "File not found."
+                        );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while opening the file:\n" + ex.Message,
+                                   "Error",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+            }
         }
 
         private void GButtonRemoveClient_Click(object sender, EventArgs e)

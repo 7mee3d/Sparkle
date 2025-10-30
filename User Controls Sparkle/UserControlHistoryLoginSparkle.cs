@@ -32,7 +32,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //Constants
-        private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = "HistoryLoginSparkle.txt";
+        private const string _kPATH_FILE_HISTORY_LOGIN_SPARKLE = @"../../Data_Sparkle/HistoryLoginSparkle.txt";
         private const int _KEY_CRYPT = 2;
 
        private bool areSameUsernameOrNot (string username , string partsOfUsername)

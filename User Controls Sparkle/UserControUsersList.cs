@@ -20,7 +20,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
 
         //Path File
-       private const string _kPATH_FILE_USER = "UsersInformation.txt";
+       private const string _kPATH_FILE_USER = @"../../Data_Sparkle/UsersInformation.txt";
 
         private string DecreyptPassword(string password, int keyCrypt)
         {

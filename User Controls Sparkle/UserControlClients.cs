@@ -32,7 +32,7 @@ namespace Sparkle.User_Controls_Sparkle
         }
    
         //Path File
-        private const string _kPATH_FILE_CLIENT = "InformationClients.txt";
+        private const string _kPATH_FILE_CLIENT = @"../../Data_Sparkle/InformationClients.txt";
 
         private bool theEmailIsCorrect (string Email)
         {
@@ -343,7 +343,23 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void notifyIconAddClients_BalloonTipClicked(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(_kPATH_FILE_CLIENT);
+            try
+            {
+                string fullPath = System.IO.Path.GetFullPath(_kPATH_FILE_CLIENT);
+
+                if (System.IO.File.Exists(fullPath))
+                    System.Diagnostics.Process.Start("explorer.exe", fullPath);
+                else
+                    MessageBox.Show("File not found.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while opening the file:\n" + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
 
         private int getLastIDClientInList()
