@@ -43,6 +43,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.removeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.showAllInformationClientClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.GButtonSearchByID = new Guna.UI2.WinForms.Guna2Button();
@@ -160,6 +161,7 @@
             this.toolStripSeparator1,
             this.removeClientToolStripMenuItem,
             this.toolStripSeparator2,
+            this.toolStripTextBox2,
             this.showAllInformationClientClientToolStripMenuItem});
             this.GContextMenuStripRemoveClient.Name = "GContextMenuStripRemoveClient";
             this.GContextMenuStripRemoveClient.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
@@ -171,7 +173,7 @@
             this.GContextMenuStripRemoveClient.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.GContextMenuStripRemoveClient.RenderStyle.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
             this.GContextMenuStripRemoveClient.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(320, 89);
+            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(320, 128);
             this.GContextMenuStripRemoveClient.Opening += new System.ComponentModel.CancelEventHandler(this.GContextMenuStripRemoveClient_Opening);
             // 
             // toolStripTextBox1
@@ -202,6 +204,16 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(316, 6);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.BackColor = System.Drawing.Color.White;
+            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox2.Enabled = false;
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(180, 15);
+            this.toolStripTextBox2.Text = "View Orderd Information Client";
             // 
             // showAllInformationClientClientToolStripMenuItem
             // 
@@ -351,5 +363,6 @@
         private System.Windows.Forms.ToolStripMenuItem removeClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAllInformationClientClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
     }
 }
