@@ -200,5 +200,7 @@ namespace Sparkle
 
             System.Diagnostics.Process.Start(URL_GitHub);
         }
+
+     
     }
 }

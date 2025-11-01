@@ -94,7 +94,7 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(222, 801);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(222, 905);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // guna2Button6
@@ -119,7 +119,7 @@
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(15, 0);
             this.guna2Button6.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 741);
+            this.guna2Button6.Location = new System.Drawing.Point(0, 845);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.PressedColor = System.Drawing.Color.White;
             this.guna2Button6.Size = new System.Drawing.Size(222, 57);
@@ -152,7 +152,7 @@
             this.GButtonLogHistorySparkleLoginUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonLogHistorySparkleLoginUsers.Image = global::Sparkle.Properties.Resources.History_Log;
             this.GButtonLogHistorySparkleLoginUsers.ImageOffset = new System.Drawing.Point(-24, 0);
-            this.GButtonLogHistorySparkleLoginUsers.Location = new System.Drawing.Point(0, 673);
+            this.GButtonLogHistorySparkleLoginUsers.Location = new System.Drawing.Point(0, 728);
             this.GButtonLogHistorySparkleLoginUsers.Name = "GButtonLogHistorySparkleLoginUsers";
             this.GButtonLogHistorySparkleLoginUsers.PressedColor = System.Drawing.Color.White;
             this.GButtonLogHistorySparkleLoginUsers.Size = new System.Drawing.Size(222, 55);
@@ -185,7 +185,7 @@
             this.GButtonRemoveOrUpdateUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonRemoveOrUpdateUsers.Image = global::Sparkle.Properties.Resources.List_Users_Image_2;
             this.GButtonRemoveOrUpdateUsers.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.GButtonRemoveOrUpdateUsers.Location = new System.Drawing.Point(0, 615);
+            this.GButtonRemoveOrUpdateUsers.Location = new System.Drawing.Point(0, 670);
             this.GButtonRemoveOrUpdateUsers.Name = "GButtonRemoveOrUpdateUsers";
             this.GButtonRemoveOrUpdateUsers.PressedColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateUsers.Size = new System.Drawing.Size(222, 55);
@@ -218,7 +218,7 @@
             this.GButtonViewAllOrderCarAndCarpet.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonViewAllOrderCarAndCarpet.Image = global::Sparkle.Properties.Resources.completed_Order;
             this.GButtonViewAllOrderCarAndCarpet.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonViewAllOrderCarAndCarpet.Location = new System.Drawing.Point(0, 267);
+            this.GButtonViewAllOrderCarAndCarpet.Location = new System.Drawing.Point(0, 322);
             this.GButtonViewAllOrderCarAndCarpet.Name = "GButtonViewAllOrderCarAndCarpet";
             this.GButtonViewAllOrderCarAndCarpet.PressedColor = System.Drawing.Color.White;
             this.GButtonViewAllOrderCarAndCarpet.Size = new System.Drawing.Size(222, 55);
@@ -252,7 +252,7 @@
             this.GButtonNewOrder.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonNewOrder.Image = global::Sparkle.Properties.Resources.Order_Icon_;
             this.GButtonNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 209);
+            this.GButtonNewOrder.Location = new System.Drawing.Point(0, 264);
             this.GButtonNewOrder.Name = "GButtonNewOrder";
             this.GButtonNewOrder.PressedColor = System.Drawing.Color.White;
             this.GButtonNewOrder.Size = new System.Drawing.Size(222, 55);
@@ -285,7 +285,7 @@
             this.GButtonUsersList.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonUsersList.Image = global::Sparkle.Properties.Resources.group_Users;
             this.GButtonUsersList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonUsersList.Location = new System.Drawing.Point(0, 557);
+            this.GButtonUsersList.Location = new System.Drawing.Point(0, 612);
             this.GButtonUsersList.Name = "GButtonUsersList";
             this.GButtonUsersList.PressedColor = System.Drawing.Color.White;
             this.GButtonUsersList.Size = new System.Drawing.Size(222, 55);
@@ -319,7 +319,7 @@
             this.GButtonUsers.Image = global::Sparkle.Properties.Resources.user_Image_;
             this.GButtonUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.GButtonUsers.ImageSize = new System.Drawing.Size(15, 15);
-            this.GButtonUsers.Location = new System.Drawing.Point(0, 499);
+            this.GButtonUsers.Location = new System.Drawing.Point(0, 554);
             this.GButtonUsers.Name = "GButtonUsers";
             this.GButtonUsers.PressedColor = System.Drawing.Color.White;
             this.GButtonUsers.Size = new System.Drawing.Size(222, 55);
@@ -353,7 +353,7 @@
             this.GButtonRemoveOrUpdateClient.Image = global::Sparkle.Properties.Resources.Remove_User_Icon;
             this.GButtonRemoveOrUpdateClient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.GButtonRemoveOrUpdateClient.ImageSize = new System.Drawing.Size(15, 15);
-            this.GButtonRemoveOrUpdateClient.Location = new System.Drawing.Point(0, 441);
+            this.GButtonRemoveOrUpdateClient.Location = new System.Drawing.Point(0, 496);
             this.GButtonRemoveOrUpdateClient.Name = "GButtonRemoveOrUpdateClient";
             this.GButtonRemoveOrUpdateClient.PressedColor = System.Drawing.Color.White;
             this.GButtonRemoveOrUpdateClient.Size = new System.Drawing.Size(222, 55);
@@ -386,7 +386,7 @@
             this.GButtonClientListSection.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.GButtonClientListSection.Image = global::Sparkle.Properties.Resources.List_Clients;
             this.GButtonClientListSection.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GButtonClientListSection.Location = new System.Drawing.Point(0, 383);
+            this.GButtonClientListSection.Location = new System.Drawing.Point(0, 438);
             this.GButtonClientListSection.Name = "GButtonClientListSection";
             this.GButtonClientListSection.PressedColor = System.Drawing.Color.White;
             this.GButtonClientListSection.Size = new System.Drawing.Size(222, 55);
@@ -419,7 +419,7 @@
             this.ButtonClients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(120)))), ((int)(((byte)(100)))));
             this.ButtonClients.Image = global::Sparkle.Properties.Resources.One_client_;
             this.ButtonClients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonClients.Location = new System.Drawing.Point(0, 325);
+            this.ButtonClients.Location = new System.Drawing.Point(0, 380);
             this.ButtonClients.Name = "ButtonClients";
             this.ButtonClients.PressedColor = System.Drawing.Color.White;
             this.ButtonClients.Size = new System.Drawing.Size(222, 55);
@@ -489,10 +489,10 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 426);
+            this.label2.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(75, 432);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(553, 96);
+            this.label2.Size = new System.Drawing.Size(544, 96);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -500,11 +500,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Garamond", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Garamond", 65.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label3.Location = new System.Drawing.Point(65, 288);
+            this.label3.Location = new System.Drawing.Point(62, 293);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 82);
+            this.label3.Size = new System.Drawing.Size(316, 98);
             this.label3.TabIndex = 1;
             this.label3.Text = "Sparkle";
             // 
@@ -512,11 +512,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Elephant", 84.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Elephant", 95.24998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(155)))));
-            this.label4.Location = new System.Drawing.Point(26, 142);
+            this.label4.Location = new System.Drawing.Point(37, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(778, 146);
+            this.label4.Size = new System.Drawing.Size(873, 164);
             this.label4.TabIndex = 1;
             this.label4.Text = "Welcome To";
             // 
@@ -531,9 +531,9 @@
             this.PanelMainWelcomeSparkle.Controls.Add(this.label);
             this.PanelMainWelcomeSparkle.Controls.Add(this.label3);
             this.PanelMainWelcomeSparkle.Controls.Add(this.guna2PictureBox2);
-            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, -13);
+            this.PanelMainWelcomeSparkle.Location = new System.Drawing.Point(228, 0);
             this.PanelMainWelcomeSparkle.Name = "PanelMainWelcomeSparkle";
-            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1195, 826);
+            this.PanelMainWelcomeSparkle.Size = new System.Drawing.Size(1371, 908);
             this.PanelMainWelcomeSparkle.TabIndex = 2;
             // 
             // GPictureBoxGitHub
@@ -542,7 +542,7 @@
             this.GPictureBoxGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GPictureBoxGitHub.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxGitHub.Image")));
             this.GPictureBoxGitHub.ImageRotate = 0F;
-            this.GPictureBoxGitHub.Location = new System.Drawing.Point(140, 667);
+            this.GPictureBoxGitHub.Location = new System.Drawing.Point(147, 715);
             this.GPictureBoxGitHub.Name = "GPictureBoxGitHub";
             this.GPictureBoxGitHub.Size = new System.Drawing.Size(55, 51);
             this.GPictureBoxGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -556,7 +556,7 @@
             this.GPictureBoxLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GPictureBoxLinkedIn.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxLinkedIn.Image")));
             this.GPictureBoxLinkedIn.ImageRotate = 0F;
-            this.GPictureBoxLinkedIn.Location = new System.Drawing.Point(79, 667);
+            this.GPictureBoxLinkedIn.Location = new System.Drawing.Point(81, 715);
             this.GPictureBoxLinkedIn.Name = "GPictureBoxLinkedIn";
             this.GPictureBoxLinkedIn.Size = new System.Drawing.Size(55, 51);
             this.GPictureBoxLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -567,10 +567,10 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(75, 551);
+            this.label5.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(75, 558);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 113);
+            this.label5.Size = new System.Drawing.Size(419, 113);
             this.label5.TabIndex = 1;
             this.label5.Text = "✔️ Interior & exterior car wash\r\n✔️ Professional carpet cleaning & sanitizing\r\n✔️" +
     " Fast, reliable, and detailed service\r\n✔️ Excellent customer care\r\n";
@@ -591,11 +591,11 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.BorderRadius = 15;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::Sparkle.Properties.Resources.Blue_Illustrative_Cleaning_Service_Magnet_1;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 10);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-15, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(1192, 804);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(1386, 905);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
@@ -610,7 +610,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1420, 800);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.PanelMainWelcomeSparkle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

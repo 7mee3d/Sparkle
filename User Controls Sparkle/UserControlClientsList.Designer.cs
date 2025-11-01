@@ -68,7 +68,7 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(639, 74);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -101,7 +101,7 @@
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewClientsLists);
             this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 291);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 518);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1371, 617);
             this.PanelMainListViewClientsList.TabIndex = 2;
             // 
             // ListViewClientsLists
@@ -119,10 +119,10 @@
             this.ListViewClientsLists.GridLines = true;
             this.ListViewClientsLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewClientsLists.HideSelection = false;
-            this.ListViewClientsLists.Location = new System.Drawing.Point(0, 13);
+            this.ListViewClientsLists.Location = new System.Drawing.Point(0, 3);
             this.ListViewClientsLists.MultiSelect = false;
             this.ListViewClientsLists.Name = "ListViewClientsLists";
-            this.ListViewClientsLists.Size = new System.Drawing.Size(1195, 505);
+            this.ListViewClientsLists.Size = new System.Drawing.Size(1371, 611);
             this.ListViewClientsLists.TabIndex = 0;
             this.ListViewClientsLists.UseCompatibleStateImageBehavior = false;
             this.ListViewClientsLists.View = System.Windows.Forms.View.Details;
@@ -135,17 +135,17 @@
             // ColumnName
             // 
             this.ColumnName.Text = "Name Client";
-            this.ColumnName.Width = 349;
+            this.ColumnName.Width = 372;
             // 
             // ColumnAddress
             // 
             this.ColumnAddress.Text = "Address";
-            this.ColumnAddress.Width = 275;
+            this.ColumnAddress.Width = 369;
             // 
             // ColumnEmail
             // 
             this.ColumnEmail.Text = "Email";
-            this.ColumnEmail.Width = 315;
+            this.ColumnEmail.Width = 376;
             // 
             // ColumnPhone
             // 
@@ -173,7 +173,7 @@
             this.GContextMenuStripRemoveClient.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.GContextMenuStripRemoveClient.RenderStyle.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(230)))), ((int)(((byte)(210)))));
             this.GContextMenuStripRemoveClient.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(320, 128);
+            this.GContextMenuStripRemoveClient.Size = new System.Drawing.Size(320, 106);
             this.GContextMenuStripRemoveClient.Opening += new System.ComponentModel.CancelEventHandler(this.GContextMenuStripRemoveClient_Opening);
             // 
             // toolStripTextBox1
@@ -227,9 +227,9 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByID);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 175);
+            this.guna2Panel1.Location = new System.Drawing.Point(858, 176);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(458, 92);
+            this.guna2Panel1.Size = new System.Drawing.Size(510, 90);
             this.guna2Panel1.TabIndex = 3;
             // 
             // GButtonSearchByID
@@ -246,9 +246,9 @@
             this.GButtonSearchByID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.GButtonSearchByID.ForeColor = System.Drawing.Color.White;
             this.GButtonSearchByID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GButtonSearchByID.Location = new System.Drawing.Point(349, 46);
+            this.GButtonSearchByID.Location = new System.Drawing.Point(354, 40);
             this.GButtonSearchByID.Name = "GButtonSearchByID";
-            this.GButtonSearchByID.Size = new System.Drawing.Size(88, 42);
+            this.GButtonSearchByID.Size = new System.Drawing.Size(101, 45);
             this.GButtonSearchByID.TabIndex = 1;
             this.GButtonSearchByID.Text = "Search";
             this.GButtonSearchByID.Click += new System.EventHandler(this.GButtonSearchByID_Click);
@@ -270,11 +270,11 @@
             this.GTextBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxSearch.IconLeft = global::Sparkle.Properties.Resources.Search;
             this.GTextBoxSearch.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.GTextBoxSearch.Location = new System.Drawing.Point(3, 46);
+            this.GTextBoxSearch.Location = new System.Drawing.Point(3, 39);
             this.GTextBoxSearch.Name = "GTextBoxSearch";
             this.GTextBoxSearch.PlaceholderText = "Search By ID";
             this.GTextBoxSearch.SelectedText = "";
-            this.GTextBoxSearch.Size = new System.Drawing.Size(340, 46);
+            this.GTextBoxSearch.Size = new System.Drawing.Size(345, 48);
             this.GTextBoxSearch.TabIndex = 0;
             // 
             // GPanelNumberClientInSparkle
@@ -284,9 +284,9 @@
             this.GPanelNumberClientInSparkle.Controls.Add(this.GPictureBoxClientPanelNumebrClient);
             this.GPanelNumberClientInSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberClientInSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberClientInSparkle.Location = new System.Drawing.Point(40, 196);
+            this.GPanelNumberClientInSparkle.Location = new System.Drawing.Point(40, 190);
             this.GPanelNumberClientInSparkle.Name = "GPanelNumberClientInSparkle";
-            this.GPanelNumberClientInSparkle.Size = new System.Drawing.Size(182, 73);
+            this.GPanelNumberClientInSparkle.Size = new System.Drawing.Size(191, 79);
             this.GPanelNumberClientInSparkle.TabIndex = 4;
             // 
             // LblNumberClient
@@ -322,7 +322,7 @@
             this.Controls.Add(this.PanelMainListViewClientsList);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlClientsList";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.Load += new System.EventHandler(this.UserControlClientsList_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlClientsList_Paint);
             this.guna2GradientPanel1.ResumeLayout(false);

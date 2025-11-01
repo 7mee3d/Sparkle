@@ -63,7 +63,7 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(639, 74);
             this.guna2GradientPanel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -95,7 +95,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByUsernameHistoryLogin);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchHistoryLoginByUsername);
-            this.guna2Panel1.Location = new System.Drawing.Point(714, 196);
+            this.guna2Panel1.Location = new System.Drawing.Point(894, 202);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(454, 94);
             this.guna2Panel1.TabIndex = 8;
@@ -151,7 +151,7 @@
             this.PanelMainListViewHistoryLoginSparkle.Controls.Add(this.ListViewHistoryLoginSparkle);
             this.PanelMainListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 315);
             this.PanelMainListViewHistoryLoginSparkle.Name = "PanelMainListViewHistoryLoginSparkle";
-            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 494);
+            this.PanelMainListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1371, 593);
             this.PanelMainListViewHistoryLoginSparkle.TabIndex = 7;
             // 
             // ListViewHistoryLoginSparkle
@@ -166,10 +166,10 @@
             this.ListViewHistoryLoginSparkle.GridLines = true;
             this.ListViewHistoryLoginSparkle.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewHistoryLoginSparkle.HideSelection = false;
-            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(0, 3);
+            this.ListViewHistoryLoginSparkle.Location = new System.Drawing.Point(3, 3);
             this.ListViewHistoryLoginSparkle.MultiSelect = false;
             this.ListViewHistoryLoginSparkle.Name = "ListViewHistoryLoginSparkle";
-            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1195, 491);
+            this.ListViewHistoryLoginSparkle.Size = new System.Drawing.Size(1368, 590);
             this.ListViewHistoryLoginSparkle.TabIndex = 0;
             this.ListViewHistoryLoginSparkle.UseCompatibleStateImageBehavior = false;
             this.ListViewHistoryLoginSparkle.View = System.Windows.Forms.View.Details;
@@ -177,17 +177,17 @@
             // ColumnUsername
             // 
             this.ColumnUsername.Text = "Username";
-            this.ColumnUsername.Width = 410;
+            this.ColumnUsername.Width = 450;
             // 
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 420;
+            this.ColumnPassword.Width = 460;
             // 
             // DateTime
             // 
             this.DateTime.Text = "Date Time Login Sparkle";
-            this.DateTime.Width = 340;
+            this.DateTime.Width = 400;
             // 
             // GPanelNumberUsernSparkle
             // 
@@ -196,9 +196,9 @@
             this.GPanelNumberUsernSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberUsernSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberUsernSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 196);
+            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 211);
             this.GPanelNumberUsernSparkle.Name = "GPanelNumberUsernSparkle";
-            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(182, 73);
+            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(191, 79);
             this.GPanelNumberUsernSparkle.TabIndex = 9;
             // 
             // LblNumberHistoryLoginSparkle
@@ -231,9 +231,9 @@
             this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.guna2Panel2.Location = new System.Drawing.Point(257, 196);
+            this.guna2Panel2.Location = new System.Drawing.Point(257, 212);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(182, 73);
+            this.guna2Panel2.Size = new System.Drawing.Size(191, 79);
             this.guna2Panel2.TabIndex = 10;
             // 
             // numberLoginUserInSparkleSystem
@@ -270,7 +270,7 @@
             this.Controls.Add(this.PanelMainListViewHistoryLoginSparkle);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControlHistoryLoginSparkle";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlHistoryLoginSparkle_Paint);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
