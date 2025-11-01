@@ -683,8 +683,8 @@ namespace Sparkle.User_Controls_Sparkle
             pen.Width = 4;
 
             //Points Line To Be Draw 
-            Point point1 = new Point(590, 300);
-            Point point2 = new Point(590, 740);
+            Point point1 = new Point(620, 310);
+            Point point2 = new Point(620, 800);
                 
             event1.Graphics.DrawLine(pen, point1, point2);
 
@@ -724,7 +724,6 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 GPanelOptionsCarpets.Visible = true;
                 GPanelCarsOptions.Visible = false;
-                TextNoneAnyOption.Visible = false;
                 GPnaelIDOrderCarpet.Visible = true;
                 PanelFillInformationClientsCarpet.Visible = true;
                 GPnaelInfroamtionOrderCar.Visible = false;
@@ -738,7 +737,6 @@ namespace Sparkle.User_Controls_Sparkle
             {
                 GPanelOptionsCarpets.Visible = false;
                 GPanelCarsOptions.Visible = true;
-                TextNoneAnyOption.Visible = false;
                 GPnaelIDOrderCarpet.Visible = false;
                 PanelFillInformationClientsCarpet.Visible = false;
 
@@ -1276,6 +1274,7 @@ namespace Sparkle.User_Controls_Sparkle
 
         private void GCheckBoxServicesFullWash_CheckedChanged(object sender, EventArgs e)
         {
+        
             if (GCheckBoxServicesFullWash.Checked)
             {
                 GPnaelOtherServices.Enabled = false;
@@ -1315,7 +1314,8 @@ namespace Sparkle.User_Controls_Sparkle
                 {
                     MessageBox.Show
                         ("Connot Add This Order Becouse the boxies is empty and not completed the all information order" +
-                        "\nPlease Fill All Boxies Information and add order", "Warning! Add New Order",
+                        "\nPlease Fill All Boxies Information and add order"
+                        , "Warning! Add New Order",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                 }
@@ -1331,7 +1331,8 @@ namespace Sparkle.User_Controls_Sparkle
                 {
                     MessageBox.Show
                    ("Connot Add This Order Becouse the boxies is empty and not completed the all information order" +
-                   "\nPlease Fill All Boxies Information and add order", "Warning! Add New Order",
+                   "\nPlease Fill All Boxies Information and add order"
+                   , "Warning! Add New Order",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Warning);
                 }
@@ -2259,7 +2260,8 @@ namespace Sparkle.User_Controls_Sparkle
 
         }
 
-    
+
+
 
         //-------------------------------- [End Section Car Create Form Finial Bill ]-------------------------------
 

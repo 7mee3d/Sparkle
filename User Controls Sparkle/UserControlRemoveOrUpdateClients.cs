@@ -510,14 +510,15 @@ namespace Sparkle.User_Controls_Sparkle
             {
 
                 GPanelFillInformationClientToUpdate.Visible = false;
-                GPanelInformationClientBeforeRemove.Visible = true; 
+                GPanelInformationClientBeforeRemove.Visible = true;
+                PictureBoxRemoveAndUpdateClientGIF.Visible = false;
 
             }
 
 
             if (GRadioButtonNone.Checked)
             {
-
+                PictureBoxRemoveAndUpdateClientGIF.Visible = true;
                 GPanelFillInformationClientToUpdate.Visible = false;
                 GPanelInformationClientBeforeRemove.Visible = false;
 
@@ -525,7 +526,7 @@ namespace Sparkle.User_Controls_Sparkle
 
             if (GRadioButtonUpdateMode.Checked)
             {
-
+                PictureBoxRemoveAndUpdateClientGIF.Visible = false;
                 GPanelFillInformationClientToUpdate.Visible = true;
                 GPanelInformationClientBeforeRemove.Visible = false;
             }
@@ -542,7 +543,7 @@ namespace Sparkle.User_Controls_Sparkle
             pen.Width = 4;
 
             Point p1 = new Point(0, 430); 
-            Point p2 = new Point(687, 430 );
+            Point p2 = new Point(750, 430 );
 
             e.Graphics.DrawLine(pen, p1, p2);
         }
@@ -551,7 +552,5 @@ namespace Sparkle.User_Controls_Sparkle
         {
             DrawLineOfUserControlRemoveAndUpdate(e);
         }
-
-      
     }
 }

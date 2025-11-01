@@ -99,9 +99,9 @@
             // PanelMainListViewClientsList
             // 
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewClientsLists);
-            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 291);
+            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 343);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1371, 617);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1371, 565);
             this.PanelMainListViewClientsList.TabIndex = 2;
             // 
             // ListViewClientsLists
@@ -122,7 +122,7 @@
             this.ListViewClientsLists.Location = new System.Drawing.Point(0, 3);
             this.ListViewClientsLists.MultiSelect = false;
             this.ListViewClientsLists.Name = "ListViewClientsLists";
-            this.ListViewClientsLists.Size = new System.Drawing.Size(1371, 611);
+            this.ListViewClientsLists.Size = new System.Drawing.Size(1371, 562);
             this.ListViewClientsLists.TabIndex = 0;
             this.ListViewClientsLists.UseCompatibleStateImageBehavior = false;
             this.ListViewClientsLists.View = System.Windows.Forms.View.Details;
@@ -227,7 +227,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByID);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearch);
-            this.guna2Panel1.Location = new System.Drawing.Point(858, 176);
+            this.guna2Panel1.Location = new System.Drawing.Point(858, 225);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(510, 90);
             this.guna2Panel1.TabIndex = 3;
@@ -284,7 +284,7 @@
             this.GPanelNumberClientInSparkle.Controls.Add(this.GPictureBoxClientPanelNumebrClient);
             this.GPanelNumberClientInSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberClientInSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberClientInSparkle.Location = new System.Drawing.Point(40, 190);
+            this.GPanelNumberClientInSparkle.Location = new System.Drawing.Point(40, 231);
             this.GPanelNumberClientInSparkle.Name = "GPanelNumberClientInSparkle";
             this.GPanelNumberClientInSparkle.Size = new System.Drawing.Size(191, 79);
             this.GPanelNumberClientInSparkle.TabIndex = 4;

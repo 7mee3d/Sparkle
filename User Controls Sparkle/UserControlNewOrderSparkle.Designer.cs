@@ -80,7 +80,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TotalPriceCarSection = new System.Windows.Forms.Label();
-            this.TextNoneAnyOption = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.GRadioButtonCarsSection = new Guna.UI2.WinForms.Guna2RadioButton();
             this.GRadioButtonCarpetsSection = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -170,9 +169,9 @@
             this.PanelFillInformationClientsCarpet.Controls.Add(this.GTextBoxEmailClientSectionCarpet);
             this.PanelFillInformationClientsCarpet.Controls.Add(this.GTextBoxAddressClientSectionCarpet);
             this.PanelFillInformationClientsCarpet.Controls.Add(this.guna2GradientPanel2);
-            this.PanelFillInformationClientsCarpet.Location = new System.Drawing.Point(22, 361);
+            this.PanelFillInformationClientsCarpet.Location = new System.Drawing.Point(39, 415);
             this.PanelFillInformationClientsCarpet.Name = "PanelFillInformationClientsCarpet";
-            this.PanelFillInformationClientsCarpet.Size = new System.Drawing.Size(565, 355);
+            this.PanelFillInformationClientsCarpet.Size = new System.Drawing.Size(565, 401);
             this.PanelFillInformationClientsCarpet.TabIndex = 4;
             // 
             // GTextBoxPhoneClientSectionCarpet
@@ -190,7 +189,7 @@
             this.GTextBoxPhoneClientSectionCarpet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxPhoneClientSectionCarpet.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GTextBoxPhoneClientSectionCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClientSectionCarpet.Location = new System.Drawing.Point(165, 74);
+            this.GTextBoxPhoneClientSectionCarpet.Location = new System.Drawing.Point(165, 85);
             this.GTextBoxPhoneClientSectionCarpet.Name = "GTextBoxPhoneClientSectionCarpet";
             this.GTextBoxPhoneClientSectionCarpet.PlaceholderText = "Enter Here Phone Client";
             this.GTextBoxPhoneClientSectionCarpet.SelectedText = "";
@@ -204,7 +203,7 @@
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.label3);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(3, 74);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(3, 85);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel3.TabIndex = 1;
@@ -248,7 +247,7 @@
             this.guna2GradientPanel4.BorderRadius = 15;
             this.guna2GradientPanel4.Controls.Add(this.label4);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(3, 151);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(3, 164);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel4.TabIndex = 1;
@@ -304,7 +303,7 @@
             this.GTextBoxOtherSeviceCarpet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxOtherSeviceCarpet.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxOtherSeviceCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxOtherSeviceCarpet.Location = new System.Drawing.Point(165, 309);
+            this.GTextBoxOtherSeviceCarpet.Location = new System.Drawing.Point(165, 322);
             this.GTextBoxOtherSeviceCarpet.Name = "GTextBoxOtherSeviceCarpet";
             this.GTextBoxOtherSeviceCarpet.PlaceholderText = "Enter Here Capet details";
             this.GTextBoxOtherSeviceCarpet.SelectedText = "";
@@ -317,7 +316,7 @@
             this.guna2GradientPanel7.BorderRadius = 15;
             this.guna2GradientPanel7.Controls.Add(this.label11);
             this.guna2GradientPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel7.Location = new System.Drawing.Point(3, 309);
+            this.guna2GradientPanel7.Location = new System.Drawing.Point(3, 322);
             this.guna2GradientPanel7.Name = "guna2GradientPanel7";
             this.guna2GradientPanel7.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel7.TabIndex = 1;
@@ -349,7 +348,7 @@
             this.GTextBoxEmailClientSectionCarpet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxEmailClientSectionCarpet.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxEmailClientSectionCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxEmailClientSectionCarpet.Location = new System.Drawing.Point(165, 151);
+            this.GTextBoxEmailClientSectionCarpet.Location = new System.Drawing.Point(165, 162);
             this.GTextBoxEmailClientSectionCarpet.Name = "GTextBoxEmailClientSectionCarpet";
             this.GTextBoxEmailClientSectionCarpet.PlaceholderText = "Enter Here Email Client";
             this.GTextBoxEmailClientSectionCarpet.SelectedText = "";
@@ -373,7 +372,7 @@
             this.GTextBoxAddressClientSectionCarpet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxAddressClientSectionCarpet.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxAddressClientSectionCarpet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxAddressClientSectionCarpet.Location = new System.Drawing.Point(165, 230);
+            this.GTextBoxAddressClientSectionCarpet.Location = new System.Drawing.Point(165, 243);
             this.GTextBoxAddressClientSectionCarpet.Name = "GTextBoxAddressClientSectionCarpet";
             this.GTextBoxAddressClientSectionCarpet.PlaceholderText = "Enter Here Address Client";
             this.GTextBoxAddressClientSectionCarpet.SelectedText = "";
@@ -387,7 +386,7 @@
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(3, 230);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(3, 243);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(156, 43);
             this.guna2GradientPanel2.TabIndex = 1;
@@ -412,7 +411,7 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(639, 74);
             this.guna2GradientPanel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -451,9 +450,9 @@
             this.GPanelOptionsCarpets.Controls.Add(this.label9);
             this.GPanelOptionsCarpets.Controls.Add(this.label8);
             this.GPanelOptionsCarpets.Controls.Add(this.label7);
-            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(602, 301);
+            this.GPanelOptionsCarpets.Location = new System.Drawing.Point(723, 343);
             this.GPanelOptionsCarpets.Name = "GPanelOptionsCarpets";
-            this.GPanelOptionsCarpets.Size = new System.Drawing.Size(580, 378);
+            this.GPanelOptionsCarpets.Size = new System.Drawing.Size(580, 372);
             this.GPanelOptionsCarpets.TabIndex = 6;
             this.GPanelOptionsCarpets.Visible = false;
             // 
@@ -534,7 +533,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.TotalPriceCarpetSection);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(409, 230);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(419, 259);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(146, 67);
             this.guna2CustomGradientPanel2.TabIndex = 10;
@@ -561,7 +560,7 @@
             this.GRadioButtonWashTypDeepWash.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypDeepWash.CheckedState.InnerOffset = -4;
             this.GRadioButtonWashTypDeepWash.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonWashTypDeepWash.Location = new System.Drawing.Point(273, 103);
+            this.GRadioButtonWashTypDeepWash.Location = new System.Drawing.Point(272, 122);
             this.GRadioButtonWashTypDeepWash.Name = "GRadioButtonWashTypDeepWash";
             this.GRadioButtonWashTypDeepWash.Size = new System.Drawing.Size(96, 21);
             this.GRadioButtonWashTypDeepWash.TabIndex = 12;
@@ -581,7 +580,7 @@
             this.GRadioButtonWashTypNormalWash.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonWashTypNormalWash.CheckedState.InnerOffset = -4;
             this.GRadioButtonWashTypNormalWash.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonWashTypNormalWash.Location = new System.Drawing.Point(155, 103);
+            this.GRadioButtonWashTypNormalWash.Location = new System.Drawing.Point(154, 122);
             this.GRadioButtonWashTypNormalWash.Name = "GRadioButtonWashTypNormalWash";
             this.GRadioButtonWashTypNormalWash.Size = new System.Drawing.Size(111, 21);
             this.GRadioButtonWashTypNormalWash.TabIndex = 11;
@@ -597,7 +596,7 @@
             this.GNumricUPDownNumberCarpets.BackColor = System.Drawing.Color.Transparent;
             this.GNumricUPDownNumberCarpets.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GNumricUPDownNumberCarpets.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GNumricUPDownNumberCarpets.Location = new System.Drawing.Point(176, 261);
+            this.GNumricUPDownNumberCarpets.Location = new System.Drawing.Point(185, 315);
             this.GNumricUPDownNumberCarpets.Maximum = new decimal(new int[] {
             20,
             0,
@@ -628,7 +627,7 @@
             this.GCheckBoxOtherServicesHomeDelivery.CheckedState.BorderThickness = 0;
             this.GCheckBoxOtherServicesHomeDelivery.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesHomeDelivery.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold);
-            this.GCheckBoxOtherServicesHomeDelivery.Location = new System.Drawing.Point(229, 198);
+            this.GCheckBoxOtherServicesHomeDelivery.Location = new System.Drawing.Point(222, 238);
             this.GCheckBoxOtherServicesHomeDelivery.Name = "GCheckBoxOtherServicesHomeDelivery";
             this.GCheckBoxOtherServicesHomeDelivery.Size = new System.Drawing.Size(129, 22);
             this.GCheckBoxOtherServicesHomeDelivery.TabIndex = 14;
@@ -648,7 +647,7 @@
             this.GCheckBoxOtherServicesQuickDrying.CheckedState.BorderThickness = 0;
             this.GCheckBoxOtherServicesQuickDrying.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxOtherServicesQuickDrying.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxOtherServicesQuickDrying.Location = new System.Drawing.Point(75, 198);
+            this.GCheckBoxOtherServicesQuickDrying.Location = new System.Drawing.Point(68, 238);
             this.GCheckBoxOtherServicesQuickDrying.Name = "GCheckBoxOtherServicesQuickDrying";
             this.GCheckBoxOtherServicesQuickDrying.Size = new System.Drawing.Size(123, 22);
             this.GCheckBoxOtherServicesQuickDrying.TabIndex = 13;
@@ -663,7 +662,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 267);
+            this.label10.Location = new System.Drawing.Point(31, 321);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(148, 21);
             this.label10.TabIndex = 0;
@@ -673,7 +672,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 158);
+            this.label9.Location = new System.Drawing.Point(31, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 21);
             this.label9.TabIndex = 0;
@@ -683,7 +682,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 103);
+            this.label8.Location = new System.Drawing.Point(31, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 21);
             this.label8.TabIndex = 0;
@@ -710,9 +709,9 @@
             this.GPanelCarsOptions.Controls.Add(this.label12);
             this.GPanelCarsOptions.Controls.Add(this.label14);
             this.GPanelCarsOptions.Controls.Add(this.guna2CustomGradientPanel1);
-            this.GPanelCarsOptions.Location = new System.Drawing.Point(605, 313);
+            this.GPanelCarsOptions.Location = new System.Drawing.Point(723, 343);
             this.GPanelCarsOptions.Name = "GPanelCarsOptions";
-            this.GPanelCarsOptions.Size = new System.Drawing.Size(580, 366);
+            this.GPanelCarsOptions.Size = new System.Drawing.Size(580, 345);
             this.GPanelCarsOptions.TabIndex = 7;
             this.GPanelCarsOptions.Visible = false;
             // 
@@ -782,7 +781,7 @@
             this.GPnaelOtherServices.Controls.Add(this.GCheckBoxOtherServicesEngineCleaning);
             this.GPnaelOtherServices.Controls.Add(this.GCheckBoxOtherServicesInteriorWash);
             this.GPnaelOtherServices.Controls.Add(this.GCheckBoxOtherServicesExteriorWash);
-            this.GPnaelOtherServices.Location = new System.Drawing.Point(62, 221);
+            this.GPnaelOtherServices.Location = new System.Drawing.Point(62, 255);
             this.GPnaelOtherServices.Name = "GPnaelOtherServices";
             this.GPnaelOtherServices.Size = new System.Drawing.Size(304, 68);
             this.GPnaelOtherServices.TabIndex = 3;
@@ -876,7 +875,7 @@
             this.GCheckBoxServicesFullWash.CheckedState.BorderThickness = 0;
             this.GCheckBoxServicesFullWash.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxServicesFullWash.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold);
-            this.GCheckBoxServicesFullWash.Location = new System.Drawing.Point(135, 117);
+            this.GCheckBoxServicesFullWash.Location = new System.Drawing.Point(135, 134);
             this.GCheckBoxServicesFullWash.Name = "GCheckBoxServicesFullWash";
             this.GCheckBoxServicesFullWash.Size = new System.Drawing.Size(93, 22);
             this.GCheckBoxServicesFullWash.TabIndex = 1;
@@ -891,7 +890,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(32, 174);
+            this.label13.Location = new System.Drawing.Point(32, 208);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(155, 24);
             this.label13.TabIndex = 0;
@@ -901,7 +900,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Garamond", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 114);
+            this.label12.Location = new System.Drawing.Point(32, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 24);
             this.label12.TabIndex = 0;
@@ -923,7 +922,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.TotalPriceCarSection);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(410, 221);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(419, 252);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(134, 67);
             this.guna2CustomGradientPanel1.TabIndex = 9;
@@ -936,20 +935,9 @@
             this.TotalPriceCarSection.ForeColor = System.Drawing.Color.White;
             this.TotalPriceCarSection.Location = new System.Drawing.Point(11, 0);
             this.TotalPriceCarSection.Name = "TotalPriceCarSection";
-            this.TotalPriceCarSection.Size = new System.Drawing.Size(57, 68);
+            this.TotalPriceCarSection.Size = new System.Drawing.Size(85, 68);
             this.TotalPriceCarSection.TabIndex = 8;
-            this.TotalPriceCarSection.Text = "0";
-            // 
-            // TextNoneAnyOption
-            // 
-            this.TextNoneAnyOption.AutoSize = true;
-            this.TextNoneAnyOption.Font = new System.Drawing.Font("Garamond", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextNoneAnyOption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.TextNoneAnyOption.Location = new System.Drawing.Point(698, 394);
-            this.TextNoneAnyOption.Name = "TextNoneAnyOption";
-            this.TextNoneAnyOption.Size = new System.Drawing.Size(391, 54);
-            this.TextNoneAnyOption.TabIndex = 11;
-            this.TextNoneAnyOption.Text = "None Any Option";
+            this.TotalPriceCarSection.Text = "0$";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -958,7 +946,7 @@
             this.guna2CustomGradientPanel3.Controls.Add(this.GRadioButtonCarpetsSection);
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.WhiteSmoke;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(360, 193);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(450, 205);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(474, 54);
             this.guna2CustomGradientPanel3.TabIndex = 12;
@@ -1060,7 +1048,7 @@
             // 
             this.GPnaelIDOrderCarpet.Controls.Add(this.guna2GradientPanel8);
             this.GPnaelIDOrderCarpet.Controls.Add(this.GTextBoxIDOrderCarpet);
-            this.GPnaelIDOrderCarpet.Location = new System.Drawing.Point(23, 276);
+            this.GPnaelIDOrderCarpet.Location = new System.Drawing.Point(40, 304);
             this.GPnaelIDOrderCarpet.Name = "GPnaelIDOrderCarpet";
             this.GPnaelIDOrderCarpet.Size = new System.Drawing.Size(532, 79);
             this.GPnaelIDOrderCarpet.TabIndex = 15;
@@ -1069,7 +1057,7 @@
             // 
             this.GPnaelIDOrderCar.Controls.Add(this.guna2GradientPanel6);
             this.GPnaelIDOrderCar.Controls.Add(this.GTextBoxIDOrderCarSection);
-            this.GPnaelIDOrderCar.Location = new System.Drawing.Point(23, 277);
+            this.GPnaelIDOrderCar.Location = new System.Drawing.Point(40, 305);
             this.GPnaelIDOrderCar.Name = "GPnaelIDOrderCar";
             this.GPnaelIDOrderCar.Size = new System.Drawing.Size(533, 79);
             this.GPnaelIDOrderCar.TabIndex = 17;
@@ -1136,9 +1124,9 @@
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.GTextBoxEmailClientCarSection);
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.GTextBoxAddressClientCarSection);
             this.GPnaelInfroamtionOrderCar.Controls.Add(this.guna2GradientPanel13);
-            this.GPnaelInfroamtionOrderCar.Location = new System.Drawing.Point(22, 361);
+            this.GPnaelInfroamtionOrderCar.Location = new System.Drawing.Point(39, 393);
             this.GPnaelInfroamtionOrderCar.Name = "GPnaelInfroamtionOrderCar";
-            this.GPnaelInfroamtionOrderCar.Size = new System.Drawing.Size(560, 401);
+            this.GPnaelInfroamtionOrderCar.Size = new System.Drawing.Size(560, 441);
             this.GPnaelInfroamtionOrderCar.TabIndex = 16;
             this.GPnaelInfroamtionOrderCar.Visible = false;
             // 
@@ -1179,7 +1167,7 @@
             this.GTextBoxPhoneClientCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxPhoneClientCarSection.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GTextBoxPhoneClientCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPhoneClientCarSection.Location = new System.Drawing.Point(177, 175);
+            this.GTextBoxPhoneClientCarSection.Location = new System.Drawing.Point(177, 192);
             this.GTextBoxPhoneClientCarSection.Name = "GTextBoxPhoneClientCarSection";
             this.GTextBoxPhoneClientCarSection.PlaceholderText = "Enter Here Phone Client";
             this.GTextBoxPhoneClientCarSection.SelectedText = "";
@@ -1217,7 +1205,7 @@
             this.guna2GradientPanel9.BorderRadius = 15;
             this.guna2GradientPanel9.Controls.Add(this.label16);
             this.guna2GradientPanel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel9.Location = new System.Drawing.Point(3, 175);
+            this.guna2GradientPanel9.Location = new System.Drawing.Point(3, 190);
             this.guna2GradientPanel9.Name = "guna2GradientPanel9";
             this.guna2GradientPanel9.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel9.TabIndex = 1;
@@ -1239,7 +1227,7 @@
             this.guna2GradientPanel15.BorderRadius = 15;
             this.guna2GradientPanel15.Controls.Add(this.label22);
             this.guna2GradientPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel15.Location = new System.Drawing.Point(3, 117);
+            this.guna2GradientPanel15.Location = new System.Drawing.Point(3, 127);
             this.guna2GradientPanel15.Name = "guna2GradientPanel15";
             this.guna2GradientPanel15.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel15.TabIndex = 1;
@@ -1261,7 +1249,7 @@
             this.guna2GradientPanel10.BorderRadius = 15;
             this.guna2GradientPanel10.Controls.Add(this.label17);
             this.guna2GradientPanel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel10.Location = new System.Drawing.Point(3, 59);
+            this.guna2GradientPanel10.Location = new System.Drawing.Point(3, 64);
             this.guna2GradientPanel10.Name = "guna2GradientPanel10";
             this.guna2GradientPanel10.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel10.TabIndex = 1;
@@ -1283,7 +1271,7 @@
             this.guna2GradientPanel11.BorderRadius = 15;
             this.guna2GradientPanel11.Controls.Add(this.label18);
             this.guna2GradientPanel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel11.Location = new System.Drawing.Point(3, 233);
+            this.guna2GradientPanel11.Location = new System.Drawing.Point(3, 253);
             this.guna2GradientPanel11.Name = "guna2GradientPanel11";
             this.guna2GradientPanel11.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel11.TabIndex = 1;
@@ -1315,7 +1303,7 @@
             this.GTextBoxNameClientCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxNameClientCarSection.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxNameClientCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxNameClientCarSection.Location = new System.Drawing.Point(177, 117);
+            this.GTextBoxNameClientCarSection.Location = new System.Drawing.Point(177, 127);
             this.GTextBoxNameClientCarSection.Name = "GTextBoxNameClientCarSection";
             this.GTextBoxNameClientCarSection.PlaceholderText = "Enter Here Name Client";
             this.GTextBoxNameClientCarSection.SelectedText = "";
@@ -1339,7 +1327,7 @@
             this.GTextBoxCarModel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxCarModel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxCarModel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxCarModel.Location = new System.Drawing.Point(177, 59);
+            this.GTextBoxCarModel.Location = new System.Drawing.Point(177, 64);
             this.GTextBoxCarModel.Name = "GTextBoxCarModel";
             this.GTextBoxCarModel.PlaceholderText = "Enter Here Car Model\n";
             this.GTextBoxCarModel.SelectedText = "";
@@ -1363,7 +1351,7 @@
             this.GTextBoxCarDetailsCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxCarDetailsCarSection.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxCarDetailsCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxCarDetailsCarSection.Location = new System.Drawing.Point(177, 349);
+            this.GTextBoxCarDetailsCarSection.Location = new System.Drawing.Point(177, 379);
             this.GTextBoxCarDetailsCarSection.Name = "GTextBoxCarDetailsCarSection";
             this.GTextBoxCarDetailsCarSection.PlaceholderText = "Enter Here Capet details";
             this.GTextBoxCarDetailsCarSection.SelectedText = "";
@@ -1376,7 +1364,7 @@
             this.guna2GradientPanel12.BorderRadius = 15;
             this.guna2GradientPanel12.Controls.Add(this.label19);
             this.guna2GradientPanel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel12.Location = new System.Drawing.Point(3, 349);
+            this.guna2GradientPanel12.Location = new System.Drawing.Point(3, 379);
             this.guna2GradientPanel12.Name = "guna2GradientPanel12";
             this.guna2GradientPanel12.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel12.TabIndex = 1;
@@ -1408,7 +1396,7 @@
             this.GTextBoxEmailClientCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxEmailClientCarSection.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxEmailClientCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxEmailClientCarSection.Location = new System.Drawing.Point(177, 232);
+            this.GTextBoxEmailClientCarSection.Location = new System.Drawing.Point(177, 253);
             this.GTextBoxEmailClientCarSection.Name = "GTextBoxEmailClientCarSection";
             this.GTextBoxEmailClientCarSection.PlaceholderText = "Enter Here Email Client";
             this.GTextBoxEmailClientCarSection.SelectedText = "";
@@ -1432,7 +1420,7 @@
             this.GTextBoxAddressClientCarSection.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxAddressClientCarSection.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxAddressClientCarSection.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxAddressClientCarSection.Location = new System.Drawing.Point(177, 291);
+            this.GTextBoxAddressClientCarSection.Location = new System.Drawing.Point(177, 312);
             this.GTextBoxAddressClientCarSection.Name = "GTextBoxAddressClientCarSection";
             this.GTextBoxAddressClientCarSection.PlaceholderText = "Enter Here Address Client";
             this.GTextBoxAddressClientCarSection.SelectedText = "";
@@ -1446,7 +1434,7 @@
             this.guna2GradientPanel13.BorderRadius = 15;
             this.guna2GradientPanel13.Controls.Add(this.label20);
             this.guna2GradientPanel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel13.Location = new System.Drawing.Point(3, 291);
+            this.guna2GradientPanel13.Location = new System.Drawing.Point(3, 316);
             this.guna2GradientPanel13.Name = "guna2GradientPanel13";
             this.guna2GradientPanel13.Size = new System.Drawing.Size(168, 43);
             this.guna2GradientPanel13.TabIndex = 1;
@@ -1506,7 +1494,7 @@
             this.GButtonResetAllOrder.Image = global::Sparkle.Properties.Resources.reset_Bold;
             this.GButtonResetAllOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.GButtonResetAllOrder.ImageOffset = new System.Drawing.Point(15, 0);
-            this.GButtonResetAllOrder.Location = new System.Drawing.Point(971, 710);
+            this.GButtonResetAllOrder.Location = new System.Drawing.Point(1101, 735);
             this.GButtonResetAllOrder.Name = "GButtonResetAllOrder";
             this.GButtonResetAllOrder.Size = new System.Drawing.Size(178, 55);
             this.GButtonResetAllOrder.TabIndex = 17;
@@ -1532,7 +1520,7 @@
             this.ButtonAddNewOrder.Image = global::Sparkle.Properties.Resources.checklist_New_Order_;
             this.ButtonAddNewOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonAddNewOrder.ImageOffset = new System.Drawing.Point(25, 0);
-            this.ButtonAddNewOrder.Location = new System.Drawing.Point(628, 710);
+            this.ButtonAddNewOrder.Location = new System.Drawing.Point(758, 735);
             this.ButtonAddNewOrder.Name = "ButtonAddNewOrder";
             this.ButtonAddNewOrder.Size = new System.Drawing.Size(323, 55);
             this.ButtonAddNewOrder.TabIndex = 16;
@@ -1545,7 +1533,7 @@
             this.GPictureBoxCarGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxCarGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.Image")));
             this.GPictureBoxCarGIF.ImageRotate = 0F;
-            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(778, 127);
+            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(868, 139);
             this.GPictureBoxCarGIF.Name = "GPictureBoxCarGIF";
             this.GPictureBoxCarGIF.Size = new System.Drawing.Size(276, 181);
             this.GPictureBoxCarGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1559,7 +1547,7 @@
             this.GPictureBoxCarpetGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxCarpetGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.Image")));
             this.GPictureBoxCarpetGIF.ImageRotate = 0F;
-            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(167, 141);
+            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(257, 153);
             this.GPictureBoxCarpetGIF.Name = "GPictureBoxCarpetGIF";
             this.GPictureBoxCarpetGIF.Size = new System.Drawing.Size(232, 148);
             this.GPictureBoxCarpetGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1581,12 +1569,11 @@
             this.Controls.Add(this.GPanelOptionsCarpets);
             this.Controls.Add(this.PanelFillInformationClientsCarpet);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.TextNoneAnyOption);
             this.Controls.Add(this.GPanelCarsOptions);
             this.Controls.Add(this.GPictureBoxCarpetGIF);
             this.Controls.Add(this.GPictureBoxCarGIF);
             this.Name = "UserControlNewOrderSparkle";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.Load += new System.EventHandler(this.UserControlNewOrderSparkle_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlNewOrderSparkle_Paint);
             this.PanelFillInformationClientsCarpet.ResumeLayout(false);
@@ -1646,7 +1633,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarGIF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPictureBoxCarpetGIF)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1699,7 +1685,6 @@
         private System.Windows.Forms.Label TotalPriceCarSection;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label TotalPriceCarpetSection;
-        private System.Windows.Forms.Label TextNoneAnyOption;
         private Guna.UI2.WinForms.Guna2Panel GPanelSizeCarpet;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2RadioButton GRadioButtonCarsSection;

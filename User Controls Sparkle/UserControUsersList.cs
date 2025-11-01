@@ -157,8 +157,8 @@ namespace Sparkle.User_Controls_Sparkle
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
             //Points Line
-            Point p1 = new Point(0, 290);
-            Point p2 = new Point(1200, 290);
+            Point p1 = new Point(0, 330);
+            Point p2 = new Point(1400, 330);
 
             //Draw the Line
             e.Graphics.DrawLine(pen, p1, p2);
@@ -266,9 +266,5 @@ namespace Sparkle.User_Controls_Sparkle
             PaintTheLine(e);
         }
 
-        private void ListViewUsersLists_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

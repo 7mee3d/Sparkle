@@ -119,10 +119,10 @@
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(15, 0);
             this.guna2Button6.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button6.Location = new System.Drawing.Point(0, 845);
+            this.guna2Button6.Location = new System.Drawing.Point(-1, 842);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.PressedColor = System.Drawing.Color.White;
-            this.guna2Button6.Size = new System.Drawing.Size(222, 57);
+            this.guna2Button6.Size = new System.Drawing.Size(223, 57);
             this.guna2Button6.TabIndex = 1;
             this.guna2Button6.Text = "Logout Sparkle";
             this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
@@ -591,7 +591,7 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.BorderRadius = 15;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Image = global::Sparkle.Properties.Resources.Sparkle_Welcome_Screen_Updated;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(-15, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";

@@ -71,9 +71,9 @@
             this.PanelFillInformationUsers.Controls.Add(this.guna2GradientPanel3);
             this.PanelFillInformationUsers.Controls.Add(this.GTextBoxUsername);
             this.PanelFillInformationUsers.Controls.Add(this.guna2GradientPanel2);
-            this.PanelFillInformationUsers.Location = new System.Drawing.Point(25, 158);
+            this.PanelFillInformationUsers.Location = new System.Drawing.Point(3, 184);
             this.PanelFillInformationUsers.Name = "PanelFillInformationUsers";
-            this.PanelFillInformationUsers.Size = new System.Drawing.Size(576, 651);
+            this.PanelFillInformationUsers.Size = new System.Drawing.Size(720, 721);
             this.PanelFillInformationUsers.TabIndex = 5;
             // 
             // GPanelAddUserSectionPermissions
@@ -87,9 +87,9 @@
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionClientListSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionClientSection);
             this.GPanelAddUserSectionPermissions.Controls.Add(this.GCheckBoxAddUserSpecialPermissionNewOrderSection);
-            this.GPanelAddUserSectionPermissions.Location = new System.Drawing.Point(2, 376);
+            this.GPanelAddUserSectionPermissions.Location = new System.Drawing.Point(59, 387);
             this.GPanelAddUserSectionPermissions.Name = "GPanelAddUserSectionPermissions";
-            this.GPanelAddUserSectionPermissions.Size = new System.Drawing.Size(573, 100);
+            this.GPanelAddUserSectionPermissions.Size = new System.Drawing.Size(610, 110);
             this.GPanelAddUserSectionPermissions.TabIndex = 5;
             this.GPanelAddUserSectionPermissions.Visible = false;
             // 
@@ -102,7 +102,7 @@
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.BorderThickness = 1;
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Location = new System.Drawing.Point(191, 45);
+            this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Location = new System.Drawing.Point(191, 44);
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Name = "GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection";
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.Size = new System.Drawing.Size(225, 21);
             this.GCheckBoxAddUserSpecialPermissionRemoveUpdateClientSection.TabIndex = 6;
@@ -121,7 +121,7 @@
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.BorderThickness = 1;
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Location = new System.Drawing.Point(422, 45);
+            this.GCheckBoxAddUserSpecialPermissionUsersListSection.Location = new System.Drawing.Point(451, 44);
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.Name = "GCheckBoxAddUserSpecialPermissionUsersListSection";
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.Size = new System.Drawing.Size(142, 21);
             this.GCheckBoxAddUserSpecialPermissionUsersListSection.TabIndex = 6;
@@ -140,7 +140,7 @@
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.BorderThickness = 1;
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Location = new System.Drawing.Point(2, 45);
+            this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Location = new System.Drawing.Point(2, 44);
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Name = "GCheckBoxAddUserSpecialPermissionShowAllOrders";
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.Size = new System.Drawing.Size(183, 21);
             this.GCheckBoxAddUserSpecialPermissionShowAllOrders.TabIndex = 6;
@@ -159,7 +159,7 @@
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.BorderThickness = 1;
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Location = new System.Drawing.Point(422, 76);
+            this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Location = new System.Drawing.Point(451, 76);
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Name = "GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle";
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.Size = new System.Drawing.Size(121, 21);
             this.GCheckBoxAddUserSpecialPermissionShowHistoryLoginSparkle.TabIndex = 6;
@@ -178,7 +178,7 @@
             this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.BorderThickness = 1;
             this.GCheckBoxAddUserSpecialPermissionUsersSection.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCheckBoxAddUserSpecialPermissionUsersSection.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GCheckBoxAddUserSpecialPermissionUsersSection.Location = new System.Drawing.Point(422, 12);
+            this.GCheckBoxAddUserSpecialPermissionUsersSection.Location = new System.Drawing.Point(451, 12);
             this.GCheckBoxAddUserSpecialPermissionUsersSection.Name = "GCheckBoxAddUserSpecialPermissionUsersSection";
             this.GCheckBoxAddUserSpecialPermissionUsersSection.Size = new System.Drawing.Size(113, 21);
             this.GCheckBoxAddUserSpecialPermissionUsersSection.TabIndex = 6;
@@ -274,7 +274,7 @@
             this.GRadioButtonSpecialPremissions.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonSpecialPremissions.CheckedState.InnerOffset = -4;
             this.GRadioButtonSpecialPremissions.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold);
-            this.GRadioButtonSpecialPremissions.Location = new System.Drawing.Point(278, 318);
+            this.GRadioButtonSpecialPremissions.Location = new System.Drawing.Point(353, 338);
             this.GRadioButtonSpecialPremissions.Name = "GRadioButtonSpecialPremissions";
             this.GRadioButtonSpecialPremissions.Size = new System.Drawing.Size(144, 21);
             this.GRadioButtonSpecialPremissions.TabIndex = 4;
@@ -295,7 +295,7 @@
             this.GRadioButtonFullAccessAllSections.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GRadioButtonFullAccessAllSections.CheckedState.InnerOffset = -4;
             this.GRadioButtonFullAccessAllSections.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GRadioButtonFullAccessAllSections.Location = new System.Drawing.Point(155, 318);
+            this.GRadioButtonFullAccessAllSections.Location = new System.Drawing.Point(190, 338);
             this.GRadioButtonFullAccessAllSections.Name = "GRadioButtonFullAccessAllSections";
             this.GRadioButtonFullAccessAllSections.Size = new System.Drawing.Size(98, 21);
             this.GRadioButtonFullAccessAllSections.TabIndex = 4;
@@ -325,7 +325,7 @@
             this.ButtonAddNewUser.Image = global::Sparkle.Properties.Resources.add_Client_Black;
             this.ButtonAddNewUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonAddNewUser.ImageOffset = new System.Drawing.Point(55, 0);
-            this.ButtonAddNewUser.Location = new System.Drawing.Point(137, 546);
+            this.ButtonAddNewUser.Location = new System.Drawing.Point(190, 546);
             this.ButtonAddNewUser.Name = "ButtonAddNewUser";
             this.ButtonAddNewUser.Size = new System.Drawing.Size(303, 55);
             this.ButtonAddNewUser.TabIndex = 3;
@@ -347,11 +347,11 @@
             this.GTextBoxPasswordUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxPasswordUser.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxPasswordUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxPasswordUser.Location = new System.Drawing.Point(194, 233);
+            this.GTextBoxPasswordUser.Location = new System.Drawing.Point(267, 226);
             this.GTextBoxPasswordUser.Name = "GTextBoxPasswordUser";
             this.GTextBoxPasswordUser.PlaceholderText = "Enter Here Password User";
             this.GTextBoxPasswordUser.SelectedText = "";
-            this.GTextBoxPasswordUser.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxPasswordUser.Size = new System.Drawing.Size(385, 50);
             this.GTextBoxPasswordUser.TabIndex = 1;
             this.GTextBoxPasswordUser.Tag = "TPhone";
             // 
@@ -360,9 +360,9 @@
             this.guna2GradientPanel3.BorderRadius = 15;
             this.guna2GradientPanel3.Controls.Add(this.label3);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(32, 233);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(101, 226);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(160, 50);
             this.guna2GradientPanel3.TabIndex = 1;
             // 
             // label3
@@ -371,7 +371,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 9);
+            this.label3.Location = new System.Drawing.Point(13, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 27);
             this.label3.TabIndex = 1;
@@ -392,11 +392,11 @@
             this.GTextBoxUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
             this.GTextBoxUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.GTextBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(112)))), ((int)(((byte)(94)))));
-            this.GTextBoxUsername.Location = new System.Drawing.Point(194, 156);
+            this.GTextBoxUsername.Location = new System.Drawing.Point(267, 149);
             this.GTextBoxUsername.Name = "GTextBoxUsername";
             this.GTextBoxUsername.PlaceholderText = "Enter Here Usrname User";
             this.GTextBoxUsername.SelectedText = "";
-            this.GTextBoxUsername.Size = new System.Drawing.Size(353, 43);
+            this.GTextBoxUsername.Size = new System.Drawing.Size(385, 50);
             this.GTextBoxUsername.TabIndex = 0;
             this.GTextBoxUsername.Tag = "TAddress";
             // 
@@ -405,9 +405,9 @@
             this.guna2GradientPanel2.BorderRadius = 15;
             this.guna2GradientPanel2.Controls.Add(this.label2);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(32, 156);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(101, 149);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(156, 43);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(160, 50);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // label2
@@ -416,7 +416,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Garamond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 8);
+            this.label2.Location = new System.Drawing.Point(13, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 27);
             this.label2.TabIndex = 1;
@@ -430,7 +430,7 @@
             this.UpperPanelUserLabels.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.UpperPanelUserLabels.Location = new System.Drawing.Point(25, 78);
             this.UpperPanelUserLabels.Name = "UpperPanelUserLabels";
-            this.UpperPanelUserLabels.Size = new System.Drawing.Size(409, 74);
+            this.UpperPanelUserLabels.Size = new System.Drawing.Size(639, 74);
             this.UpperPanelUserLabels.TabIndex = 3;
             // 
             // pictureBox1
@@ -463,9 +463,9 @@
             this.pictureBoxUsers.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxUsers.BackgroundImage = global::Sparkle.Properties.Resources.Background_Sparkle_Users;
             this.pictureBoxUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxUsers.Location = new System.Drawing.Point(607, 3);
+            this.pictureBoxUsers.Location = new System.Drawing.Point(619, -71);
             this.pictureBoxUsers.Name = "pictureBoxUsers";
-            this.pictureBoxUsers.Size = new System.Drawing.Size(660, 873);
+            this.pictureBoxUsers.Size = new System.Drawing.Size(844, 1108);
             this.pictureBoxUsers.TabIndex = 4;
             this.pictureBoxUsers.TabStop = false;
             // 
@@ -475,10 +475,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PanelFillInformationUsers);
-            this.Controls.Add(this.pictureBoxUsers);
             this.Controls.Add(this.UpperPanelUserLabels);
+            this.Controls.Add(this.pictureBoxUsers);
             this.Name = "UserControlUsers";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.PanelFillInformationUsers.ResumeLayout(false);
             this.PanelFillInformationUsers.PerformLayout();
             this.GPanelAddUserSectionPermissions.ResumeLayout(false);

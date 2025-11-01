@@ -999,3 +999,5 @@
 999&&//&&DinaX AzzamX&&//&&Ankara&&//&&dinax.azzamx@no-mail.test&&//&&99991699003&&//&&XL&&//&&Eco Wash&&//&&Quick Drying - Home Delivery&&//&&5&&//&&None&&//&&182
 1000&&//&&HalaX NassarX&&//&&Istanbul&&//&&halax.nassarx@example.test&&//&&999665395629&&//&&Large&&//&&Eco Wash&&//&&Quick Drying - Home Delivery&&//&&5&&//&&None&&//&&182
 1001&&//&&ahmed Mohammed&&//&&China&&//&&ahmedMohammed@gmail.com&&//&&765451231&&//&&Small&&//&&Normal Wash&&//&&Quick Drying&&//&&4&&//&&None&&//&&60
+1002&&//&&Carsto Gen&&//&&USA&&//&&CarstoGena@gmail.com&&//&&73246787123&&//&&Medium&&//&&Deep Wash&&//&&Home Delivery&&//&&8&&//&&None&&//&&280
+1003&&//&&Cresto Keen&&//&&USA&&//&&crestoKeen@yahoo.com&&//&&9251734523&&//&&Medium&&//&&Normal Wash&&//&&Quick Drying Home Delivery&&//&&4&&//&&None&&//&&140

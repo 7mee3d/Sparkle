@@ -96,7 +96,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByIDOrderCarpet);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchIDOrderCarpet);
-            this.guna2Panel1.Location = new System.Drawing.Point(737, 9);
+            this.guna2Panel1.Location = new System.Drawing.Point(910, 17);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(458, 60);
             this.guna2Panel1.TabIndex = 6;
@@ -151,9 +151,9 @@
             // 
             this.PanelMainListViewAllOrdersCarpet.Controls.Add(this.guna2Panel1);
             this.PanelMainListViewAllOrdersCarpet.Controls.Add(this.ListViewAllOrdersCarpet);
-            this.PanelMainListViewAllOrdersCarpet.Location = new System.Drawing.Point(0, 266);
+            this.PanelMainListViewAllOrdersCarpet.Location = new System.Drawing.Point(0, 286);
             this.PanelMainListViewAllOrdersCarpet.Name = "PanelMainListViewAllOrdersCarpet";
-            this.PanelMainListViewAllOrdersCarpet.Size = new System.Drawing.Size(1195, 543);
+            this.PanelMainListViewAllOrdersCarpet.Size = new System.Drawing.Size(1371, 622);
             this.PanelMainListViewAllOrdersCarpet.TabIndex = 5;
             // 
             // ListViewAllOrdersCarpet
@@ -180,7 +180,7 @@
             this.ListViewAllOrdersCarpet.Location = new System.Drawing.Point(0, 101);
             this.ListViewAllOrdersCarpet.MultiSelect = false;
             this.ListViewAllOrdersCarpet.Name = "ListViewAllOrdersCarpet";
-            this.ListViewAllOrdersCarpet.Size = new System.Drawing.Size(1195, 442);
+            this.ListViewAllOrdersCarpet.Size = new System.Drawing.Size(1368, 518);
             this.ListViewAllOrdersCarpet.TabIndex = 0;
             this.ListViewAllOrdersCarpet.UseCompatibleStateImageBehavior = false;
             this.ListViewAllOrdersCarpet.View = System.Windows.Forms.View.Details;
@@ -248,7 +248,7 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(25, 78);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(663, 74);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(639, 74);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -283,7 +283,7 @@
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.Controls.Add(this.GRadioButtonCarpetsSectionList);
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
-            this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.Location = new System.Drawing.Point(360, 203);
+            this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.Location = new System.Drawing.Point(426, 217);
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.Name = "GCPanelChoiceSectionToViewOrdersCarOrCarpet";
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.Size = new System.Drawing.Size(474, 54);
             this.GCPanelChoiceSectionToViewOrdersCarOrCarpet.TabIndex = 13;
@@ -340,16 +340,16 @@
             // 
             this.PanelMainListViewAllOrdersCar.Controls.Add(this.guna2Panel3);
             this.PanelMainListViewAllOrdersCar.Controls.Add(this.ListViewAllOrdersCar);
-            this.PanelMainListViewAllOrdersCar.Location = new System.Drawing.Point(0, 266);
+            this.PanelMainListViewAllOrdersCar.Location = new System.Drawing.Point(0, 286);
             this.PanelMainListViewAllOrdersCar.Name = "PanelMainListViewAllOrdersCar";
-            this.PanelMainListViewAllOrdersCar.Size = new System.Drawing.Size(1195, 543);
+            this.PanelMainListViewAllOrdersCar.Size = new System.Drawing.Size(1371, 622);
             this.PanelMainListViewAllOrdersCar.TabIndex = 14;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.GButtonSearchIDOrderCarSectionToListView);
             this.guna2Panel3.Controls.Add(this.GTextBoxSearchByIDOrderCarSection);
-            this.guna2Panel3.Location = new System.Drawing.Point(737, 9);
+            this.guna2Panel3.Location = new System.Drawing.Point(910, 17);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(458, 60);
             this.guna2Panel3.TabIndex = 6;
@@ -421,10 +421,10 @@
             this.ListViewAllOrdersCar.GridLines = true;
             this.ListViewAllOrdersCar.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewAllOrdersCar.HideSelection = false;
-            this.ListViewAllOrdersCar.Location = new System.Drawing.Point(0, 101);
+            this.ListViewAllOrdersCar.Location = new System.Drawing.Point(0, 84);
             this.ListViewAllOrdersCar.MultiSelect = false;
             this.ListViewAllOrdersCar.Name = "ListViewAllOrdersCar";
-            this.ListViewAllOrdersCar.Size = new System.Drawing.Size(1195, 442);
+            this.ListViewAllOrdersCar.Size = new System.Drawing.Size(1368, 536);
             this.ListViewAllOrdersCar.TabIndex = 0;
             this.ListViewAllOrdersCar.UseCompatibleStateImageBehavior = false;
             this.ListViewAllOrdersCar.View = System.Windows.Forms.View.Details;
@@ -496,7 +496,7 @@
             this.GPictureBoxCarpetGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxCarpetGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarpetGIF.Image")));
             this.GPictureBoxCarpetGIF.ImageRotate = 0F;
-            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(198, 153);
+            this.GPictureBoxCarpetGIF.Location = new System.Drawing.Point(264, 167);
             this.GPictureBoxCarpetGIF.Name = "GPictureBoxCarpetGIF";
             this.GPictureBoxCarpetGIF.Size = new System.Drawing.Size(216, 127);
             this.GPictureBoxCarpetGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -510,7 +510,7 @@
             this.GPictureBoxCarGIF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.GPictureBoxCarGIF.Image = ((System.Drawing.Image)(resources.GetObject("GPictureBoxCarGIF.Image")));
             this.GPictureBoxCarGIF.ImageRotate = 0F;
-            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(765, 127);
+            this.GPictureBoxCarGIF.Location = new System.Drawing.Point(831, 141);
             this.GPictureBoxCarGIF.Name = "GPictureBoxCarGIF";
             this.GPictureBoxCarGIF.Size = new System.Drawing.Size(276, 181);
             this.GPictureBoxCarGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -525,7 +525,7 @@
             this.GPanelNumberOrdersCarpetSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberOrdersCarpetSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberOrdersCarpetSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberOrdersCarpetSparkle.Location = new System.Drawing.Point(25, 179);
+            this.GPanelNumberOrdersCarpetSparkle.Location = new System.Drawing.Point(25, 202);
             this.GPanelNumberOrdersCarpetSparkle.Name = "GPanelNumberOrdersCarpetSparkle";
             this.GPanelNumberOrdersCarpetSparkle.Size = new System.Drawing.Size(167, 81);
             this.GPanelNumberOrdersCarpetSparkle.TabIndex = 21;
@@ -561,7 +561,7 @@
             this.GPanelNumberOrdersCar.Controls.Add(this.guna2PictureBox1);
             this.GPanelNumberOrdersCar.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberOrdersCar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberOrdersCar.Location = new System.Drawing.Point(25, 179);
+            this.GPanelNumberOrdersCar.Location = new System.Drawing.Point(25, 202);
             this.GPanelNumberOrdersCar.Name = "GPanelNumberOrdersCar";
             this.GPanelNumberOrdersCar.Size = new System.Drawing.Size(167, 81);
             this.GPanelNumberOrdersCar.TabIndex = 22;
@@ -604,7 +604,7 @@
             this.Controls.Add(this.GPictureBoxCarpetGIF);
             this.Controls.Add(this.GPictureBoxCarGIF);
             this.Name = "UserControlShowAllOrdersCarAndCarpet";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.guna2Panel1.ResumeLayout(false);
             this.PanelMainListViewAllOrdersCarpet.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);

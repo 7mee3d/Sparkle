@@ -236,6 +236,8 @@
     <None Include="Resources\eye show.gif" />
     <None Include="Resources\eye show gif Image.gif" />
     <None Include="Resources\eye hide image .png" />
+    <None Include="Resources\Sparkle Welcome Screen Updated.png" />
+    <None Include="Resources\Update And Remove.gif" />
     <Content Include="Washing Icon Sparkle Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,7 +55,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.GButtonSearchByUsername);
             this.guna2Panel1.Controls.Add(this.GTextBoxSearchUsersList);
-            this.guna2Panel1.Location = new System.Drawing.Point(713, 175);
+            this.guna2Panel1.Location = new System.Drawing.Point(858, 218);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(454, 94);
             this.guna2Panel1.TabIndex = 6;
@@ -108,9 +108,9 @@
             // PanelMainListViewClientsList
             // 
             this.PanelMainListViewClientsList.Controls.Add(this.ListViewUsersLists);
-            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 291);
+            this.PanelMainListViewClientsList.Location = new System.Drawing.Point(0, 346);
             this.PanelMainListViewClientsList.Name = "PanelMainListViewClientsList";
-            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1195, 500);
+            this.PanelMainListViewClientsList.Size = new System.Drawing.Size(1371, 562);
             this.PanelMainListViewClientsList.TabIndex = 5;
             // 
             // ListViewUsersLists
@@ -126,14 +126,13 @@
             this.ListViewUsersLists.GridLines = true;
             this.ListViewUsersLists.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewUsersLists.HideSelection = false;
-            this.ListViewUsersLists.Location = new System.Drawing.Point(0, 8);
+            this.ListViewUsersLists.Location = new System.Drawing.Point(3, 3);
             this.ListViewUsersLists.MultiSelect = false;
             this.ListViewUsersLists.Name = "ListViewUsersLists";
-            this.ListViewUsersLists.Size = new System.Drawing.Size(1192, 510);
+            this.ListViewUsersLists.Size = new System.Drawing.Size(1371, 559);
             this.ListViewUsersLists.TabIndex = 0;
             this.ListViewUsersLists.UseCompatibleStateImageBehavior = false;
             this.ListViewUsersLists.View = System.Windows.Forms.View.Details;
-            this.ListViewUsersLists.SelectedIndexChanged += new System.EventHandler(this.ListViewUsersLists_SelectedIndexChanged);
             // 
             // ColumnUsername
             // 
@@ -143,7 +142,7 @@
             // ColumnPassword
             // 
             this.ColumnPassword.Text = "Password";
-            this.ColumnPassword.Width = 400;
+            this.ColumnPassword.Width = 450;
             // 
             // Permissions
             // 
@@ -153,7 +152,7 @@
             // StatusAccount
             // 
             this.StatusAccount.Text = "Status Account";
-            this.StatusAccount.Width = 200;
+            this.StatusAccount.Width = 300;
             // 
             // guna2GradientPanel1
             // 
@@ -198,9 +197,9 @@
             this.GPanelNumberUsernSparkle.Controls.Add(this.GPictureBoxUserPanelNumebrUser);
             this.GPanelNumberUsernSparkle.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(187)))), ((int)(((byte)(156)))));
             this.GPanelNumberUsernSparkle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 196);
+            this.GPanelNumberUsernSparkle.Location = new System.Drawing.Point(40, 231);
             this.GPanelNumberUsernSparkle.Name = "GPanelNumberUsernSparkle";
-            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(182, 73);
+            this.GPanelNumberUsernSparkle.Size = new System.Drawing.Size(182, 81);
             this.GPanelNumberUsernSparkle.TabIndex = 7;
             // 
             // LblNumberUser
@@ -236,7 +235,7 @@
             this.Controls.Add(this.PanelMainListViewClientsList);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UserControUsersList";
-            this.Size = new System.Drawing.Size(1195, 809);
+            this.Size = new System.Drawing.Size(1371, 908);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControUsersList_Paint);
             this.guna2Panel1.ResumeLayout(false);
             this.PanelMainListViewClientsList.ResumeLayout(false);

@@ -560,6 +560,7 @@ namespace Sparkle.User_Controls_Sparkle
             return (ListViewAllOrdersCar.Items.Count);
         }
 
+
         // ------------------------------------------- [ End Section Controls ] ----------------------------------------------
 
 
