@@ -1891,7 +1891,7 @@ namespace Sparkle.User_Controls_Sparkle
             lblResultIDOrder.Font = new Font("Garamond", 16, FontStyle.Bold);
             lblResultIDOrder.Top = 150;
             lblResultIDOrder.Left = 130;
-            lblResultIDOrder.Width = 50;
+            lblResultIDOrder.Width = 100;
 
             lblIDOrder.Height = 20;
 
